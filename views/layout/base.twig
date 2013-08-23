@@ -1,0 +1,37 @@
+{% include "layout/header.twig" %}
+
+<body <?php body_class(); ?>>
+	<div id="page" class="hfeed site">
+		<?php do_action( 'before' ); ?>
+		<header id="main_header" class="main_header" role="banner">
+			<div class="brand">
+				<h1 class="brand__title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" 	rel="home">
+						<?php bloginfo( 'name' ); ?>
+					</a>
+				</h1>
+				<?php the_breadcrumb(); ?>
+			</div>
+			<!-- use nav-bar here -->
+		</header><!-- #masthead -->
+	
+		<div class="container">
+	
+			<div class="row">
+	
+				{% block content %}{% endblock %}
+				{% block sidebar %}
+					<aside id="sidebar" class="col-sm-4" role="complementary">
+						<?php get_sidebar(); ?>
+					</aside>
+				{% endblock %}
+			</div>
+		</div>
+	
+		{% include "layout/footer.twig" %}
+	
+	</div><!-- #page -->
+
+{% include "layout/scripts.twig" %}
+</body>
+</html>

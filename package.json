@@ -1,0 +1,26 @@
+{
+  "name": "wptimber-biosciences",
+  "version": "0.0.1",
+  "description": "A Front-End Developers Wordpress Theme",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-compass": "~0.5.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bryanaka/wp-timber-biosciences"
+  },
+  "author": "Bryan M. Robles <bryanaka0@gmail.gov>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bryanaka/wp-timber-biosciences/issues"
+  }
+}

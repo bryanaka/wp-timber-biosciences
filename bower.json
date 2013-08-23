@@ -1,0 +1,32 @@
+{
+  "name": "wptimber-biosciences",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bryanaka/wp-timber-biosciences",
+  "authors": [
+    "Bryan M. Robles <bryanaka0@gmail.gov>"
+  ],
+  "description": "A Front-End Developers Wordpress Theme",
+  "main": "index.php",
+  "keywords": [
+    "wordpress",
+    "pbd",
+    "physical",
+    "biosciences",
+    "biosciences",
+    "modern",
+    "theme"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~2.1.2",
+    "requirejs": "~2.1.8"
+  }
+}
