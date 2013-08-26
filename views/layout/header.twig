@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" {{language_attributes}}> <!--<![endif]-->
 <head>
 	<meta charset="{{ bloginfo('charset') }}">
-	<title>{{ wp_title( '|', true, 'right' ) }} {{ bloginfo('name') }}</title>
+	<title>{{wp_title}} {{ bloginfo('name') }}</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 	-->
 	<link rel="stylesheet" href="{{ stylesheet_uri }}" type="text/css">
 	<script src="/wp-content/themes/biosciences/js/modernizr.custom.js"></script>
-	{% block html-head %}{% endblock %}
+	{% block html_head %}{% endblock %}
 	<!-- start wordpress-head -->
 	{{wp_head}}
 	<!-- end wordpress-head -->

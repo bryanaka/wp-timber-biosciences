@@ -1,7 +1,7 @@
 {% include "layout/header.twig" %}
 
 <body class="{{body_class}}" data-source="base">
-	<?php do_action( 'before' ); ?>
+	{# do_action( 'before' ); #}
 	<header id="main_header" class="main_header" role="banner">
 		<div class="brand">
 			<h1 class="brand__title">
@@ -9,10 +9,10 @@
 					{{ bloginfo('name') }}
 				</a>
 			</h1>
-			<?php the_breadcrumb(); ?>
+			{# the_breadcrumb() #}
 		</div>
 
-		{% block navigation-bar %}
+		{% block navigation_bar %}
 			{% include "layout/navbar.twig" %}
 		{% endblock %}
 
@@ -28,7 +28,7 @@
 
 			{% block sidebar %}
 				<aside id="sidebar" class="col-sm-4" role="complementary">
-					<?php get_sidebar(); ?>
+					{# get_sidebar() #}
 				</aside>
 			{% endblock %}
 		</div>
@@ -39,7 +39,7 @@
 		{% include "layout/footer.twig" %}
 	{% endblock %}
 
-<script data-main="/wp-content/themes/biosciences/js/main" src="/wp-content/themes/biosciences/bower_components/requirejs/require.js"></script>
+<script data-main="{{theme_dir}}/js/main" src="{{theme_dir}}/bower_components/requirejs/require.js"></script>
 {{wp_footer}}
 </body>
 </html>

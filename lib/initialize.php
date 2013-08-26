@@ -5,12 +5,14 @@ register_nav_menus(array(
 				'site-tools' => 'Site Tools'
 			));
 
-class MyContext extends Timber {
+	$nav_defaults = array(
+		'theme_location'  => 'primary',
+		'menu'            => 'Primary Menu',
+		'container_class' => 'collapse navbar-collapse navbar-ex1-collapse',
+		'container_id'    => '',
+		'menu_class' 	  => 'nav navbar-nav',
+		'menu_id'         => 'main_nav',
+		'echo'            => true,
+		'items_wrap' 	  => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+	);
 
-	function get_context(){
-		$context = parent::get_context();
-		$context['header'] = array();
-		$context['header']['nav'] = new TimberMenu('primary');
-		return $context;
-	}
-}

@@ -1,7 +1,9 @@
 <?php
 
 function pretty_print($text) {
-	print_r('<pre>' + $text + '</pre>');
+	echo '<pre>';
+	print_r($text);
+	echo '</pre>';
 }
 
 $context = Timber::get_context();
