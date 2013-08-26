@@ -1,4 +1,6 @@
 <?php
+use Timber as Timber;
+use Biosciences as Biosciences;
 
 function pretty_print($text) {
 	echo '<pre>';
@@ -6,7 +8,7 @@ function pretty_print($text) {
 	echo '</pre>';
 }
 
-$context = Timber::get_context();
+$context = Biosciences\Context::get_context();
 $context['posts'] = Timber::get_posts();
 Timber::render('posts/list.twig', $context);
 

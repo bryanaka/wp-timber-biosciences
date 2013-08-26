@@ -1,18 +1,17 @@
 <?php
 
-register_nav_menus(array(
-				'primary' => 'Primary Navigation',
-				'site-tools' => 'Site Tools'
-			));
+require_once BIOSCIENCES_PATH.'/lib/navigation_menus.php';
 
-	$nav_defaults = array(
-		'theme_location'  => 'primary',
-		'menu'            => 'Primary Menu',
-		'container_class' => 'collapse navbar-collapse navbar-ex1-collapse',
-		'container_id'    => '',
-		'menu_class' 	  => 'nav navbar-nav',
-		'menu_id'         => 'main_nav',
-		'echo'            => true,
-		'items_wrap' 	  => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-	);
+function to_underscored($string){
+	$underscored_string = strtolower(preg_replace('/([a-z])([A-Z])/', '$1_$2', $string ));
+	return $underscored_string;
+}
 
+spl_autoload_register(function ($class) {
+	$new_class = str_replace('\\', '/', $class);
+	$underscored_class = to_underscored($new_class);
+	$file_path = BIOSCIENCES_PATH . '/lib/' . $underscored_class . '.php';
+	if( file_exists($file_path) ){
+		include $file_path;
+	}
+});
