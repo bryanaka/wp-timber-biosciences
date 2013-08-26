@@ -1,0 +1,6 @@
+{% extends "layout/base.twig" %}
+{% block content %}
+	{% for post in posts %}
+		{% include [post.post_type~'/preview.twig', 'posts/preview.twig'] %}
+	{% endfor %}
+{% endblock %}
