@@ -6,10 +6,14 @@ TimberPost
             <th>
                 Property<br>
                 <em>Type</em>
+                <br>
+                <br>
             </th>
             <th>
                 Description<br>
                 <em>Example</em>
+                <br>
+                <br>
             </th>
         </tr>
 	</thead>
@@ -18,370 +22,534 @@ TimberPost
 			<td>
 				ImageClass <br>
 				<em>PHP Class - string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>TimberImage</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				PostClass <br>
 				<em>PHP Class - string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>TimberPost</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				_can_edit <br>
-				<em>type</em>
+				<em>Boolean</em>
+				<br>
+				<br>
 			</td>
 			<td>
-				description<br>
-				<em></em>
+				returns boolean based on if the current user can edit the current post or page<br>
+				<em>Use inside templates</em><br>
+				<pre>
+{% if post.can_edit %}
+	this text will only show if current user can edit
+{% endif %}</pre>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				get_edit_url<br>
+				<em>url</em>
+				<br>
+				<br>
+			</td>
+			<td>
+				get the url to edit current post<br>
+				<em>localhost:8888/wp-admin/post.php?post=5&amp;action=edit</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				ID <br>
 				<em>integer</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>1</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				_edit_lock <br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>1377281248:1</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				_thumbnail_id <br>
 				<em>integer</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>7</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				_edit_last <br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>1</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				_oxygen_post_location<br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>featured</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_author<br>
 				<em>Reference - integer</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>1</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_date <br>
 				<em>DateTime</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>2013-08-21 00:25:21</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_date_gmt<br>
 				<em>DateTime</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>2013-08-21 00:25:21</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_content<br>
 				<em>text</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_title<br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>Hello world!</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_excerpt<br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em></em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_status<br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>publish</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				comment_status <br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>open</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				ping_status<br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>open</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_password <br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em></em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_name<br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>hello-world</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				to_ping <br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em></em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				pinged <br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em></em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_modified <br>
 				<em>DateTime</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>2013-08-23 18:00:44</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_modified_gmt<br>
 				<em>DateTime</em> 
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>2013-08-23 18:00:44</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_content_filtered<br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em></em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_parent<br>
 				<em>Reference - Integer</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>0</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				guid<br>
 				<em>url</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>http://localhost:8888/?p=1</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				menu_order <br>
 				<em>integer</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>0</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_type<br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>post</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				post_mime_type<br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em></em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				comment_count<br>
 				<em>integer</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>1</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				filter<br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>raw</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				format_content <br>
 				<em>type</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em></em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				slug <br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>hello-world</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				display_date<br>
 				<em>String-ifyed Date</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>August 21, 2013</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				status<br>
 				<em>string</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>publish</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				permalink <br>
 				<em>url</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>http://localhost:8888/?p=1</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				path <br>
 				<em>url</em>
+				<br>
+				<br>
 			</td>
 			<td>
 				description<br>
 				<em>/</em>
+				<br>
+				<br>
 			</td>
 		</tr>
 	</tbody>
