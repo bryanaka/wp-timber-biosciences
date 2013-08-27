@@ -1,3 +1,5 @@
 .sass-cache*
 assets/bower_lib*
+assets/css*
 node_modules*
+
