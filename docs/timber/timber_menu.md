@@ -1,50 +1,430 @@
 TimberMenu
 =====================
 
+Object 
+
+Properties
+----------------
+
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Items</td>
+        <td>Array of TimberMenuItem Objects</td>
+    </tr>
+</table>
+
 
 TimberMenuItem
 ============================
 
-[children] => 
-[ID] => 5
-[post_author] => 1
-[post_date] => 2013-08-21 20:41:40
-[post_date_gmt] => 2013-08-21 20:41:40
-[post_content] =>  
-[post_title] => 
-[post_excerpt] => 
-[post_status] => publish
-[comment_status] => open
-[ping_status] => open
-[post_password] => 
-[post_name] => 5
-[to_ping] => 
-[pinged] => 
-[post_modified] => 2013-08-26 23:43:18
-[post_modified_gmt] => 2013-08-26 23:43:18
-[post_content_filtered] => 
-[post_parent] => 0
-[guid] => http://localhost:8888/?p=5
-[menu_order] => 1
-[post_type] => nav_menu_item
-[post_mime_type] => 
-[comment_count] => 0
-[filter] => raw
-[format_content] => 
-[db_id] => 5
-[menu_item_parent] => 0
-[object_id] => 2
-[object] => page
-[type] => post_type
-[type_label] => Page
-[url] => http://localhost:8888/?page_id=2
-[title] => Sample Page
-[target] => 
-[attr_title] => 
-[description] => 
-[classes] => Array
-    (
-        [0] => 
-    )
+<table>
+    <thead>
+        <tr>
+            <th>
+                Property<br>
+                <em>Type</em>
+            </th>
+            <th>
+                Description<br>
+                <em>Example</em>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                children<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ID<br>
+                <em></em>
+            </td>
+            <td>
+                post_author<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_date<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>2013-08-21 20:41:40</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_date_gmt<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>2013-08-21 20:41:40</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_content<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_title<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_title<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_excerpt<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_status<br>
+                <em>string</em>
+            </td>
+            <td>
+                description<br>
+                <em>publish</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ping_status<br>
+                <em>string</em>
+            </td>
+            <td>
+                description<br>
+                <em>open</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_name<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                comment_status<br>
+                <em>string</em>
+            </td>
+            <td>
+                description<br>
+                <em>open</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                to_ping<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                pinged<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_modified<br>
+                <em>DateTime</em>
+            </td>
+            <td>
+                description<br>
+                <em>2013-08-26 23:43:18</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_modified_gmt<br>
+                <em>DateTime</em>
+            </td>
+            <td>
+                description<br>
+                <em>2013-08-26 23:43:18</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_password<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_content_filtered<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_parent<br>
+                <em>integer</em>
+            </td>
+            <td>
+                description<br>
+                <em>0</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                guid<br>
+                <em>url</em>
+            </td>
+            <td>
+                description<br>
+                <em>http://localhost:8888/?p=5</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                menu_order<br>
+                <em>integer</em>
+            </td>
+            <td>
+                description<br>
+                <em>1</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_type<br>
+                <em>nav_menu_item</em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                post_excerpt<br>
+                <em></em>
+            </td>
+            <td>
+                post_mime_type<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                comment_count<br>
+                <em>integer</em>
+            </td>
+            <td>
+                description<br>
+                <em>0</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                filter<br>
+                <em>string</em>
+            </td>
+            <td>
+                description<br>
+                <em>raw</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                format_content<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                db_id<br>
+                <em>integer</em>
+            </td>
+            <td>
+                description<br>
+                <em>5</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                menu_item_parent<br>
+                <em>integer</em>
+            </td>
+            <td>
+                description<br>
+                <em>0</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                object_id<br>
+                <em>integer</em>
+            </td>
+            <td>
+                description<br>
+                <em>2</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                object<br>
+                <em>string</em>
+            </td>
+            <td>
+                description<br>
+                <em>page</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                type<br>
+                <em>string</em>
+            </td>
+            <td>
+                description<br>
+                <em>post_type</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                type_label<br>
+                <em>string</em>
+            </td>
+            <td>
+                description<br>
+                <em>Page</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                url<br>
+                <em>url</em>
+            </td>
+            <td>
+                description<br>
+                <em>http://localhost:8888/?page_id=2</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                title<br>
+                <em>string</em>
+            </td>
+            <td>
+                description<br>
+                <em>Sample Page</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                target<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                attr_title<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                description<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                classes<br>
+                <em>Array</em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                xfn<br>
+                <em></em>
+            </td>
+            <td>
+                description<br>
+                <em>example</em>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-[xfn] => 

@@ -1,40 +1,388 @@
 TimberPost
 ==============================
-
-[ImageClass] => TimberImage
-[PostClass] => TimberPost
-[_can_edit] => 
-[ID] => 1
-[_edit_lock] => 1377281248:1
-[_thumbnail_id] => 7
-[_edit_last] => 1
-[_oxygen_post_location] => featured
-[post_author] => 1
-[post_date] => 2013-08-21 00:25:21
-[post_date_gmt] => 2013-08-21 00:25:21
-[post_content] => Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!
-[post_title] => Hello world!
-[post_excerpt] => 
-[post_status] => publish
-[comment_status] => open
-[ping_status] => open
-[post_password] => 
-[post_name] => hello-world
-[to_ping] => 
-[pinged] => 
-[post_modified] => 2013-08-23 18:00:44
-[post_modified_gmt] => 2013-08-23 18:00:44
-[post_content_filtered] => 
-[post_parent] => 0
-[guid] => http://localhost:8888/?p=1
-[menu_order] => 0
-[post_type] => post
-[post_mime_type] => 
-[comment_count] => 1
-[filter] => raw
-[format_content] => 
-[slug] => hello-world
-[display_date] => August 21, 2013
-[status] => publish
-[permalink] => http://localhost:8888/?p=1
-[path] => /
+<table>
+	<thead>
+		<tr>
+            <th>
+                Property<br>
+                <em>Type</em>
+            </th>
+            <th>
+                Description<br>
+                <em>Example</em>
+            </th>
+        </tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				ImageClass <br>
+				<em>PHP Class - string</em>
+			</td>
+			<td>
+				description<br>
+				<em>TimberImage</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				PostClass <br>
+				<em>PHP Class - string</em>
+			</td>
+			<td>
+				description<br>
+				<em>TimberPost</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				_can_edit <br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em></em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				ID <br>
+				<em>integer</em>
+			</td>
+			<td>
+				description<br>
+				<em>1</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				_edit_lock <br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em>1377281248:1</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				_thumbnail_id <br>
+				<em>integer</em>
+			</td>
+			<td>
+				description<br>
+				<em>7</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				_edit_last <br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em>1</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				_oxygen_post_location<br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>featured</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_author<br>
+				<em>Reference - integer</em>
+			</td>
+			<td>
+				description<br>
+				<em>1</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_date <br>
+				<em>DateTime</em>
+			</td>
+			<td>
+				description<br>
+				<em>2013-08-21 00:25:21</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_date_gmt<br>
+				<em>DateTime</em>
+			</td>
+			<td>
+				description<br>
+				<em>2013-08-21 00:25:21</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_content<br>
+				<em>text</em>
+			</td>
+			<td>
+				description<br>
+				<em>Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_title<br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>Hello world!</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_excerpt<br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em></em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_status<br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>publish</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				comment_status <br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>open</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				ping_status<br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>open</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_password <br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em></em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_name<br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>hello-world</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				to_ping <br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em></em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				pinged <br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em></em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_modified <br>
+				<em>DateTime</em>
+			</td>
+			<td>
+				description<br>
+				<em>2013-08-23 18:00:44</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_modified_gmt<br>
+				<em>DateTime</em> 
+			</td>
+			<td>
+				description<br>
+				<em>2013-08-23 18:00:44</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_content_filtered<br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em></em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_parent<br>
+				<em>Reference - Integer</em>
+			</td>
+			<td>
+				description<br>
+				<em>0</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				guid<br>
+				<em>url</em>
+			</td>
+			<td>
+				description<br>
+				<em>http://localhost:8888/?p=1</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				menu_order <br>
+				<em>integer</em>
+			</td>
+			<td>
+				description<br>
+				<em>0</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_type<br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>post</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				post_mime_type<br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em></em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				comment_count<br>
+				<em>integer</em>
+			</td>
+			<td>
+				description<br>
+				<em>1</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				filter<br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>raw</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				format_content <br>
+				<em>type</em>
+			</td>
+			<td>
+				description<br>
+				<em></em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				slug <br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>hello-world</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				display_date<br>
+				<em>String-ifyed Date</em>
+			</td>
+			<td>
+				description<br>
+				<em>August 21, 2013</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				status<br>
+				<em>string</em>
+			</td>
+			<td>
+				description<br>
+				<em>publish</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				permalink <br>
+				<em>url</em>
+			</td>
+			<td>
+				description<br>
+				<em>http://localhost:8888/?p=1</em>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				path <br>
+				<em>url</em>
+			</td>
+			<td>
+				description<br>
+				<em>/</em>
+			</td>
+		</tr>
+	</tbody>
+</table>	
