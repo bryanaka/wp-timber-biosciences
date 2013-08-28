@@ -1,4 +1,4 @@
-{% include "layout/header.twig" %}
+{% include "components/header.twig" %}
 
 <body class="{{body_class}}" data-source="base">
 	{# do_action( 'before' ); #}
@@ -13,7 +13,7 @@
 		</div>
 
 		{% block navigation_bar %}
-			{% include "layout/navbar.twig" %}
+			{% include "components/navbar.twig" %}
 		{% endblock %}
 
 	</header><!-- #masthead -->
@@ -36,7 +36,7 @@
 	</div>
 	
 	{% block footer %}
-		{% include "layout/footer.twig" %}
+		{% include "components/footer.twig" %}
 	{% endblock %}
 
 <script data-main="{{theme_dir}}/assets/js/main" src="{{theme_dir}}/assets/bower_lib/requirejs/require.js"></script>
