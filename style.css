@@ -14,6 +14,13 @@ Tags: pbd, physical, biosciences, modern, front-end, developer, theme, timber, t
 bioscience is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 */
 /* This file will have the vaiables for bootstrap and other files */
+/* Laboratory Blue (Slightly better version) */
+/* Laboratory Blue, According to lbl.gov banner */
+/* PBD Green */
+/* PBD Yellow */
+/* PBD Yellow-Green */
+/* A nice cream color that goes well with green */
+/* An off black */
 /*!
  * Bootstrap v3.0.0
  *
@@ -8365,9 +8372,86 @@ td.visible-print {
   transition: height 0.35s ease;
 }
 
+/* line 1, ../scss/_lab_header.scss */
+.labHeader {
+  background: #00395a;
+  color: #ffffff;
+  font-weight: 500;
+  padding: .25em 0 .25em 0;
+  border-bottom: #00598d 4px solid;
+}
+
+/* line 9, ../scss/_lab_header.scss */
+.labHeader__brand {
+  max-width: 100px;
+  height: auto;
+  padding: 0.2em 1em 0 .5em;
+  padding: 0.2rem 1rem 0 .5rem;
+  display: inline;
+  float: left;
+  margin-top: -.35em;
+}
+
+/* line 19, ../scss/_lab_header.scss */
+.labHeader__headline {
+  font-size: 28px;
+  font-size: 1.75rem;
+  margin-top: .25rem;
+}
+
+/* line 24, ../scss/_lab_header.scss */
+.labHeader__links {
+  margin-top: .15rem;
+  text-align: right;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding-right: 0.5em;
+  padding-right: 0.5rem;
+}
+
+/* line 32, ../scss/_lab_header.scss */
+.labHeader__link {
+  text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  padding: .25em 0;
+  display: block;
+}
+/* line 40, ../scss/_lab_header.scss */
+.labHeader__link:hover {
+  color: #008ada;
+}
+
+/* line 45, ../scss/_lab_header.scss */
+.labHeader__DOE {
+  text-align: right;
+  float: right;
+  padding-right: 1em;
+  padding-right: 1rem;
+  padding-top: 0.2em;
+  padding-top: 0.2rem;
+  max-width: 200px;
+  height: 100%;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+/* line 55, ../scss/_lab_header.scss */
+.labHeader__DOE img {
+  max-width: 185.4px;
+  max-height: 45px;
+  width: 110%;
+}
+/* line 60, ../scss/_lab_header.scss */
+.labHeader__DOE .DOE__energy {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
 /* line 1, ../scss/author.scss */
 body {
   background-color: #FCFCFC;
+  font-size: 16px;
 }
 
 /*  ==================================================
@@ -8377,35 +8461,35 @@ body {
 	Navigation
 	================================================== */
 @media (min-width: 768px) {
-  /* line 38, ../scss/author.scss */
+  /* line 39, ../scss/author.scss */
   .navbar {
     border-radius: 0;
     min-height: 0;
   }
 
-  /* line 42, ../scss/author.scss */
+  /* line 43, ../scss/author.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  /* line 46, ../scss/author.scss */
+  /* line 47, ../scss/author.scss */
   .navbar-brand {
     padding-top: 9px;
     padding-bottom: 9px;
   }
 }
-/* line 52, ../scss/author.scss */
+/* line 53, ../scss/author.scss */
 .breadcrumb--pbd {
   margin-bottom: 0;
   background-color: #FAFAFA;
 }
 
-/* line 57, ../scss/author.scss */
+/* line 58, ../scss/author.scss */
 .navbar {
   border-radius: 0;
 }
-/* line 60, ../scss/author.scss */
+/* line 61, ../scss/author.scss */
 .navbar.navbar--green {
   background-color: #008000;
   border-bottom: #9ACD32 4px solid;
@@ -8414,24 +8498,24 @@ body {
 }
 
 /* the navigation link selectors... */
-/* line 69, ../scss/author.scss */
+/* line 70, ../scss/author.scss */
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
   color: #FAFAFA;
 }
 
-/* line 73, ../scss/author.scss */
+/* line 74, ../scss/author.scss */
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 /* the navigation hover selectors... wtf... */
-/* line 78, ../scss/author.scss */
+/* line 79, ../scss/author.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
   color: #ffd059;
 }
 
-/* line 86, ../scss/author.scss */
+/* line 87, ../scss/author.scss */
 .widget__title {
   font-size: 18px;
   font-weight: bold;
@@ -8441,9 +8525,17 @@ body {
 	Main Content
 	================================================== */
 /*  ==================================================
+	Page
+	================================================== */
+/* line 106, ../scss/author.scss */
+.page__header {
+  margin: 0 0 16px 0;
+}
+
+/*  ==================================================
 	Footer
 	================================================== */
-/* line 104, ../scss/author.scss */
+/* line 115, ../scss/author.scss */
 .mainFooter {
   border-top: #5e5e5e 4px solid;
   background: #444444;
@@ -8453,19 +8545,19 @@ body {
   margin: 0 auto;
 }
 
-/* line 113, ../scss/author.scss */
+/* line 124, ../scss/author.scss */
 .mainFooter__item {
   vertical-align: top;
   text-align: left;
 }
 
-/* line 117, ../scss/author.scss */
+/* line 128, ../scss/author.scss */
 .mainFooter__link {
   text-decoration: none;
   color: #FAFAFA;
 }
 
-/* line 121, ../scss/author.scss */
+/* line 132, ../scss/author.scss */
 .mainFooter__linkGroup {
   width: auto;
   width: -moz-fit-content;

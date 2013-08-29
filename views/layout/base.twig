@@ -1,6 +1,9 @@
 {% include "components/header.twig" %}
 
 <body class="{{body_class}}" data-source="base">
+	
+	{% include 'components/lab_header.twig' %}
+
 	{# do_action( 'before' ); #}
 	<header id="main_header" class="main_header" role="banner">
 		<div class="brand">
@@ -18,7 +21,7 @@
 
 	</header><!-- #masthead -->
 	
-	<div class="container">
+	<main class="container" role="main">
 	
 		<div class="row">
 			{% block content %}
@@ -33,13 +36,15 @@
 			{% endblock %}
 		</div>
 
-	</div>
+	</main>
 	
 	{% block footer %}
 		{% include "components/footer.twig" %}
 	{% endblock %}
-
+{#
 <script data-main="{{theme_dir}}/assets/js/main" src="{{theme_dir}}/assets/bower_lib/requirejs/require.js"></script>
+#}
+<script src="{{theme_dir}}/assets/js/main-built.js"></script>
 {{wp_footer}}
 </body>
 </html>

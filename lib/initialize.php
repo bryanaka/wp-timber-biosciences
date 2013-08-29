@@ -3,12 +3,14 @@
 require_once BIOSCIENCES_PATH.'/lib/navigation_menus.php';
 
 function to_underscored($string){
+	// look for any stings with two uppercase letters
 	$underscored_string = strtolower(preg_replace('/([a-z])([A-Z])/', '$1_$2', $string ));
 	return $underscored_string;
 }
 
 function to_camelcase($string) {
-	$camelcase_string = strtolower(preg_replace('/([a-z])([A-Z])/', '$1_$2', $string ));
+	$camelcase_string = preg_replace('/(?:^|_)(.?)/e',"strtoupper('$1')",$string);
+	// look for any strings with two uppercase letters
 	return $camelcase_string;
 }
 

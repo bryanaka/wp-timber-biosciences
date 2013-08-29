@@ -1,0 +1,64 @@
+.labHeader {
+	background: $lab-blue;
+	color:#ffffff;
+	font-weight:500;
+	padding:.25em 0 .25em 0;
+	border-bottom: lighten($lab-blue, 10%) 4px solid;
+
+}
+	.labHeader__brand {
+		max-width:100px;
+		height:auto;
+		padding: 0.2em 1em 0 .5em;
+		padding: 0.2rem 1rem 0 .5rem;
+		display:inline;
+		float: left;
+		margin-top: -.35em;
+	}
+
+	.labHeader__headline {
+		@include font-size(1.75);
+		margin-top:.25rem;
+	}
+
+	.labHeader__links {
+		margin-top: .15rem;
+		text-align: right;
+		@include font-size(.75);
+		padding-right: 0.5em;
+		padding-right: 0.5rem;
+	}
+
+	.labHeader__link {
+		text-decoration: none;
+		color: #ffffff;
+		text-decoration:none;
+		font-size: 12px;
+		padding:.25em 0;
+		display:block;
+
+		&:hover {
+			color: lighten($lab-blue, 25%);
+		}	
+	}
+
+	.labHeader__DOE {
+		text-align:right;
+		float: right;
+		padding-right: 1em;
+		padding-right: 1rem;
+		padding-top: 0.2em;
+		padding-top: 0.2rem;
+		max-width: 200px;
+		height: 100%;
+		@include font-size(.75);
+		img {
+			max-width:185.4px;
+			max-height: 45px;
+			width:110%;
+		}
+		.DOE__energy {
+			@include font-size(1.25);
+		}
+
+	}

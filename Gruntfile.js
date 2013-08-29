@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		},
 		copy: {
 			styles: {
-				src: 'assets/stylesheets/style.css',
+				src: 'assets/css/style.css',
 				dest: 'style.css'
 			}
 		},

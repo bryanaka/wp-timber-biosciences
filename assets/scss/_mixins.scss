@@ -1,0 +1,38 @@
+@mixin font-size($sizeValue: 1.0) {
+  font-size: ($sizeValue * 16 ) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin border-box() {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+@mixin buttonify($color: #252525, $percent: 10%) {
+	border: darken($color, 8%) 1px solid;
+	background: $color; /* fallback */
+	background-image: -webkit-gradient(linear,left top,left bottom,from($color),to(darken($color, $percent))); /* chrome 2+, safari 4+ */
+	background-image: -webkit-linear-gradient(top,$color,darken($color, $percent)); /* chrome 10+, safari 5.1+ */
+	background-image: -moz-linear-gradient(top,$color,darken($color, $percent)); /* firefox */
+	background-image: -ms-linear-gradient(top,$color,darken($color, $percent)); /* IE10 */
+	background-image: -o-linear-gradient(top,$color,darken($color, $percent)); /* Opera 11.1 + */
+	background-image: linear-gradient(top,$color,darken($color, $percent)); /* Standard */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color}', endColorstr='#{darken($color, $percent)}')";
+}
+
+@mixin transform($string: "") {
+    -webkit-transform: $string;
+       -moz-transform: $string;
+	    -ms-transform: $string;
+	     -o-transform: $string;
+		    transform: $string;
+}
+
+@mixin transition($string: "") {
+    -webkit-transition: $string;
+       -moz-transition: $string;
+        -ms-transition: $string;
+         -o-transition: $string;
+    		transition: $string;
+}

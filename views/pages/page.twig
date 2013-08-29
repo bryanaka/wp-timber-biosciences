@@ -1,5 +1,11 @@
 {% extends 'layout/base.twig' %}
 {% block content %}
-yo mr white
+
+<h1 class="col-xs-12 page__header">{{page.title}}</h1>
+
+<article class="col-xs-12 page__content">
+	{{page.content}}
+</article>
+
 {% endblock %}
 {% block sidebar %}{% endblock %}
