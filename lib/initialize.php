@@ -1,27 +1,11 @@
 <?php
 
 require_once BIOSCIENCES_PATH.'/lib/navigation_menus.php';
+require BIOSCIENCES_PATH.'/lib/biosciences/utils.php';
 
-function to_underscored($string){
-	// look for any stings with two uppercase letters
+function to_underscored ($string) {
 	$underscored_string = strtolower(preg_replace('/([a-z])([A-Z])/', '$1_$2', $string ));
 	return $underscored_string;
-}
-
-function to_camelcase($string) {
-	$camelcase_string = preg_replace('/(?:^|_)(.?)/e',"strtoupper('$1')",$string);
-	// look for any strings with two uppercase letters
-	return $camelcase_string;
-}
-
-function pretty_print($text) {
-	echo '<pre>';
-	print_r($text);
-	echo '</pre>';
-}
-
-function pp($text) {
-	pretty_print($text);
 }
 
 spl_autoload_register(function ($class) {
@@ -32,3 +16,6 @@ spl_autoload_register(function ($class) {
 		include $file_path;
 	}
 });
+
+Bootstrap\Grid::initialize();
+
