@@ -18,4 +18,5 @@ spl_autoload_register(function ($class) {
 });
 
 Bootstrap\Grid::initialize();
+$utils = new Bootstrap\ResponsiveUtilities();
 

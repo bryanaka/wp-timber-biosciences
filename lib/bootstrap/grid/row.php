@@ -1,7 +1,7 @@
 <?php namespace Bootstrap\Grid;
-use Bootstrap as BS;
+Use Bootstrap\Shortcodes as Shortcodes;
 
-Class Row extends BS\Shortcodes
+Class Row extends Shortcodes
 {
 	public $shortcode = 'bs-row';
 	public $shortcode_fn = 'row';
