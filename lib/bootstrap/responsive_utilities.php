@@ -5,7 +5,9 @@ Class ResponsiveUtilities extends Shortcodes
 	public $shortcode = 'bs-resp-util';
 	public $shortcode_fn = 'respUtil';
 	public $defaultAttrs = array(
-		'el' => 'span'
+		'el' => 'span',
+		'type' => null,
+		'media' => null
 	);
 	// [be-resp-util type='' media='']
 	public function respUtil ($attributes, $content=null) {
@@ -19,13 +21,13 @@ Class ResponsiveUtilities extends Shortcodes
 		$types = explode(',', $visibility_type);
 		$medias = explode(',', $media_sizes);
 
-		if ( count($medias) !== count($sizes) ) {
+		if ( count($medias) !== count($types) ) {
 			return "error--number_of_types_and_medias_must_be_equal";
 		}
 
 		for ($n=0, $t = count($medias); $n < $t; $n++) {
 			$medias[$n] = trim($medias[$n]);
-			$types[$n]  = trim($sizes[$n]);
+			$types[$n]  = trim($types[$n]);
 			$utilClasses .= "{$types[$n]}-{$medias[$n]} ";
 		}
 
