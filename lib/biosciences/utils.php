@@ -1,6 +1,6 @@
 <?php namespace Bioscences;
 
-Class Utils 
+Class Utils
 {
 	public static function to_underscored($string){
 		// some test cases will fail still...

@@ -25,13 +25,12 @@
 	
 		<div class="row">
 			{% block content %}
-				<!-- default content can go here. otherwise, must be extended -->
-				Sorry, no content
+				Sorry, No Content
 			{% endblock %}
 
 			{% block sidebar %}
 				<aside id="sidebar" class="col-sm-4" role="complementary">
-					{# get_sidebar() #}
+					{{main_sidebar}}
 				</aside>
 			{% endblock %}
 		</div>

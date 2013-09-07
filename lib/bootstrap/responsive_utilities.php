@@ -9,6 +9,10 @@ Class ResponsiveUtilities extends Shortcodes
 		'type' => null,
 		'media' => null
 	);
+
+	static public function initialize() {
+		$responsiveUtils = new self();
+	}
 	// [be-resp-util type='' media='']
 	public function respUtil ($attributes, $content=null) {
 		$attrs = shortcode_atts($this->defaultAttrs, $attributes, $this->shortcode);

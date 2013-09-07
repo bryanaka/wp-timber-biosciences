@@ -12,7 +12,7 @@
 
   <div class="collapse navbar-collapse mainNav">
     <ul class="nav navbar-nav">
-      {% for item in header.nav.get_items %}
+      {% for item in navigation.primary.get_items %}
         {% if item.get_children %}
           <li class="mainNav__link dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="{{item.get_path}}">{{item.title}} <b class="caret"></b></a>

@@ -7,8 +7,11 @@ class Context extends Timber {
 
 	public static function get_context() {
 		$context = parent::get_context();
-		$context['header'] = array();
-		$context['header']['nav'] = new TimberMenu('primary');
+		$context['navigation'] = array();
+		$context['navigation']['primary'] = new TimberMenu('primary');
+		$context['navigation']['footer_left'] = new TimberMenu('footer_left');
+		$context['navigation']['footer_center'] = new TimberMenu('footer_center');
+		$context['navigation']['footer_right'] = new TimberMenu('footer_right');
 		return $context;
 	}
 
