@@ -25,6 +25,8 @@
         {% else %}
           <li class="mainNav__link"><a href="{{item.get_path}}">{{item.title}}</a></li>
         {% endif %}
+      {% else %}
+        <li>No Primary Menu Selected</li>
       {% endfor %}
     </ul>
   </div>

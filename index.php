@@ -4,7 +4,7 @@ use Biosciences as Biosciences;
 
 $context = Biosciences\Context::get_context();
 $context['posts'] = Timber::get_posts();
-
+//$context['featured_posts'] = new Timberpost('meta_key=&meta_value=blue');
 $context['main_sidebar'] = Timber::get_widgets('main_sidebar');
 
 // $sidebars = wp_get_sidebars_widgets();

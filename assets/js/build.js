@@ -1,11 +1,14 @@
-({
-    baseUrl: ".",
-    paths: {
-		"requireLib": "../bower_lib/requirejs/require",
-        "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min",
+{
+    "baseUrl": ".",
+    "name": "../bower_lib/almond/almond",
+    "paths": {
+        "jquery": "../bower_lib/jquery/jquery",
         "bootstrap": "bootstrap",
-        "biosciences-core": "biosciences"
+        "biosciences": "biosciences",
+        "responsive_slides.min": "responsive_slides.min"
     },
-    name: "main",
-    out: "main-built.js"
-})
+    "include": ["main"],
+    "insertRequire": ["main"],
+    "out": "main-built.js",
+    "wrap": true
+}

@@ -2,4 +2,7 @@
 
 Class Base {
 
+	public static function initialize () {
+
+	}
 }

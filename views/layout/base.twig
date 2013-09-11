@@ -20,22 +20,25 @@
 		{% endblock %}
 
 	</header><!-- #masthead -->
-	
-	<main class="container" role="main">
-	
-		<div class="row">
-			{% block content %}
-				Sorry, No Content
-			{% endblock %}
+	<div class="container-wrap">
+		<main class="container" role="main">
+		
+			<div class="row">
+				
+				{% block content %}
+					Sorry, No Content
+				{% endblock %}
 
-			{% block sidebar %}
-				<aside id="sidebar" class="col-sm-4" role="complementary">
-					{{main_sidebar}}
-				</aside>
-			{% endblock %}
-		</div>
-
-	</main>
+				{% block sidebar %}
+					<aside id="sidebar" class="col-sm-4 col-xs-12" role="complementary">
+						{{main_sidebar}}
+					</aside>
+				{% endblock %}
+				
+			</div>
+	
+		</main>
+	</div>
 	
 	{% block footer %}
 		{% include "components/footer.twig" %}

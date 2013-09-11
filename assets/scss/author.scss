@@ -1,6 +1,17 @@
 body {
-	background-color: #FCFCFC;
+	background-color: #FAFAFA;
 	font-size: 16px;
+}
+.container-wrap {
+	border-left: 3px #CDCDCD solid;
+	border-right: 3px #CDCDCD solid;
+	background-color: #FCFCFC;
+	padding: 16px 32px;
+	max-width: 1250px;
+	margin: 0 auto;
+}
+.container {
+
 }
 
 /*  ==================================================
@@ -57,6 +68,7 @@ body {
 
 .navbar {
 	border-radius: 0;
+	margin-bottom: 0px;
 
 	&.navbar--green {
 		background-color: #008000;
@@ -98,6 +110,32 @@ body {
 
 }
 
+.news__title {
+	color: #008000;
+}
+
+.news__divider {
+	margin: 8px 0;
+}
+
+.tease {
+	margin: 16px 0;
+}
+
+.tease__thumbnail {
+	float: left;
+	padding-right: 16px;
+}
+.tease__title a {
+	color: #252525;
+	-webkit-transition: color 500ms;
+	   -moz-transition: color 500ms;
+			transition: color 500ms; 
+
+	&:hover {
+		color: #428bca;
+	}
+}
 
 /*  ==================================================
 	Page
@@ -106,6 +144,21 @@ body {
 .page__header {
 	margin: 0 0 16px 0;
 
+}
+/*  ==================================================
+	Widgets
+	================================================== */
+.widget {
+	border: 3px #CDCDCD solid;
+	border-radius: 5px;
+	padding: 10px;
+	background: #FCFCFC;
+	margin-bottom: 16px;
+}
+
+.widget__title {
+	text-align: center;
+	margin-top: 5px;
 }
 
 /*  ==================================================

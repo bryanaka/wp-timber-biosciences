@@ -8372,6 +8372,129 @@ td.visible-print {
   transition: height 0.35s ease;
 }
 
+/* line 1, ../scss/slider.scss */
+.slider-container {
+  width: 100%;
+  position: relative;
+}
+
+/* line 6, ../scss/slider.scss */
+.slider {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 15, ../scss/slider.scss */
+.slider li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+/* line 21, ../scss/slider.scss */
+.slide {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 30, ../scss/slider.scss */
+.slide__image {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+
+/* line 38, ../scss/slider.scss */
+.slide__caption {
+  background: #000000;
+  color: #FAFAFA;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+  z-index: 10;
+}
+
+/* line 48, ../scss/slider.scss */
+.slides_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  display: block;
+  background: #fff;
+  /* Fix for IE6-9 */
+  opacity: 0;
+  filter: alpha(opacity=1);
+  width: 48%;
+  text-indent: -9999px;
+  overflow: hidden;
+  height: 85%;
+}
+
+/* line 64, ../scss/slider.scss */
+.slides_nav.next {
+  left: auto;
+  right: 0;
+}
+
+/* line 69, ../scss/slider.scss */
+.slides_nav:focus {
+  outline: none;
+}
+
+/* line 73, ../scss/slider.scss */
+.slides_tabs {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* line 81, ../scss/slider.scss */
+.slides_tabs li {
+  display: inline;
+  float: none;
+  _float: left;
+  *float: left;
+  margin-right: 5px;
+}
+
+/* line 89, ../scss/slider.scss */
+.slides_tabs a {
+  text-indent: -9999px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #ccc;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  _display: block;
+  *display: block;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  width: 9px;
+  height: 9px;
+}
+
+/* line 105, ../scss/slider.scss */
+.slides_here a {
+  background: #222;
+  background: rgba(0, 0, 0, 0.8);
+}
+
 /* line 1, ../scss/_lab_header.scss */
 .labHeader {
   background: #00395a;
@@ -8450,8 +8573,18 @@ td.visible-print {
 
 /* line 1, ../scss/author.scss */
 body {
-  background-color: #FCFCFC;
+  background-color: #FAFAFA;
   font-size: 16px;
+}
+
+/* line 5, ../scss/author.scss */
+.container-wrap {
+  border-left: 3px #CDCDCD solid;
+  border-right: 3px #CDCDCD solid;
+  background-color: #FCFCFC;
+  padding: 16px 32px;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 /*  ==================================================
@@ -8461,35 +8594,36 @@ body {
 	Navigation
 	================================================== */
 @media (min-width: 768px) {
-  /* line 39, ../scss/author.scss */
+  /* line 50, ../scss/author.scss */
   .navbar {
     border-radius: 0;
     min-height: 0;
   }
 
-  /* line 43, ../scss/author.scss */
+  /* line 54, ../scss/author.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  /* line 47, ../scss/author.scss */
+  /* line 58, ../scss/author.scss */
   .navbar-brand {
     padding-top: 9px;
     padding-bottom: 9px;
   }
 }
-/* line 53, ../scss/author.scss */
+/* line 64, ../scss/author.scss */
 .breadcrumb--pbd {
   margin-bottom: 0;
   background-color: #FAFAFA;
 }
 
-/* line 58, ../scss/author.scss */
+/* line 69, ../scss/author.scss */
 .navbar {
   border-radius: 0;
+  margin-bottom: 0px;
 }
-/* line 61, ../scss/author.scss */
+/* line 73, ../scss/author.scss */
 .navbar.navbar--green {
   background-color: #008000;
   border-bottom: #9ACD32 4px solid;
@@ -8498,24 +8632,24 @@ body {
 }
 
 /* the navigation link selectors... */
-/* line 70, ../scss/author.scss */
+/* line 82, ../scss/author.scss */
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
   color: #FAFAFA;
 }
 
-/* line 74, ../scss/author.scss */
+/* line 86, ../scss/author.scss */
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 /* the navigation hover selectors... wtf... */
-/* line 79, ../scss/author.scss */
+/* line 91, ../scss/author.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
   color: #ffd059;
 }
 
-/* line 87, ../scss/author.scss */
+/* line 99, ../scss/author.scss */
 .widget__title {
   font-size: 18px;
   font-weight: bold;
@@ -8524,18 +8658,69 @@ body {
 /*  ==================================================
 	Main Content
 	================================================== */
+/* line 113, ../scss/author.scss */
+.news__title {
+  color: #008000;
+}
+
+/* line 117, ../scss/author.scss */
+.news__divider {
+  margin: 8px 0;
+}
+
+/* line 121, ../scss/author.scss */
+.tease {
+  margin: 16px 0;
+}
+
+/* line 125, ../scss/author.scss */
+.tease__thumbnail {
+  float: left;
+  padding-right: 16px;
+}
+
+/* line 129, ../scss/author.scss */
+.tease__title a {
+  color: #252525;
+  -webkit-transition: color 500ms;
+  -moz-transition: color 500ms;
+  transition: color 500ms;
+}
+/* line 135, ../scss/author.scss */
+.tease__title a:hover {
+  color: #428bca;
+}
+
 /*  ==================================================
 	Page
 	================================================== */
-/* line 106, ../scss/author.scss */
+/* line 144, ../scss/author.scss */
 .page__header {
   margin: 0 0 16px 0;
 }
 
 /*  ==================================================
+	Widgets
+	================================================== */
+/* line 151, ../scss/author.scss */
+.widget {
+  border: 3px #CDCDCD solid;
+  border-radius: 5px;
+  padding: 10px;
+  background: #FCFCFC;
+  margin-bottom: 16px;
+}
+
+/* line 159, ../scss/author.scss */
+.widget__title {
+  text-align: center;
+  margin-top: 5px;
+}
+
+/*  ==================================================
 	Footer
 	================================================== */
-/* line 115, ../scss/author.scss */
+/* line 168, ../scss/author.scss */
 .mainFooter {
   border-top: #5e5e5e 4px solid;
   background: #444444;
@@ -8545,19 +8730,19 @@ body {
   margin: 0 auto;
 }
 
-/* line 124, ../scss/author.scss */
+/* line 177, ../scss/author.scss */
 .mainFooter__item {
   vertical-align: top;
   text-align: left;
 }
 
-/* line 128, ../scss/author.scss */
+/* line 181, ../scss/author.scss */
 .mainFooter__link {
   text-decoration: none;
   color: #FAFAFA;
 }
 
-/* line 132, ../scss/author.scss */
+/* line 185, ../scss/author.scss */
 .mainFooter__linkGroup {
   width: auto;
   width: -moz-fit-content;
