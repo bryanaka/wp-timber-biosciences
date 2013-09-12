@@ -11,7 +11,6 @@ Text Domain: biosciences
 Domain Path: /languages/
 Tags: pbd, physical, biosciences, modern, front-end, developer, theme, timber, twig
 
-bioscience is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 */
 /* This file will have the vaiables for bootstrap and other files */
 /* Laboratory Blue (Slightly better version) */
@@ -8372,13 +8371,165 @@ td.visible-print {
   transition: height 0.35s ease;
 }
 
-/* line 1, ../scss/slider.scss */
+/* line 1, ../scss/base/_global_styles.scss */
+body {
+  background-color: #F2F2F2;
+  font-size: 16px;
+}
+
+/* line 5, ../scss/base/_global_styles.scss */
+.container-wrap {
+  border-left: 4px #DEDEDE solid;
+  border-right: 4px #DEDEDE solid;
+  background-color: #FCFCFC;
+  padding: 16px 32px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* line 1, ../scss/headers/_lab_header.scss */
+.labHeader {
+  background: #00395a;
+  color: #ffffff;
+  font-weight: 500;
+  padding: .25em 0 .25em 0;
+  border-bottom: #00598d 4px solid;
+}
+
+/* line 9, ../scss/headers/_lab_header.scss */
+.labHeader__brand {
+  max-width: 100px;
+  height: auto;
+  padding: 0.2em 1em 0 .5em;
+  padding: 0.2rem 1rem 0 .5rem;
+  display: inline;
+  float: left;
+  margin-top: -4px;
+}
+
+/* line 19, ../scss/headers/_lab_header.scss */
+.labHeader__name {
+  position: relative;
+  top: 12px;
+}
+
+/* line 24, ../scss/headers/_lab_header.scss */
+.labHeader__headline {
+  font-size: 28px;
+  font-size: 1.75rem;
+  margin-top: .25rem;
+  padding-left: 3px;
+}
+
+/* line 30, ../scss/headers/_lab_header.scss */
+.labHeader__links {
+  margin-top: 2.5px;
+  text-align: right;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding-right: 16px;
+  display: inline-block;
+}
+
+/* line 45, ../scss/headers/_lab_header.scss */
+.labHeader__link {
+  text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  padding: .25em 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 55, ../scss/headers/_lab_header.scss */
+.labHeader__link:hover {
+  color: #008ada;
+}
+
+/* line 60, ../scss/headers/_lab_header.scss */
+.labHeader__DOE {
+  text-align: left;
+  display: inline-block !important;
+  vertical-align: top;
+}
+/* line 65, ../scss/headers/_lab_header.scss */
+.labHeader__DOE img {
+  max-width: 200px;
+  max-height: 50px;
+  height: 100%;
+  margin-top: 2.5px;
+}
+
+/*  ==================================================
+	Header
+	================================================== */
+/*  ==================================================
+	Main Navigation
+	================================================== */
+@media (min-width: 768px) {
+  /* line 5, ../scss/nav/_main_nav.scss */
+  .navbar {
+    border-radius: 0;
+    min-height: 0;
+  }
+
+  /* line 9, ../scss/nav/_main_nav.scss */
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* line 13, ../scss/nav/_main_nav.scss */
+  .navbar-brand {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+/* line 19, ../scss/nav/_main_nav.scss */
+.breadcrumb--pbd {
+  margin-bottom: 0;
+  background-color: #FAFAFA;
+}
+
+/* line 24, ../scss/nav/_main_nav.scss */
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0px;
+}
+/* line 28, ../scss/nav/_main_nav.scss */
+.navbar.navbar--green {
+  background-color: #008000;
+  border-bottom: #9ACD32 4px solid;
+  border-left: none;
+  border-right: none;
+}
+
+/* the navigation link selectors... */
+/* line 37, ../scss/nav/_main_nav.scss */
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+  color: #FAFAFA;
+}
+
+/* line 41, ../scss/nav/_main_nav.scss */
+.navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* the navigation hover selectors... wtf... */
+/* line 46, ../scss/nav/_main_nav.scss */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
+  color: #ffd059;
+}
+
+/* line 1, ../scss/components/_slider.scss */
 .slider-container {
   width: 100%;
   position: relative;
 }
 
-/* line 6, ../scss/slider.scss */
+/* line 6, ../scss/components/_slider.scss */
 .slider {
   position: relative;
   list-style: none;
@@ -8388,14 +8539,14 @@ td.visible-print {
   margin: 0;
 }
 
-/* line 15, ../scss/slider.scss */
+/* line 15, ../scss/components/_slider.scss */
 .slider li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-/* line 21, ../scss/slider.scss */
+/* line 21, ../scss/components/_slider.scss */
 .slide {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -8405,7 +8556,7 @@ td.visible-print {
   top: 0;
 }
 
-/* line 30, ../scss/slider.scss */
+/* line 30, ../scss/components/_slider.scss */
 .slide__image {
   display: block;
   height: auto;
@@ -8414,7 +8565,7 @@ td.visible-print {
   border: 0;
 }
 
-/* line 38, ../scss/slider.scss */
+/* line 38, ../scss/components/_slider.scss */
 .slide__caption {
   background: #252525;
   color: #FAFAFA;
@@ -8425,13 +8576,13 @@ td.visible-print {
   z-index: 10;
   opacity: 0.95;
 }
-/* line 48, ../scss/slider.scss */
+/* line 48, ../scss/components/_slider.scss */
 .slide__caption a {
   float: right;
   padding-right: 8px;
 }
 
-/* line 55, ../scss/slider.scss */
+/* line 55, ../scss/components/_slider.scss */
 .slides_nav {
   z-index: 3;
   position: absolute;
@@ -8449,18 +8600,18 @@ td.visible-print {
   height: 85%;
 }
 
-/* line 71, ../scss/slider.scss */
+/* line 71, ../scss/components/_slider.scss */
 .slides_nav.next {
   left: auto;
   right: 0;
 }
 
-/* line 76, ../scss/slider.scss */
+/* line 76, ../scss/components/_slider.scss */
 .slides_nav:focus {
   outline: none;
 }
 
-/* line 80, ../scss/slider.scss */
+/* line 80, ../scss/components/_slider.scss */
 .slides_tabs {
   list-style: none;
   margin-left: 0;
@@ -8469,7 +8620,7 @@ td.visible-print {
   text-align: center;
 }
 
-/* line 88, ../scss/slider.scss */
+/* line 88, ../scss/components/_slider.scss */
 .slides_tabs li {
   display: inline;
   float: none;
@@ -8478,7 +8629,7 @@ td.visible-print {
   margin-right: 5px;
 }
 
-/* line 96, ../scss/slider.scss */
+/* line 96, ../scss/components/_slider.scss */
 .slides_tabs a {
   text-indent: -9999px;
   overflow: hidden;
@@ -8495,223 +8646,28 @@ td.visible-print {
   height: 9px;
 }
 
-/* line 112, ../scss/slider.scss */
+/* line 112, ../scss/components/_slider.scss */
 .slides_here a {
   background: #222;
   background: rgba(0, 0, 0, 0.8);
-}
-
-/* line 1, ../scss/_lab_header.scss */
-.labHeader {
-  background: #00395a;
-  color: #ffffff;
-  font-weight: 500;
-  padding: .25em 0 .25em 0;
-  border-bottom: #00598d 4px solid;
-}
-
-/* line 9, ../scss/_lab_header.scss */
-.labHeader__brand {
-  max-width: 100px;
-  height: auto;
-  padding: 0.2em 1em 0 .5em;
-  padding: 0.2rem 1rem 0 .5rem;
-  display: inline;
-  float: left;
-  margin-top: -4px;
-}
-
-/* line 19, ../scss/_lab_header.scss */
-.labHeader__name {
-  position: relative;
-  top: 12px;
-}
-
-/* line 24, ../scss/_lab_header.scss */
-.labHeader__headline {
-  font-size: 28px;
-  font-size: 1.75rem;
-  margin-top: .25rem;
-}
-
-/* line 29, ../scss/_lab_header.scss */
-.labHeader__links {
-  margin-top: 2.5px;
-  text-align: right;
-  font-size: 12px;
-  font-size: 0.75rem;
-  padding-right: 16px;
-  display: inline-block;
-}
-
-/* line 44, ../scss/_lab_header.scss */
-.labHeader__link {
-  text-decoration: none;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 12px;
-  padding: .25em 0;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-/* line 54, ../scss/_lab_header.scss */
-.labHeader__link:hover {
-  color: #008ada;
-}
-
-/* line 59, ../scss/_lab_header.scss */
-.labHeader__DOE {
-  text-align: left;
-  display: inline-block !important;
-  vertical-align: top;
-}
-/* line 64, ../scss/_lab_header.scss */
-.labHeader__DOE img {
-  max-width: 200px;
-  max-height: 50px;
-  height: 100%;
-  margin-top: 2.5px;
-}
-
-/* line 1, ../scss/author.scss */
-body {
-  background-color: #F2F2F2;
-  font-size: 16px;
-}
-
-/* line 5, ../scss/author.scss */
-.container-wrap {
-  border-left: 4px #DEDEDE solid;
-  border-right: 4px #DEDEDE solid;
-  background-color: #FCFCFC;
-  padding: 16px 32px;
-  max-width: 1250px;
-  margin: 0 auto;
-}
-
-/*  ==================================================
-	Header
-	================================================== */
-/*  ==================================================
-	Navigation
-	================================================== */
-@media (min-width: 768px) {
-  /* line 5, ../scss/nav.scss */
-  .navbar {
-    border-radius: 0;
-    min-height: 0;
-  }
-
-  /* line 9, ../scss/nav.scss */
-  .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  /* line 13, ../scss/nav.scss */
-  .navbar-brand {
-    padding-top: 9px;
-    padding-bottom: 9px;
-  }
-}
-/* line 19, ../scss/nav.scss */
-.breadcrumb--pbd {
-  margin-bottom: 0;
-  background-color: #FAFAFA;
-}
-
-/* line 24, ../scss/nav.scss */
-.navbar {
-  border-radius: 0;
-  margin-bottom: 0px;
-}
-/* line 28, ../scss/nav.scss */
-.navbar.navbar--green {
-  background-color: #008000;
-  border-bottom: #9ACD32 4px solid;
-  border-left: none;
-  border-right: none;
-}
-
-/* the navigation link selectors... */
-/* line 37, ../scss/nav.scss */
-.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
-  color: #FAFAFA;
-}
-
-/* line 41, ../scss/nav.scss */
-.navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-/* the navigation hover selectors... wtf... */
-/* line 46, ../scss/nav.scss */
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
-  color: #ffd059;
 }
 
 /*  ==================================================
 	Sidebar
 	================================================== */
 /*  ==================================================
-	Main Content
-	================================================== */
-/* line 9, ../scss/content.scss */
-.news__title {
-  color: #008000;
-}
-
-/* line 13, ../scss/content.scss */
-.news__divider {
-  margin: 8px 0;
-}
-
-/* line 17, ../scss/content.scss */
-.tease {
-  margin: 16px 0;
-}
-
-/* line 21, ../scss/content.scss */
-.tease__thumbnail {
-  float: left;
-  padding-right: 16px;
-}
-
-/* line 25, ../scss/content.scss */
-.tease__title a {
-  color: #252525;
-  -webkit-transition: color 500ms;
-  -moz-transition: color 500ms;
-  transition: color 500ms;
-}
-/* line 31, ../scss/content.scss */
-.tease__title a:hover {
-  color: #428bca;
-}
-
-/*  ==================================================
-	Page
-	================================================== */
-/* line 40, ../scss/content.scss */
-.page__header {
-  margin: 0 0 16px 0;
-}
-
-/*  ==================================================
 	Widgets
 	================================================== */
-/* line 4, ../scss/widgets.scss */
+/* line 4, ../scss/components/_widget.scss */
 .widget {
   border: 3px #CECECE solid;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 16px;
   background: #FAFAFA;
   margin-bottom: 16px;
 }
 
-/* line 12, ../scss/widgets.scss */
+/* line 12, ../scss/components/_widget.scss */
 .widget__title {
   font-size: 18px;
   font-weight: bold;
@@ -8720,9 +8676,68 @@ body {
 }
 
 /*  ==================================================
-	Footer
+	Main Content
 	================================================== */
-/* line 5, ../scss/footer.scss */
+/*  ==================================================
+	Pages
+	================================================== */
+/* line 5, ../scss/content/_pages.scss */
+.page__header {
+  margin: 0 0 16px 0;
+}
+
+/*  ==================================================
+	News
+	================================================== */
+/* line 5, ../scss/content/_news.scss */
+.news__title {
+  color: #008000;
+}
+
+/* line 9, ../scss/content/_news.scss */
+.news__divider {
+  margin: 8px 0;
+}
+
+/*  ==================================================
+	News Teaser - previews
+	================================================== */
+/* line 17, ../scss/content/_news.scss */
+.tease {
+  margin: 16px 0;
+  background-color: #FAFAFA;
+  border: 3px #DCDCDC solid;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+/* line 25, ../scss/content/_news.scss */
+.tease__title {
+  margin-top: 0px;
+}
+
+/* line 29, ../scss/content/_news.scss */
+.tease__thumbnail {
+  float: left;
+  padding-right: 16px;
+}
+
+/* line 33, ../scss/content/_news.scss */
+.tease__title a {
+  color: #252525;
+  -webkit-transition: color 500ms;
+  -moz-transition: color 500ms;
+  transition: color 500ms;
+}
+/* line 39, ../scss/content/_news.scss */
+.tease__title a:hover {
+  color: #428bca;
+}
+
+/*  ==================================================
+	Main Footer
+	================================================== */
+/* line 5, ../scss/footers/_main_footer.scss */
 .mainFooter {
   border-top: #5e5e5e 4px solid;
   background: #333333;
@@ -8733,19 +8748,19 @@ body {
   overflow: hidden;
 }
 
-/* line 15, ../scss/footer.scss */
+/* line 15, ../scss/footers/_main_footer.scss */
 .mainFooter__item {
   vertical-align: top;
   text-align: left;
 }
 
-/* line 19, ../scss/footer.scss */
+/* line 19, ../scss/footers/_main_footer.scss */
 .mainFooter__link {
   text-decoration: none;
   color: #FAFAFA;
 }
 
-/* line 23, ../scss/footer.scss */
+/* line 23, ../scss/footers/_main_footer.scss */
 .mainFooter__linkGroup {
   width: auto;
   width: -moz-fit-content;
@@ -8760,7 +8775,7 @@ body {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 7, ../scss/_print.scss */
+  /* line 7, ../scss/support/_print.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -8769,18 +8784,18 @@ body {
     text-shadow: none !important;
   }
 
-  /* line 15, ../scss/_print.scss */
+  /* line 15, ../scss/support/_print.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 19, ../scss/_print.scss */
+  /* line 19, ../scss/support/_print.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 23, ../scss/_print.scss */
+  /* line 23, ../scss/support/_print.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -8788,31 +8803,31 @@ body {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 33, ../scss/_print.scss */
+  /* line 33, ../scss/support/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 37, ../scss/_print.scss */
+  /* line 37, ../scss/support/_print.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 42, ../scss/_print.scss */
+  /* line 42, ../scss/support/_print.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 47, ../scss/_print.scss */
+  /* line 47, ../scss/support/_print.scss */
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 51, ../scss/_print.scss */
+  /* line 51, ../scss/support/_print.scss */
   img {
     max-width: 100% !important;
   }
@@ -8821,13 +8836,13 @@ body {
     margin: 0.5cm;
 }
 
-  /* line 59, ../scss/_print.scss */
+  /* line 59, ../scss/support/_print.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 64, ../scss/_print.scss */
+  /* line 64, ../scss/support/_print.scss */
   h2, h3 {
     page-break-after: avoid;
   }

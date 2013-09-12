@@ -24,6 +24,7 @@
 	.labHeader__headline {
 		@include font-size(1.75);
 		margin-top:.25rem;
+		padding-left: 3px;
 	}
 
 	.labHeader__links {
