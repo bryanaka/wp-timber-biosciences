@@ -1,0 +1,48 @@
+/*  ==================================================
+	Navigation
+	================================================== */
+@media (min-width: 768px){
+	.navbar {
+		border-radius: 0;
+		min-height: 0;
+	}
+	.navbar-nav > li > a {
+		padding-top: 10px;
+		padding-bottom: 10px; 
+	}
+	.navbar-brand {
+		padding-top: 9px;
+		padding-bottom: 9px; 
+	}
+}
+
+.breadcrumb--pbd {
+	margin-bottom: 0;
+	background-color: #FAFAFA;
+}
+
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0px;
+
+	&.navbar--green {
+		background-color: #008000;
+		border-bottom: #9ACD32 4px solid;
+		border-left: none;
+		border-right: none;
+	}
+}
+
+/* the navigation link selectors... */
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+	color: #FAFAFA;
+}
+
+.navbar-nav > li > a {
+	padding-top: 10px;
+	padding-bottom: 10px; 
+}
+/* the navigation hover selectors... wtf... */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
+	color: #ffd059;
+}

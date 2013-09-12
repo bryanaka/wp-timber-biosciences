@@ -1,13 +1,19 @@
 {% extends "layout/base.twig" %}
 {% block content %}
 	<div class="col-sm-8 col-xs-12">
+		<div class="row">
+			<h1 class="col-md-12 page__header hidden-sm hidden-xs">
+				The Physical Biosciences Division
+			</h1>
+		<h1 class="col-xs-12 page__header visible-sm">Welcome to PBD</h1>
+		</div>
 		<div class="list">
 			<div class="slider-container">
 				<ul class="slider">
 					{% for post in posts %}
 						{% if post.featured_news_item == 'yes' %}
 							<li class="slide">
-								<img src="{{ post.get_image('featured_news_image').src|resize(760,450) }}" alt="Featured Image - {{post.title}}" class="slide__image">
+								<img src="{{ post.get_image('featured_news_image').src|resize(760,400) }}" alt="Featured Image - {{post.title}}" class="slide__image">
 								<div class="slide__caption">
 									{{post.title}} <a href="{{post.permalink}}">Read More <i class="icon-arror-right"></i> </a>
 								</div>

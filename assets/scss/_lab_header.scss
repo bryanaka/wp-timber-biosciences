@@ -13,7 +13,12 @@
 		padding: 0.2rem 1rem 0 .5rem;
 		display:inline;
 		float: left;
-		margin-top: -.35em;
+		margin-top: -4px;
+	}
+
+	.labHeader__name {
+		position: relative;
+		top: 12px;
 	}
 
 	.labHeader__headline {
@@ -22,11 +27,18 @@
 	}
 
 	.labHeader__links {
-		margin-top: .15rem;
+		margin-top: 2.5px;
 		text-align: right;
 		@include font-size(.75);
-		padding-right: 0.5em;
-		padding-right: 0.5rem;
+		padding-right: 16px;
+		display: inline-block;
+	}
+	.labHeader__links {
+	// background no supported in IE8 and cant seem to size correctly.
+	// background-image: url('assets/img/doe_seal_white_o35.png');
+	// background-size: 31% 100%;
+	// background-repeat: no-repeat;
+	// background-position: 100% 0%;
 	}
 
 	.labHeader__link {
@@ -36,6 +48,8 @@
 		font-size: 12px;
 		padding:.25em 0;
 		display:block;
+		margin: 0;
+		padding: 0;
 
 		&:hover {
 			color: lighten($lab-blue, 25%);
@@ -43,22 +57,15 @@
 	}
 
 	.labHeader__DOE {
-		text-align:right;
-		float: right;
-		padding-right: 1em;
-		padding-right: 1rem;
-		padding-top: 0.2em;
-		padding-top: 0.2rem;
-		max-width: 200px;
-		height: 100%;
-		@include font-size(.75);
+		text-align: left;
+		display: inline-block !important; // twitter responsive utils force my hand.
+		vertical-align: top;
+		
 		img {
-			max-width:185.4px;
-			max-height: 45px;
-			width:110%;
-		}
-		.DOE__energy {
-			@include font-size(1.25);
+			max-width: 200px;
+			max-height: 50px;
+			height: 100%;
+			margin-top: 2.5px;
 		}
 
 	}

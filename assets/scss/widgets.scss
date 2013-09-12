@@ -1,0 +1,17 @@
+/*  ==================================================
+	Widgets
+	================================================== */
+.widget {
+	border: 3px #CECECE solid;
+	border-radius: 10px;
+	padding: 10px;
+	background: #FAFAFA;
+	margin-bottom: 16px;
+}
+
+.widget__title {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 5px;
+}

@@ -1,0 +1,43 @@
+/*  ==================================================
+	Main Content
+	================================================== */
+
+.main_content {
+
+}
+
+.news__title {
+	color: #008000;
+}
+
+.news__divider {
+	margin: 8px 0;
+}
+
+.tease {
+	margin: 16px 0;
+}
+
+.tease__thumbnail {
+	float: left;
+	padding-right: 16px;
+}
+.tease__title a {
+	color: #252525;
+	-webkit-transition: color 500ms;
+	   -moz-transition: color 500ms;
+			transition: color 500ms; 
+
+	&:hover {
+		color: #428bca;
+	}
+}
+
+/*  ==================================================
+	Page
+	================================================== */
+
+.page__header {
+	margin: 0 0 16px 0;
+
+}

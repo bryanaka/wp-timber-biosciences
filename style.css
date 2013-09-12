@@ -8416,16 +8416,22 @@ td.visible-print {
 
 /* line 38, ../scss/slider.scss */
 .slide__caption {
-  background: #000000;
+  background: #252525;
   color: #FAFAFA;
   position: absolute;
   width: 100%;
   bottom: 0;
-  padding: 5px;
+  padding: 5px 5px 5px 8px;
   z-index: 10;
+  opacity: 0.95;
+}
+/* line 48, ../scss/slider.scss */
+.slide__caption a {
+  float: right;
+  padding-right: 8px;
 }
 
-/* line 48, ../scss/slider.scss */
+/* line 55, ../scss/slider.scss */
 .slides_nav {
   z-index: 3;
   position: absolute;
@@ -8443,18 +8449,18 @@ td.visible-print {
   height: 85%;
 }
 
-/* line 64, ../scss/slider.scss */
+/* line 71, ../scss/slider.scss */
 .slides_nav.next {
   left: auto;
   right: 0;
 }
 
-/* line 69, ../scss/slider.scss */
+/* line 76, ../scss/slider.scss */
 .slides_nav:focus {
   outline: none;
 }
 
-/* line 73, ../scss/slider.scss */
+/* line 80, ../scss/slider.scss */
 .slides_tabs {
   list-style: none;
   margin-left: 0;
@@ -8463,7 +8469,7 @@ td.visible-print {
   text-align: center;
 }
 
-/* line 81, ../scss/slider.scss */
+/* line 88, ../scss/slider.scss */
 .slides_tabs li {
   display: inline;
   float: none;
@@ -8472,7 +8478,7 @@ td.visible-print {
   margin-right: 5px;
 }
 
-/* line 89, ../scss/slider.scss */
+/* line 96, ../scss/slider.scss */
 .slides_tabs a {
   text-indent: -9999px;
   overflow: hidden;
@@ -8489,7 +8495,7 @@ td.visible-print {
   height: 9px;
 }
 
-/* line 105, ../scss/slider.scss */
+/* line 112, ../scss/slider.scss */
 .slides_here a {
   background: #222;
   background: rgba(0, 0, 0, 0.8);
@@ -8512,27 +8518,33 @@ td.visible-print {
   padding: 0.2rem 1rem 0 .5rem;
   display: inline;
   float: left;
-  margin-top: -.35em;
+  margin-top: -4px;
 }
 
 /* line 19, ../scss/_lab_header.scss */
+.labHeader__name {
+  position: relative;
+  top: 12px;
+}
+
+/* line 24, ../scss/_lab_header.scss */
 .labHeader__headline {
   font-size: 28px;
   font-size: 1.75rem;
   margin-top: .25rem;
 }
 
-/* line 24, ../scss/_lab_header.scss */
+/* line 29, ../scss/_lab_header.scss */
 .labHeader__links {
-  margin-top: .15rem;
+  margin-top: 2.5px;
   text-align: right;
   font-size: 12px;
   font-size: 0.75rem;
-  padding-right: 0.5em;
-  padding-right: 0.5rem;
+  padding-right: 16px;
+  display: inline-block;
 }
 
-/* line 32, ../scss/_lab_header.scss */
+/* line 44, ../scss/_lab_header.scss */
 .labHeader__link {
   text-decoration: none;
   color: #ffffff;
@@ -8540,47 +8552,38 @@ td.visible-print {
   font-size: 12px;
   padding: .25em 0;
   display: block;
+  margin: 0;
+  padding: 0;
 }
-/* line 40, ../scss/_lab_header.scss */
+/* line 54, ../scss/_lab_header.scss */
 .labHeader__link:hover {
   color: #008ada;
 }
 
-/* line 45, ../scss/_lab_header.scss */
+/* line 59, ../scss/_lab_header.scss */
 .labHeader__DOE {
-  text-align: right;
-  float: right;
-  padding-right: 1em;
-  padding-right: 1rem;
-  padding-top: 0.2em;
-  padding-top: 0.2rem;
-  max-width: 200px;
-  height: 100%;
-  font-size: 12px;
-  font-size: 0.75rem;
+  text-align: left;
+  display: inline-block !important;
+  vertical-align: top;
 }
-/* line 55, ../scss/_lab_header.scss */
+/* line 64, ../scss/_lab_header.scss */
 .labHeader__DOE img {
-  max-width: 185.4px;
-  max-height: 45px;
-  width: 110%;
-}
-/* line 60, ../scss/_lab_header.scss */
-.labHeader__DOE .DOE__energy {
-  font-size: 20px;
-  font-size: 1.25rem;
+  max-width: 200px;
+  max-height: 50px;
+  height: 100%;
+  margin-top: 2.5px;
 }
 
 /* line 1, ../scss/author.scss */
 body {
-  background-color: #FAFAFA;
+  background-color: #F2F2F2;
   font-size: 16px;
 }
 
 /* line 5, ../scss/author.scss */
 .container-wrap {
-  border-left: 3px #CDCDCD solid;
-  border-right: 3px #CDCDCD solid;
+  border-left: 4px #DEDEDE solid;
+  border-right: 4px #DEDEDE solid;
   background-color: #FCFCFC;
   padding: 16px 32px;
   max-width: 1250px;
@@ -8594,36 +8597,36 @@ body {
 	Navigation
 	================================================== */
 @media (min-width: 768px) {
-  /* line 50, ../scss/author.scss */
+  /* line 5, ../scss/nav.scss */
   .navbar {
     border-radius: 0;
     min-height: 0;
   }
 
-  /* line 54, ../scss/author.scss */
+  /* line 9, ../scss/nav.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  /* line 58, ../scss/author.scss */
+  /* line 13, ../scss/nav.scss */
   .navbar-brand {
     padding-top: 9px;
     padding-bottom: 9px;
   }
 }
-/* line 64, ../scss/author.scss */
+/* line 19, ../scss/nav.scss */
 .breadcrumb--pbd {
   margin-bottom: 0;
   background-color: #FAFAFA;
 }
 
-/* line 69, ../scss/author.scss */
+/* line 24, ../scss/nav.scss */
 .navbar {
   border-radius: 0;
   margin-bottom: 0px;
 }
-/* line 73, ../scss/author.scss */
+/* line 28, ../scss/nav.scss */
 .navbar.navbar--green {
   background-color: #008000;
   border-bottom: #9ACD32 4px solid;
@@ -8632,61 +8635,58 @@ body {
 }
 
 /* the navigation link selectors... */
-/* line 82, ../scss/author.scss */
+/* line 37, ../scss/nav.scss */
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
   color: #FAFAFA;
 }
 
-/* line 86, ../scss/author.scss */
+/* line 41, ../scss/nav.scss */
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 /* the navigation hover selectors... wtf... */
-/* line 91, ../scss/author.scss */
+/* line 46, ../scss/nav.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
   color: #ffd059;
 }
 
-/* line 99, ../scss/author.scss */
-.widget__title {
-  font-size: 18px;
-  font-weight: bold;
-}
-
+/*  ==================================================
+	Sidebar
+	================================================== */
 /*  ==================================================
 	Main Content
 	================================================== */
-/* line 113, ../scss/author.scss */
+/* line 9, ../scss/content.scss */
 .news__title {
   color: #008000;
 }
 
-/* line 117, ../scss/author.scss */
+/* line 13, ../scss/content.scss */
 .news__divider {
   margin: 8px 0;
 }
 
-/* line 121, ../scss/author.scss */
+/* line 17, ../scss/content.scss */
 .tease {
   margin: 16px 0;
 }
 
-/* line 125, ../scss/author.scss */
+/* line 21, ../scss/content.scss */
 .tease__thumbnail {
   float: left;
   padding-right: 16px;
 }
 
-/* line 129, ../scss/author.scss */
+/* line 25, ../scss/content.scss */
 .tease__title a {
   color: #252525;
   -webkit-transition: color 500ms;
   -moz-transition: color 500ms;
   transition: color 500ms;
 }
-/* line 135, ../scss/author.scss */
+/* line 31, ../scss/content.scss */
 .tease__title a:hover {
   color: #428bca;
 }
@@ -8694,7 +8694,7 @@ body {
 /*  ==================================================
 	Page
 	================================================== */
-/* line 144, ../scss/author.scss */
+/* line 40, ../scss/content.scss */
 .page__header {
   margin: 0 0 16px 0;
 }
@@ -8702,17 +8702,19 @@ body {
 /*  ==================================================
 	Widgets
 	================================================== */
-/* line 151, ../scss/author.scss */
+/* line 4, ../scss/widgets.scss */
 .widget {
-  border: 3px #CDCDCD solid;
-  border-radius: 5px;
+  border: 3px #CECECE solid;
+  border-radius: 10px;
   padding: 10px;
-  background: #FCFCFC;
+  background: #FAFAFA;
   margin-bottom: 16px;
 }
 
-/* line 159, ../scss/author.scss */
+/* line 12, ../scss/widgets.scss */
 .widget__title {
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
   margin-top: 5px;
 }
@@ -8720,29 +8722,30 @@ body {
 /*  ==================================================
 	Footer
 	================================================== */
-/* line 168, ../scss/author.scss */
+/* line 5, ../scss/footer.scss */
 .mainFooter {
   border-top: #5e5e5e 4px solid;
-  background: #444444;
+  background: #333333;
   padding: 1.5em;
   padding: 1.5rem;
   color: #FFFFFF;
   margin: 0 auto;
+  overflow: hidden;
 }
 
-/* line 177, ../scss/author.scss */
+/* line 15, ../scss/footer.scss */
 .mainFooter__item {
   vertical-align: top;
   text-align: left;
 }
 
-/* line 181, ../scss/author.scss */
+/* line 19, ../scss/footer.scss */
 .mainFooter__link {
   text-decoration: none;
   color: #FAFAFA;
 }
 
-/* line 185, ../scss/author.scss */
+/* line 23, ../scss/footer.scss */
 .mainFooter__linkGroup {
   width: auto;
   width: -moz-fit-content;

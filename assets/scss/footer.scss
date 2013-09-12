@@ -1,0 +1,33 @@
+/*  ==================================================
+	Footer
+	================================================== */
+
+.mainFooter {
+	border-top: lighten(#444444, 10%) 4px solid;
+	background: #333333;
+	padding: 1.5em;
+	padding: 1.5rem;
+	color: #FFFFFF;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.mainFooter__item {
+	vertical-align: top;
+	text-align: left;
+}
+.mainFooter__link {
+	text-decoration: none;
+	color: #FAFAFA;
+}
+.mainFooter__linkGroup {
+	width: auto;
+	width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    min-width: 250px;
+	margin: 0 auto 20px auto;
+}
+.mainFooter__subheader {
+	
+}
