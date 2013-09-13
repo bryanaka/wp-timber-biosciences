@@ -30,7 +30,7 @@
 				{% endblock %}
 
 				{% block sidebar %}
-					<aside id="sidebar" class="col-sm-4 col-xs-12" role="complementary">
+					<aside id="sidebar" class="col-md-4" role="complementary">
 						{{main_sidebar}}
 					</aside>
 				{% endblock %}
@@ -43,10 +43,6 @@
 	{% block footer %}
 		{% include "components/footer.twig" %}
 	{% endblock %}
-{#
-<script data-main="{{theme_dir}}/assets/js/main" src="{{theme_dir}}/assets/bower_lib/requirejs/require.js"></script>
-#}
-<script src="{{theme_dir}}/assets/js/main-built.js"></script>
 {{wp_footer}}
 </body>
 </html>

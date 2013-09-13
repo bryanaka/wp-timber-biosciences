@@ -8,6 +8,7 @@ Class Base extends Timber {
 
 	public $context;
 	public $posts;
+	public $post;
 	public $page;
 	public $menus = array();
 	public $sidebars = array();
@@ -39,25 +40,37 @@ Class Base extends Timber {
 		}
 		return $results;
 	}
+
+	public function get_current_post() {
+		$this->post = new TimberPost();
+		return $this->post;
+	}
 	// how could we filter posts from these results if needed? how to reduce queries?
 
 	public function find_page($pid = null) {
-		$this->page = new TimberPost($pid = null);
+		$this->page = new TimberPost($pid);
 		return $this->page;
 	}
+
+	
 
 	public function render_page( $filenames, $echo = true ) {
 		$this->add_to_context('menus');
 		$this->add_to_context('posts');
 		$this->add_to_context('page');
+		$this->add_to_context('post');
 		parent::render($filenames, $this->context, $echo);
 	}
 
 	private function add_to_context ($property) {
-		if( property_exists($this, $property) ) {
+		if( isset($this->{$property}) && property_exists($this, $property) ) {
 			$this->context[$property] = $this->{$property};
-		} else {
+			return true;
+		} elseif ( isset($this->{$property}) && !property_exists($this, $property) ) {
 			throw new InvalidArgumentException("No Property Found with the name {$property} in " +get_class($this));
+		} else {
+			return false;
 		}
 	}
+
 }
