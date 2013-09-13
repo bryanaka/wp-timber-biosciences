@@ -8705,31 +8705,37 @@ body {
 /* line 17, ../scss/content/_news.scss */
 .tease {
   margin: 16px 0;
-  background-color: #FAFAFA;
-  border: 3px #DCDCDC solid;
-  padding: 16px;
-  border-radius: 5px;
+  border-top: 7px #008000 solid;
 }
 
-/* line 25, ../scss/content/_news.scss */
+/* line 22, ../scss/content/_news.scss */
+.tease-container {
+  padding: 16px;
+  border-left: 2px #DCDCDC solid;
+  border-right: 2px #DCDCDC solid;
+  border-bottom: 2px #DCDCDC solid;
+  background-color: #FAFAFA;
+}
+
+/* line 31, ../scss/content/_news.scss */
 .tease__title {
   margin-top: 0px;
 }
 
-/* line 29, ../scss/content/_news.scss */
+/* line 35, ../scss/content/_news.scss */
 .tease__thumbnail {
   float: left;
   padding-right: 16px;
 }
 
-/* line 33, ../scss/content/_news.scss */
+/* line 39, ../scss/content/_news.scss */
 .tease__title a {
   color: #252525;
   -webkit-transition: color 500ms;
   -moz-transition: color 500ms;
   transition: color 500ms;
 }
-/* line 39, ../scss/content/_news.scss */
+/* line 45, ../scss/content/_news.scss */
 .tease__title a:hover {
   color: #428bca;
 }

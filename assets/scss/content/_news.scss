@@ -16,10 +16,16 @@
 
 .tease {
 	margin: 16px 0;
-	background-color: #FAFAFA;
-	border: 3px #DCDCDC solid;
+	border-top: 7px #008000 solid;
+}
+
+.tease-container {
 	padding: 16px;
-	border-radius: 5px;
+	border-left:   2px #DCDCDC solid;
+	border-right:  2px #DCDCDC solid;
+	border-bottom: 2px #DCDCDC solid;
+	background-color: #FAFAFA;
+
 }
 
 .tease__title {
