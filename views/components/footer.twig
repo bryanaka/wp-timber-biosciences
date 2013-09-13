@@ -1,30 +1,30 @@
 <footer id="mainFooter" class="mainFooter" role="contentinfo">
 	<div class="row">
 		<div class="col-md-3 col-sm-6">
-			{% if navigation.footer_left %}
+			{% if menus.footer_left %}
 				<article class="mainFooter__linkGroup">
-					<h4 class="mainFooter__subheader">{{navigation.footer_left.name}}</h4>
-					{% for item in navigation.footer_left.get_items %}
+					<h4 class="mainFooter__subheader">{{menus.footer_left.name}}</h4>
+					{% for item in menus.footer_left.get_items %}
 						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
 					{% endfor %}
 				</article>
 			{% endif %}
 		</div>
 		<div class="col-md-3 col-sm-6">
-			{% if navigation.footer_center %}
+			{% if menus.footer_center %}
 				<article class="mainFooter__linkGroup">
-					<h4 class="mainFooter__subheader">{{navigation.footer_center.name}}</h4>
-					{% for item in navigation.footer_center.get_items %}
+					<h4 class="mainFooter__subheader">{{menus.footer_center.name}}</h4>
+					{% for item in menus.footer_center.get_items %}
 						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
 					{% endfor %}
 				</article>
 			{% endif %}
 		</div>
 		<div class="col-md-3 col-sm-6">
-			{% if navigation.footer_right %}
+			{% if menus.footer_right %}
 				<article class="mainFooter__linkGroup">
-					<h4 class="mainFooter__subheader">{{navigation.footer_right.name}}</h4>
-					{% for item in navigation.footer_right.get_items %}
+					<h4 class="mainFooter__subheader">{{menus.footer_right.name}}</h4>
+					{% for item in menus.footer_right.get_items %}
 						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
 					{% endfor %}
 				</article>

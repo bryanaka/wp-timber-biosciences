@@ -2,11 +2,13 @@
 
 use Timber as Timber;
 use TimberMenu as TimberMenu;
+use TimberPost as TimberPost;
 
 Class Base extends Timber {
 
 	public $context;
 	public $posts;
+	public $page;
 	public $menus = array();
 	public $sidebars = array();
 
@@ -39,18 +41,20 @@ Class Base extends Timber {
 	}
 	// how could we filter posts from these results if needed? how to reduce queries?
 
-	public function render_page( $filenames, $data = Array(), $echo = true ) {
-		$this->add_to_context('menus');
-		if ( !empty($data) ) {
-			$data = $this->context;
-		}
-		parent::render($filenames, $data, $echo);
+	public function find_page($pid = null) {
+		$this->page = new TimberPost($pid = null);
+		return $this->page;
+	}
 
+	public function render_page( $filenames, $echo = true ) {
+		$this->add_to_context('menus');
+		$this->add_to_context('posts');
+		$this->add_to_context('page');
+		parent::render($filenames, $this->context, $echo);
 	}
 
 	private function add_to_context ($property) {
 		if( property_exists($this, $property) ) {
-			// add a check to see if this property is valid
 			$this->context[$property] = $this->{$property};
 		} else {
 			throw new InvalidArgumentException("No Property Found with the name {$property} in " +get_class($this));
