@@ -1,0 +1,15 @@
+.card--scientist {
+	@extend .card;
+}
+
+.scientist__divider {
+	border-top-color: $pbd-green;
+	width: 99%;
+	margin-left: auto;
+	border-top-width: 2px;
+}
+
+.scientist__letter {
+	color: $pbd-green;
+	font-size: 32px;
+}

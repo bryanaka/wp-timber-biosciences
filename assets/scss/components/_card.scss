@@ -1,20 +1,34 @@
-.card {
-	background-color: $component-bg;
-	border: 3px $gray-border solid;
-	border-top: none;
-	width: 100%;
-	max-width: 200px;
-	padding: 0 8px;
-}
-
 .card-container {
 	border-top:5px $pbd-green solid;
 	text-align: center;
-	max-width: 200px;
+	max-width: 240px;
 }
 
-.card--scientist {
-	@extend .card;
+.card {
+	background-color: $component-bg;
+	border: 1px $gray-border solid;
+	border-top: none;
+	width: 100%;
+	max-width: 240px;
+	padding: 0 8px;
+	@include transition-property(background-color);
+	@include transition-duration(600ms);
+
+	&:hover {
+		background-color: #FDF5E6;
+	}
+}
+
+.card__link {
+	color: $pbd-green;
+	text-decoration: none;
+	@include transition-property(color);
+	@include transition-duration(500ms);
+
+	&:hover {
+		color: $pbd-green;
+		text-decoration: none;
+	}
 }
 
 .card__title {

@@ -8683,23 +8683,54 @@ body {
 }
 
 /* line 1, ../scss/components/_card.scss */
-.card, .card--scientist {
-  background-color: #fcfcfc;
-  border: 3px #cecece solid;
-  border-top: none;
-  width: 100%;
-  max-width: 200px;
-  padding: 0 8px;
-}
-
-/* line 10, ../scss/components/_card.scss */
 .card-container {
   border-top: 5px green solid;
   text-align: center;
-  max-width: 200px;
+  max-width: 240px;
 }
 
-/* line 24, ../scss/components/_card.scss */
+/* line 7, ../scss/components/_card.scss */
+.card, .card--scientist {
+  background-color: #fcfcfc;
+  border: 1px #cecece solid;
+  border-top: none;
+  width: 100%;
+  max-width: 240px;
+  padding: 0 8px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 600ms;
+  -moz-transition-duration: 600ms;
+  -o-transition-duration: 600ms;
+  transition-duration: 600ms;
+}
+/* line 17, ../scss/components/_card.scss */
+.card:hover, .card--scientist:hover {
+  background-color: #FDF5E6;
+}
+
+/* line 22, ../scss/components/_card.scss */
+.card__link {
+  color: green;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+/* line 28, ../scss/components/_card.scss */
+.card__link:hover {
+  color: green;
+  text-decoration: none;
+}
+
+/* line 38, ../scss/components/_card.scss */
 .card__thumb {
   max-width: 168px;
   width: 90%;
@@ -8707,13 +8738,13 @@ body {
   padding: 0 8px;
 }
 
-/* line 31, ../scss/components/_card.scss */
+/* line 45, ../scss/components/_card.scss */
 .card__subtitle {
   font-size: 20px;
   margin: 0 0 8px 0;
 }
 
-/* line 36, ../scss/components/_card.scss */
+/* line 50, ../scss/components/_card.scss */
 .card__content {
   font-size: 16px;
   margin: 0 0 8px 0;
@@ -8755,10 +8786,10 @@ body {
 /* line 22, ../scss/content/_news.scss */
 .tease-container {
   padding: 16px;
-  border-left: 2px #cecece solid;
-  border-right: 2px #cecece solid;
-  border-bottom: 2px #cecece solid;
-  background-color: #FAFAFA;
+  border-left: 1px #cecece solid;
+  border-right: 1px #cecece solid;
+  border-bottom: 1px #cecece solid;
+  background-color: #fcfcfc;
 }
 
 /* line 31, ../scss/content/_news.scss */
@@ -8782,6 +8813,20 @@ body {
 /* line 45, ../scss/content/_news.scss */
 .tease__title a:hover {
   color: #428bca;
+}
+
+/* line 5, ../scss/content/_scientists.scss */
+.scientist__divider {
+  border-top-color: green;
+  width: 99%;
+  margin-left: auto;
+  border-top-width: 2px;
+}
+
+/* line 12, ../scss/content/_scientists.scss */
+.scientist__letter {
+  color: green;
+  font-size: 32px;
 }
 
 /*  ==================================================
