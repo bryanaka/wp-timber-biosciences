@@ -1,0 +1,20 @@
+{% extends "layout/base-grid.twig" %}
+{% block content %}
+	<div class="row">
+		<h1 class="col-xs-12 page__header">{{page.title}}</h1>
+		<article class="col-xs-12 page__content">
+			{{page.content}}
+		</article>
+	</div>
+	<div class="row">
+		{% for scientist in scientists %}
+			{% if current_letter != scientist.last_name|slice(0,1) %}
+				{% set current_letter = scientist.last_name|slice(0,1) %}
+				<h2 class="col-xs-12">{{ current_letter }}</h2>
+			{% endif %}
+
+			{% include [scientist.post_type~'/preview.twig', 'posts/preview.twig'] %}
+		{% endfor %}
+	</div>
+	
+{% endblock %}

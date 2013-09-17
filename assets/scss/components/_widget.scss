@@ -2,10 +2,10 @@
 	Widgets
 	================================================== */
 .widget {
-	border: 3px #CECECE solid;
+	border: 3px $gray-border solid;
 	border-radius: 5px;
 	padding: 16px;
-	background: #FAFAFA;
+	background: $component-bg;
 	margin-bottom: 16px;
 }
 

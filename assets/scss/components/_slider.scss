@@ -36,8 +36,8 @@
 }
 
 .slide__caption {
-	background: #252525;
-	color: #FAFAFA;
+	background: $off-black;
+	color: $off-white;
 	position:absolute;
 	width: 100%;
 	bottom: 0;
@@ -110,6 +110,6 @@
 }
 
 .slides_here a {
-	background: #222;
+	background: $off-black;
 	background: rgba(0,0,0, .8);
 }

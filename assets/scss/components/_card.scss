@@ -1,0 +1,39 @@
+.card {
+	background-color: $component-bg;
+	border: 3px $gray-border solid;
+	border-top: none;
+	width: 100%;
+	max-width: 200px;
+	padding: 0 8px;
+}
+
+.card-container {
+	border-top:5px $pbd-green solid;
+	text-align: center;
+	max-width: 200px;
+}
+
+.card--scientist {
+	@extend .card;
+}
+
+.card__title {
+
+}
+
+.card__thumb {
+	max-width: 168px;
+	width: 90%;
+	margin: 8px 0;
+	padding: 0 8px;
+}
+
+.card__subtitle {
+	font-size: 20px;
+	margin:0 0 8px 0;
+}
+
+.card__content {
+	font-size: 16px;
+	margin:0 0 8px 0;
+}

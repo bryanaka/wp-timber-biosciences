@@ -3,7 +3,7 @@
 	================================================== */
 
 .news__title {
-	color: #008000;
+	color: $pbd-green;
 }
 
 .news__divider {
@@ -16,14 +16,14 @@
 
 .tease {
 	margin: 16px 0;
-	border-top: 7px #008000 solid;
+	border-top: 7px $pbd-green solid;
 }
 
 .tease-container {
 	padding: 16px;
-	border-left:   2px #DCDCDC solid;
-	border-right:  2px #DCDCDC solid;
-	border-bottom: 2px #DCDCDC solid;
+	border-left:   2px $gray-border solid;
+	border-right:  2px $gray-border solid;
+	border-bottom: 2px $gray-border solid;
 	background-color: #FAFAFA;
 
 }

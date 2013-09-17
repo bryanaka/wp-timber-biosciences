@@ -18,7 +18,7 @@
 
 .breadcrumb--pbd {
 	margin-bottom: 0;
-	background-color: #FAFAFA;
+	background-color: $component-bg;
 }
 
 .navbar {
@@ -26,8 +26,8 @@
 	margin-bottom: 0px;
 
 	&.navbar--green {
-		background-color: #008000;
-		border-bottom: #9ACD32 4px solid;
+		background-color: $pbd-green;
+		border-bottom: $pbd-yellow-green 4px solid;
 		border-left: none;
 		border-right: none;
 	}
@@ -35,7 +35,7 @@
 
 /* the navigation link selectors... */
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
-	color: #FAFAFA;
+	color: $off-white;
 }
 
 .navbar-nav > li > a {

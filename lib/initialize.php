@@ -26,9 +26,10 @@ function biosciences_script_loading() {
 	// modernizr
 	wp_register_script( 'modernizr', $script_path.'modernizr.custom.js', array(), false, false );
 
-	// jquery
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, $in_footer);
+	// jquery needs to be an older version to support the calendar widget...
+	// which uses an old qtip library, which depends on $.browser method... UGH
+	// wp_deregister_script('jquery');
+	// wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, $in_footer);
 
 	// bootstrap - maybe split up?
 	wp_register_script('bootstrap', $script_path.'bootstrap/bootstrap.min.js', array('jquery'), false, $in_footer );

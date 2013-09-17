@@ -1,12 +1,18 @@
 body {
-	background-color: #F2F2F2;
+	background-color: #F6F6F6;
 	font-size: 16px;
 }
+
 .container-wrap {
-	border-left: 4px #DEDEDE solid;
-	border-right: 4px #DEDEDE solid;
-	background-color: #FCFCFC;
+	border-left: 4px $gray-border solid;
+	border-right: 4px $gray-border solid;
+	background-color: $off-white;
 	padding: 16px 32px;
+	max-width: 1250px;
+	margin: 0 auto;
+}
+.container-wrap--grid {
+	padding: 16px;
 	max-width: 1250px;
 	margin: 0 auto;
 }

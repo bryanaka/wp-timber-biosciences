@@ -1,0 +1,11 @@
+<div class="col-xs-6 col-sm-3" id="scientist--{{scientist.guid}}">
+	<a href="{{scientist.permalink}}">
+		<div class="card-container">
+			<article class="card--scientist">
+				<img src="{{scientist.get_thumbnail.get_src|resize(160,202)}}" class="card__thumb">
+				<h3 class="card__subtitle">{{scientist.first_name}} {{scientist.last_name}}</h3>
+				<h4 class="card__content">Title Goes Here</h4>
+			</article>
+		</div>
+	</a>
+</div>
