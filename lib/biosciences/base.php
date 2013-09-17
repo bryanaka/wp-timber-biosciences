@@ -47,6 +47,7 @@ Class Base extends Timber {
 	// Feature: filter out the posts into each context. for now it just goes into post.
 	public function find_posts_by_type($type, $PostClass = 'TimberPost') {
 		if ( is_array($type) ) {
+			// note that for now, registers under $context[posts]
 			return $this->find_posts( array('post_type' => $type) );
 		}
 		$results = parent::get_posts("post_type=#{$type}", $PostClass);
