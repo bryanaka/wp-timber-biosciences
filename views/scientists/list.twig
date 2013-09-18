@@ -5,6 +5,11 @@
 		<article class="col-xs-12 page__content">
 			{{page.content}}
 		</article>
+		<article class="col-xs-12">
+			{% for letter in 'A'..'Z' %}
+				<span class="letterNav"><a href="#section-{{letter|lower}}">{{letter}}</a></span>
+			{% endfor %}
+		</article>
 	</div>
 	<div class="row">
 		{% for scientist in scientists %}
@@ -12,7 +17,7 @@
 				</div>
 				<div class="row">
 					{% set current_letter = scientist.last_name|slice(0,1) %}
-					<h2 class="col-xs-12 scientist__letter">{{ current_letter }}</h2>
+					<h2 class="col-xs-12 scientist__letter" id="section-{{current_letter|lower}}">{{ current_letter }}</h2>
 					<hr class="scientist__divider">
 				</div>
 				<div class="row">
