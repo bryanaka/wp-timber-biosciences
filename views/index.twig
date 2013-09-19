@@ -2,20 +2,22 @@
 {% block content %}
 	<div class="col-md-8">
 		<div class="slider-container">
-			<ul class="slider" id="slider">
-				{% for post in posts %}
-					{% if post.featured_news_item == 'yes' %}
-						<li class="slide">
-							<img src="{{ post.get_image('featured_news_image').src|resize(760,400) }}" alt="Featured Image - {{post.title}}" class="slide__image">
-							<div class="slide__caption">
-								{{post.title}} <a href="{{post.permalink}}">Read More <i class="icon-double-angle-right"></i><i class="icon-arror-right"></i> </a>
-							</div>
-						</li>
-					{% endif %}
-				{% else %}
-					No Featured posts
-				{% endfor %}
-			</ul>
+			<div class="slider-inside-wrap">
+				<ul class="slider" id="slider">
+					{% for post in posts %}
+						{% if post.featured_news_item == 'yes' %}
+							<li class="slide">
+								<img src="{{ post.get_image('featured_news_image').src|resize(760,400) }}" alt="Featured Image - {{post.title}}" class="slide__image">
+								<div class="slide__caption">
+									{{post.title}} <a href="{{post.permalink}}">Read More <i class="icon-double-angle-right"></i><i class="icon-arror-right"></i> </a>
+								</div>
+							</li>
+						{% endif %}
+					{% else %}
+						No Featured posts
+					{% endfor %}
+				</ul>
+			</div>
 		</div>
 		<div class="news--preview">
 			<h2 class="news__title">Latest News</h2>

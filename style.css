@@ -7568,12 +7568,19 @@ h1, h2, h3 {
 .slider-container {
   width: 100%;
   position: relative;
-  border: #cecece 1px solid;
   border-top: green 7px solid;
-  padding: 8px;
 }
 
-/* line 9, ../scss/components/_slider.scss */
+/* line 7, ../scss/components/_slider.scss */
+.slider-inside-wrap {
+  border: #cecece 1px solid;
+  border-top: none;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+}
+
+/* line 15, ../scss/components/_slider.scss */
 .slider {
   position: relative;
   list-style: none;
@@ -7583,14 +7590,14 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
-/* line 18, ../scss/components/_slider.scss */
+/* line 24, ../scss/components/_slider.scss */
 .slider li:first-child {
   position: relative;
   display: block;
   float: left;
 }
 
-/* line 24, ../scss/components/_slider.scss */
+/* line 30, ../scss/components/_slider.scss */
 .slide {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -7600,7 +7607,7 @@ h1, h2, h3 {
   top: 0;
 }
 
-/* line 33, ../scss/components/_slider.scss */
+/* line 39, ../scss/components/_slider.scss */
 .slide__image {
   display: block;
   height: auto;
@@ -7609,7 +7616,7 @@ h1, h2, h3 {
   border: 0;
 }
 
-/* line 41, ../scss/components/_slider.scss */
+/* line 47, ../scss/components/_slider.scss */
 .slide__caption {
   background: #252525;
   color: #fcfcfc;
@@ -7620,13 +7627,13 @@ h1, h2, h3 {
   z-index: 10;
   opacity: 0.95;
 }
-/* line 51, ../scss/components/_slider.scss */
+/* line 57, ../scss/components/_slider.scss */
 .slide__caption a {
   float: right;
   padding-right: 8px;
 }
 
-/* line 58, ../scss/components/_slider.scss */
+/* line 64, ../scss/components/_slider.scss */
 .slides_nav {
   z-index: 3;
   position: absolute;
@@ -7644,18 +7651,18 @@ h1, h2, h3 {
   height: 85%;
 }
 
-/* line 74, ../scss/components/_slider.scss */
+/* line 80, ../scss/components/_slider.scss */
 .slides_nav.next {
   left: auto;
   right: 0;
 }
 
-/* line 79, ../scss/components/_slider.scss */
+/* line 85, ../scss/components/_slider.scss */
 .slides_nav:focus {
   outline: none;
 }
 
-/* line 83, ../scss/components/_slider.scss */
+/* line 89, ../scss/components/_slider.scss */
 .slides_tabs {
   list-style: none;
   margin-left: 0;
@@ -7664,7 +7671,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* line 91, ../scss/components/_slider.scss */
+/* line 97, ../scss/components/_slider.scss */
 .slides_tabs li {
   display: inline;
   float: none;
@@ -7673,7 +7680,7 @@ h1, h2, h3 {
   margin-right: 5px;
 }
 
-/* line 99, ../scss/components/_slider.scss */
+/* line 105, ../scss/components/_slider.scss */
 .slides_tabs a {
   text-indent: -9999px;
   overflow: hidden;
@@ -7689,7 +7696,7 @@ h1, h2, h3 {
   height: 7px;
 }
 
-/* line 114, ../scss/components/_slider.scss */
+/* line 120, ../scss/components/_slider.scss */
 .slides_here a {
   background: green;
 }
