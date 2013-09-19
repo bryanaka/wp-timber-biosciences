@@ -20,7 +20,9 @@ Bootstrap\Grid::initialize();
 Bootstrap\ResponsiveUtilities::initialize();
 
 function biosciences_script_loading() {
+	$styles_path = get_template_directory_uri().'/assets/css';
 	$script_path = get_template_directory_uri().'/assets/js/';
+	$vendor_path = get_template_directory_uri().'/assets/vendor/';
 	$in_footer = true;
 
 	// modernizr
@@ -31,8 +33,7 @@ function biosciences_script_loading() {
 	// wp_deregister_script('jquery');
 	// wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, $in_footer);
 
-	// bootstrap - maybe split up?
-	wp_register_script('bootstrap', $script_path.'bootstrap/bootstrap.min.js', array('jquery'), false, $in_footer );
+	wp_register_script('bootstrap', $vendor_path.'sass-bootstrap/dist/js/bootstrap.min.js', array('jquery'), false, $in_footer );
 	
 	// responsive_slides - only home page?
 	wp_register_script('responsive_slides', $script_path.'responsive_slides.min.js', array('jquery'), false, $in_footer );
