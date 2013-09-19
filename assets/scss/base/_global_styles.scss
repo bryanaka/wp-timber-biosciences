@@ -1,6 +1,12 @@
 body {
 	background-color: #F6F6F6;
 	font-size: 16px;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+	font-family: 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+	font-weight: 500;
 }
 
 .container-wrap {
@@ -10,6 +16,12 @@ body {
 	padding: 16px 32px;
 	max-width: 1250px;
 	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	.container-wrap {
+		padding: 16px 0;
+	}
 }
 .container-wrap--grid {
 	padding: 16px;

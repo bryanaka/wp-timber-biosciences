@@ -7,12 +7,16 @@
 		min-height: 0;
 	}
 	.navbar-nav > li > a {
-		padding-top: 10px;
-		padding-bottom: 10px; 
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin: 5px 3px;
 	}
 	.navbar-brand {
 		padding-top: 9px;
-		padding-bottom: 9px; 
+		padding-bottom: 9px;
+		a {
+			color: $off-white;
+		}
 	}
 }
 
@@ -24,25 +28,53 @@
 .navbar {
 	border-radius: 0;
 	margin-bottom: 0px;
+}
 
-	&.navbar--green {
-		background-color: $pbd-green;
-		border-bottom: $pbd-yellow-green 4px solid;
-		border-left: none;
-		border-right: none;
+.navbar--green {
+	background-color: $pbd-green;
+	border-bottom: $pbd-yellow-green 4px solid;
+	border-left: none;
+	border-right: none;
+	color: $off-white;
+
+	// the navigation link selectors...
+	// ugly nesting thanks to bootstrap
+	.mainNav__link > a {
+		color: $off-white;
+		border-top: $pbd-yellow-green 2px solid;
+
+		&:hover, &:focus {
+			color: $pbd-yellow;
+			background-color: $pbd-green;
+			border-top: $pbd-yellow 2px solid;
+		}
 	}
 }
+.mainNav__brand {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 500;
 
-/* the navigation link selectors... */
-.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
-	color: $off-white;
 }
-
 .navbar-nav > li > a {
-	padding-top: 10px;
-	padding-bottom: 10px; 
+	padding-top: 5px;
+	padding-bottom: 5px; 
 }
-/* the navigation hover selectors... wtf... */
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
-	color: #ffd059;
+.navbar-toggle {
+	position: relative;
+	float: right;
+	margin-right: 15px;
+	padding: 6px 7px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	background-color: $off-black;
+	color: $off-white;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	@include transition-property(background-color);
+	@include transition-duration(600ms);
+	
+	&:hover {
+		background-color: lighten($off-black, 5%);
+	}
 }

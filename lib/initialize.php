@@ -37,10 +37,13 @@ function biosciences_script_loading() {
 	// responsive_slides - only home page?
 	wp_register_script('responsive_slides', $script_path.'responsive_slides.min.js', array('jquery'), false, $in_footer );
 
+	wp_register_script('main', $script_path.'main.js', array('jquery', 'responsive_slides'), false, $in_footer );
+
 	wp_enqueue_script('modernizr');
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('bootstrap');
 	wp_enqueue_script('responsive_slides');
+	wp_enqueue_script('main');
 }
 
 add_action( 'wp_enqueue_scripts', 'biosciences_script_loading' );

@@ -1,20 +1,19 @@
 {% include "components/header.twig" %}
 
 <body class="{{body_class}}" data-source="base">
-	
+	{#
 	{% include 'components/lab_header.twig' %}
-
-	{# do_action( 'before' ); #}
+	#}
 	<header id="main_header" class="main_header" role="banner">
+		{#
 		<div class="brand">
 			<h1 class="brand__title">
 				<a href="/" title="{{ bloginfo('name', display) }}" rel="home">
 					{{ bloginfo('name') }}
 				</a>
 			</h1>
-			{# the_breadcrumb() #}
 		</div>
-
+		#}
 		{% block navigation_bar %}
 			{% include "components/navbar.twig" %}
 		{% endblock %}
