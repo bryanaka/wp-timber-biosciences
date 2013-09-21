@@ -1,0 +1,78 @@
+{% extends 'layout/base.twig' %}
+{% block content %}
+
+<div class="profile__head" style="">
+	<section class="profile__name col-sm-8 col-xs-12">
+		<div class="page__header">
+			<h1>{{scientist.title}}</h1>
+		</div>
+
+		{# This needs to be associated to scientist__titles model #}
+		<article class="profile__titles grid__item one-half hidden-palm">
+				<ul>
+					{% for title in scientist.titles %}
+						<li>{{title}}</li>
+					{% else %}
+						no titles
+					{% endfor %}
+				</ul>
+		</article>
+		<article class="profile__websites grid__item one-half hidden-palm">
+			<h4>Websites:</h4>
+			<ul>
+				{% for website in scientist.websites %}
+					<li><a href="{{url}}">{{name}}</a></li>
+				{% else %}
+					no websites
+				{% endfor %}
+			</ul>
+		</article>
+	</section>
+	<figure class="col-sm-8 col-xs-12">
+		<img src="{{scientist.get_thumbnail.src}}" alt="{{scientist.get_thumbnail.caption}}" class="profile__img">
+	</figure>
+</div>
+<section class="profile__contact grid__item one-third portable-one-whole">
+
+	<article class="profile__address grid__item one-whole lap-one-half col-xs-6">
+		<h3>Location Information</h3>
+		{{scientist.department_name}}<br>
+		{{scientist.address1}}<br>
+		{{scientist.address2}}<br>
+		{{scientist.city}}, {{scientist.state}} {{scientist.zip_code}} USA
+	</article>
+
+	<article class="profile__location col-sm-6 col-md-12">
+		<h3>Contact Information</h3>
+		Primary Number: {{scientist.phone1}}<br>
+		{% if scientist.phone2_type != 'null' %}
+			{{scientist.phone2_type}}: {{scientist.phone2}}<br>
+		{% endif %}
+		E-Mail: <a href="mailto:{{scientist.email}}">{{scientist.email}}</a><br>
+	</article>
+
+</section>
+
+<section class="profile__bio col-md-8 col-sm-12">
+
+	<article class="profile__emphasis">
+		<h3>Research Emphasis:</h3>
+		<p>
+			{{scientist.emphasis}}
+		</p>
+	</article>
+
+	{% if profile.summary %}
+	<article id="scientist__summary" class="profile__summary">
+		<h3>Summary:</h3>
+		<p>
+			{{scientist.summary}}
+		</p>
+	</article>
+	{% endif %}
+
+</section>
+
+
+{% endblock %}
+{% block sidebar %}{% endblock %}

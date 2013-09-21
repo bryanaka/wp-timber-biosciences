@@ -32,27 +32,23 @@ Class Base extends Timber {
 	}
 
 	public function find_posts($query = false, $PostClass = 'TimberPost') {
-		$results = parent::get_posts($query, $PostClass);
-		$this->context['posts'] = $results;
-		return $results;
+		$this->context['posts'] = parent::get_posts($query, $PostClass);
+		return $this->context['posts'];
 	}
 
 	public function find_posts_as($context_name, $query = false, $PostClass = 'TimberPost') {
-		$results = parent::get_posts($query, $PostClass);
-		$this->context[$context_name] = $results;
-		return $results;
+		$this->context[$context_name] = parent::get_posts($query, $PostClass);
+		return $this->context[$context_name];
 	}
 	
 	// If you are getting multiple types, distinguishing them may or may not be important
 	// Feature: filter out the posts into each context. for now it just goes into post.
+	// note that for now, arrays of types register under $context[posts] via find_posts
 	public function find_posts_by_type($type, $PostClass = 'TimberPost') {
-		if ( is_array($type) ) {
-			// note that for now, registers under $context[posts]
-			return $this->find_posts( array('post_type' => $type) );
-		}
-		$results = parent::get_posts("post_type=#{$type}", $PostClass);
-		$this->context[$type] = $results;
-		return $results;
+		if ( is_array($type) ) { return $this->find_posts( array('post_type' => $type) ); }
+
+		$this->context[$type] = parent::get_posts("post_type=#{$type}", $PostClass);
+		return $this->context[$type];
 	}
 
 	public function find_page($pid = null) {
@@ -60,9 +56,9 @@ Class Base extends Timber {
 		return $this->context['page'];
 	}
 
-	public function get_current_post() {
-		$this->context['post'] = new TimberPost();
-		return $this->context['post'];
+	public function get_current_post($context_name = 'post') {
+		$this->context[$context_name] = new TimberPost();
+		return $this->context[$context_name];
 	}
 	// how could we filter posts from these results if needed? how to reduce queries?
 	
@@ -70,11 +66,11 @@ Class Base extends Timber {
 		return $this->find_page();
 	}
 
-	public function render_page( $filenames, $echo = true ) {
+	public function render_page($filenames, $echo = true) {
 		parent::render($filenames, $this->context, $echo);
 	}
 
-	private function add_to_context ($property) {
+	private function add_to_context($property) {
 		if( isset($this->{$property}) && property_exists($this, $property) ) {
 			$this->context[$property] = $this->{$property};
 			return true;
