@@ -6467,32 +6467,37 @@ td.visible-print {
   }
 }
 /* line 1, ../scss/base/_global_styles.scss */
+html {
+  background-color: #333;
+}
+
+/* line 5, ../scss/base/_global_styles.scss */
 body {
   background-color: #F6F6F6;
   font-size: 16px;
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
-/* line 7, ../scss/base/_global_styles.scss */
+/* line 11, ../scss/base/_global_styles.scss */
 h1, h2, h3 {
   font-family: 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 500;
 }
 
-/* line 11, ../scss/base/_global_styles.scss */
+/* line 15, ../scss/base/_global_styles.scss */
 .container {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 15, ../scss/base/_global_styles.scss */
+/* line 19, ../scss/base/_global_styles.scss */
 .container-wrap {
   padding: 16px;
   max-width: 1250px;
   margin: 0 auto;
 }
 
-/* line 21, ../scss/base/_global_styles.scss */
+/* line 25, ../scss/base/_global_styles.scss */
 .container-wrap--grid {
   padding: 16px;
   max-width: 1250px;

@@ -16,6 +16,8 @@ spl_autoload_register(function ($class) {
 	}
 });
 
+require_once BIOSCIENCES_PATH.'/lib/biosciences/featured_scientist_widget.php';
+
 Bootstrap\Grid::initialize();
 Bootstrap\ResponsiveUtilities::initialize();
 
