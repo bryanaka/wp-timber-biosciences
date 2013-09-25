@@ -1,0 +1,45 @@
+img.alignright {
+	float:right;
+	margin:0 0 1em 1em;
+}
+img.alignleft {
+	float:left;
+	margin:0 1em 1em 0;
+}
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignright {
+	float:right;
+}
+.alignleft {
+	float:left;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media all and (max-width: 769px) {
+	img.alignright {
+		float:none;
+		display: block;
+		margin:0 auto;
+	}
+	img.alignleft {
+		float:none;
+		display: block;
+		margin:0 auto;
+	}
+	.alignright {
+		float:none;
+		display: block;
+	}
+	.alignleft {
+		float:none;
+		display: block;
+	}
+}

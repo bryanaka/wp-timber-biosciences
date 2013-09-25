@@ -13,9 +13,15 @@
 	}
 	.navbar-brand {
 		padding-top: 9px;
-		padding-bottom: 9px;
+		padding-bottom: 9px; 
 		a {
 			color: $off-white;
+			text-decoration: none;
+			@include transition-property(color);
+			@include transition-duration(600ms);
+			&:hover {
+				color: $pbd-yellow;
+			}
 		}
 	}
 }
@@ -41,12 +47,10 @@
 	// ugly nesting thanks to bootstrap
 	.mainNav__link > a {
 		color: $off-white;
-		border-top: $pbd-yellow-green 2px solid;
 
 		&:hover, &:focus {
 			color: $pbd-yellow;
 			background-color: $pbd-green;
-			border-top: $pbd-yellow 2px solid;
 		}
 	}
 }
@@ -54,7 +58,16 @@
 	margin: 0;
 	font-size: 24px;
 	font-weight: 500;
+	color: $off-white;
 
+	&:hover {
+		color: $pbd-yellow;
+	}
+
+}
+.navbar-brand a {
+	color: $off-white;
+	text-decoration: none;
 }
 .navbar-nav > li > a {
 	padding-top: 5px;

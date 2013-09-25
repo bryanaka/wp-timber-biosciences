@@ -8,7 +8,10 @@ h1, h2, h3 {
 	font-family: 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
 	font-weight: 500;
 }
-
+.container {
+	padding-left: 0;
+	padding-right: 0; 
+}
 .container-wrap {
 	padding: 16px;
 	max-width: 1250px;
