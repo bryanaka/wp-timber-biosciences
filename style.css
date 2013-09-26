@@ -6906,9 +6906,20 @@ img.aligncenter {
   padding: 16px;
   background: #fcfcfc;
   margin-bottom: 16px;
+  box-shadow: 0;
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+}
+/* line 13, ../scss/components/_widget.scss */
+.widget:hover {
+  box-shadow: -4px -3px 6px #DADADA;
 }
 
-/* line 11, ../scss/components/_widget.scss */
+/* line 18, ../scss/components/_widget.scss */
 .widget__title {
   font-size: 18px;
   font-weight: 500;
