@@ -6497,7 +6497,23 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
-/* line 25, ../scss/base/_global_styles.scss */
+/* line 24, ../scss/base/_global_styles.scss */
+.container--focused {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 29, ../scss/base/_global_styles.scss */
+.container-wrap--focused {
+  padding: 16px;
+  max-width: 1250px;
+  margin: 0 auto;
+  background-color: #fcfcfc;
+  border-left: 4px #cecece solid;
+  border-right: 4px #cecece solid;
+}
+
+/* line 38, ../scss/base/_global_styles.scss */
 .container-wrap--grid {
   padding: 16px;
   max-width: 1250px;
@@ -6906,6 +6922,12 @@ img.aligncenter {
   padding: 16px;
   background: #fcfcfc;
   margin-bottom: 16px;
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
   box-shadow: 0;
   -webkit-transition-property: box-shadow;
   -moz-transition-property: box-shadow;
@@ -6914,12 +6936,12 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 13, ../scss/components/_widget.scss */
+/* line 45, ../scss/_mixins.scss */
 .widget:hover {
-  box-shadow: -4px -3px 6px #DADADA;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 18, ../scss/components/_widget.scss */
+/* line 14, ../scss/components/_widget.scss */
 .widget__title {
   font-size: 18px;
   font-weight: 500;
@@ -6948,13 +6970,20 @@ img.aligncenter {
   transition-property: background-color;
   -webkit-transition-duration: 600ms;
   transition-duration: 600ms;
+  box-shadow: 0;
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
 }
-/* line 17, ../scss/components/_card.scss */
+/* line 45, ../scss/_mixins.scss */
 .card:hover, .card--scientist:hover {
-  background-color: #FDF5E6;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 22, ../scss/components/_card.scss */
+/* line 19, ../scss/components/_card.scss */
 .card__link {
   color: green;
   text-decoration: none;
@@ -6965,13 +6994,13 @@ img.aligncenter {
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
 }
-/* line 28, ../scss/components/_card.scss */
+/* line 25, ../scss/components/_card.scss */
 .card__link:hover {
   color: green;
   text-decoration: none;
 }
 
-/* line 38, ../scss/components/_card.scss */
+/* line 35, ../scss/components/_card.scss */
 .card__thumb {
   max-width: 168px;
   width: 90%;
@@ -6979,13 +7008,13 @@ img.aligncenter {
   padding: 0 8px;
 }
 
-/* line 45, ../scss/components/_card.scss */
+/* line 42, ../scss/components/_card.scss */
 .card__subtitle {
   font-size: 20px;
   margin: 0 0 8px 0;
 }
 
-/* line 50, ../scss/components/_card.scss */
+/* line 47, ../scss/components/_card.scss */
 .card__content {
   font-size: 16px;
   margin: 0 0 8px 0;
@@ -7031,29 +7060,47 @@ img.aligncenter {
   border-right: 1px #cecece solid;
   border-bottom: 1px #cecece solid;
   background-color: #fcfcfc;
+  box-shadow: 0;
+  box-shadow: 0;
+  -webkit-transition-property: box-shadow;
+  -moz-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+}
+/* line 45, ../scss/_mixins.scss */
+.tease-container:hover {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 31, ../scss/content/_news.scss */
+/* line 32, ../scss/content/_news.scss */
 .tease__title {
   margin-top: 0px;
 }
 
-/* line 35, ../scss/content/_news.scss */
+/* line 36, ../scss/content/_news.scss */
 .tease__thumbnail {
   float: left;
   padding-right: 16px;
 }
 
-/* line 39, ../scss/content/_news.scss */
+/* line 40, ../scss/content/_news.scss */
 .tease__title a {
   color: #252525;
   -webkit-transition: color 500ms;
   -moz-transition: color 500ms;
   transition: color 500ms;
 }
-/* line 45, ../scss/content/_news.scss */
+/* line 46, ../scss/content/_news.scss */
 .tease__title a:hover {
   color: #428bca;
+}
+
+/* line 50, ../scss/content/_news.scss */
+.tease__date {
+  font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
+  color: #777777;
 }
 
 /* line 5, ../scss/content/_scientists.scss */
@@ -7104,6 +7151,11 @@ img.aligncenter {
   width: fit-content;
   min-width: 250px;
   margin: 0 auto 20px auto;
+}
+
+/* line 31, ../scss/footers/_main_footer.scss */
+.mainFooter__subheader {
+  font-family: 'Ubuntu', 'Source Sans Pro', 'Helvetica', sans-serif;
 }
 
 /* ==========================================================================

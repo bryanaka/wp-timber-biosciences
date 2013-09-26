@@ -25,7 +25,8 @@
 	border-right:  1px $gray-border solid;
 	border-bottom: 1px $gray-border solid;
 	background-color: $component-bg;
-
+	box-shadow: 0;
+	@include card-box-shadow();
 }
 
 .tease__title {
@@ -45,4 +46,8 @@
 	&:hover {
 		color: #428bca;
 	}
+}
+.tease__date {
+	font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
+	color: #777777;
 }

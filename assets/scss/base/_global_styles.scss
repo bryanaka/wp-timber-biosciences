@@ -21,6 +21,19 @@ h1, h2, h3 {
 	max-width: 1250px;
 	margin: 0 auto;
 }
+.container--focused {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.container-wrap--focused {
+	padding: 16px;
+	max-width: 1250px;
+	margin: 0 auto;
+	background-color: $off-white;
+	border-left: 4px #cecece solid;
+	border-right: 4px #cecece solid;
+}
 
 .container-wrap--grid {
 	padding: 16px;

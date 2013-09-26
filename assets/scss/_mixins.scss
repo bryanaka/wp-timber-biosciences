@@ -36,3 +36,13 @@
          -o-transition: $string;
     		transition: $string;
 }
+
+@mixin card-box-shadow($speed:400ms, $box-shadow: 4px 4px 6px rgba(0,0,0,0.2)) {
+	box-shadow: 0;
+	@include transition-property(box-shadow);
+	@include transition-duration($speed);
+	
+	&:hover {
+		box-shadow: $box-shadow;
+	}
+}

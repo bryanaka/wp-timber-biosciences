@@ -1,0 +1,28 @@
+{% include "components/header.twig" %}
+
+<body class="{{body_class}}" data-source="base">
+
+	<header id="main_header" class="main_header" role="banner">
+		{% block navigation_bar %}
+			{% include "components/navbar.twig" %}
+		{% endblock %}
+	</header>
+	<div class="container-wrap--focused">
+		<main class="container--focused" role="main">
+				
+			{% block content %}
+				Sorry, No Content
+			{% endblock %}
+
+			{% block sidebar %}
+			{% endblock %}
+	
+		</main>
+	</div>
+	
+	{% block footer %}
+		{% include "components/footer.twig" %}
+	{% endblock %}
+{{wp_footer}}
+</body>
+</html>

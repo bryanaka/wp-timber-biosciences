@@ -13,10 +13,7 @@
 	padding: 0 8px;
 	@include transition-property(background-color);
 	@include transition-duration(600ms);
-
-	&:hover {
-		background-color: #FDF5E6;
-	}
+	@include card-box-shadow();
 }
 
 .card__link {

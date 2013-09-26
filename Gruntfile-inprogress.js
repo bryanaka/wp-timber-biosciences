@@ -31,7 +31,8 @@ module.exports = function(grunt) {
             assets: 'assets',
             bower: '<% app.assets %>/vendor',
             styles: '<%= app.assets %>/scss',
-            js: '<%= app.assets %>/js'
+            js: '<%= app.assets %>/js',
+            buildJs: ['<%= app.js %>/*.js', '<%= app.js %>/**/*.js', '!<%= app.js %>/scripts.min.js']
         },
 
         /**
@@ -121,7 +122,7 @@ module.exports = function(grunt) {
         concat: {
             dev: {
                 files: {
-                    '<%= project.app %>/js/scripts.min.js': '<%= project.js %>'
+                    '<%= app.js %>/scripts.min.js': this.app.buildJs
                 }
             },
             options: {
@@ -142,37 +143,10 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '<%= project.app %>/js/scripts.min.js': '<%= project.js %>'
+                    '<%= app.js %>/scripts.min.js': this.app.buildJs
                 }
             }
         },
-
-        /**
-         * Compile Sass/SCSS files
-         * https://github.com/gruntjs/grunt-contrib-sass
-         * Compiles all Sass/SCSS files and appends project banner
-         */
-        sass: {
-            dev: {
-                options: {
-                    style: 'expanded',
-                    banner: '<%= tag.banner %>'
-                },
-                files: {
-                    '<%= project.app %>/css/style.min.css': '<%= project.css %>'
-                }
-            },
-            dist: {
-                options: {
-                    style: 'compressed',
-                    banner: '<%= tag.banner %>'
-                },
-                files: {
-                    '<%= project.app %>/css/style.min.css': '<%= project.css %>'
-                }
-            }
-        },
-
         /**
          * Compile Sass/SCSS files with Compass
          * https://github.com/gruntjs/grunt-contrib-sass
@@ -181,30 +155,36 @@ module.exports = function(grunt) {
         compass: {
             dev: {
                 options: {
-                    sassDir: 'sass',
-                    cssDir: 'stylesheets',
+                    httpPath: '/wp-content/themes/timber-biosciences',
+                    sassDir: '<%= app.styles %>',
+                    cssDir: '<%= app.assets %>/css',
                     outputStyle: 'expanded',
-                    environment: 'development'
-                    // httpPath: '',
-                    // imagesDir: '',
-                    // javascriptsDir: '',
-                    // fontsDir: '',
-                    // 
+                    environment: 'development',
+                    imagesDir: '<%= app.assets%>/img',
+                    relativeAssets: true,
+                    javascriptsDir: '<%= app.js %>',
+                    fontsDir: '<%= app.assets %>/fonts'
                 }
             },
             dist: {
                 options: {
-                    sassDir: 'sass',
-                    cssDir: '.',
+                    httpPath: '/wp-content/themes/timber-biosciences',
+                    sassDir: '<%= app.styles %>',
+                    cssDir: '<%= app.assets %>/css',
                     outputStyle: 'compressed',
-                    environment: 'production'
-                    // httpPath: '',
-                    // imagesDir: '',
-                    // javascriptsDir: '',
-                    // fontsDir: '',
-                    //
+                    environment: 'production',
+                    imagesDir: '<%= app.assets%>/img',
+                    relativeAssets: true,
+                    javascriptsDir: '<%= app.js %>',
+                    fontsDir: '<%= app.assets %>/fonts'
                 }
             },
+        },
+        copy: {
+            styles: {
+                src: 'assets/css/style.css',
+                dest: 'style.css'
+            }
         },
 
         /**
@@ -218,9 +198,9 @@ module.exports = function(grunt) {
                 files: '<%= project.src %>/js/{,*/}*.js',
                 tasks: ['concat:dev', 'jshint']
             },
-            sass: {
-                files: '<%= project.src %>/scss/{,*/}*.{scss,sass}',
-                tasks: ['sass:dev']
+            compass: {
+                files: '<%= app.styles %>/{,*/}*.{scss,sass}',
+                tasks: ['compass:dev', 'copy:styles']
             }
         }
     });
@@ -229,7 +209,7 @@ module.exports = function(grunt) {
      * Default task
      * Run `grunt` on the command line
      */
-    grunt.registerTask('default', ['sass:dev', 'jshint', 'concat:dev', 'connect:livereload', 'open', 'watch']);
+    grunt.registerTask('default', ['compass:dev', 'jshint', 'concat:dev', 'watch']);
 
     /**
      * Build task
