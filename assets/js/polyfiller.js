@@ -1,5 +1,5 @@
 (function(window, document, Modernizr) {
-
+	'use strict';
 	var inputAttrTests = Modernizr.input.required && Modernizr.input.pattern;
 	var inputTypeTests = Modernizr.inputtypes.email && Modernizr.inputtypes.url;
 
