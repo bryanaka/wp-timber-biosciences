@@ -12,10 +12,11 @@ $page->find_menus( array('primary', 'footer_left', 'footer_center', 'footer_righ
 $page->get_current_page();
 
 $query = array(
-	"post_type" => "scientists",
-	"meta_key" 	=> "last_name",
-	"orderby" 	=> "meta_value",
-	"order" 	=> "ASC"
+	"numberposts" => -1,
+	"post_type"   => "scientists",
+	"meta_key" 	  => "last_name",
+	"orderby" 	  => "meta_value",
+	"order"		  => "ASC"
 );
 
 $page->find_posts_as('scientists', $query);
