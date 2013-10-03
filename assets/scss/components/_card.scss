@@ -29,7 +29,8 @@
 }
 
 .card__title {
-
+	margin-top: 0;
+	padding-top: 1rem;
 }
 
 .card__thumb {
@@ -47,4 +48,21 @@
 .card__content {
 	font-size: 16px;
 	margin:0 0 8px 0;
+}
+
+.card-container--full {
+	@extend .card-container;
+	max-width: 100%;
+	min-height: 450px;
+}
+
+.card--full {
+	@extend .card;
+	max-width: 100%;
+}
+
+.card__thumb--full {
+	@extend .card__thumb;
+	width: 95%;
+	max-width: none;
 }
