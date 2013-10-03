@@ -6583,6 +6583,103 @@ img.aligncenter {
     display: block;
   }
 }
+/* line 4, ../scss/base/_tables.scss */
+table {
+  /* Remove spacing between table cells (from Normalize.css) */
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+/* line 12, ../scss/base/_tables.scss */
+table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+
+/* line 20, ../scss/base/_tables.scss */
+table td,
+table th {
+  border-left: 1px solid #cbcbcb;
+  /*  inner column border */
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+  /*to make ths where the title is really long work*/
+  padding: 6px 12px;
+  /* cell padding */
+}
+
+/* line 29, ../scss/base/_tables.scss */
+table td:first-child,
+table th:first-child {
+  border-left-width: 0;
+}
+
+/* line 33, ../scss/base/_tables.scss */
+table thead {
+  background: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+/* line 45, ../scss/base/_tables.scss */
+table td {
+  background-color: transparent;
+}
+
+/* line 48, ../scss/base/_tables.scss */
+table .table-odd td {
+  background-color: #f2f2f2;
+}
+
+/* line 52, ../scss/base/_tables.scss */
+table tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+/* line 57, ../scss/base/_tables.scss */
+.table-striped tr:nth-child(2n-1) td {
+  background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+/* line 62, ../scss/base/_tables.scss */
+.table-bordered td {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+/* line 66, ../scss/base/_tables.scss */
+.table-bordered tbody > tr:last-child td,
+.table-horizontal tbody > tr:last-child td {
+  border-bottom-width: 0;
+}
+
+/* HORIZONTAL BORDERED TABLES */
+/* line 74, ../scss/base/_tables.scss */
+.table-horizontal td,
+.table-horizontal th {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+/* line 78, ../scss/base/_tables.scss */
+.table-horizontal tbody > tr:last-child td {
+  border-bottom-width: 0;
+}
+
+/* responsive table css*/
 /* line 1, ../scss/headers/_lab_header.scss */
 .labHeader {
   background: #00395a;
@@ -6936,7 +7033,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 45, ../scss/_mixins.scss */
+/* line 43, ../scss/_mixins.scss */
 .widget:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -6978,7 +7075,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 45, ../scss/_mixins.scss */
+/* line 43, ../scss/_mixins.scss */
 .card:hover, .card--full:hover, .card--scientist:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -7003,37 +7100,44 @@ img.aligncenter {
 /* line 31, ../scss/components/_card.scss */
 .card__title {
   margin-top: 0;
+  padding-top: 1rem;
 }
 
-/* line 35, ../scss/components/_card.scss */
-.card__thumb {
+/* line 36, ../scss/components/_card.scss */
+.card__thumb, .card__thumb--full {
   max-width: 168px;
   width: 90%;
   margin: 8px 0;
   padding: 0 8px;
 }
 
-/* line 42, ../scss/components/_card.scss */
+/* line 43, ../scss/components/_card.scss */
 .card__subtitle {
   font-size: 20px;
   margin: 0 0 8px 0;
 }
 
-/* line 47, ../scss/components/_card.scss */
+/* line 48, ../scss/components/_card.scss */
 .card__content {
   font-size: 16px;
   margin: 0 0 8px 0;
 }
 
-/* line 52, ../scss/components/_card.scss */
+/* line 53, ../scss/components/_card.scss */
 .card-container--full {
   max-width: 100%;
-  min-height: 300px;
+  min-height: 450px;
 }
 
-/* line 58, ../scss/components/_card.scss */
+/* line 59, ../scss/components/_card.scss */
 .card--full {
   max-width: 100%;
+}
+
+/* line 64, ../scss/components/_card.scss */
+.card__thumb--full {
+  width: 95%;
+  max-width: none;
 }
 
 /*  ==================================================
@@ -7085,7 +7189,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 45, ../scss/_mixins.scss */
+/* line 43, ../scss/_mixins.scss */
 .tease-container:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -7250,4 +7354,31 @@ img.aligncenter {
   h2, h3 {
     page-break-after: avoid;
   }
+}
+/* line 34, ../scss/style.scss */
+.hero--banner {
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 100px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+/* line 41, ../scss/style.scss */
+.hero--banner .page__header {
+  padding-top: 30px;
+  position: absolute;
+  z-index: 5;
+  text-shadow: rgba(255, 255, 255, 0.65) 0 1px 0;
+}
+
+/* line 48, ../scss/style.scss */
+.hero--banner__overlay {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fcfcfc;
+  opacity: 0.80;
 }

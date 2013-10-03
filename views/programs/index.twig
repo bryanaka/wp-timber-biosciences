@@ -8,10 +8,19 @@
 		</article>
 	</div>
 	<div class="row">
+		<div class="col-xs-12">
+			<h2 class="">Scientific Programs</h2>
+			<hr class="">
+		</div>
+	</div>
+	<div class="row">
 		{% for child in page.get_children %}
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div class="card-container--full">
 					<article class="card--full">
+						{% if child.get_thumbnail %}
+							<img src="{{ child.get_thumbnail.get_src }}" class="card__thumb--full">
+						{% endif %}
 						<h2 class="card__title"><a href="{{child.get_path}}">{{child.post_title}}</a></h2>
 						{{child.get_preview(50)}}
 					</article>

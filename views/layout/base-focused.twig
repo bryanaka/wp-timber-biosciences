@@ -7,9 +7,12 @@
 			{% include "components/navbar.twig" %}
 		{% endblock %}
 	</header>
+
 	<div class="container-wrap--focused">
 		<main class="container--focused" role="main">
-				
+			{% block hero %}
+			{% endblock %}
+		
 			{% block content %}
 				Sorry, No Content
 			{% endblock %}
