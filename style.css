@@ -6950,14 +6950,14 @@ img.aligncenter {
 }
 
 /* line 1, ../scss/components/_card.scss */
-.card-container {
+.card-container, .card-container--full {
   border-top: 5px green solid;
   text-align: center;
   max-width: 240px;
 }
 
 /* line 7, ../scss/components/_card.scss */
-.card, .card--scientist {
+.card, .card--full, .card--scientist {
   background-color: #fcfcfc;
   border: 1px #cecece solid;
   border-top: none;
@@ -6979,7 +6979,7 @@ img.aligncenter {
   transition-duration: 400ms;
 }
 /* line 45, ../scss/_mixins.scss */
-.card:hover, .card--scientist:hover {
+.card:hover, .card--full:hover, .card--scientist:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -7000,6 +7000,11 @@ img.aligncenter {
   text-decoration: none;
 }
 
+/* line 31, ../scss/components/_card.scss */
+.card__title {
+  margin-top: 0;
+}
+
 /* line 35, ../scss/components/_card.scss */
 .card__thumb {
   max-width: 168px;
@@ -7018,6 +7023,17 @@ img.aligncenter {
 .card__content {
   font-size: 16px;
   margin: 0 0 8px 0;
+}
+
+/* line 52, ../scss/components/_card.scss */
+.card-container--full {
+  max-width: 100%;
+  min-height: 300px;
+}
+
+/* line 58, ../scss/components/_card.scss */
+.card--full {
+  max-width: 100%;
 }
 
 /*  ==================================================
