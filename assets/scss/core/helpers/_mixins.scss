@@ -1,3 +1,7 @@
+// **********************************
+// Utilities
+// **********************************
+
 @mixin vendor($name, $argument, $extended: true) {
 	-webkit-#{$name}: $argument;
        -moz-#{$name}: $argument;
@@ -8,13 +12,27 @@
 			#{$name}: $argument;
 }
 
+@mixin respond-to() {
+	
+	@media screen and (min-width: $size) {
+
+	}
+}
+
+
+// **********************************
+// Design
+// **********************************
+
+@mixin hide-text{
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
 @mixin font-size($sizeValue: 1.0) {
   font-size: ($sizeValue * 16 ) + px;
   font-size: $sizeValue + rem;
-}
-
-@mixin border-box() {
-	@include vendor(box-sizing, border-box, false);
 }
 
 @mixin buttonify($color: #252525, $percent: 10%) {
@@ -48,11 +66,4 @@
 
 @mixin letterpress($opacity){
     text-shadow:white($opacity) 0 1px 0;
-}
-
-@mixin respond-to() {
-	
-	@media screen and (min-width: $size) {
-
-	}
 }

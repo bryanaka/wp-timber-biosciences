@@ -7,7 +7,11 @@
 					{% for post in posts %}
 						{% if post.featured_news_item == 'yes' %}
 							<li class="slide">
-								<img src="{{ post.get_image('featured_news_image').src|resize(760,400) }}" alt="Featured Image - {{post.title}}" class="slide__image">
+								{% if post.get_image('featured_news_image').src %}
+									<img src="{{ post.get_image('featured_news_image').src|resize(760,400) }}" alt="Featured Image - {{post.title}}" class="slide__image">
+								{% else %}
+									<img src="{{ post.get_thumbnail.get_src|resize(760, 400) }}" alt="Featured Image - {{post.title}}" class="slide__image">
+								{% endif %}
 								<div class="slide__caption">
 									{{post.title}} <a href="{{post.permalink}}">Read More <i class="icon-double-angle-right"></i><i class="icon-arror-right"></i> </a>
 								</div>
