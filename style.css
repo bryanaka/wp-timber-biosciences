@@ -6656,7 +6656,7 @@ table thead {
    Content
    ========================================================================== */
 /* line 5, ../scss/core/content/_utils.scss */
-.c-center {
+.theater__video, .c-center {
   text-align: center;
 }
 
@@ -7492,6 +7492,72 @@ img.aligncenter {
 .tease__date {
   font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
   color: #777777;
+}
+
+/* line 1, ../scss/modules/_theater.scss */
+.theater__banner {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 5, ../scss/modules/_theater.scss */
+.theater__container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  padding: 24px 0px 0px 16px;
+  padding: 1.5rem 0rem 0rem 1rem;
+}
+
+/* line 11, ../scss/modules/_theater.scss */
+.theater__video {
+  position: relative;
+  padding-bottom: 65%;
+  padding-top: 30px;
+  margin-bottom: 1.5rem;
+  height: 0;
+  overflow: hidden;
+  max-width: 960px;
+  width: 100%;
+  height: auto;
+  border: 1px #666666 solid;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 2px 3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.8) 2px 3px 5px;
+}
+/* line 26, ../scss/modules/_theater.scss */
+.theater__video iframe, .theater__video object, .theater__video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+}
+
+/* line 37, ../scss/modules/_theater.scss */
+.theater__info h1, .theater__info h2, .theater__info h3 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 10px;
+}
+
+/* line 43, ../scss/modules/_theater.scss */
+.theater__icon {
+  font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  padding: 12px 32px 16px 0px;
+  padding: 0.75rem 2rem 1rem 0rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+/* line 52, ../scss/modules/_theater.scss */
+.theater__icon:hover {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* line 1, ../scss/_inbox.scss */
