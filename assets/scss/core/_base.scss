@@ -25,7 +25,7 @@ body {
 // *************************************
 
 p {
-	font-size: rem($base-font-size);
+	@include rem();
 }
 
 // A better looking default horizontal rule
@@ -89,7 +89,7 @@ table {
 table caption {
     color: #000;
     font: italic 85%/1 arial, sans-serif;
-    padding: 1em 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
@@ -100,7 +100,8 @@ table th {
     font-size: inherit;
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
-    padding: 6px 12px; /* cell padding */
+    @include rem-fallback(padding, 0.5, 1);
+    //padding: 6px 12px; /* cell padding */
 }
 table td:first-child,
 table th:first-child {

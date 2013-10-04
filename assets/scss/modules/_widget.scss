@@ -3,7 +3,7 @@
 	================================================== */
 .widget {
 	border: 2px $gray-border solid;
-	padding: 16px;
+	padding: 8px;
 	background: $component-bg;
 	margin-bottom: 16px;
 	@include transition-property(box-shadow);

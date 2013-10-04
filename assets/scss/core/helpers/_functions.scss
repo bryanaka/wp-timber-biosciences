@@ -5,3 +5,7 @@
 @function white($opacity){
     @return rgba(255,255,255,$opacity);
 }
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}

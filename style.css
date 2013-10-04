@@ -6549,7 +6549,8 @@ body {
 
 /* line 27, ../scss/core/_base.scss */
 p {
-  font-size: rem(16px);
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* line 32, ../scss/core/_base.scss */
@@ -6607,7 +6608,7 @@ table {
 table caption {
   color: #000;
   font: italic 85%/1 arial, sans-serif;
-  padding: 1em 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -6621,17 +6622,17 @@ table th {
   margin: 0;
   overflow: visible;
   /*to make ths where the title is really long work*/
-  padding: 6px 12px;
-  /* cell padding */
+  padding: 8px 16px;
+  padding: 0.5rem 1rem;
 }
 
-/* line 106, ../scss/core/_base.scss */
+/* line 107, ../scss/core/_base.scss */
 table td:first-child,
 table th:first-child {
   border-left-width: 0;
 }
 
-/* line 110, ../scss/core/_base.scss */
+/* line 111, ../scss/core/_base.scss */
 table thead {
   background: #e0e0e0;
   color: #000;
@@ -6639,13 +6640,13 @@ table thead {
   vertical-align: bottom;
 }
 
-/* line 122, ../scss/core/_base.scss */
+/* line 123, ../scss/core/_base.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
 
-/* line 127, ../scss/core/_base.scss */
+/* line 128, ../scss/core/_base.scss */
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -7232,7 +7233,7 @@ img.aligncenter {
 /* line 4, ../scss/modules/_widget.scss */
 .widget {
   border: 2px #cecece solid;
-  padding: 16px;
+  padding: 8px;
   background: #fcfcfc;
   margin-bottom: 16px;
   -webkit-transition-property: box-shadow;
@@ -7249,7 +7250,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 62, ../scss/core/helpers/_mixins.scss */
+/* line 93, ../scss/core/helpers/_mixins.scss */
 .widget:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -7291,7 +7292,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 62, ../scss/core/helpers/_mixins.scss */
+/* line 93, ../scss/core/helpers/_mixins.scss */
 .card:hover, .card--full:hover, .card--scientist:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -7459,7 +7460,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 62, ../scss/core/helpers/_mixins.scss */
+/* line 93, ../scss/core/helpers/_mixins.scss */
 .tease-container:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
