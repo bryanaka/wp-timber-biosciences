@@ -8,13 +8,6 @@
 			#{$name}: $argument;
 }
 
-@function black($opacity){
-    @return rgba(0,0,0,$opacity);
-}
-@function white($opacity){
-    @return rgba(255,255,255,$opacity);
-}
-
 @mixin font-size($sizeValue: 1.0) {
   font-size: ($sizeValue * 16 ) + px;
   font-size: $sizeValue + rem;
@@ -29,6 +22,14 @@
 	background: $color; /* fallback */
 	@include background-image( linear-gradient( top, $color,darken($color, $percent) ) );
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color}', endColorstr='#{darken($color, $percent)}')";
+}
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
 }
 
 @mixin transform($string: "") {

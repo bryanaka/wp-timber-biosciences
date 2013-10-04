@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+html,button,input,select,textarea {
+    color: $base-color;
+}
+
+html {
+    background-color: $html-base-background;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
+body {
+    background: $base-background;
+    color: $base-color;
+    font-family: $base-font-family;
+    font-size: 100%;
+    line-height: $base-line-height;
+}
+
+// *************************************
+//  Block Elements
+// *************************************
+
+p {
+	font-size: rem($base-font-size);
+}
+
+// A better looking default horizontal rule
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+// Remove the gap between images, videos, audio and canvas and the bottom of
+// their containers: h5bp.com/i/440
+audio,canvas,img,video {
+    vertical-align: middle;
+}
+
+// Remove default fieldset styles.
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+    resize: vertical;
+}
+
+// *************************************
+//  Inline Elements
+// *************************************
+
+// A better, default link color and effect
+a {
+    color: #0088CC;
+    @include transition-property(color);
+    @include transition-duration(400ms);
+
+    &:hover {
+        color: lighten(#0088CC, 10%);
+    }
+}
+
+// *************************************
+//  Table
+// *************************************
+
+// Thanks to the Pure.css team at Yahoo
+// https://github.com/yui/pure
+
+table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+
+table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+table td,
+table th {
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 6px 12px; /* cell padding */
+}
+table td:first-child,
+table th:first-child {
+    border-left-width: 0;
+}
+
+table thead {
+    background: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+
+// *************************************
+//  Psuedo Elements
+// *************************************
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}

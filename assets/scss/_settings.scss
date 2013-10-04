@@ -1,0 +1,58 @@
+/*  ==================================
+	Base Variables
+	================================== */
+
+// *************************************
+// Colors
+// *************************************
+
+$off-black:    #252525;
+$off-white:    #FCFCFC;
+$component-bg: #FCFCFC;
+$gray-border:  #CECECE;
+$grey-border:  $gray-border;
+
+$lab-blue: 	   #00395A; 	/* Laboratory Blue (Slightly better version) */
+$lab-old-blue: #0F405B; 	/* Laboratory Blue, According to lbl.gov banner */
+$pbd-green:    #008000;
+$pbd-yellow:   #ffd059;
+$pbd-yellow-green: #9ACD32;
+$pbd-cream: papayawhip;
+
+
+// super variables
+$html-base-background: #333333;
+
+// design elements
+
+$base-background: #F6F6F6;
+$base-color: #252525;
+$base-link-color: #0053c9;
+$base-link-hover-color: #0053c9;
+$base-border-radius: 3px;
+$base-border: 1px solid $base-color;
+$base-boxShadow: 0 1px 2px rgba($base-color, 0.25);
+
+// typography
+
+$base-font-size: 16px;
+$base-font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$base-line-height: 1.6;
+$base-whitespace: 20px;
+
+/*  ==================================
+	Content and Layout Variables
+	================================== */
+
+$c-header-font-family: 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+
+$l-maxWidth: 980px;
+
+/*  ==================================
+	Module Variables
+	================================== */
+
+
+/*  ==================================
+	Vendor Variables
+	================================== */
