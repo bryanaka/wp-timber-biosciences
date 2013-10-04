@@ -7249,7 +7249,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 44, ../scss/core/helpers/_mixins.scss */
+/* line 62, ../scss/core/helpers/_mixins.scss */
 .widget:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -7291,7 +7291,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 44, ../scss/core/helpers/_mixins.scss */
+/* line 62, ../scss/core/helpers/_mixins.scss */
 .card:hover, .card--full:hover, .card--scientist:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -7459,7 +7459,7 @@ img.aligncenter {
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
 }
-/* line 44, ../scss/core/helpers/_mixins.scss */
+/* line 62, ../scss/core/helpers/_mixins.scss */
 .tease-container:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
