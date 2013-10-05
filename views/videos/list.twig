@@ -1,32 +1,43 @@
 {% extends 'layout/base.twig' %}
 
 {% block hero %}
-	<div class="theater__banner">
+	<div class="theater__container">
 		<div class="container">
-			<div class="theater__container">
+			<div class="theater">
 				<div class="theater__video">
 					<iframe src="//www.youtube.com/embed/6MEAL7uq1ec" frameborder="0" allowfullscreen>
 						Loading...
 					</iframe>
 				</div>
-				<hgroup class="theater__info">
+				<hgroup class="theater__headers">
 					<h1 class="theater__title">Video - Science and Tech Talks</h1>
-					<h2 class="theater__author">Erna Graz</h2>
+					<h2 class="theater__author">Presented by Erna Graz</h2>
 				</hgroup>
 				<aside class="theater__share">
 					<div class="theater__icon">
-						<i class="icon-collapse"></i> Details
+						<a href="">
+							<i class="icon-collapse"></i> Details
+						</a>
 					</div>
 					<div class="theater__icon">
-						<i class="icon-facebook-sign"></i> Facebook
+						<a href="">
+							<i class="icon-facebook-sign"></i> Facebook
+						</a>
 					</div>
 					<div class="theater__icon">
-						<i class="icon-twitter-sign"></i> Tweet
+						<a href="https://twitter.com/intent/tweet?text={#Text for the tweet goes here#}">
+							<i class="icon-twitter-sign"></i> Tweet
+						</a>
 					</div>
 					<div class="theater__icon">
-						<i class="icon-google-plus-sign"></i> Google +
+						<a href="">
+							<i class="icon-google-plus-sign"></i> Google +
+						</a>
 					</div>
 				</aside>
+				<article class="theater__info">
+					This is where the details will go
+				</article>
 			</div>
 		</div>
 	</div>

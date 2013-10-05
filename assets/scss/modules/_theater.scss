@@ -1,12 +1,12 @@
-.theater__banner {
+.theater__container {
 	background-color: black(.8);
 }
 
-.theater__container {
+.theater {
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1000px;
 	width: 100%;
-	@include rem-fallback(padding, 1.5rem, 0, 0, 1rem);
+	@include rem-fallback(padding, 1.5rem, 1rem, 0, 1rem);
 }
 .theater__video {
 	@extend %c-center;
@@ -16,7 +16,7 @@
 	margin-bottom: 1.5rem;
 	height: 0;
 	overflow:hidden;
-	max-width: 960px;
+	max-width: 1000px;
 	width: 100%;
 	height: auto;
 	border: 1px #666666 solid;
@@ -28,12 +28,12 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		max-width: 960px;
+		max-width: 1000px;
 		height: 100%;
 	}
 }
 
-.theater__info {
+.theater__headers {
 	h1, h2, h3 {
 		color: white(.9);
 		margin-top: 10px;
@@ -42,14 +42,24 @@
 
 .theater__icon {
 	font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
-	color: white(0.6);
 	display: inline-block;
 	@include rem-fallback(padding, .75rem, 2rem, 1rem, 0);
 	@include rem(1.25);
-	@include transition-property(color);
-	@include transition-duration(500ms);
-
-	&:hover {
-		color: white(0.85);
+	
+	a {
+		color: white(0.6);
+		text-decoration: none;
+		@include transition-property(color);
+		@include transition-duration(500ms);
+		
+		&:hover {
+			color: white(0.85);
+		}
 	}
+}
+
+.theater__info {
+	border-top: 1px white(0.25) solid;
+	color: $off-white;
+	@include rem-fallback(padding, 1rem, 0);
 }

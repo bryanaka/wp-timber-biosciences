@@ -7495,17 +7495,17 @@ img.aligncenter {
 }
 
 /* line 1, ../scss/modules/_theater.scss */
-.theater__banner {
+.theater__container {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* line 5, ../scss/modules/_theater.scss */
-.theater__container {
+.theater {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1000px;
   width: 100%;
-  padding: 24px 0px 0px 16px;
-  padding: 1.5rem 0rem 0rem 1rem;
+  padding: 24px 16px 0px 16px;
+  padding: 1.5rem 1rem 0rem 1rem;
 }
 
 /* line 11, ../scss/modules/_theater.scss */
@@ -7516,7 +7516,7 @@ img.aligncenter {
   margin-bottom: 1.5rem;
   height: 0;
   overflow: hidden;
-  max-width: 960px;
+  max-width: 1000px;
   width: 100%;
   height: auto;
   border: 1px #666666 solid;
@@ -7529,12 +7529,12 @@ img.aligncenter {
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 960px;
+  max-width: 1000px;
   height: 100%;
 }
 
 /* line 37, ../scss/modules/_theater.scss */
-.theater__info h1, .theater__info h2, .theater__info h3 {
+.theater__headers h1, .theater__headers h2, .theater__headers h3 {
   color: rgba(255, 255, 255, 0.9);
   margin-top: 10px;
 }
@@ -7542,12 +7542,16 @@ img.aligncenter {
 /* line 43, ../scss/modules/_theater.scss */
 .theater__icon {
   font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
-  color: rgba(255, 255, 255, 0.6);
   display: inline-block;
   padding: 12px 32px 16px 0px;
   padding: 0.75rem 2rem 1rem 0rem;
   font-size: 20px;
   font-size: 1.25rem;
+}
+/* line 49, ../scss/modules/_theater.scss */
+.theater__icon a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
   -webkit-transition-property: color;
   -moz-transition-property: color;
   -o-transition-property: color;
@@ -7555,9 +7559,17 @@ img.aligncenter {
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
 }
-/* line 52, ../scss/modules/_theater.scss */
-.theater__icon:hover {
+/* line 55, ../scss/modules/_theater.scss */
+.theater__icon a:hover {
   color: rgba(255, 255, 255, 0.85);
+}
+
+/* line 61, ../scss/modules/_theater.scss */
+.theater__info {
+  border-top: 1px rgba(255, 255, 255, 0.25) solid;
+  color: #fcfcfc;
+  padding: 16px 0px;
+  padding: 1rem 0rem;
 }
 
 /* line 1, ../scss/_inbox.scss */
