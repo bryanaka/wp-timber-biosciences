@@ -61,5 +61,6 @@
 .theater__info {
 	border-top: 1px white(0.25) solid;
 	color: $off-white;
+	display: none;
 	@include rem-fallback(padding, 1rem, 0);
 }

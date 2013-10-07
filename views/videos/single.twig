@@ -1,0 +1,78 @@
+{% extends 'layout/base.twig' %}
+
+{% block hero %}
+	<div class="theater__container">
+		<div class="container">
+			<section class="theater">
+				<article class="theater__video">
+					<iframe src="//www.youtube.com/embed/{{video.code}}" frameborder="0" allowfullscreen>
+						Loading...
+					</iframe>
+				</article>
+				<hgroup class="theater__headers">
+					<h1 class="theater__title">{{video.title}} - {{video.series}}</h1>
+					{% if video.presenter != 'null' %}
+						<h2 class="theater__author">Presented by {{video.presenter}}</h2>
+					{% else %}
+						<h2 class="theater__author">Presented by {{video.guest_presenter}}</h2>
+					{% endif %}
+				</hgroup>
+				<aside class="theater__share">
+					<div class="theater__icon">
+						<a href="" id="js-toggle-details">
+							<i class="icon-collapse"></i> Details
+						</a>
+					</div>
+					<div class="theater__icon">
+						<a href="">
+							Facebook
+						</a>
+					</div>
+					<div class="theater__icon">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-size="medium" data-related="berkeleylab">Tweet</a>
+						<script>
+							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+						</script>
+						</a>
+					</div>
+					<div class="theater__icon">
+						<a href="">
+							<div class="g-plusone"></div>
+							
+							<!-- Place this tag after the last +1 button tag. -->
+							<script type="text/javascript">
+							  (function() {
+							    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							    po.src = 'https://apis.google.com/js/plusone.js';
+							    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							  })();
+							</script>
+						</a>
+					</div>
+				</aside>
+				<article class="theater__info">
+					{{ video.description|wpautop }}
+				</article>
+			</section>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>Related Videos</h2>
+				<hr>
+			</div>
+		</div>
+		<section class="other_vids row">
+			{% for video in rel_videos %}
+				{% include [video.post_type~'/preview.twig', 'videos/preview.twig'] %}
+			{% endfor %}
+		</section>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

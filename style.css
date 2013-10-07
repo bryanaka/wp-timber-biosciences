@@ -6684,32 +6684,38 @@ h4, h5, h6 {
 
 /* line 11, ../scss/core/content/_headers.scss */
 h1, .c-h1 {
-  font-size: rem(40px);
+  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 /* line 15, ../scss/core/content/_headers.scss */
 h2, .c-h2 {
-  font-size: rem(35px);
+  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 /* line 19, ../scss/core/content/_headers.scss */
 h3, .c-h3 {
-  font-size: rem(30px);
+  font-size: 28.8px;
+  font-size: 1.8rem;
 }
 
 /* line 23, ../scss/core/content/_headers.scss */
 h4, .c-h4 {
-  font-size: rem(25px);
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 /* line 27, ../scss/core/content/_headers.scss */
 h5, .c-h5 {
-  font-size: rem(20px);
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 /* line 31, ../scss/core/content/_headers.scss */
 h6, .c-h6 {
-  font-size: rem(16px);
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* line 1, ../scss/core/content/_tables.scss */
@@ -7568,6 +7574,7 @@ img.aligncenter {
 .theater__info {
   border-top: 1px rgba(255, 255, 255, 0.25) solid;
   color: #fcfcfc;
+  display: none;
   padding: 16px 0px;
   padding: 1rem 0rem;
 }

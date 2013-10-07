@@ -19,4 +19,11 @@
         before: function(){},   // Function: Before callback
         after: function(){}     // Function: After callback
     });
+    var $toggleTheaterInfo = $('#js-toggle-details');
+    if($toggleTheaterInfo){
+        $toggleTheaterInfo.on('click', function(e) {
+            e.preventDefault();
+            $('.theater__info').slideToggle(400);
+        });
+    }
 })(window, document, jQuery);
