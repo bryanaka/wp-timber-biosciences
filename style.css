@@ -6684,20 +6684,20 @@ h4, h5, h6 {
 
 /* line 11, ../scss/core/content/_headers.scss */
 h1, .c-h1 {
-  font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 38.4px;
+  font-size: 2.4rem;
 }
 
 /* line 15, ../scss/core/content/_headers.scss */
 h2, .c-h2 {
-  font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 34.4px;
+  font-size: 2.15rem;
 }
 
 /* line 19, ../scss/core/content/_headers.scss */
 h3, .c-h3 {
-  font-size: 28.8px;
-  font-size: 1.8rem;
+  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 /* line 23, ../scss/core/content/_headers.scss */

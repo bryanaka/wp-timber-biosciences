@@ -3,7 +3,12 @@
 		<div class="card-container">
 			<div class="card">
 				<img src="http://img.youtube.com/vi/{{video.code}}/2.jpg" class="card__thumb">
-				<h3 class="c-h6">{{video.title}}</h3>
+				<h3 class="card__subtitle c-h5">{{video.title}}</h3>
+				{% if video.presenter != 'null' %}
+					<h4 class="c-h6">{{video.series}}</h4>
+				{% else %}
+					<h4 class="c-h6">{{video.series}}</h4>
+				{% endif %}
 			</div>
 		</div>
 	</a>
