@@ -7480,21 +7480,22 @@ img.aligncenter {
 .tease__thumbnail {
   float: left;
   padding-right: 16px;
+  max-width: 100%;
 }
 
-/* line 40, ../scss/modules/_news.scss */
+/* line 41, ../scss/modules/_news.scss */
 .tease__title a {
   color: #252525;
   -webkit-transition: color 500ms;
   -moz-transition: color 500ms;
   transition: color 500ms;
 }
-/* line 46, ../scss/modules/_news.scss */
+/* line 47, ../scss/modules/_news.scss */
 .tease__title a:hover {
   color: #428bca;
 }
 
-/* line 50, ../scss/modules/_news.scss */
+/* line 51, ../scss/modules/_news.scss */
 .tease__date {
   font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
   color: #777777;

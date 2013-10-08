@@ -10,5 +10,20 @@
 			{% endif %}
 			{{ post.content }}
 		</div>
+		{% if post.ext_link %}
+			{% if post.source_name %}
+				<div class="tease__readmore">
+					<a href="{{post.ext_link}}" target="_blank">
+						<i class="icon-external-link"></i> Read the Full Story at {{post.source_name}}
+					</a>
+				</div>
+			{% else %}
+			<div class="tease__readmore">
+				<a href="{{post.ext_link}}" target="_blank">
+					<i class="icon-external-link"></i> Read the Full Story Here
+				</a>
+			</div>
+			{% endif %}
+		{% endif %}
 	</div>
 </article>

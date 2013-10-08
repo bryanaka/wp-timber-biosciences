@@ -20,7 +20,4 @@ $query = array(
 );
 
 $page->find_posts_as('scientists', $query);
-
-// Take the scientists and sort them by last name. Place them in an associative array.
-// ['a' =>[],'b'=>[], 'c'=>[]...]
 $page->render_page('scientists/list.twig');

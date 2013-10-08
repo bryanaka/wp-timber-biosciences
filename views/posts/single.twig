@@ -12,6 +12,21 @@
 		<div class="entry-content">
 			{{post.content}}
 		</div>
+		{% if post.ext_link %}
+			{% if post.source_name %}
+				<div class="post__readmore">
+					<a href="{{post.ext_link}}" target="_blank">
+						<i class="icon-external-link"></i> Read the Full Story at {{post.source_name}}
+					</a>
+				</div>
+			{% else %}
+			<div class="post__readmore">
+				<a href="{{post.ext_link}}" target="_blank">
+					<i class="icon-external-link"></i> Read the Full Story Here
+				</a>
+			</div>
+			{% endif %}
+		{% endif %}
 	</article>
 </div>
 {% endblock %}
