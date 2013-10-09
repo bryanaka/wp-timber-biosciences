@@ -14,7 +14,14 @@
 		</div>
 	</div>
 	<div class="row">
+		{% set number = 0 %}
 		{% for child in page.get_children %}
+			{% if number >= 3 %}
+				{% set number = 0 %}
+				</div>
+				<div class="row">
+			{% endif %}
+			{% set number = number + 1 %}	
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div class="card-container--full">
 					<article class="card--full">

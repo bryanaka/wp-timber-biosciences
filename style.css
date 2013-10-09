@@ -7349,15 +7349,22 @@ img.aligncenter {
 /* line 53, ../scss/modules/_card.scss */
 .card-container--full {
   max-width: 100%;
-  min-height: 450px;
+  min-height: 460px;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+/* line 59, ../scss/modules/_card.scss */
+.card-container--full .card--full {
+  min-height: 460px;
+  height: 100%;
 }
 
-/* line 59, ../scss/modules/_card.scss */
+/* line 65, ../scss/modules/_card.scss */
 .card--full {
   max-width: 100%;
 }
 
-/* line 64, ../scss/modules/_card.scss */
+/* line 70, ../scss/modules/_card.scss */
 .card__thumb--full {
   width: 95%;
   max-width: none;
