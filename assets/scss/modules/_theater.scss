@@ -56,6 +56,11 @@
 			color: white(0.85);
 		}
 	}
+
+	a, iframe {
+		padding-left: 30%;
+		width: 100% !important;
+	}
 }
 
 .theater__info {
@@ -63,4 +68,9 @@
 	color: $off-white;
 	display: none;
 	@include rem-fallback(padding, 1rem, 0);
+}
+
+.card__subtitle--theater {
+	@extend .card__subtitle;
+	@include rem(1);
 }

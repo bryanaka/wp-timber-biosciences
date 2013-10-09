@@ -7335,7 +7335,7 @@ img.aligncenter {
 }
 
 /* line 43, ../scss/modules/_card.scss */
-.card__subtitle {
+.card__subtitle, .card__subtitle--theater {
   font-size: 20px;
   margin: 0 0 8px 0;
 }
@@ -7570,14 +7570,25 @@ img.aligncenter {
 .theater__icon a:hover {
   color: rgba(255, 255, 255, 0.85);
 }
+/* line 60, ../scss/modules/_theater.scss */
+.theater__icon a, .theater__icon iframe {
+  padding-left: 30%;
+  width: 100% !important;
+}
 
-/* line 61, ../scss/modules/_theater.scss */
+/* line 66, ../scss/modules/_theater.scss */
 .theater__info {
   border-top: 1px rgba(255, 255, 255, 0.25) solid;
   color: #fcfcfc;
   display: none;
   padding: 16px 0px;
   padding: 1rem 0rem;
+}
+
+/* line 73, ../scss/modules/_theater.scss */
+.card__subtitle--theater {
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* line 1, ../scss/_inbox.scss */
