@@ -1,0 +1,22 @@
+@media screen and (max-width:480px) {
+	.widget {
+		display: none;
+	}
+
+	#gce_widget-2 {
+		display: block;
+	}
+
+	.card-container--full {
+		min-height: initial;
+		.card--program {
+			max-height: 300px;
+			min-height: 200px;
+		}
+	}
+
+	.card__text--program {
+		display:none;
+	}
+
+}
