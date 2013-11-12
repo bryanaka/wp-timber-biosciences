@@ -17,12 +17,18 @@
 		{% for child in page.get_children %}
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div class="card-container--full">
-					<article class="card--full">
+					<article class="card--full card--program">
 						{% if child.get_thumbnail %}
 							<img src="{{ child.get_thumbnail.get_src }}" class="card__thumb--full">
 						{% endif %}
-						<h2 class="card__title"><a href="{{child.get_path}}">{{child.post_title}}</a></h2>
-						{{child.get_preview(50)}}
+						<h2 class="card__title">
+							<a href="{{child.get_path}}">
+								{{child.post_title}}
+							</a>
+						</h2>
+						<p class="card__text--program">
+							{{child.get_preview(30)}}
+						</p>
 					</article>
 				</div>
 			</div>

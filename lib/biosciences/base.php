@@ -3,6 +3,7 @@
 use Timber as Timber;
 use TimberMenu as TimberMenu;
 use TimberPost as TimberPost;
+use TimberLoader as TimberLoader;
 
 Class Base extends Timber {
 
@@ -66,8 +67,8 @@ Class Base extends Timber {
 		return $this->find_page();
 	}
 
-	public function render_page($filenames, $echo = true) {
-		parent::render($filenames, $this->context, $echo);
+	public function render_page($filenames, $expires=600, $cacheMode = TimberLoader::CACHE_NONE) {
+		parent::render($filenames, $this->context, $expires, $cacheMode);
 	}
 
 	private function add_to_context($property) {

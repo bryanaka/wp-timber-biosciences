@@ -60,13 +60,11 @@
 
 {% block content %}
 	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<h2>Related Videos</h2>
-				<hr>
-			</div>
+		<div class="col-xs-12">
+			<h2>Related Videos</h2>
+			<hr>
 		</div>
-		<section class="other_vids row">
+		<section class="other_vids">
 			{% for video in rel_videos %}
 				{% include [video.post_type~'/preview.twig', 'videos/preview.twig'] %}
 			{% endfor %}
