@@ -3,22 +3,24 @@
 {% block html_head %}
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/base-min.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="assets/libs/effeckt-captions.css">
+    <link rel="stylesheet" href="/wordpress/wp-content/themes/wptimber-biosciences/assets/libs/onestop.css">
+    <link rel="stylesheet" href="/wordpress/wp-content/themes/wptimber-biosciences/assets/libs/effeckt-captions.css">
 {% endblock %}
 
 {% block content %}
     <div id="onestop">
         <h3>Onestop</h3>
         <div id="sections">
-            <div class="section">
-                <a href="" class="onestop-link">
+            <!-- <div class="section"> -->
+                {% for post in onestop_posts %}
+                <a href="{{post.link}}" class="onestop-link">
                     <div class="onestop-section">
-                        <figure class="effeckt-caption" data-effect-type="cover-fade">
-                            <div class="onestop-element">
+                        <figure class="effeckt-caption" data-effeckt-type="cover-fade">
+                            <div class="onestop-element-real">
                                 <img src="{{TimberImage(post.get_field('image')).src}}" alt="">
                                 <figcaption>
                                     <div class="effeckt-figcaption-wrap">
-                                        {{post.content}}
+                                        {{post.notes}}
                                     </div>
                                 </figcaption>
                             </div>
@@ -26,7 +28,9 @@
                         <p>{{post.title}}</p>
                     </div>
                 </a>
-            </div>
+                {% endfor %}
+                <div style="clear:both"></div>
+           <!--  </div> -->
         </div>
     </div>
 
