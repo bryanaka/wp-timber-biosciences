@@ -1,34 +1,33 @@
 {% extends 'layout/base-focused.twig'%}
 {% block content %}
 
-<div class="row">
-	<article id="post-{{post.ID}}" class="post post--{{post.post_type}} col-sm-12">
-		<header class="post__header">
-			<h1 class="post__title">
-				{{post.title}}
-			</h1>
-			<img src="{{post.get_thumbnail.src|resize(250)}}" alt="{{post.thumnail.caption}}" class="alignleft">
-		</header>
-		<div class="entry-content">
-			{{post.content}}
-		</div>
-		{% if post.ext_link %}
-			{% if post.source_name %}
-				<div class="post__readmore">
-					<a href="{{post.ext_link}}" target="_blank">
-						<i class="icon-external-link"></i> Read the Full Story at {{post.source_name}}
-					</a>
-				</div>
-			{% else %}
+<article id="post-{{post.ID}}" class="post post--{{post.post_type}} col-sm-12">
+	<header class="post__header">
+		<h1 class="post__title">
+			{{post.title}}
+		</h1>
+		<img src="{{post.get_thumbnail.src|resize(250)}}" alt="{{post.thumnail.caption}}" class="alignleft">
+	</header>
+	<div class="entry-content">
+		{{post.content}}
+	</div>
+	{% if post.ext_link %}
+		{% if post.source_name %}
 			<div class="post__readmore">
 				<a href="{{post.ext_link}}" target="_blank">
-					<i class="icon-external-link"></i> Read the Full Story Here
+					<i class="icon-external-link"></i> Read the Full Story at {{post.source_name}}
 				</a>
 			</div>
-			{% endif %}
+		{% else %}
+		<div class="post__readmore">
+			<a href="{{post.ext_link}}" target="_blank">
+				<i class="icon-external-link"></i> Read the Full Story Here
+			</a>
+		</div>
 		{% endif %}
-	</article>
-</div>
+	{% endif %}
+</article>
+
 {% endblock %}
 
 {% block sidebar %}

@@ -7,10 +7,10 @@ use Biosciences as Biosciences;
 // $context['post'] = new TimberPost();
 // Timber::render('posts/single.twig', $context);
 
-$page = new Biosciences\Base();
+$pageObj = new Biosciences\Base();
 $menus = array('primary', 'footer_left', 'footer_center', 'footer_right');
-$page->find_menus($menus);
+$pageObj->find_menus($menus);
 
-$page->get_current_post();
+$pageObj->get_current_post();
 
-$page->render_page('posts/single.twig');
+$pageObj->render_page('posts/single.twig');

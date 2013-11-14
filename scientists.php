@@ -6,10 +6,10 @@ use Timber as Timber;
 use TimberPost as TimberPost;
 use Biosciences as Biosciences;
 
-$page = new Biosciences\Base();
-$page->find_menus( array('primary', 'footer_left', 'footer_center', 'footer_right') );
+$pageObj = new Biosciences\Base();
+$pageObj->find_menus( array('primary', 'footer_left', 'footer_center', 'footer_right') );
 
-$page->get_current_page();
+$pageObj->get_current_page();
 
 $query = array(
 	"numberposts" => -1,
@@ -19,5 +19,5 @@ $query = array(
 	"order"		  => "ASC"
 );
 
-$page->find_posts_as('scientists', $query);
-$page->render_page('scientists/list.twig');
+$pageObj->find_posts_as('scientists', $query);
+$pageObj->render_page('scientists/list.twig');

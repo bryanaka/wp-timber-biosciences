@@ -12,9 +12,9 @@
 				<hgroup class="theater__headers">
 					<h1 class="theater__title">{{video.title}} - {{video.series}}</h1>
 					{% if video.presenter != 'null' %}
-						<h2 class="theater__author c-h3">Presented by {{video.presenter}}</h2>
+						<h3 class="theater__author">Presented by {{video.presenter}}</h3>
 					{% else %}
-						<h2 class="theater__author c-h3">Presented by {{video.guest_presenter}}</h2>
+						<h3 class="theater__author">Presented by {{video.guest_presenter}}</h3>
 					{% endif %}
 				</hgroup>
 				<aside class="theater__share row">

@@ -7166,28 +7166,38 @@ img.aligncenter {
 	================================================== */
 /* line 5, ../scss/modules/_footers.scss */
 .mainFooter {
-  border-top: #525252 4px solid;
-  background: #333333;
+  border-top: yellowgreen 4px solid;
+  background: green;
   padding: 1.5em;
   padding: 1.5rem;
+  padding-bottom: 0;
   color: #fcfcfc;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 15, ../scss/modules/_footers.scss */
+/* line 16, ../scss/modules/_footers.scss */
 .mainFooter__item {
   vertical-align: top;
   text-align: left;
 }
 
-/* line 19, ../scss/modules/_footers.scss */
+/* line 20, ../scss/modules/_footers.scss */
 .mainFooter__link {
   text-decoration: none;
   font-size: 18px;
+  color: #fcfcfc;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+}
+/* line 27, ../scss/modules/_footers.scss */
+.mainFooter__link:hover {
+  color: #ffd059;
 }
 
-/* line 23, ../scss/modules/_footers.scss */
+/* line 31, ../scss/modules/_footers.scss */
 .mainFooter__linkGroup {
   width: auto;
   width: -moz-fit-content;
@@ -7197,9 +7207,11 @@ img.aligncenter {
   margin: 0 auto 20px auto;
 }
 
-/* line 32, ../scss/modules/_footers.scss */
+/* line 40, ../scss/modules/_footers.scss */
 .mainFooter__subheader {
   font-family: 'Ubuntu', 'Source Sans Pro', 'Helvetica', sans-serif;
+  border-bottom: yellowgreen 2px solid;
+  padding-bottom: 4px;
 }
 
 /* line 1, ../scss/modules/_slider.scss */
@@ -7363,7 +7375,36 @@ img.aligncenter {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 14, ../scss/modules/_widget.scss */
+@media screen and (max-width: 991px) {
+  /* line 15, ../scss/modules/_widget.scss */
+  .widget {
+    width: 49%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+  }
+
+  /* line 23, ../scss/modules/_widget.scss */
+  .widget:first-of-type {
+    margin-right: 4px;
+  }
+}
+@media screen and (max-width: 720px) {
+  /* line 29, ../scss/modules/_widget.scss */
+  .widget {
+    width: 98%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+}
+/* line 41, ../scss/modules/_widget.scss */
 .widget__title {
   font-size: 18px;
   font-weight: 500;
@@ -7477,10 +7518,9 @@ img.aligncenter {
 /* line 12, ../scss/modules/_profile.scss */
 .scientist__letter {
   color: green;
-  font-size: 32px;
 }
 
-/* line 17, ../scss/modules/_profile.scss */
+/* line 16, ../scss/modules/_profile.scss */
 .profile__img {
   padding: 3px;
   border: #252525 2px solid;
@@ -7489,24 +7529,24 @@ img.aligncenter {
   background: #FAFAFA;
 }
 
-/* line 25, ../scss/modules/_profile.scss */
+/* line 24, ../scss/modules/_profile.scss */
 .profile__name, .profile__contact {
   text-align: left;
 }
 
-/* line 28, ../scss/modules/_profile.scss */
+/* line 27, ../scss/modules/_profile.scss */
 .profile__name {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-/* line 32, ../scss/modules/_profile.scss */
+/* line 31, ../scss/modules/_profile.scss */
 .profile__name h1, .profile__name h2, .profile__name ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 36, ../scss/modules/_profile.scss */
+/* line 35, ../scss/modules/_profile.scss */
 .profile__headContainer {
   background: #EDEDED;
   border-bottom: #E5E5E5 3px solid;
@@ -7514,18 +7554,18 @@ img.aligncenter {
   margin-bottom: 1.5rem;
 }
 
-/* line 43, ../scss/modules/_profile.scss */
+/* line 42, ../scss/modules/_profile.scss */
 .profile__head {
   padding: 8px 0;
   padding: 0.5rem 0;
 }
 
-/* line 47, ../scss/modules/_profile.scss */
+/* line 46, ../scss/modules/_profile.scss */
 .profile__bio {
   text-align: left;
 }
 
-/* line 50, ../scss/modules/_profile.scss */
+/* line 49, ../scss/modules/_profile.scss */
 .profile__address, .profile__location {
   margin-bottom: 24rem;
   margin-bottom: 1.5rem;
@@ -7691,28 +7731,32 @@ img.aligncenter {
 }
 
 @media screen and (max-width: 560px) {
-  /* line 3, ../scss/modules/breakpoints/_tablet.scss */
-  .theater__headers h1 {
+  /* line 2, ../scss/modules/breakpoints/_tablet.scss */
+  h1 {
     font-size: 24px;
     font-size: 1.5rem;
   }
-  /* line 6, ../scss/modules/breakpoints/_tablet.scss */
-  .theater__headers h2 {
+
+  /* line 5, ../scss/modules/breakpoints/_tablet.scss */
+  h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
-  /* line 9, ../scss/modules/breakpoints/_tablet.scss */
-  .theater__headers h3 {
+
+  /* line 8, ../scss/modules/breakpoints/_tablet.scss */
+  h3 {
     font-size: 17.6px;
     font-size: 1.1rem;
   }
-  /* line 12, ../scss/modules/breakpoints/_tablet.scss */
-  .theater__headers h4, .theater__headers h5 {
+
+  /* line 11, ../scss/modules/breakpoints/_tablet.scss */
+  h4, h5 {
     font-size: 16px;
     font-size: 1rem;
   }
-  /* line 15, ../scss/modules/breakpoints/_tablet.scss */
-  .theater__headers h6 {
+
+  /* line 14, ../scss/modules/breakpoints/_tablet.scss */
+  h6 {
     font-size: 13.6px;
     font-size: 0.85rem;
   }

@@ -3,10 +3,11 @@
 	================================================== */
 
 .mainFooter {
-	border-top: lighten(#333333, 12%) 4px solid;
-	background: #333333;
+	border-top: $pbd-yellow-green 4px solid;
+	background: $pbd-green;
 	padding: 1.5em;
 	padding: 1.5rem;
+	padding-bottom: 0;
 	color: $off-white;
 	margin: 0 auto;
 	overflow: hidden;
@@ -19,6 +20,13 @@
 .mainFooter__link {
 	text-decoration: none;
 	font-size: 18px;
+	color: $off-white;
+	@include transition-property(color);
+	@include transition-duration(400ms);
+
+	&:hover {
+		color: $pbd-yellow;
+	}
 }
 .mainFooter__linkGroup {
 	width: auto;
@@ -31,4 +39,6 @@
 
 .mainFooter__subheader {
 	font-family: 'Ubuntu', 'Source Sans Pro', 'Helvetica', sans-serif;
+	border-bottom: $pbd-yellow-green 2px solid;
+	padding-bottom: 4px;
 }

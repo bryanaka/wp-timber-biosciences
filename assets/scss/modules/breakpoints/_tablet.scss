@@ -1,20 +1,17 @@
 @media screen and (max-width: 560px) {
-	.theater__headers {
-		h1 {
-			@include rem(1.50);
-		}
-		h2 {
-			@include rem(1.25);
-		}
-		h3 {
-			@include rem(1.1);
-		}
-		h4,h5 {
-			@include rem(1);
-		}
-		h6 { 
-			@include rem(0.85);
-		}
+	h1 {
+		@include rem(1.50);
 	}
-	
+	h2 {
+		@include rem(1.25);
+	}
+	h3 {
+		@include rem(1.1);
+	}
+	h4,h5 {
+		@include rem(1);
+	}
+	h6 { 
+		@include rem(0.85);
+	}
 }
