@@ -11,8 +11,7 @@
     <div id="onestop">
         <h3>Onestop</h3>
         <div id="sections">
-            <!-- <div class="section"> -->
-                {% for post in onestop_posts %}
+                {% for post in posts %}
                 <a href="{{post.link}}" class="onestop-link">
                     <div class="onestop-section">
                         <figure class="effeckt-caption" data-effeckt-type="cover-fade">
@@ -30,8 +29,8 @@
                 </a>
                 {% endfor %}
                 <div style="clear:both"></div>
-           <!--  </div> -->
         </div>
+        {{debug_info}}
     </div>
 
 {% endblock %}
