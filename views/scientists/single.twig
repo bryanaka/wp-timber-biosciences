@@ -15,8 +15,8 @@
 				{# This needs to be associated to scientist__titles model #}
 				<article class="profile__titles col-sm-4 hidden-xs">
 						<ul>
-							{% for title in scientist.titles %}
-								<li>{{title}}</li>
+							{% for title in scientist.get_field('position_titles') %}
+								<li>{{title.title}}</li>
 							{% else %}
 								<li>No Titles</li>
 							{% endfor %}
@@ -25,8 +25,8 @@
 				<article class="profile__websites col-sm-4 hidden-xs">
 					<h4>Websites:</h4>
 					<ul>
-						{% for website in scientist.websites %}
-							<li><a href="{{url}}">{{name}}</a></li>
+						{% for website in scientist.get_field('websites') %}
+							<li><a href="{{website.url}}">{{website.name}}</a></li>
 						{% else %}
 							<li>No Websites</li>
 						{% endfor %}
@@ -64,15 +64,15 @@
 	<article class="profile__emphasis">
 		<h2>Research Emphasis:</h2>
 		<p>
-			{{scientist.emphasis}}
+			{{scientist.emphasis|raw}}
 		</p>
 	</article>
 
-	{% if profile.summary %}
+	{% if scientist.summary %}
 	<article id="scientist__summary" class="profile__summary">
 		<h2>Summary:</h2>
 		<p>
-			{{scientist.summary}}
+			{{scientist.summary|raw}}
 		</p>
 	</article>
 	{% endif %}

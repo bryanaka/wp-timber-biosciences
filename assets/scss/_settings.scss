@@ -19,33 +19,51 @@ $pbd-yellow:   #ffd059;
 $pbd-yellow-green: #9ACD32;
 $pbd-cream: papayawhip;
 
-
-// super variables
 $html-base-background: #333333;
-
-// design elements
-
 $base-background: #F6F6F6;
 $base-color: #252525;
 $base-link-color: #0053c9;
 $base-link-hover-color: #0053c9;
+
+// *************************************
+// Design Element Defaults
+// *************************************
+
 $base-border-radius: 3px;
 $base-border: 1px solid $base-color;
 $base-boxShadow: 0 1px 2px rgba($base-color, 0.25);
 
-// typography
+// *************************************
+// Typography
+// *************************************
 
 $base-font-size: 16px;
-$base-font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 $base-line-height: 1.6;
 $base-whitespace: 20px;
+$base-header-font-family: 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+$base-font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+
+/*  ==================================
+	Brakepoints
+	================================== */
+
+// Small Devices
+$palm-max:   480px;
+
+// Tablet Sized Devices
+$tablet-min: $palm-max+1;
+$tablet-max: 769px;
+
+// Laptop Sized Devices
+$lap-min: $tablet-max+1;
+$lap-max: 1200px;
+
+// Large Devices
+$desk-min:   1201px;
 
 /*  ==================================
 	Content and Layout Variables
 	================================== */
-
-$c-header-font-family: 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
-
 $l-maxWidth: 980px;
 
 /*  ==================================

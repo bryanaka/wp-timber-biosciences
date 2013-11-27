@@ -1,3 +1,9 @@
+/* CSSWizardry Table Grid */
+
+.table-grid {
+    table-layout: fixed;
+}
+
 table .table-odd td {
     background-color: #f2f2f2;
 }
@@ -28,4 +34,4 @@ table .table-odd td {
     border-bottom-width: 0;
 }
 
-/* responsive table css*/
+/* responsive table css */

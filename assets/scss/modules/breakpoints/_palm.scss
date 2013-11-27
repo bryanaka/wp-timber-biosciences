@@ -1,4 +1,14 @@
-@media screen and (max-width:480px) {
+// ********************************
+// Styles 480px and below
+// ********************************
+
+@include mq-palm {
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
 	.widget {
 		display: none;
 	}
@@ -19,4 +29,22 @@
 		display:none;
 	}
 
+	.card-container--scientist {
+		min-height: 235px;
+	}
+	
+	.card--scientist {
+		min-height: 215px;
+	}
+
+}
+
+@include mq-range(400px, 480px) {
+	.card-container--scientist {
+		min-height: 285px;
+	}
+	
+	.card--scientist {
+		min-height: 265px;
+	}
 }
