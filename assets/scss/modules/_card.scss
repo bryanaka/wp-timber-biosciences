@@ -41,7 +41,6 @@
 }
 
 .card__subtitle {
-	font-size: 20px;
 	margin:0 0 8px 0;
 }
 
@@ -50,6 +49,13 @@
 	margin:0 0 8px 0;
 }
 
+.card__thumb--full {
+	@extend .card__thumb;
+	width: 95%;
+	max-width: none;
+}
+
+// card - full
 .card-container--full {
 	@extend .card-container;
 	max-width: 100%;
@@ -67,8 +73,13 @@
 	max-width: 100%;
 }
 
-.card__thumb--full {
-	@extend .card__thumb;
-	width: 95%;
-	max-width: none;
+// card - scientist
+.card-container--scientist {
+	@extend .card-container;
+	min-height: 265px;
+}
+
+.card--scientist {
+	@extend .card;
+	min-height: 245px;
 }

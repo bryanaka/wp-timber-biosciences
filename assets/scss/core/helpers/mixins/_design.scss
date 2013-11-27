@@ -1,0 +1,28 @@
+// **********************************
+// Design
+// **********************************
+
+@mixin buttonify($color: #252525, $percent: 10%) {
+	border: darken($color, 8%) 1px solid;
+	background: $color; /* fallback */
+	@include background-image( linear-gradient( top, $color,darken($color, $percent) ) );
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color}', endColorstr='#{darken($color, $percent)}')";
+}
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+@mixin card-box-shadow($speed:400ms, $box-shadow: 4px 4px 6px rgba(0,0,0,0.2)) {
+	box-shadow: 0;
+	@include transition-property(box-shadow);
+	@include transition-duration($speed);
+	
+	&:hover {
+		box-shadow: $box-shadow;
+	}
+}

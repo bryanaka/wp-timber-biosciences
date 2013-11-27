@@ -1,4 +1,18 @@
-@media screen and (max-width: 560px) {
+// ********************************
+// Styles Between 481px and 768px
+// ********************************
+
+@include mq-tablet {
+	.card-container--scientist {
+		min-height: 285px;
+	}
+	
+	.card--scientist {
+		min-height: 265px;
+	}
+}
+
+@include mq-max(560px) {
 	h1 {
 		@include rem(1.50);
 	}
