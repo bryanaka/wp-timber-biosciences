@@ -1,0 +1,15 @@
+// ********************************
+// Styles Between 769px and 1200px
+// ********************************
+
+@include mq-lap {
+
+	.card-container--scientist {
+		min-height: 305px;
+	}
+	
+	.card--scientist {
+		min-height: 285px;
+	}
+
+}

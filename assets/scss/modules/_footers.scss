@@ -5,8 +5,7 @@
 .mainFooter {
 	border-top: $pbd-yellow-green 4px solid;
 	background: $pbd-green;
-	padding: 1.5em;
-	padding: 1.5rem;
+	@include rem-fallback(padding, 1.5);
 	padding-bottom: 0;
 	color: $off-white;
 	margin: 0 auto;
@@ -38,7 +37,7 @@
 }
 
 .mainFooter__subheader {
-	font-family: 'Ubuntu', 'Source Sans Pro', 'Helvetica', sans-serif;
+	font-family: $base-header-font-family;
 	border-bottom: $pbd-yellow-green 2px solid;
 	padding-bottom: 4px;
 }
