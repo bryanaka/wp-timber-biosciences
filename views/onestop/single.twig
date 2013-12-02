@@ -27,7 +27,6 @@
             </ul>
             {% for item in post.get_field('info') %}
                 <div id="tabs-{{loop.index}}">
-                    <h3>{{item.title}}</h3>
                     {% if item.image.src != "" %}
                         <img src="{{item.image.src|resize(500, 300)}}" alt="">
                     {% endif %}
