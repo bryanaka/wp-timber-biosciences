@@ -9,6 +9,7 @@
 
 {% block content %}
     <div id="content">
+        <h2>{{post.title}}</h2>
         <div id="content-header">
             {% for contact in post.get_field('contacts') %}
                 <div class="contact">
@@ -17,6 +18,7 @@
                     <span>{{contact.number}}</span>
                     <span>{{contact.email}}</span>
                 </div>
+                <div class="clear"></div>
             {% endfor %}
         </div>
         <div id="tabs">
