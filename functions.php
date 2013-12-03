@@ -23,6 +23,20 @@ function main_sidebar()  {
 
 }
 
+function enable_more_buttons($buttons) {
+  $buttons[] = 'hr';
+  $buttons[] = 'sub';
+  $buttons[] = 'sup';
+  $buttons[] = 'fontselect';
+  $buttons[] = 'fontsizeselect';
+  $buttons[] = 'cleanup';
+  $buttons[] = 'styleselect';
+
+  return $buttons;
+}
+
+add_filter("mce_buttons_3", "enable_more_buttons");
+
 // Hook into the 'widgets_init' action
 add_action( 'widgets_init', 'main_sidebar' );
 
