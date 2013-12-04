@@ -23,14 +23,6 @@
     display: block;
 }
 
-.onestop-info a {
-    color: #0088CC;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 400ms;
-    transition-duration: 400ms;
-}
-
 .clear {
     clear: both;
 }
