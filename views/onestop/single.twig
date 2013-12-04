@@ -33,6 +33,9 @@
                         <img src="{{item.image.src|resize(500, 300)}}" alt="">
                     {% endif %}
                     <p>{{item.info}}</p>
+                    {% if item.iframe != "" %}
+                        <iframe src="{{item.iframe}}" frameborder="0" style="width: 100%; height: 600px"></iframe>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
