@@ -1,3 +1,9 @@
+.container--foundation {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1400px;
+}
+
 .scientist__divider {
 	border-top-color: $pbd-green;
 	width: 99%;
@@ -15,19 +21,24 @@
 	max-width: 175px;
 	min-width: 100px;
 	background: #FAFAFA;
-
 }
+
 .profile__name, .profile__contact {
 	text-align: left;
 }
+
 .profile__name {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
+
 .profile__name h1, .profile__name h2, .profile__name ul {
 	margin-top: 0;
 	margin-bottom: 0;
 }
+
+
+
 .profile__headContainer {
 	background: #EDEDED;
     border-bottom: #E5E5E5 3px solid;
@@ -39,9 +50,25 @@
 	padding: 8px 0;
 	padding: 0.5rem 0;
 }
+
+.profile__icons {
+	@include rem(2.25);
+	@include rem-fallback(padding-top, 1);
+	text-align: center;
+	a {
+		color: $off-black;
+		text-decoration: none;
+
+		&:hover {
+			color: lighten($off-black, 15%);
+		}
+	}
+}
+
 .profile__bio {
 	text-align: left;
 }
+
 .profile__address, .profile__location {
 	margin-bottom: 24rem;
 	margin-bottom: 1.5rem;

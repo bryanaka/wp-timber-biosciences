@@ -3,12 +3,27 @@
 // ********************************
 
 @include mq-tablet {
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
 	.card-container--scientist {
 		min-height: 285px;
 	}
 	
 	.card--scientist {
 		min-height: 265px;
+	}
+
+}
+
+@include mq-min(481px) {
+	.tab {
+		display: inherit !important;
+	}
+	.tab--palm {
+		display: none !important;
 	}
 }
 

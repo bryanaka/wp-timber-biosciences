@@ -31,3 +31,10 @@ h5, .c-h5, %c-h5 {
 h6, .c-h6, %c-h6 {
   @include rem(1);
 }
+
+@include mq-max(560px) {
+	h1, h2, h3,
+    h4, h5, h6 {
+        text-align: center;
+    }
+}

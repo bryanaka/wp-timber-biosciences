@@ -1,0 +1,27 @@
+.tabs {
+
+}
+
+.tabs--desk {
+
+}
+
+.tabs--tablet, .tabs--lap, .tabs--palm {
+	.tab-nav {
+		display: none;
+	}	
+}
+
+.tab {
+
+}
+
+.tab--palm {
+	display: none;
+}
+
+#profile_contact:target,
+#profile_websites:target,
+#profile_bio:target {
+	display: block;
+}
