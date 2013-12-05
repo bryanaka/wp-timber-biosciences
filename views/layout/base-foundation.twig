@@ -17,51 +17,34 @@
 		background-image-sizing, border-radius, multiple-backgrounds, history, canvas, canvas text, rem
 	-->
 	<link rel="stylesheet" href="{{ stylesheet_uri }}" type="text/css">
+	{% block html_head %}
+	{% endblock %}
 	<!-- start wordpress-head -->
 	{{wp_head}}
 	<!-- end wordpress-head -->
-	{% block html_head %}{% endblock %}
 </head>
 
 <body class="{{body_class}}" data-source="base">
-	
-	{% include 'components/lab_header.twig' %}
 
-	{# do_action( 'before' ); #}
 	<header id="main_header" class="main_header" role="banner">
-		<div class="brand">
-			<h1 class="brand__title">
-				<a href="/" title="{{ bloginfo('name', display) }}" rel="home">
-					{{ bloginfo('name') }}
-				</a>
-			</h1>
-			{# the_breadcrumb() #}
-		</div>
-
 		{% block navigation_bar %}
 			{% include "components/navbar.twig" %}
 		{% endblock %}
+	</header>
 
-	</header><!-- #masthead -->
-	<div class="container-wrap--grid">
-		<main class="container" role="main">
-		
-			<div class="row">
-				
-				{% block content %}
-					Sorry, No Content
-				{% endblock %}
+	{% block hero %}
+	{% endblock %}
 
-				{% block sidebar %}
-					<aside id="sidebar" class="col-md-4" role="complementary">
-						{{main_sidebar}}
-					</aside>
-				{% endblock %}
-				
-			</div>
-	
-		</main>
-	</div>
+	<main class="container--foundation clearfix" role="main">
+			
+		{% block content %}
+			Sorry, No Content
+		{% endblock %}
+
+		{% block sidebar %}
+		{% endblock %}
+
+	</main>
 	
 	{% block footer %}
 		{% include "components/footer.twig" %}

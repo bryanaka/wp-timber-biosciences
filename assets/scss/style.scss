@@ -25,18 +25,21 @@ Tags: pbd, physical, biosciences, modern, front-end, developer, theme, timber, t
 @import 'core/core';
 
 // modules
-@import 'modules/lab_header';
-@import 'modules/main_header';
-@import 'modules/nav';
-@import 'modules/footers';
-@import 'modules/slider';
-@import 'modules/sidebar';
-@import 'modules/widget';
-@import 'modules/card';
-@import 'modules/profile';
-@import 'modules/news';
-@import 'modules/theater';
-@import 'modules/breakpoints/breakpoints';
+@import 
+	'modules/lab_header',
+	'modules/main_header',
+	'modules/nav',
+	'modules/footers',
+	'modules/slider',
+	'modules/tabs',
+	'modules/sidebar',
+	'modules/widget',
+	'modules/card',
+	'modules/profile',
+	'modules/news',
+	'modules/theater',
+	'modules/breakpoints/breakpoints';
+
 // styles that need to be sorted out
 @import 'inbox';
 @import 'shame';

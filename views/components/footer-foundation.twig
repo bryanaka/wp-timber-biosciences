@@ -1,0 +1,47 @@
+<footer id="mainFooter" class="mainFooter" role="contentinfo">
+	<div class="row">
+		<div class="large-3 medium-6 small-12 columns">
+			{% if menus.footer_left %}
+				<article class="mainFooter__linkGroup">
+					<h4 class="mainFooter__subheader">{{menus.footer_left.name}}</h4>
+					{% for item in menus.footer_left.get_items %}
+						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
+					{% endfor %}
+				</article>
+			{% endif %}
+		</div>
+		<div class="large-3 medium-6 small-12 columns">
+			{% if menus.footer_center %}
+				<article class="mainFooter__linkGroup">
+					<h4 class="mainFooter__subheader">{{menus.footer_center.name}}</h4>
+					{% for item in menus.footer_center.get_items %}
+						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
+					{% endfor %}
+				</article>
+			{% endif %}
+		</div>
+		<div class="large-3 medium-6 small-12 columns">
+			{% if menus.footer_right %}
+				<article class="mainFooter__linkGroup">
+					<h4 class="mainFooter__subheader">{{menus.footer_right.name}}</h4>
+					{% for item in menus.footer_right.get_items %}
+						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
+					{% endfor %}
+				</article>
+			{% endif %}
+		</div>
+		<div class="large-3 medium-6 small-12 columns">
+			<article class="mainFooter__linkGroup">
+				<div class="mainFooter__img">
+					<img src="{{template_uri}}/assets/img/lbnl.svg" style="width:70%;padding: 0 8px 16px 8px">
+				</div>
+				<div class="mainFooter__img">
+					<img src="{{template_uri}}/assets/img/full_doe_logo_white.png" width="150">
+				</div>
+			</article>
+		</div>
+	</div>
+	<div class="site-info">
+		<?php do_action( 'bioscience_credits' ); ?>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->

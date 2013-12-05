@@ -1,19 +1,26 @@
-{% extends 'layout/base.twig' %}
+{% extends 'layout/base-foundation.twig' %}
 {% block hero %}
 	<div class="profile__headContainer">
-		<section class="profile__head container" style="">
+		<section class="profile__head container--foundation" style="">
 			<div class="row">
-				<div class="profile__name col-xs-12">
-					<h1>{{scientist.title}}</h1>
-				</div>
-				<figure class="col-sm-4">
+				<figure class="small-7 medium-6 large-5 columns">
 					<img src="{{scientist.get_thumbnail.src}}"
 					     alt="{{scientist.get_thumbnail.caption}}"
 					     class="profile__img">
 				</figure>
-			
-				{# This needs to be associated to scientist__titles model #}
-				<article class="profile__titles col-sm-4 hidden-xs">
+
+				<div class="profile__name small-5 medium-6 large-7 columns">
+					<h1>{{scientist.title}}</h1>
+					<article class="profile__icons visible-xs">
+						<h5>{{ scientist.get_field('position_titles')[0].title }}</h5>
+						<a href="mailto:{{scientist.email}}">
+							<i class="icon-envelope"></i>
+						</a>
+						<a href="{{scientist.publications}}">
+							<i class="icon-book"></i>
+						</a>
+					</article>
+					<article class="profile__titles hidden-xs">
 						<ul>
 							{% for title in scientist.get_field('position_titles') %}
 								<li>{{title.title}}</li>
@@ -21,63 +28,106 @@
 								<li>No Titles</li>
 							{% endfor %}
 						</ul>
-				</article>
-				<article class="profile__websites col-sm-4 hidden-xs">
-					<h4>Websites:</h4>
-					<ul>
-						{% for website in scientist.get_field('websites') %}
-							<li><a href="{{website.url}}">{{website.name}}</a></li>
-						{% else %}
-							<li>No Websites</li>
-						{% endfor %}
-					</ul>
-				</article>
+					</article>
+					<article class="profile__websites hidden-xs">
+						<h4>Websites:</h4>
+						<ul>
+							{% for website in scientist.get_field('websites') %}
+								<li><a href="{{website.url}}">{{website.name}}</a></li>
+							{% else %}
+								<li>No Websites</li>
+							{% endfor %}
+						</ul>
+					</article>
+				</div>
+
+				
 			</div>
 		</section>
 	</div>
 {% endblock %}
 
 {% block content %}
-<section class="profile__contact col-sm-4 col-xs-12 row">
+<div class="tabs--palm">
+	<nav class="tab-nav row">
+		<div class="tab-nav__item small-4 columns">
+			<a href="#profile_bio" class="tab-nav__link">Bio</a>
+		</div>
+		<div class="tab-nav__item small-4 columns">
+			<a href="#profile_websites" class="tab-nav__link">Websites</a>
+		</div>
+		<div class="tab-nav__item small-4 columns">
+			<a href="#profile_contact" class="tab-nav__link">Contact</a>
+		</div>
+	</nav>
 
-	<article class="profile__address col-xs-6 col-sm-12">
-		<h2>Location Information</h2>
-		{{scientist.department_name}}<br>
-		{{scientist.address1}}<br>
-		{{scientist.address2}}<br>
-		{{scientist.city}}, {{scientist.state}} {{scientist.zip_code}} USA
-	</article>
+	<section id="profile_contact" class="tab profile__contact medium-12 large-4 columns">
+	
+		<article class="profile__address medium-6 small-12 large-12 columns">
+			<h2 class="c-left">Location Information</h2>
+			{{scientist.department_name}}<br>
+			{{scientist.address1}}<br>
+			{{scientist.address2}}<br>
+			{{scientist.city}}, {{scientist.state}} {{scientist.zip_code}} USA
+		</article>
+	
+		<article class="profile__location medium-6 small-12 large-12 columns">
+			<h2 class="c-left">Contact Information</h2>
+			Primary Number: {{scientist.phone1}}<br>
+			{% if scientist.phone2_type != 'null' %}
+				{{scientist.phone2_type}}: {{scientist.phone2}}<br>
+			{% endif %}
+			E-Mail: <a href="mailto:{{scientist.email}}">{{scientist.email}}</a><br>
+		</article>
+	
+	</section>
 
-	<article class="profile__location col-xs-6 col-sm-12 ">
-		<h2>Contact Information</h2>
-		Primary Number: {{scientist.phone1}}<br>
-		{% if scientist.phone2_type != 'null' %}
-			{{scientist.phone2_type}}: {{scientist.phone2}}<br>
+	<section id="profile_websites" class="tab tab--palm small-12 columns">
+		<h2 class="c-left">Websites:</h2>
+		<ul>
+			{% for website in scientist.get_field('websites') %}
+				<li><a href="{{website.url}}">{{website.name}}</a></li>
+			{% else %}
+				<li>No Websites</li>
+			{% endfor %}
+		</ul>
+	</section>
+	
+	<section id="profile_bio" class="tab tab--default profile__bio large-8 medium-12 small-12 columns">
+	
+		<article class="profile__emphasis">
+			<h2>Research Emphasis</h2>
+			<hr>
+			<p>
+				{{scientist.emphasis|raw}}
+			</p>
+		</article>
+	
+		{% if scientist.summary %}
+		<article id="scientist__summary" class="profile__summary">
+			<h2>Summary:</h2>
+			<p>
+				{{scientist.summary|raw}}
+			</p>
+		</article>
 		{% endif %}
-		E-Mail: <a href="mailto:{{scientist.email}}">{{scientist.email}}</a><br>
-	</article>
+	
+	</section>
 
-</section>
-
-<section class="profile__bio col-sm-8 col-xs-12">
-
-	<article class="profile__emphasis">
-		<h2>Research Emphasis:</h2>
-		<p>
-			{{scientist.emphasis|raw}}
-		</p>
-	</article>
-
-	{% if scientist.summary %}
-	<article id="scientist__summary" class="profile__summary">
-		<h2>Summary:</h2>
-		<p>
-			{{scientist.summary|raw}}
-		</p>
-	</article>
-	{% endif %}
-
-</section>
+</div>
 {% endblock %}
 
-{% block sidebar %}{% endblock %}
+{% block footer %}
+{% include "components/footer-foundation.twig" %}
+<script>
+// ghetto tabs, revisit when possible
+(function($){
+	$(".tab-nav").on("click", ".tab-nav__link", function(event) {
+		event.preventDefault();
+		var tabSelected = $(event.target).attr("href");
+		$(".tab").slideUp(400);
+		$(tabSelected).slideDown(400);
+	});
+})(jQuery);
+</script>
+{% endblock %}

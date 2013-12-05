@@ -5,6 +5,15 @@
 %c-center, .c-center {
   text-align: center;
 }
+
+%c-left, .c-left {
+	text-align: left !important;
+}
+
+%c-right, .c-right {
+	text-align: right !important;
+}
+
 %c-condense, .c-condense {
   font-size: 85%;
 }

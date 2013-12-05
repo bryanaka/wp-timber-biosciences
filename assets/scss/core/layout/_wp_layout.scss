@@ -23,21 +23,31 @@ img.aligncenter {
 	margin-right: auto;
 }
 
-@media all and (max-width: 769px) {
+@media all and (max-width: 560px) {
 	img.alignright {
 		float:none;
 		display: block;
-		margin:0 auto;
+		margin-left: auto;
+		margin-right: auto;
+		@include rem-fallback(margin-top, 1.5);
+		@include rem-fallback(margin-bottom, 1.5);
 	}
+
 	img.alignleft {
 		float:none;
 		display: block;
 		margin:0 auto;
+		margin-left: auto;
+		margin-right: auto;
+		@include rem-fallback(margin-top, 1.5);
+		@include rem-fallback(margin-bottom, 1.5);
 	}
+
 	.alignright {
 		float:none;
 		display: block;
 	}
+
 	.alignleft {
 		float:none;
 		display: block;
