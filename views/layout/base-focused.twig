@@ -20,7 +20,8 @@
 	<!-- start wordpress-head -->
 	{{wp_head}}
 	<!-- end wordpress-head -->
-	{% block html_head %}{% endblock %}
+	{% block html_head %}
+	{% endblock %}
 </head>
 
 <body class="{{body_class}}" data-source="base">
@@ -32,24 +33,20 @@
 	</header>
 
 	<div class="container-wrap--focused">
-		<main class="container--focused" role="main">
-			<div class="row">
-				{% block hero %}
-				{% endblock %}
+		<main class="container--focused clearfix" role="main">
+			{% block hero %}
+			{% endblock %}
 			
-				{% block content %}
-					Sorry, No Content
-				{% endblock %}
-	
-				{% block sidebar %}
-				{% endblock %}
-			</div>
+			{% block content %}
+				Sorry, No Content
+			{% endblock %}
 		</main>
 	</div>
-	
+
+	{{wp_footer}}
 	{% block footer %}
 		{% include "components/footer.twig" %}
 	{% endblock %}
-{{wp_footer}}
+
 </body>
 </html>

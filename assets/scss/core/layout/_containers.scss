@@ -4,7 +4,7 @@
 }
 .container-wrap {
 	padding: 16px;
-	max-width: 1250px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 .container--focused {
@@ -14,7 +14,7 @@
 
 .container-wrap--focused {
 	padding: 16px;
-	max-width: 1250px;
+	max-width: 1400px;
 	margin: 0 auto;
 	background-color: $off-white;
 	border-left: 4px #cecece solid;
@@ -23,6 +23,16 @@
 
 .container-wrap--grid {
 	padding: 16px;
-	max-width: 1250px;
+	max-width: 1400px;
 	margin: 0 auto;
+}
+
+.container--foundation {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1400px;
+}
+
+.row {
+	max-width: 100%;
 }

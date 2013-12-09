@@ -14,12 +14,12 @@ Tags: pbd, physical, biosciences, modern, front-end, developer, theme, timber, t
 
 */
 
+// settings
+@import 'settings';
+
 // Vendor SCSS
 @import 'compass/css3';
 @import 'lib/all';
-
-// settings
-@import 'settings';
 
 // core
 @import 'core/core';
@@ -32,13 +32,14 @@ Tags: pbd, physical, biosciences, modern, front-end, developer, theme, timber, t
 	'modules/footers',
 	'modules/slider',
 	'modules/tabs',
+	'modules/jq_tabs',
 	'modules/sidebar',
 	'modules/widget',
 	'modules/card',
 	'modules/profile',
 	'modules/news',
 	'modules/theater',
-	'modules/breakpoints/breakpoints';
+	'modules/breakpoints';
 
 // styles that need to be sorted out
 @import 'inbox';

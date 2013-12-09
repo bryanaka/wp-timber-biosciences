@@ -2,19 +2,23 @@
 
 {% block hero %}
 	{% if page.thumbnail %}
-		<div class="hero--banner col-xs-12 hidden-xs" style="background-image: url({{page.get_thumbnail.src}});">
+		<div class="hero--banner small-12 columns hide-for-small-only" 
+		     style="background-image: url({{page.get_thumbnail.src}});">
 			<div class="hero--banner__overlay"></div>
 			<h1 class="page__header">{{page.title}}</h1>
 		</div>
-		<h1 class="page__header col-xs-12 visible-xs">{{page.title}}</h1>
+		<h1 class="page__header show-for-small-only">{{page.title}}</h1>
 	{% else %}
-		<h1 class="page__header col-xs-12">{{page.title}}</h1>
+		<div class="row">
+			<h1 class="page__header columns">{{page.title}}</h1>
+			<hr style="width:100%">
+		</div>
 	{% endif %}
 {% endblock %}
 
 {% block content %}
 
-	<article class="col-xs-12 page__content">
+	<article class="page__content small-12 columns">
 		{{page.content}}
 	</article>
 

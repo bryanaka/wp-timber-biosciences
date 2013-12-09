@@ -1,47 +1,46 @@
-{% extends 'layout/base.twig' %}
+{% extends 'layout/base-focused.twig' %}
 
 {% block html_head %}
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/wp-content/themes/wptimber-biosciences/assets/css/tabs.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/south-street/jquery-ui.min.css">
 {% endblock %}
 
 {% block content %}
-    <div id="content">
-        <h2>{{post.title}}</h2>
-        <div id="content-header">
-            {% for contact in post.get_field('contacts') %}
-                <div class="contact">
-                    <span>{{contact.name}}</span>
-                    <span>{{contact.address}}</span>
-                    <span>{{contact.number}}</span>
-                    <span>{{contact.email}}</span>
-                </div>
-            {% endfor %}
-            <div class="clear"></div>
-        </div>
-        <div id="tabs">
+    <div class="row">
+        <h1 class="page__header columns">{{page.title}}</h1>
+        <hr style="width:100%">
+    </div>
+    <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-4 c-center">
+        {% for contact in page.get_field('contacts') %}
+            <li class="contact">
+                <div>{{contact.name}}</div>
+                <div>{{contact.number}}</div>
+                <div><a href="mailto:{{contact.email}}">{{contact.email}}</a></div>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="row">
+        <div id="tabs" class="hidden">
             <ul>
-            {% for item in post.get_field('info') %}
-                <li><a href="#tabs-{{loop.index}}">{{item.title}}</a></li>
+            {% for tab in page.get_field('tabs') %}
+                <li><a href="#tab-{{loop.index}}">{{tab.title}}</a></li>
             {% endfor %}
             </ul>
-            {% for item in post.get_field('info') %}
-                <div id="tabs-{{loop.index}}">
-                    {% if item.image.src != "" %}
-                        <img src="{{item.image.src|resize(500, 300)}}" alt="">
-                    {% endif %}
-                    <p>{{item.info}}</p>
-                    {% if item.iframe != "" %}
-                        <iframe src="{{item.iframe}}" frameborder="0" style="width: 100%; height: 600px"></iframe>
-                    {% endif %}
+            {% for tab in page.get_field('tabs') %}
+                <div id="tab-{{loop.index}}">
+                    <h3>{{tab.title}}</h3>
+                    <p>{{tab.content}}</p>
                 </div>
             {% endfor %}
         </div>
     </div>
+{% endblock %}
 
+{% block footer %}
+    {% include "components/footer.twig" %}
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script type="text/javascript">
-        $('#tabs').tabs();
+        jQuery(function(){
+            jQuery('#tabs').removeClass("hidden").tabs();
+        });
     </script>
 {% endblock %}
