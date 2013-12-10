@@ -15,7 +15,6 @@
 	.card--scientist {
 		min-height: 265px;
 	}
-
 }
 
 @include mq-min(481px) {
@@ -25,6 +24,10 @@
 	.tab--palm {
 		display: none !important;
 	}
+	.mainFooter__linkGroup {
+		min-height: 145px;
+	}
+
 }
 
 @include mq-max(560px) {

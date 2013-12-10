@@ -11095,42 +11095,47 @@ table td, table th {
   }
 }
 @media screen and (min-width: 481px) {
-  /* line 22, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 21, ../scss/modules/breakpoints/_tablet.scss */
   .tab {
     display: inherit !important;
   }
 
-  /* line 25, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 24, ../scss/modules/breakpoints/_tablet.scss */
   .tab--palm {
     display: none !important;
   }
+
+  /* line 27, ../scss/modules/breakpoints/_tablet.scss */
+  .mainFooter__linkGroup {
+    min-height: 145px;
+  }
 }
 @media screen and (max-width: 560px) {
-  /* line 31, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 34, ../scss/modules/breakpoints/_tablet.scss */
   h1 {
     font-size: 24px;
     font-size: 1.5rem;
   }
 
-  /* line 34, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 37, ../scss/modules/breakpoints/_tablet.scss */
   h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 
-  /* line 37, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 40, ../scss/modules/breakpoints/_tablet.scss */
   h3 {
     font-size: 17.6px;
     font-size: 1.1rem;
   }
 
-  /* line 40, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 43, ../scss/modules/breakpoints/_tablet.scss */
   h4, h5 {
     font-size: 16px;
     font-size: 1rem;
   }
 
-  /* line 43, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 46, ../scss/modules/breakpoints/_tablet.scss */
   h6 {
     font-size: 13.6px;
     font-size: 0.85rem;
