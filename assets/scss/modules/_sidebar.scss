@@ -2,5 +2,10 @@
 	Sidebar
 	================================================== */
 .sidebar {
-
+	@include grid-column(
+    	// Control the number of columns
+    	$columns:4,
+    	// Specify whethere or not this is the last column in the row
+    	$last-column:true
+    );
 }

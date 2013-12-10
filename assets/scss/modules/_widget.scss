@@ -11,33 +11,6 @@
 	@include card-box-shadow();
 }
 
-@media screen and (max-width: 991px) {
-	.widget {
-		width: 49%;
-		position: relative;
-		min-height: 1px;
-		padding-left: 15px;
-		padding-right: 15px;
-		float: left;
-	}
-	.widget:first-of-type {
-		margin-right: 4px;
-	}
-}
-
-@media screen and (max-width: 720px) {
-	.widget {
-		width: 98%;
-		position: relative;
-		min-height: 1px;
-		padding-left: 15px;
-		padding-right: 15px;
-		margin-right: auto;
-		margin-left: auto;
-		float: none;
-	}
-}
-
 .widget__title {
 	font-size: 18px;
 	font-weight: 500;

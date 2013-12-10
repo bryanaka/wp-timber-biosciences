@@ -10143,15 +10143,16 @@ table .table-odd td {
   padding: 16px;
   max-width: 1400px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
-/* line 10, ../scss/core/layout/_containers.scss */
+/* line 11, ../scss/core/layout/_containers.scss */
 .container--focused {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 15, ../scss/core/layout/_containers.scss */
+/* line 16, ../scss/core/layout/_containers.scss */
 .container-wrap--focused {
   padding: 16px;
   max-width: 1400px;
@@ -10161,21 +10162,21 @@ table .table-odd td {
   border-right: 4px #cecece solid;
 }
 
-/* line 24, ../scss/core/layout/_containers.scss */
+/* line 25, ../scss/core/layout/_containers.scss */
 .container-wrap--grid {
   padding: 16px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* line 30, ../scss/core/layout/_containers.scss */
+/* line 31, ../scss/core/layout/_containers.scss */
 .container--foundation {
   margin-right: auto;
   margin-left: auto;
   max-width: 1400px;
 }
 
-/* line 36, ../scss/core/layout/_containers.scss */
+/* line 37, ../scss/core/layout/_containers.scss */
 .row {
   max-width: 100%;
 }
@@ -10257,6 +10258,12 @@ img.aligncenter {
 /* line 8, ../scss/core/layout/_layout.scss */
 .l-header, .page__header {
   margin: 0 0 16px 0;
+}
+
+/* line 12, ../scss/core/layout/_layout.scss */
+.l-full {
+  max-width: 100%;
+  width: 100%;
 }
 
 /* line 1, ../scss/modules/_lab_header.scss */
@@ -10660,6 +10667,16 @@ table td, table th {
 /*  ==================================================
 	Sidebar
 	================================================== */
+/* line 4, ../scss/modules/_sidebar.scss */
+.sidebar {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: right;
+  float: left;
+}
+
 /*  ==================================================
 	Widgets
 	================================================== */
@@ -10684,36 +10701,7 @@ table td, table th {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 991px) {
-  /* line 15, ../scss/modules/_widget.scss */
-  .widget {
-    width: 49%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-  }
-
-  /* line 23, ../scss/modules/_widget.scss */
-  .widget:first-of-type {
-    margin-right: 4px;
-  }
-}
-@media screen and (max-width: 720px) {
-  /* line 29, ../scss/modules/_widget.scss */
-  .widget {
-    width: 98%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    float: none;
-  }
-}
-/* line 41, ../scss/modules/_widget.scss */
+/* line 14, ../scss/modules/_widget.scss */
 .widget__title {
   font-size: 18px;
   font-weight: 500;
@@ -10910,12 +10898,22 @@ table td, table th {
 /*  ==================================================
 	News
 	================================================== */
-/* line 5, ../scss/modules/_news.scss */
+/* line 4, ../scss/modules/_news.scss */
+.news-column {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 66.66667%;
+  float: right;
+  float: left;
+}
+
+/* line 13, ../scss/modules/_news.scss */
 .news__title {
   color: green;
 }
 
-/* line 9, ../scss/modules/_news.scss */
+/* line 17, ../scss/modules/_news.scss */
 .news__divider {
   margin: 8px 0;
 }
@@ -10923,13 +10921,13 @@ table td, table th {
 /*  ==================================================
 	News Teaser - previews
 	================================================== */
-/* line 17, ../scss/modules/_news.scss */
+/* line 25, ../scss/modules/_news.scss */
 .tease {
   margin: 16px 0;
   border-top: 7px green solid;
 }
 
-/* line 22, ../scss/modules/_news.scss */
+/* line 30, ../scss/modules/_news.scss */
 .tease-container {
   padding: 16px;
   border-left: 1px #cecece solid;
@@ -10948,31 +10946,31 @@ table td, table th {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 32, ../scss/modules/_news.scss */
+/* line 40, ../scss/modules/_news.scss */
 .tease__title {
   margin-top: 0px;
 }
 
-/* line 36, ../scss/modules/_news.scss */
+/* line 44, ../scss/modules/_news.scss */
 .tease__thumbnail {
   float: left;
   padding-right: 16px;
   max-width: 100%;
 }
 
-/* line 41, ../scss/modules/_news.scss */
+/* line 49, ../scss/modules/_news.scss */
 .tease__title a {
   color: #252525;
   -webkit-transition: color 500ms;
   -moz-transition: color 500ms;
   transition: color 500ms;
 }
-/* line 47, ../scss/modules/_news.scss */
+/* line 55, ../scss/modules/_news.scss */
 .tease__title a:hover {
   color: #428bca;
 }
 
-/* line 51, ../scss/modules/_news.scss */
+/* line 59, ../scss/modules/_news.scss */
 .tease__date {
   font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
   color: #777777;
@@ -11066,6 +11064,35 @@ table td, table th {
   font-size: 1rem;
 }
 
+/* line 5, ../scss/modules/_calendar.scss */
+.widget .ai1ec-agenda-widget-view .ai1ec-date {
+  background: none;
+}
+/* line 10, ../scss/modules/_calendar.scss */
+.widget .ai1ec-agenda-widget-view .ai1ec-date-title {
+  background: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+/* line 20, ../scss/modules/_calendar.scss */
+.widget .ai1ec-agenda-widget-view .ai1ec-month {
+  background-color: green;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+/* line 37, ../scss/modules/_calendar.scss */
+.widget .ai1ec-agenda-widget-view .ai1ec-event {
+  border-top: #008000 3px solid;
+}
+/* line 42, ../scss/modules/_calendar.scss */
+.widget .ai1ec-agenda-widget-view .ai1ec-event > a {
+  border-radius: 0;
+}
+/* line 47, ../scss/modules/_calendar.scss */
+.widget .ai1ec-agenda-widget-view .ai1ec-allday-badge {
+  background: #008000;
+}
+
 @media screen and (max-width: 1200px) {
   /* line 7, ../scss/modules/breakpoints/_laptop.scss */
   .card-container--scientist {
@@ -11075,6 +11102,61 @@ table td, table th {
   /* line 11, ../scss/modules/breakpoints/_laptop.scss */
   .card--scientist {
     min-height: 285px;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 18, ../scss/modules/breakpoints/_laptop.scss */
+  .container-wrap {
+    padding-top: 0;
+  }
+
+  /* line 22, ../scss/modules/breakpoints/_laptop.scss */
+  .slider-inside-wrap {
+    padding-top: 0;
+  }
+
+  /* line 26, ../scss/modules/breakpoints/_laptop.scss */
+  .slider-container {
+    margin-left: -2.5rem;
+    width: 115%;
+    width: -webkit-calc(100% + 5rem);
+    width: -moz-calc(100% + 5rem);
+    width: calc(100% + 5rem);
+  }
+
+  /* line 34, ../scss/modules/breakpoints/_laptop.scss */
+  .news-column {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: right;
+    float: left;
+  }
+
+  /* line 43, ../scss/modules/breakpoints/_laptop.scss */
+  .sidebar {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: right;
+    float: left;
+  }
+
+  /* line 51, ../scss/modules/breakpoints/_laptop.scss */
+  .widget {
+    width: 49%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+  }
+
+  /* line 59, ../scss/modules/breakpoints/_laptop.scss */
+  .widget:first-of-type {
+    margin-right: 4px;
   }
 }
 @media screen and (max-width: 769px) {
@@ -11093,49 +11175,61 @@ table td, table th {
   .card--scientist {
     min-height: 265px;
   }
+
+  /* line 18, ../scss/modules/breakpoints/_tablet.scss */
+  .widget {
+    width: 98%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
 }
 @media screen and (min-width: 481px) {
-  /* line 21, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 31, ../scss/modules/breakpoints/_tablet.scss */
   .tab {
     display: inherit !important;
   }
 
-  /* line 24, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 34, ../scss/modules/breakpoints/_tablet.scss */
   .tab--palm {
     display: none !important;
   }
 
-  /* line 27, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 37, ../scss/modules/breakpoints/_tablet.scss */
   .mainFooter__linkGroup {
     min-height: 145px;
   }
 }
 @media screen and (max-width: 560px) {
-  /* line 34, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 44, ../scss/modules/breakpoints/_tablet.scss */
   h1 {
     font-size: 24px;
     font-size: 1.5rem;
   }
 
-  /* line 37, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 47, ../scss/modules/breakpoints/_tablet.scss */
   h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 
-  /* line 40, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 50, ../scss/modules/breakpoints/_tablet.scss */
   h3 {
     font-size: 17.6px;
     font-size: 1.1rem;
   }
 
-  /* line 43, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 53, ../scss/modules/breakpoints/_tablet.scss */
   h4, h5 {
     font-size: 16px;
     font-size: 1rem;
   }
 
-  /* line 46, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 56, ../scss/modules/breakpoints/_tablet.scss */
   h6 {
     font-size: 13.6px;
     font-size: 0.85rem;
@@ -11273,6 +11367,13 @@ table td, table th {
   opacity: 0.80;
 }
 
+@media screen and (max-width: 960px) {
+  /* line 2, ../scss/_shame.scss */
+  .slider-container {
+    margin-left: 0\9;
+    width: 100% \9;
+  }
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r

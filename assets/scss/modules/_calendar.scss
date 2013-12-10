@@ -1,0 +1,58 @@
+.widget {
+	// top level calendar
+	.ai1ec-agenda-widget-view {
+		// container
+		.ai1ec-date {
+			background: none;
+		}
+		
+		// date section
+		.ai1ec-date-title {
+			background: none;
+			-webkit-border-radius: 0;
+			border-radius: 0;
+		}
+		
+		.ai1ec-day {
+		
+		}
+		
+		.ai1ec-month {
+			background-color: $pbd-green;
+			-webkit-border-radius: 0;
+			border-radius: 0;
+		}
+		
+		.ai1ec-weekday {
+		
+		}
+		
+		// info section
+		// container
+		.ai1ec-date-events {
+		
+		}
+		
+		// inner container
+		.ai1ec-event {
+			border-top: #008000 3px solid;
+		}
+		
+		// link
+		.ai1ec-event > a {
+			border-radius: 0;
+		}
+		
+		// badge
+		.ai1ec-allday-badge {
+			background: #008000;
+		}
+		
+		// Title
+		.ai1ec-event-title {
+			
+		}
+	
+	
+	}
+}

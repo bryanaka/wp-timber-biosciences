@@ -1,6 +1,14 @@
 /*  ==================================================
 	News
 	================================================== */
+.news-column {
+	@include grid-column(
+		// Control the number of columns
+		$columns:8,
+		// Specify whethere or not this is the last column in the row
+		$last-column:true
+	);
+}
 
 .news__title {
 	color: $pbd-green;
