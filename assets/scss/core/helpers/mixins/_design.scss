@@ -18,7 +18,7 @@
 }
 
 @mixin card-box-shadow($speed:400ms, $box-shadow: 4px 4px 6px rgba(0,0,0,0.2)) {
-	box-shadow: 0;
+	box-shadow: none;
 	@include transition-property(box-shadow);
 	@include transition-duration($speed);
 	

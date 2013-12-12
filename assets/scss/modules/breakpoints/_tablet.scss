@@ -25,6 +25,20 @@
 		margin-left: auto;
 		float: none;
 	}
+	.video_list, .scientist_list {
+		@include block-grid(
+	    	// This controls how many elements will be on each row of the block grid. Set this to whatever number you need, up to the max allowed in the variable.
+	    	// Available options: 1-12 by default, and false.
+	    	$per-row: 3,
+	
+		    // This controls how much space is between each item in the block grid.
+		    // Use a variable or any pixel or em values.
+		    $spacing: $block-grid-default-spacing,
+		
+    		// This controls whether or not base styles come through, set to false to leave out.
+    		$base-style: true
+  		);
+	}
 }
 
 @include mq-min(481px) {
@@ -42,16 +56,16 @@
 
 @include mq-max(560px) {
 	h1 {
-		@include rem(1.50);
+		@include rem(1.6);
 	}
 	h2 {
-		@include rem(1.25);
+		@include rem(1.35);
 	}
 	h3 {
-		@include rem(1.1);
+		@include rem(1.25);
 	}
 	h4,h5 {
-		@include rem(1);
+		@include rem(1.15);
 	}
 	h6 { 
 		@include rem(0.85);

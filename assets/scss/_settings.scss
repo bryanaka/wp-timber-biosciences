@@ -43,6 +43,17 @@ $base-whitespace: 20px;
 $base-header-font-family: 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
 $base-font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
+// *************************************
+// Z-indexes
+// *************************************
+
+// Z-Indexes are notoriously hard to keep track of when spread throughout your
+// stylesheets. To simplify this process, All Z-indexes should be declared in a
+// unique variable in this area.
+
+$z-slider: 5;
+$z-subnav: 10;
+
 /*  ==================================
 	Breakpoints
 	================================== */

@@ -1,30 +1,29 @@
 {% extends "layout/base-grid.twig" %}
 {% block content %}
 	<div class="row">
-		<h1 class="col-xs-12 page__header">{{page.title}}</h1>
-		<article class="col-xs-12 page__content">
+		<h1 class="small-12 columns page__header">{{page.title}}</h1>
+		<article class="small-12 columns page__content">
 			{{page.content}}
 		</article>
-		<article class="col-xs-12">
+		<article class="small-12 columns">
 			{% for letter in 'A'..'Z' %}
 				<span class="letterNav"><a href="#section-{{letter|lower}}">{{letter}}</a></span>
 			{% endfor %}
 		</article>
 	</div>
-	<div class="row">
+	<ul class="scientist_list">
 		{% for scientist in scientists %}
 			{% if current_letter != scientist.last_name|slice(0,1) %}
-				</div>
+				</ul>
 				<div class="row">
 					{% set current_letter = scientist.last_name|slice(0,1) %}
-					<h2 class="col-xs-12 scientist__letter" id="section-{{current_letter|lower}}">{{ current_letter }}</h2>
+					<h2 class="small-12 columns scientist__letter" id="section-{{current_letter|lower}}">{{ current_letter }}</h2>
 					<hr class="scientist__divider">
 				</div>
-				<div class="row">
+				<ul class="scientist_list">
 			{% endif %}
-
 			{% include [scientist.post_type~'/preview.twig', 'posts/preview.twig'] %}
 		{% endfor %}
-	</div>
+	</ul>
 	
 {% endblock %}

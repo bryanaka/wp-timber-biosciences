@@ -1,8 +1,8 @@
 {% extends "layout/base.twig" %}
 {% block content %}
-	<h1 class="col-xs-12 page__header">{{page.title}}</h1>
+	<h1 class="small-12 columns page__header">{{page.title}}</h1>
 	{% for post in posts %}
-		<div class="articleContainer col-xs-12">
+		<div class="small-12 columns articleContainer">
 			{% include [post.post_type~'/preview-full.twig', 'posts/preview-full.twig'] %}
 		</div>
 	{% endfor %}

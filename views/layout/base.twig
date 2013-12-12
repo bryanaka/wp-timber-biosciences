@@ -17,18 +17,18 @@
 		background-image-sizing, border-radius, multiple-backgrounds, history, canvas, canvas text, rem
 	-->
 	<link rel="stylesheet" href="{{ stylesheet_uri }}" type="text/css">
-	{% block html_head %}
-	{% endblock %}
 	<!-- start wordpress-head -->
 	{{wp_head}}
 	<!-- end wordpress-head -->
+	{% block html_head %}
+	{% endblock %}
 </head>
 
 <body class="{{body_class}}" data-source="base">
 
 	<header id="main_header" class="main_header" role="banner">
 		{% block navigation_bar %}
-			{% include "components/navbar.twig" %}
+			{% include "components/new-navbar.twig" %}
 		{% endblock %}
 	</header>
 
@@ -49,7 +49,7 @@
 	</div>
 
 	{% block footer %}
-		{% include "components/footer-foundation.twig" %}
+		{% include "components/footer.twig" %}
 	{% endblock %}
 
 {{wp_footer}}

@@ -1,0 +1,34 @@
+<nav class="navbar-b navbar-b--green">
+	<div class="nav__left">
+		<h1 class="navbar__brand">
+        	<a href="/" class="show-for-xlarge-up">
+        		<i class="icon-leaf "></i> Physical Biosciences Division
+        	</a>
+        	<a href="/" class="hide-for-xlarge-up">
+        		<i class="icon-leaf"></i> PBD
+        	</a>
+      	</h1>
+	</div>
+	<ul class="nav__right">
+		{% for item in menus.primary.get_items %}
+	        {% if item.get_children %}
+				<li class="nav__item">
+					<a class="nav__link js-navDropdown" href="{{item.get_path}}">
+						{{item.title}} <b class="icon-double-angle-down"></b>
+					</a>
+					<ul class="subnav">
+						{% for child in item.get_children %}
+                			<li class="subnav__item">
+                				<a class="subnav__link" href="{{child.url}}">{{child.title}}</a>
+                			</li>
+              			{% endfor %}
+					 </ul>
+          		</li>
+        	{% else %}
+          		<li class="nav__item">
+          			<a href="{{item.get_path}}">{{item.title}}</a>
+          		</li>
+        	{% endif %}
+        {% endfor %}
+	</ul>
+</nav>

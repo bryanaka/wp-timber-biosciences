@@ -11,20 +11,58 @@
 	.card--scientist {
 		min-height: 285px;
 	}
-
+	.video_list, .scientist_list {
+		@include block-grid(
+	    	// This controls how many elements will be on each row of the block grid. Set this to whatever number you need, up to the max allowed in the variable.
+	    	// Available options: 1-12 by default, and false.
+	    	$per-row: 4,
+	
+		    // This controls how much space is between each item in the block grid.
+		    // Use a variable or any pixel or em values.
+		    $spacing: $block-grid-default-spacing,
+		
+    		// This controls whether or not base styles come through, set to false to leave out.
+    		$base-style: true
+  		);
+	}
+	.navbar {
+		border-radius: 0;
+		min-height: 0;
+	}
+	.navbar-nav > li > a {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin: 5px 3px;
+	}
+	.navbar-brand {
+		padding-top: 9px;
+		padding-bottom: 9px; 
+		a {
+			color: $off-white;
+			text-decoration: none;
+			@include transition-property(color);
+			@include transition-duration(600ms);
+			&:hover {
+				color: $pbd-yellow;
+			}
+		}
+	}
 }
 
 @include mq-max(960px) {
-	.container-wrap {
-		padding-top: 0;
-	}
 
 	.slider-inside-wrap {
 		padding-top: 0;
 	}
 
 	.slider-container {
-		margin-left: -2.5rem;
+		// rem-fallback can't seem to handle negatives... :/
+		// @include rem-fallback(margin-left, -2.5)
+		// @include rem-fallback(margin-top, -1);
+		margin-left: -40px;
+    	margin-left: -2.5rem;
+    	margin-top: -16px;
+    	margin-top: -1rem;
 		width: 115%;
 		width: -webkit-calc(100% + 5rem);
 		width:    -moz-calc(100% + 5rem);

@@ -10,6 +10,8 @@ $pageObj->find_menus( array('primary', 'footer_left', 'footer_center', 'footer_r
 $query = array(
 	"numberposts" => -1,
 	"post_type"   => "videos",
+	"meta_key" 	  => "series",
+	"orderby" 	  => "meta_value",
 	"order"		  => "ASC"
 );
 

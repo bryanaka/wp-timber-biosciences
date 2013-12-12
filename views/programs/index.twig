@@ -2,20 +2,20 @@
 
 {% block content %}
 	<div class="row">
-		<h1 class="col-xs-12 page__header">{{page.title}}</h1>
-		<article class="col-xs-12 page__content">
+		<h1 class="small-12 columns page__header">{{page.title}}</h1>
+		<article class="small-12 columns page__content">
 			{{page.content}}
 		</article>
 	</div>
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="small-12 columns">
 			<h2 class="">Scientific Programs</h2>
 			<hr class="">
 		</div>
 	</div>
 	<div class="row">
 		{% for child in page.get_children %}
-			<div class="col-xs-12 col-sm-6 col-md-4">
+			<div class="small-12 medium-6 large-4 columns">
 				<div class="card-container--full">
 					<article class="card--full card--program">
 						{% if child.get_thumbnail %}

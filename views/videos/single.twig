@@ -2,7 +2,7 @@
 
 {% block hero %}
 	<div class="theater__container">
-		<div class="container">
+		<div class="container-wrap">
 			<section class="theater">
 				<article class="theater__video">
 					<iframe src="//www.youtube.com/embed/{{video.code}}" frameborder="0" allowfullscreen>
@@ -10,44 +10,55 @@
 					</iframe>
 				</article>
 				<hgroup class="theater__headers">
-					<h1 class="theater__title">{{video.title}} - {{video.series}}</h1>
-					{% if video.presenter != 'null' %}
-						<h3 class="theater__author">Presented by {{video.presenter}}</h3>
-					{% else %}
-						<h3 class="theater__author">Presented by {{video.guest_presenter}}</h3>
-					{% endif %}
+					<h2 class="theater__title c-h1">{{video.series}}:</h1>
+					<h1 class="theater__title">{{video.title}}</h1>
+					<h3 class="theater__author">Presented by
+						{% spaceless %}
+							{% for index,presenter in video.get_field('presenters') %}
+								{% if presenter.presenter %}
+									{# Scientist Page Title is their name #}
+									{{presenter.presenter.post_title}}
+									{% if index != (video.get_field('presenters')|length - 1) %}
+									,
+									{% endif %}
+								{% else %}
+									{{presenter.guest_presenter}}
+									{% if index != (video.get_field('presenters')|length - 1) %}
+									,
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						{% endspaceless %}
+					</h3>
 				</hgroup>
 				<aside class="theater__share row">
-					<div class="theater__icon col-xs-6 col-sm-3 col-md-3">
+					<div class="theater__icon small-6 medium-3 columns">
 						<a href="" id="js-toggle-details">
 							<i class="icon-collapse"></i> Details
 						</a>
 					</div>
-					<div class="theater__icon col-xs-6 col-sm-3 col-md-3">
+					<div class="theater__icon small-6 medium-3 columns">
 						<a href="">
 							Facebook
 						</a>
 					</div>
-					<div class="theater__icon col-xs-6 col-sm-3 col-md-3">
+					<div class="theater__icon small-6 medium-3 columns">
 						<a href="https://twitter.com/share" class="twitter-share-button" data-size="medium" data-related="berkeleylab">Tweet</a>
 						<script>
 							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 						</script>
 						</a>
 					</div>
-					<div class="theater__icon col-xs-6 col-sm-3">
-						<a href="">
-							<div class="g-plusone"></div>
-							
-							<!-- Place this tag after the last +1 button tag. -->
-							<script type="text/javascript">
-							  (function() {
-							    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-							    po.src = 'https://apis.google.com/js/plusone.js';
-							    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-							  })();
-							</script>
-						</a>
+					<div class="theater__icon small-6 medium-3 columns">
+						<div class="g-plusone"></div>
+						<!-- Place this tag after the last +1 button tag. -->
+						<script type="text/javascript">
+						  (function() {
+						    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						    po.src = 'https://apis.google.com/js/plusone.js';
+						    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						  })();
+						</script>
 					</div>
 				</aside>
 				<article class="theater__info">
@@ -60,11 +71,11 @@
 
 {% block content %}
 	<div class="container">
-		<div class="col-xs-12">
+		<div class="small-12 columns">
 			<h2>Related Videos</h2>
 			<hr>
 		</div>
-		<section class="other_vids">
+		<section class="video_list">
 			{% for video in rel_videos %}
 				{% include [video.post_type~'/preview.twig', 'videos/preview.twig'] %}
 			{% endfor %}
