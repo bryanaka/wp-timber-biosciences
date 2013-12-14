@@ -65,7 +65,7 @@
 	font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
 	display: inline-block;
 	@include rem-fallback(padding, .75rem, 2rem, 1rem, 0);
-	@include rem(1.25);
+	@include font-size(1.25);
 	
 	a {
 		color: white(0.6);
@@ -93,5 +93,5 @@
 
 .card__subtitle--theater {
 	@extend .card__subtitle;
-	@include rem(1);
+	@include font-size(1);
 }

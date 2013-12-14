@@ -1,37 +1,50 @@
-<nav class="navbar navbar--green" role="navigation">
-  	<!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <div class="navbar-brand">
-      <h1 class="mainNav__brand">
-        <a href="/" class="visible-lg"><i class="icon-leaf "></i> Physical Biosciences Division</a>
-        <a href="/" class="hidden-lg"><i class="icon-leaf"></i> PBD</a>
-      </h1>
-    </div>
-  	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".mainNav">
-  		<span class="sr-only">Toggle navigation</span>
-  		Menu
-  	</button>
-  </div>
-
-  <div class="collapse navbar-collapse mainNav">
-    <ul class="nav navbar-nav navbar-right">
-      {% for item in menus.primary.get_items %}
-        {% if item.get_children %}
-          <li class="mainNav__link dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="{{item.get_path}}">{{item.title}} <b class="icon-double-angle-down"></b></a>
-            <ul class="dropdown-menu">
-              {% for child in item.get_children %}
-                <li class="nav-drop-item"><a href="{{child.url}}">{{child.title}}</a></li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% else %}
-          <li class="mainNav__link"><a href="{{item.get_path}}">{{item.title}}</a></li>
-        {% endif %}
-      {% else %}
-        <li>No Primary Menu Selected</li>
-      {% endfor %}
-    </ul>
-  </div>
-
+<nav id="main_nav" class="navbar navbar--green">
+	<div class="nav__left">
+		<h1 class="navbar__brand">
+        	<a href="/" class="show-for-xlarge-up">
+        		<i class="icon-leaf "></i> Physical Biosciences Division
+        	</a>
+        	<a href="/" class="hide-for-xlarge-up">
+        		<i class="icon-leaf"></i> PBD
+        	</a>
+      	</h1>
+	</div>
+	<ul class="nav__right">
+		{% for item in menus.primary.get_items %}
+	        {% if item.get_children %}
+				<li class="nav__item">
+					<a class="nav__link js-navDropdown" href="{{item.get_path}}">
+						{{item.title}} <b class="icon-double-angle-down"></b>
+					</a>
+					<ul class="subnav">
+						{% for child in item.get_children %}
+                			<a class="subnav__link" href="{{child.url}}">
+                				<li class="subnav__item">
+                					{{child.title}}
+                				</li>
+                			</a>
+              			{% endfor %}
+					 </ul>
+          		</li>
+        	{% else %}
+          		<a href="{{item.get_path}}">
+          			<li class="nav__item">
+          				{{item.title}}
+          			</li>
+          		</a>
+        	{% endif %}
+        {% endfor %}
+        <li class="nav__search js-search">
+        	<a href="#" class="nav__link">
+        		<b class="icon-search"></b>
+        	</a>
+        </li>
+	</ul>
 </nav>
+
+<div class="wp_search">
+  <form role="search" method="get" id="searchform" class="searchform" action="/">
+    <label class="sr-only" for="s">Search PBD for:</label>
+    <input type="search" name="s" class="wp_search__field" placeholder="Search PBD">
+  </form>
+</div>

@@ -28,4 +28,23 @@
             $('.theater__info').slideToggle(400);
         });
     }
+    // touch nav
+    if(window.Modernizr.touch) {
+        var $nav_items = $('.nav__item');
+        $nav_items.on('click', '.js-navDropdown', function(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            $(this).siblings('.subnav').toggleClass('is_open');
+        });
+        $('body').on('click', function(event) {
+            event.preventDefault();
+            $('.subnav').removeClass('is_open');
+        });
+    }
+    // search
+    $('.js-search').on('click', function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        $('.wp_search').slideToggle(500);
+    });
 })(window, document, jQuery);

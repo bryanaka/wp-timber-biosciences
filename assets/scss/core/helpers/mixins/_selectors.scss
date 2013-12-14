@@ -1,0 +1,17 @@
+@mixin placeholder($nested: false) {
+	@if($nested) {
+		&::-webkit-input-placeholder,
+		&:-ms-input-placeholder,
+		&::-moz-placeholder,
+		&:-moz-placeholder {
+			@content;
+		}
+	} @else {
+		::-webkit-input-placeholder,
+		:-ms-input-placeholder,
+		::-moz-placeholder,
+		:-moz-placeholder {
+			@content;
+		}
+	}
+}

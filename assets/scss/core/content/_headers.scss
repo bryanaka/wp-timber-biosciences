@@ -9,27 +9,27 @@ h4, h5, h6 {
 }
 
 h1, .c-h1, %c-h1 {
-  @include rem(2.4);
+  @include font-size(2.4);
 }
 
 h2, .c-h2, %c-h2 {
-  @include rem(2.15);
+  @include font-size(2.15);
 }
 
 h3, .c-h3, %c-h3 {
-  @include rem(1.75);
+  @include font-size(1.75);
 }
 
 h4, .c-h4, %c-h4 {
-  @include rem(1.5);
+  @include font-size(1.5);
 }
 
 h5, .c-h5, %c-h5 {
-  @include rem(1.25);
+  @include font-size(1.25);
 }
 
 h6, .c-h6, %c-h6 {
-  @include rem(1);
+  @include font-size(1);
 }
 
 @include mq-max(560px) {

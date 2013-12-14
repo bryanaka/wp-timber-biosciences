@@ -34,3 +34,18 @@
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+.is_hidden {
+  display: none !important;
+}
+.is_shown {
+  display: inherit !important;
+}
+.is_invisible {
+  visibility: hidden;
+}
+
+.is_sr_hidden {
+  display: none !important;
+  visibility: hidden !important;
+}

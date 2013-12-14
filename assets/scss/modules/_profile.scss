@@ -69,7 +69,7 @@
 }
 
 .profile__icons {
-	@include rem(2.25);
+	@include font-size(2.25);
 	@include rem-fallback(padding-top, 1);
 	text-align: center;
 	a {
@@ -87,6 +87,5 @@
 }
 
 .profile__address, .profile__location {
-	margin-bottom: 24rem;
-	margin-bottom: 1.5rem;
+	@include rem-fallback(margin-bottom, 1.5);
 }

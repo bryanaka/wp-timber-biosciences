@@ -45,13 +45,26 @@
 }
 
 @mixin font-size($sizeValue: 1.0) {
-  font-size: ($sizeValue * 16 ) + px;
+  font-size: ($sizeValue * $base-font-size);
   font-size: $sizeValue + rem;
 }
 
-@mixin hide-text{
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
+@mixin hidden-text {
+  font: #{0/0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
 }
 

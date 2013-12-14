@@ -18,3 +18,7 @@
     height: 100%;
   }
 }
+
+%clearfix, %cf, .cf, .clearfix {
+  @include clearfix();
+}

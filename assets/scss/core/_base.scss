@@ -25,7 +25,7 @@ body {
 // *************************************
 
 p {
-	@include rem();
+	@include font-size(1);
 }
 
 // A better looking default horizontal rule

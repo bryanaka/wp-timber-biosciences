@@ -13,3 +13,18 @@
 	max-width: 100%;
 	width: 100%;
 }
+
+.center-block {
+  @include center-block();
+}
+
+.l-right {
+  float: right !important;
+}
+.l-left {
+  float: left !important;
+}
+
+.l-affix {
+  position: fixed;
+}

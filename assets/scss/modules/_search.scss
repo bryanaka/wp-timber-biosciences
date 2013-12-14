@@ -1,0 +1,34 @@
+.wp_search {
+  display: none;
+  background-color: #162A33;
+}
+
+.wp_search__field {
+  font-family: $base-header-font-family;
+  @include vendor(appearance, none, false);
+  @include font-size(2);
+  width: 100%;
+  height: 100%;
+  background-color: #162A33;
+  color: $off-white;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 2.5rem;
+  
+  @include placeholder(true) {
+    color: #EDEDED;
+    
+    &::before {
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      content: " ";
+      padding-right: 0.25rem;
+    }
+  }
+}
+
+.wp_search__field:focus {
+  outline: none;
+}
