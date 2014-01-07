@@ -2,11 +2,17 @@
 	Main Navigation
 	================================================== */
 
+.bio-logo {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+}
+
 .navbar {
 	display: block;
 	&:before, &:after {
 		content: " ";
-    	display: table;
+		display: table;
 	}
 	&:after {
 		clear: both;
@@ -40,7 +46,7 @@
 	@include rem-fallback(padding-left, 1);
 }
 
-.nav__item, .nav__search {
+%nav__item, .nav__item {
 	position: relative;
 	display: inline-block;
 	@include rem-fallback(padding, 0.5);
@@ -49,7 +55,11 @@
 	&:hover, &:hover .nav__link {
 		background-color: #009000;
 	}
+}
 
+.nav__search, .nav__menu {
+	@extend %nav__item;
+	float: right;
 }
 
 .nav__item {
@@ -73,6 +83,32 @@
 	a {
 		@extend .nav__link;
 		@extend %c-h4;
+		margin-bottom: 0;
+	}
+}
+
+.nav__menu, .nav__close {
+	display: none;
+}
+
+.nav__button {
+	vertical-align: top;
+	@include rem-fallback(padding, 0.25, 0.5);
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	background: #34495e;
+	border: 0;
+	border-bottom: 2px solid #263849;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 -2px #263849;
+	box-shadow: inset 0 -2px #263849;
+
+	&:active {
+		top: 1px;
+		outline: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
 	}
 }
 
@@ -112,4 +148,8 @@
 
 .subnav__link {
 	@extend .nav__link;
+}
+
+.subnav__close {
+	@extend .nav__close;
 }

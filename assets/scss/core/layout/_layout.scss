@@ -9,22 +9,28 @@
 	margin: 0 0 16px 0;
 }
 
-.l-full {
+.page__header {
+	@extend %c-h2;
+}
+
+%l-full, .l-full {
 	max-width: 100%;
 	width: 100%;
 }
 
-.center-block {
-  @include center-block();
+%l-center, .l-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.l-right {
+%l-right, .l-right {
   float: right !important;
 }
-.l-left {
+%l-left, .l-left {
   float: left !important;
 }
 
-.l-affix {
+%l-affix, .l-affix {
   position: fixed;
 }

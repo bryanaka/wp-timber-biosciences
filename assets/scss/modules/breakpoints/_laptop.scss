@@ -25,6 +25,9 @@
     		$base-style: true
   		);
 	}
+}
+
+@include mq-min(850px) {
 	.navbar {
 		border-radius: 0;
 		min-height: 0;

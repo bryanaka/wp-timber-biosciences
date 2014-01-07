@@ -38,7 +38,20 @@
 }
 
 .tease__title {
+	@extend %c-h3;
 	margin-top: 0px;
+
+	a {
+		color: #252525;
+		text-decoration: none;
+		-webkit-transition: color 500ms;
+		   -moz-transition: color 500ms;
+			    transition: color 500ms;
+
+		&:hover {
+			color: #428bca;
+		}
+	}
 }
 
 .tease__thumbnail {
@@ -47,16 +60,6 @@
 	max-width: 100%;
 }
 
-.tease__title a {
-	color: #252525;
-	-webkit-transition: color 500ms;
-	   -moz-transition: color 500ms;
-			transition: color 500ms; 
-
-	&:hover {
-		color: #428bca;
-	}
-}
 .tease__date {
 	font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
 	color: #777777;

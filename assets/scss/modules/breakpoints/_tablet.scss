@@ -2,7 +2,11 @@
 // Styles Between 481px and 768px
 // ********************************
 
+// max 768
 @include mq-tablet {
+	body {
+		overflow-x: hidden; 
+	}
 	img {
 		max-width: 100%;
 		height: auto;
@@ -38,6 +42,59 @@
     		// This controls whether or not base styles come through, set to false to leave out.
     		$base-style: true
   		);
+	}
+}
+
+@include mq-max(850px) {
+	.nav__menu, .nav__close {
+		display: inherit;
+	}
+
+	.nav__right {
+		position: fixed;
+		left:100%;
+		width: 60%;
+		border-left: $pbd-yellow-green 3px solid;
+		height: 100%;
+		padding-right: 0;
+		background-color: $pbd-green;
+		z-index: $z-nav;
+		max-width: 300px;
+
+		.nav__item {
+			display: block;
+			text-align: center;
+			box-shadow: none;
+			@include font-size(1.15);
+		}
+		.subnav {
+			display: block;
+		}
+	}
+
+	.no-touch .nav__item:hover .subnav,
+	.touch .nav__item:hover .subnav.is_open {
+		border: none;
+		left: 56.5%;
+		top: 92px;
+		width: 43.5%;
+		min-width: 0;
+		height: 100%;
+		position: fixed;
+	}
+
+	.subnav__item {
+		width: 88%;
+	}
+
+	.no-touch .nav__item .subnav,
+	.touch .nav__item .subnav.is_open {
+		top: 0;
+		display: block;
+		box-shadow: none;
+		min-width: 100%;
+		border-left: none;
+		border-right: none
 	}
 }
 

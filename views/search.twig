@@ -1,0 +1,29 @@
+{% extends "layout/base-focused.twig" %}
+
+
+{% block hero %}
+	{% if page.thumbnail %}
+		<div class="hero--banner small-12 columns hide-for-small-only" 
+		     style="background-image: url({{page.get_thumbnail.src}});">
+			<div class="hero--banner__overlay"></div>
+			<h1 class="page__header">{{title}}</h1>
+		</div>
+		<h1 class="page__header show-for-small-only">{{title}}</h1>
+	{% else %}
+		<div class="row">
+			<h1 class="page__header columns">{{title}}</h1>
+			<hr style="width:100%">
+		</div>
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+
+	<article class="page__content small-12 columns">
+		{{page.content}}
+		{% for post in posts %}
+			{% include [post.post_type~'/abbr-preview.twig', 'posts/abbr-preview.twig'] %}
+		{% endfor %}
+	</article>
+
+{% endblock %}

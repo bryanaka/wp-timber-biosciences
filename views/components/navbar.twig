@@ -2,43 +2,60 @@
 	<div class="nav__left">
 		<h1 class="navbar__brand">
         	<a href="/" class="show-for-xlarge-up">
-        		<i class="icon-leaf "></i> Physical Biosciences Division
+        		<i class="icon-leaf"></i> Physical Biosciences Division
         	</a>
         	<a href="/" class="hide-for-xlarge-up">
         		<i class="icon-leaf"></i> PBD
         	</a>
       	</h1>
 	</div>
+  
+  <div class="nav__menu">
+    <button id="openNavButton" class="nav__button">Menu</button>
+  </div>
+
+  <div class="nav__search js-search">
+    <a href="#" class="nav__link">
+      <b class="icon-search icon-large"></b>
+    </a>
+  </div>
+
 	<ul class="nav__right">
+    <li class="nav__item hide-for-large-up">
+      Navigation
+    </li>
 		{% for item in menus.primary.get_items %}
-	        {% if item.get_children %}
+	    {% if item.get_children %}
 				<li class="nav__item">
 					<a class="nav__link js-navDropdown" href="{{item.get_path}}">
 						{{item.title}} <b class="icon-double-angle-down"></b>
 					</a>
 					<ul class="subnav">
 						{% for child in item.get_children %}
-                			<a class="subnav__link" href="{{child.url}}">
-                				<li class="subnav__item">
-                					{{child.title}}
-                				</li>
-                			</a>
-              			{% endfor %}
+              <a class="subnav__link" href="{{child.url}}">
+              	<li class="subnav__item">
+              		{{child.title}}
+              	</li>
+              </a>
+            {% endfor %}
+              <li class="subnav__item subnav__close">
+                <a href="#" class="subnav__link js-closeSubNav">
+                  <i class="icon-double-angle-left icon-large"></i> Back
+                </a>
+              </li>
 					 </ul>
-          		</li>
-        	{% else %}
-          		<a href="{{item.get_path}}">
-          			<li class="nav__item">
-          				{{item.title}}
-          			</li>
-          		</a>
-        	{% endif %}
-        {% endfor %}
-        <li class="nav__search js-search">
-        	<a href="#" class="nav__link">
-        		<b class="icon-search"></b>
-        	</a>
         </li>
+      {% else %}
+      	<li class="nav__item">
+      		<a href="{{item.get_path}}">{{item.title}}</a>
+      	</li>
+      {% endif %}
+    {% endfor %}
+    <li class="nav__item nav__close">
+      <a href="#" id="closeNavButton" class="nav__link">
+        <i class="icon-remove"></i> Close
+      </a>
+    </li>
 	</ul>
 </nav>
 

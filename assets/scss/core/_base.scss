@@ -8,16 +8,20 @@ html,button,input,select,textarea {
 
 html {
     background-color: $html-base-background;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
 }
 
 body {
     background: $base-background;
     color: $base-color;
+    position: static;
+    @if $custom-font-family {
+        font: $font-weight #{$font-size}%/#{$line-height} $custom-font-family, $font-family;
+    } @else {
+        font: $font-weight #{$font-size}%/#{$line-height} $font-family;
+    }
+    font-size: inherit;
+    line-height: inherit;
     font-family: $base-font-family;
-    font-size: 100%;
-    line-height: $base-line-height;
 }
 
 // *************************************

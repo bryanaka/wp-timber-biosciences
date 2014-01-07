@@ -2,39 +2,62 @@
 //   Headings
 // -------------------------------------
 
-h1, h2, h3,
-h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
   font-family: $base-header-font-family;
   font-weight: 500;
 }
 
-h1, .c-h1, %c-h1 {
-  @include font-size(2.4);
+%c-h1, %c-h2, %c-h3,
+%c-h4, %c-h5, %c-h6 {
+  // extend typeplate settings
+  @extend %hN;
+  font-family: $base-header-font-family;
+  font-weight: 500;
 }
 
-h2, .c-h2, %c-h2 {
-  @include font-size(2.15);
+%c-h1 {
+  @extend .alpha;
 }
 
-h3, .c-h3, %c-h3 {
-  @include font-size(1.75);
+%c-h2 {
+  @extend .beta;
 }
 
-h4, .c-h4, %c-h4 {
-  @include font-size(1.5);
+%c-h3 {
+  @extend .gamma;
 }
 
-h5, .c-h5, %c-h5 {
-  @include font-size(1.25);
+%c-h4 {
+  @extend .delta;
 }
 
-h6, .c-h6, %c-h6 {
-  @include font-size(1);
+%c-h5 {
+  @extend .epsilon;
+}
+
+%c-h6 {
+  @extend .zeta;
 }
 
 @include mq-max(560px) {
 	h1, h2, h3,
-    h4, h5, h6 {
-        text-align: center;
-    }
+  h4, h5, h6 {
+      text-align: center;
+  }
+  
+  %c-h1 {
+    @include font-size(1.6);
+  }
+  %c-h2 {
+    @include font-size(1.35);
+  }
+  %c-h3 {
+    @include font-size(1.25);
+  }
+  %c-h4,%c-h5 {
+    @include font-size(1.15);
+  }
+  %c-h6 { 
+    @include font-size(0.85);
+  }
 }
