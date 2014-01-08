@@ -1,6 +1,10 @@
 (function(window, document, $){
     'use strict';
 
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
     window.TestSlider = $('#slider').responsiveSlides({
         auto: true,             // Boolean: Animate automatically, true or false
         speed: 500,            // Integer: Speed of the transition, in milliseconds
@@ -49,9 +53,20 @@
     $('#openNavButton').on('click', function() {
         $nav.addClass('is_open');
     });
+    
+    Hammer(document.body).on('swipeleft', function() {
+        $nav.addClass('is_open');
+    });
+
     $('#closeNavButton').on('click', function() {
         $nav.removeClass('is_open');
     });
+
+    Hammer(document.body).on('swiperight', function() {
+        $nav.removeClass('is_open');
+    });
+
+
 
     // search
     $('.js-search').on('click', function(event) {
