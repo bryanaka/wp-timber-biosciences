@@ -116,29 +116,31 @@
 	Sub Navigation
 	================================================== */
 
-.no-touch .nav__item:hover .subnav,
-.touch .nav__item:hover .subnav.is_open {
-	position: absolute;
-	display: block;
-	width: auto;
-	height: auto;
-	@include rem-fallback(padding, .5, 1);
-	overflow: visible;
-	clip: auto;
-	left: -3px;
-	min-width: 110%;
-	box-shadow: 4px 4px 6px rgba(0,0,0,0.2);
-	border: 3px $pbd-yellow-green solid;
-	border-top: 0;
-	@include rem-fallback(margin-top, .5);
-}
-
 .subnav {
 	@extend .nav;
 	@extend %sr-only;
 	background-color: #009000;
 	z-index: $z-subnav;
 	@include card-box-shadow();
+}
+
+@include mq-min(851px) {
+	.no-touch .nav__item:hover .subnav,
+	.touch .nav__item:hover .subnav.is_open {
+		position: absolute;
+		display: block;
+		width: auto;
+		height: auto;
+		overflow: visible;
+		clip: auto;
+		left: -3px;
+		min-width: 140%;
+		box-shadow: 4px 4px 6px rgba(0,0,0,0.2);
+		border: 3px $pbd-yellow-green solid;
+		border-top: 0;
+		@include rem-fallback(padding, .5, 1);
+		@include rem-fallback(margin-top, .5);
+	}
 }
 
 .subnav__item {

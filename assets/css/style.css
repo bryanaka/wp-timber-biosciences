@@ -5017,27 +5017,7 @@ img.aligncenter {
 /*  ==================================================
 	Sub Navigation
 	================================================== */
-/* line 120, ../scss/modules/_nav.scss */
-.no-touch .nav__item:hover .subnav,
-.touch .nav__item:hover .subnav.is_open {
-  position: absolute;
-  display: block;
-  width: auto;
-  height: auto;
-  padding: 8px 16px;
-  padding: 0.5rem 1rem;
-  overflow: visible;
-  clip: auto;
-  left: -3px;
-  min-width: 110%;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
-  border: 3px yellowgreen solid;
-  border-top: 0;
-  margin-top: 8px;
-  margin-top: 0.5rem;
-}
-
-/* line 136, ../scss/modules/_nav.scss */
+/* line 119, ../scss/modules/_nav.scss */
 .subnav {
   background-color: #009000;
   z-index: 15;
@@ -5052,7 +5032,28 @@ img.aligncenter {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 144, ../scss/modules/_nav.scss */
+@media screen and (min-width: 851px) {
+  /* line 129, ../scss/modules/_nav.scss */
+  .no-touch .nav__item:hover .subnav,
+  .touch .nav__item:hover .subnav.is_open {
+    position: absolute;
+    display: block;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    left: -3px;
+    min-width: 140%;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+    border: 3px yellowgreen solid;
+    border-top: 0;
+    padding: 8px 16px;
+    padding: 0.5rem 1rem;
+    margin-top: 8px;
+    margin-top: 0.5rem;
+  }
+}
+/* line 146, ../scss/modules/_nav.scss */
 .subnav__item {
   text-align: center;
   padding-top: 8px;
@@ -6063,6 +6064,8 @@ img.aligncenter {
   /* line 53, ../scss/modules/breakpoints/_tablet.scss */
   .nav__right {
     position: fixed;
+    top: 0;
+    padding-top: 46px;
     left: 100%;
     width: 60%;
     border-left: yellowgreen 3px solid;
@@ -6071,8 +6074,16 @@ img.aligncenter {
     background-color: green;
     z-index: 10;
     max-width: 300px;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
   }
-  /* line 64, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 68, ../scss/modules/breakpoints/_tablet.scss */
+  .nav__right.is_open {
+    left: 40%;
+  }
+  /* line 72, ../scss/modules/breakpoints/_tablet.scss */
   .nav__right .nav__item {
     display: block;
     text-align: center;
@@ -6080,84 +6091,107 @@ img.aligncenter {
     font-size: 18.4px;
     font-size: 1.15rem;
   }
-  /* line 70, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 78, ../scss/modules/breakpoints/_tablet.scss */
   .nav__right .subnav {
     display: block;
   }
 
-  /* line 76, ../scss/modules/breakpoints/_tablet.scss */
-  .no-touch .nav__item:hover .subnav,
-  .touch .nav__item:hover .subnav.is_open {
-    border: none;
-    left: 56.5%;
-    top: 92px;
-    width: 43.5%;
-    min-width: 0;
-    height: 100%;
+  /* line 86, ../scss/modules/breakpoints/_tablet.scss */
+  .no-touch .nav__item .subnav, .no-touch .nav__item:hover .subnav, .touch .nav__item .subnav, .touch .nav__item:hover .subnav {
+    left: 100%;
     position: fixed;
+    top: -20px;
+    width: 68%;
+    min-width: 0;
+    max-width: 300px;
+    height: 100%;
+    margin: auto;
+    padding-top: 65px;
+    overflow: hidden;
+    clip: auto;
+    display: block;
+    box-shadow: none;
+    border: none;
+    border-left: yellowgreen 3px solid;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  /* line 105, ../scss/modules/breakpoints/_tablet.scss */
+  .no-touch .nav__item .subnav.is_open, .no-touch .nav__item:hover .subnav.is_open, .touch .nav__item .subnav.is_open, .touch .nav__item:hover .subnav.is_open {
+    left: 40%;
   }
 
-  /* line 86, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 113, ../scss/modules/breakpoints/_tablet.scss */
   .subnav__item {
     width: 88%;
   }
-
-  /* line 91, ../scss/modules/breakpoints/_tablet.scss */
-  .no-touch .nav__item .subnav,
-  .touch .nav__item .subnav.is_open {
-    top: 0;
-    display: block;
-    box-shadow: none;
-    min-width: 100%;
-    border-left: none;
-    border-right: none;
-  }
 }
-@media screen and (min-width: 481px) {
-  /* line 102, ../scss/modules/breakpoints/_tablet.scss */
-  .tab {
-    display: inherit !important;
+@media screen and (min-width: 500px) and (max-width: 850px) {
+  /* line 119, ../scss/modules/breakpoints/_tablet.scss */
+  .nav__right.is_open {
+    left: -webkit-calc(100% - 300px);
+    left: calc(100% - 300px);
   }
 
-  /* line 105, ../scss/modules/breakpoints/_tablet.scss */
-  .tab--palm {
-    display: none !important;
+  /* line 126, ../scss/modules/breakpoints/_tablet.scss */
+  .no-touch .nav__item .subnav.is_open,
+  .no-touch .nav__item:hover .subnav.is_open, .touch .nav__item .subnav.is_open,
+  .touch .nav__item:hover .subnav.is_open {
+    left: -webkit-calc(102.5% - 300px);
+    left: calc(102.5% - 300px);
   }
-
-  /* line 108, ../scss/modules/breakpoints/_tablet.scss */
-  .mainFooter__linkGroup {
-    min-height: 145px;
+  /* line 131, ../scss/modules/breakpoints/_tablet.scss */
+  .no-touch .nav__item:hover .subnav, .touch .nav__item:hover .subnav {
+    left: 100%;
   }
 }
 @media screen and (max-width: 560px) {
-  /* line 115, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 138, ../scss/modules/breakpoints/_tablet.scss */
   h1 {
     font-size: 25.6px;
     font-size: 1.6rem;
   }
 
-  /* line 118, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 141, ../scss/modules/breakpoints/_tablet.scss */
   h2 {
     font-size: 21.6px;
     font-size: 1.35rem;
   }
 
-  /* line 121, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 144, ../scss/modules/breakpoints/_tablet.scss */
   h3 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 
-  /* line 124, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 147, ../scss/modules/breakpoints/_tablet.scss */
   h4, h5 {
     font-size: 18.4px;
     font-size: 1.15rem;
   }
 
-  /* line 127, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 150, ../scss/modules/breakpoints/_tablet.scss */
   h6 {
     font-size: 13.6px;
     font-size: 0.85rem;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 156, ../scss/modules/breakpoints/_tablet.scss */
+  .tab {
+    display: inherit !important;
+  }
+
+  /* line 159, ../scss/modules/breakpoints/_tablet.scss */
+  .tab--palm {
+    display: none !important;
+  }
+
+  /* line 162, ../scss/modules/breakpoints/_tablet.scss */
+  .mainFooter__linkGroup {
+    min-height: 145px;
   }
 }
 @media screen and (max-width: 480px) {

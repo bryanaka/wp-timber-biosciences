@@ -29,24 +29,28 @@
         });
     }
     // touch nav
-    if(window.Modernizr.touch) {
-        var $nav_items = $('.nav__item');
-        $nav_items.on('click', '.js-navDropdown', function(event) {
+    $('.nav__item').on('click', '.js-navDropdown', function(event) {
+        if(window.innerWidth <= 850 || window.Modernizr.touch) {
             event.stopPropagation();
             event.preventDefault();
             $('.subnav').removeClass('is_open');
             $(this).siblings('.subnav').toggleClass('is_open');
-        });
-    }
+        }
+    });
+    $('.nav__item').on('click', '.js-closeSubNav', function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        var $currentSubNav = $(event.target).closest('.subnav');
+        $currentSubNav.removeClass('is_open');
+    });
+
     // off canvas nav
+    var $nav = $('.nav__right');
     $('#openNavButton').on('click', function() {
-        var $nav = $('.nav__right');
-        var pos = (window.innerWidth < 500 ? '40%' : (window.innerWidth-300));
-        $nav.animate({'left': pos});
-        // this needs to fire on resize as well...
+        $nav.addClass('is_open');
     });
     $('#closeNavButton').on('click', function() {
-        $('.nav__right').animate({'left':'100%'});
+        $nav.removeClass('is_open');
     });
 
     // search
