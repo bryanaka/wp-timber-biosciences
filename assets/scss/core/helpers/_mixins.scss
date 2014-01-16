@@ -3,7 +3,3 @@
         "mixins/selectors",
         "mixins/media_queries",
         "mixins/design";
-
-@mixin transform($string: "") {
-	@include vendor(transform, $string);
-}

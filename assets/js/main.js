@@ -1,3 +1,4 @@
+/*jshint undef:false, newcap: false */
 (function(window, document, $){
     'use strict';
 
@@ -51,22 +52,36 @@
     // off canvas nav
     var $nav = $('.nav__right');
     $('#openNavButton').on('click', function() {
+        event.preventDefault();
+        event.stopPropagation();
         $nav.addClass('is_open');
     });
-    
-    Hammer(document.body).on('swipeleft', function() {
+
+    Hammer(document.body, {
+        stop_browser_behavior: {
+            userSelect: 'text'
+        }
+    }).on('swipeleft', function() {
+        event.preventDefault();
+        event.stopPropagation();
         $nav.addClass('is_open');
     });
 
     $('#closeNavButton').on('click', function() {
+        event.preventDefault();
+        event.stopPropagation();
         $nav.removeClass('is_open');
     });
 
-    Hammer(document.body).on('swiperight', function() {
+    Hammer(document.body, {
+        stop_browser_behavior: {
+            userSelect: 'text'
+        }
+    }).on('swiperight', function() {
+        event.preventDefault();
+        event.stopPropagation();
         $nav.removeClass('is_open');
     });
-
-
 
     // search
     $('.js-search').on('click', function(event) {

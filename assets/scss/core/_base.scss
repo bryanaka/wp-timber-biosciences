@@ -133,3 +133,13 @@ table thead {
     background: #b3d4fc;
     text-shadow: none;
 }
+
+@include mq-tablet {
+    body {
+        overflow-x: hidden; 
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

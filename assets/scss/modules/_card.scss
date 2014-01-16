@@ -91,3 +91,56 @@
 .card--video {
 	min-height: 220px;
 }
+
+@include mq-lap {
+	.card-container--scientist {
+		min-height: 305px;
+	}
+	
+	.card--scientist {
+		min-height: 285px;
+	}
+}
+
+@include mq-tablet {
+	.card-container--scientist {
+		min-height: 285px;
+	}
+	
+	.card--scientist {
+		min-height: 265px;
+	}
+}
+
+@include mq-palm {
+
+	.card-container--full {
+		min-height: initial;
+		.card--program {
+			max-height: 300px;
+			min-height: 200px;
+		}
+	}
+
+	.card__text--program {
+		display:none;
+	}
+
+	.card-container--scientist {
+		min-height: 235px;
+	}
+	
+	.card--scientist {
+		min-height: 215px;
+	}
+}
+
+@include mq-range(400px, 480px) {
+	.card-container--scientist {
+		min-height: 285px;
+	}
+	
+	.card--scientist {
+		min-height: 265px;
+	}
+}

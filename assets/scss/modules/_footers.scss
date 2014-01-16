@@ -42,3 +42,9 @@
 	border-bottom: $pbd-yellow-green 2px solid;
 	padding-bottom: 4px;
 }
+
+@include mq-min(481px) {
+	.mainFooter__linkGroup {
+		min-height: 145px;
+	}
+}

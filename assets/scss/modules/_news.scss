@@ -8,6 +8,7 @@
 		// Specify whethere or not this is the last column in the row
 		$last-column:true
 	);
+	padding: 0;
 }
 
 .news__title {
@@ -39,7 +40,9 @@
 
 .tease__title {
 	@extend %c-h3;
-	margin-top: 0px;
+	margin-top: 0;
+	margin-bottom: 9px;
+	margin-bottom: 0.5rem;
 
 	a {
 		color: #252525;
@@ -63,4 +66,25 @@
 .tease__date {
 	font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
 	color: #777777;
+}
+
+@include mq-max(960px) {
+
+	.news-column {
+		@include grid-column(
+    		// Control the number of columns
+    		$columns:12,
+    		// Specify whethere or not this is the last column in the row
+    		$last-column:true
+    	);
+	}
+}
+
+@include mq-palm {
+	
+	.tease__thumbnail {
+		float: none;
+		display: block;
+		margin: .5rem auto;
+	}
 }

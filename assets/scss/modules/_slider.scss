@@ -123,3 +123,24 @@
 .slides_here a {
 	background: $pbd-green;
 }
+
+@include mq-max(960px) {
+
+	.slider-inside-wrap {
+		padding-top: 0;
+	}
+
+	.slider-container {
+		// rem-fallback can't seem to handle negatives... :/
+		// @include rem-fallback(margin-left, -2.5)
+		// @include rem-fallback(margin-top, -1);
+		margin-left: -40px;
+    	margin-left: -2.5rem;
+    	margin-top: -16px;
+    	margin-top: -1rem;
+		width: 115%;
+		width: -webkit-calc(100% + 5rem);
+		width:    -moz-calc(100% + 5rem);
+		width:         calc(100% + 5rem);
+	}
+}

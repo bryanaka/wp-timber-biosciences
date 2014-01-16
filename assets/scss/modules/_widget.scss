@@ -17,3 +17,45 @@
 	text-align: center;
 	margin-top: 5px;
 }
+
+@include mq-max(960px) {
+
+	.widget {
+		width: 49%;
+		position: relative;
+		min-height: 1px;
+		padding-left: 15px;
+		padding-right: 15px;
+		float: left;
+	}
+	.widget:first-of-type {
+		margin-right: 4px;
+	}
+
+}
+
+@include mq-tablet {
+	.widget {
+		width: 98%;
+		position: relative;
+		min-height: 1px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-right: auto;
+		margin-left: auto;
+		float: none;
+	}
+}
+
+@include mq-palm {
+
+	.widget {
+		display: none;
+	}
+
+	#gce_widget-2 {
+		display: block;
+	}
+
+}
+

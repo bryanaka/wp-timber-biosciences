@@ -29,3 +29,53 @@
 #profile_bio:target {
 	display: block;
 }
+
+@include mq-min(481px) {
+	.tab {
+		display: inherit !important;
+	}
+	.tab--palm {
+		display: none !important;
+	}
+}
+
+@include mq-palm {
+	.tabs--palm {
+
+		.tab {
+			display: none;
+			&.is_active {
+				display: block;
+			}	
+		}
+		.tab--default {
+			display: block;
+		}
+
+		.tab-nav {
+			display: block;
+			text-align: center;
+		}
+
+		.tab-nav__item {
+			background-color: $pbd-green;
+			border-top: $pbd-yellow-green 3px solid;
+			border-bottom: $pbd-yellow-green 3px solid;
+			@include rem-fallback(margin-bottom, 1);
+			@include rem-fallback(padding, 0.5);
+
+			&:nth-of-type(2) {
+				border-left: $pbd-yellow-green 3px solid;
+				border-right: $pbd-yellow-green 3px solid;
+			}
+		}
+
+		.tab-nav__link {
+			color: $off-white;
+
+			&:hover {
+				color: $pbd-yellow;
+			}
+		}
+	}
+}

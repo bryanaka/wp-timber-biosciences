@@ -45,19 +45,19 @@ h1, h2, h3, h4, h5, h6{
       text-align: center;
   }
   
-  %c-h1 {
+  h1, %c-h1 {
     @include font-size(1.6);
   }
-  %c-h2 {
+  h2, %c-h2 {
     @include font-size(1.35);
   }
-  %c-h3 {
+  h3, %c-h3 {
     @include font-size(1.25);
   }
-  %c-h4,%c-h5 {
+  h4, h5, %c-h4,%c-h5 {
     @include font-size(1.15);
   }
-  %c-h6 { 
+  h6, %c-h6 { 
     @include font-size(0.85);
   }
 }

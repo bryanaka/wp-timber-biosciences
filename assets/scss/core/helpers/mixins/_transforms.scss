@@ -1,4 +1,8 @@
 
+@mixin transform($string: "") {
+  @include vendor(transform, $string);
+}
+
 @mixin transition-transform($transition...) {
   -webkit-transition: -webkit-transform $transition;
      -moz-transition: -moz-transform $transition;

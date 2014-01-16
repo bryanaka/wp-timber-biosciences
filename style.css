@@ -4074,8 +4074,7 @@ small {
 }
 
 /* line 563, ../vendor/typeplate/scss/_typeplate.scss */
-h1, h2, h3, h4, h5, h6, .page__header, .tease__title,
-.navbar__brand a {
+h1, h2, h3, h4, h5, h6, .page__header, .tease__title {
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0;
@@ -4083,58 +4082,58 @@ h1, h2, h3, h4, h5, h6, .page__header, .tease__title,
 
 /* line 578, ../vendor/typeplate/scss/_typeplate.scss */
 .tera {
-  font-size: 117px;
-  font-size: 6.52902rem;
-  margin-bottom: 0.25272rem;
-}
-
-/* line 578, ../vendor/typeplate/scss/_typeplate.scss */
-.giga {
   font-size: 90px;
   font-size: 5.02232rem;
   margin-bottom: 0.32853rem;
 }
 
 /* line 578, ../vendor/typeplate/scss/_typeplate.scss */
-.mega {
+.giga {
   font-size: 72px;
   font-size: 4.01786rem;
   margin-bottom: 0.41067rem;
 }
 
 /* line 578, ../vendor/typeplate/scss/_typeplate.scss */
+.mega {
+  font-size: 54px;
+  font-size: 3.01339rem;
+  margin-bottom: 0.54756rem;
+}
+
+/* line 578, ../vendor/typeplate/scss/_typeplate.scss */
 .alpha, h1 {
-  font-size: 60px;
-  font-size: 3.34821rem;
-  margin-bottom: 0.4928rem;
-}
-
-/* line 578, ../vendor/typeplate/scss/_typeplate.scss */
-.beta, h2, .page__header {
-  font-size: 48px;
-  font-size: 2.67857rem;
-  margin-bottom: 0.616rem;
-}
-
-/* line 578, ../vendor/typeplate/scss/_typeplate.scss */
-.gamma, h3, .tease__title {
   font-size: 36px;
   font-size: 2.00893rem;
   margin-bottom: 0.82133rem;
 }
 
 /* line 578, ../vendor/typeplate/scss/_typeplate.scss */
-.delta, h4, .navbar__brand a {
+.beta, h2, .page__header {
+  font-size: 30px;
+  font-size: 1.67411rem;
+  margin-bottom: 0.9856rem;
+}
+
+/* line 578, ../vendor/typeplate/scss/_typeplate.scss */
+.gamma, h3, .tease__title {
   font-size: 24px;
   font-size: 1.33929rem;
   margin-bottom: 1.232rem;
 }
 
 /* line 578, ../vendor/typeplate/scss/_typeplate.scss */
-.epsilon, h5 {
+.delta, h4 {
   font-size: 21px;
   font-size: 1.17187rem;
   margin-bottom: 1.408rem;
+}
+
+/* line 578, ../vendor/typeplate/scss/_typeplate.scss */
+.epsilon, h5 {
+  font-size: 18px;
+  font-size: 1.00446rem;
+  margin-bottom: 1.64267rem;
 }
 
 /* line 578, ../vendor/typeplate/scss/_typeplate.scss */
@@ -4608,7 +4607,7 @@ table thead {
 }
 
 /* line 27, ../scss/core/content/_utils.scss */
-.subnav, .sr-only {
+.subnav, .subnav--left, .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -4641,8 +4640,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 11, ../scss/core/content/_headers.scss */
-.page__header, .tease__title,
-.navbar__brand a {
+.page__header, .tease__title {
   font-family: "Ubuntu", "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
 }
@@ -4664,12 +4662,6 @@ h1, h2, h3, h4, h5, h6 {
   .tease__title {
     font-size: 20px;
     font-size: 1.25rem;
-  }
-
-  /* line 57, ../scss/core/content/_headers.scss */
-  .navbar__brand a {
-    font-size: 18.4px;
-    font-size: 1.15rem;
   }
 }
 /* CSSWizardry Table Grid */
@@ -4911,7 +4903,7 @@ img.aligncenter {
 }
 
 /* line 30, ../scss/modules/_nav.scss */
-.nav, .nav__right, .nav__left, .subnav {
+.nav, .nav__right, .nav__left, .subnav, .subnav--left {
   margin-left: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -4983,15 +4975,17 @@ img.aligncenter {
 }
 /* line 83, ../scss/modules/_nav.scss */
 .navbar__brand a {
+  font-size: 28px;
+  font-size: 1.556rem;
   margin-bottom: 0;
 }
 
-/* line 90, ../scss/modules/_nav.scss */
+/* line 91, ../scss/modules/_nav.scss */
 .nav__menu, .nav__close, .subnav__close {
   display: none;
 }
 
-/* line 94, ../scss/modules/_nav.scss */
+/* line 95, ../scss/modules/_nav.scss */
 .nav__button {
   vertical-align: top;
   padding: 4px 8px;
@@ -5006,7 +5000,7 @@ img.aligncenter {
   -webkit-box-shadow: inset 0 -2px #263849;
   box-shadow: inset 0 -2px #263849;
 }
-/* line 107, ../scss/modules/_nav.scss */
+/* line 108, ../scss/modules/_nav.scss */
 .nav__button:active {
   top: 1px;
   outline: none;
@@ -5017,8 +5011,8 @@ img.aligncenter {
 /*  ==================================================
 	Sub Navigation
 	================================================== */
-/* line 119, ../scss/modules/_nav.scss */
-.subnav {
+/* line 120, ../scss/modules/_nav.scss */
+.subnav, .subnav--left {
   background-color: #009000;
   z-index: 15;
   box-shadow: none;
@@ -5028,14 +5022,16 @@ img.aligncenter {
   transition-duration: 400ms;
 }
 /* line 25, ../scss/core/helpers/mixins/_design.scss */
-.subnav:hover {
+.subnav:hover, .subnav--left:hover {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 851px) {
-  /* line 129, ../scss/modules/_nav.scss */
+  /* line 132, ../scss/modules/_nav.scss */
   .no-touch .nav__item:hover .subnav,
-  .touch .nav__item:hover .subnav.is_open {
+  .no-touch .nav__item:hover .subnav--left,
+  .touch .nav__item:hover .subnav.is_open,
+  .touch .nav__item:hover .subnav--left.is_open {
     position: absolute;
     display: block;
     width: auto;
@@ -5043,7 +5039,7 @@ img.aligncenter {
     overflow: visible;
     clip: auto;
     left: -3px;
-    min-width: 140%;
+    min-width: 150%;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
     border: 3px yellowgreen solid;
     border-top: 0;
@@ -5052,14 +5048,155 @@ img.aligncenter {
     margin-top: 8px;
     margin-top: 0.5rem;
   }
+
+  /* line 148, ../scss/modules/_nav.scss */
+  .no-touch .nav__item:hover .subnav--left,
+  .touch .nav__item:hover .subnav--left.is_open {
+    left: -50%;
+    left: -webkit-calc(-50% + 3px);
+    left: calc(-50% + 3px);
+  }
 }
-/* line 146, ../scss/modules/_nav.scss */
+/* line 155, ../scss/modules/_nav.scss */
 .subnav__item {
   text-align: center;
   padding-top: 8px;
   padding-top: 0.5rem;
 }
 
+@media screen and (min-width: 850px) {
+  /* line 170, ../scss/modules/_nav.scss */
+  .navbar {
+    border-radius: 0;
+    min-height: 0;
+  }
+
+  /* line 174, ../scss/modules/_nav.scss */
+  .navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px 3px;
+  }
+
+  /* line 179, ../scss/modules/_nav.scss */
+  .navbar-brand {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  /* line 182, ../scss/modules/_nav.scss */
+  .navbar-brand a {
+    color: #fcfcfc;
+    text-decoration: none;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 600ms;
+    transition-duration: 600ms;
+  }
+  /* line 187, ../scss/modules/_nav.scss */
+  .navbar-brand a:hover {
+    color: #ffd059;
+  }
+}
+@media screen and (max-width: 850px) {
+  /* line 195, ../scss/modules/_nav.scss */
+  .nav__menu, .nav__close, .subnav__close {
+    display: inherit;
+  }
+
+  /* line 199, ../scss/modules/_nav.scss */
+  .nav__right {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    padding-top: 46px;
+    left: 100%;
+    width: 60%;
+    border-left: yellowgreen 3px solid;
+    height: 100%;
+    padding-right: 0;
+    background-color: green;
+    z-index: 10;
+    max-width: 300px;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  /* line 215, ../scss/modules/_nav.scss */
+  .nav__right.is_open {
+    left: 40%;
+  }
+  /* line 219, ../scss/modules/_nav.scss */
+  .nav__right .nav__item {
+    display: block;
+    text-align: center;
+    box-shadow: none;
+    font-size: 18.4px;
+    font-size: 1.15rem;
+  }
+  /* line 225, ../scss/modules/_nav.scss */
+  .nav__right .subnav {
+    display: block;
+  }
+
+  /* line 233, ../scss/modules/_nav.scss */
+  .no-touch .nav__item .subnav, .no-touch .nav__item .subnav--left, .no-touch .nav__item:hover .subnav, .no-touch .nav__item:hover .subnav--left, .touch .nav__item .subnav, .touch .nav__item .subnav--left, .touch .nav__item:hover .subnav, .touch .nav__item:hover .subnav--left {
+    left: 100%;
+    position: fixed;
+    top: -20px;
+    width: 68%;
+    min-width: 0;
+    max-width: 300px;
+    height: 150%;
+    margin: auto;
+    padding-top: 65px;
+    overflow: hidden;
+    overflow-y: scroll;
+    clip: auto;
+    display: block;
+    box-shadow: none;
+    border: none;
+    border-left: yellowgreen 3px solid;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  /* line 253, ../scss/modules/_nav.scss */
+  .no-touch .nav__item .subnav.is_open, .no-touch .nav__item .subnav--left.is_open, .no-touch .nav__item:hover .subnav.is_open, .no-touch .nav__item:hover .subnav--left.is_open, .touch .nav__item .subnav.is_open, .touch .nav__item .subnav--left.is_open, .touch .nav__item:hover .subnav.is_open, .touch .nav__item:hover .subnav--left.is_open {
+    left: 40%;
+  }
+  /* line 257, ../scss/modules/_nav.scss */
+  .no-touch .nav__item .subnav--left, .no-touch .nav__item:hover .subnav--left, .touch .nav__item .subnav--left, .touch .nav__item:hover .subnav--left {
+    left: -100%;
+    left: -webkit-calc(-100% + 3px);
+    left: calc(-100% + 3px);
+  }
+
+  /* line 266, ../scss/modules/_nav.scss */
+  .subnav__item {
+    width: 88%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 850px) {
+  /* line 272, ../scss/modules/_nav.scss */
+  .nav__right.is_open {
+    left: -webkit-calc(100% - 300px);
+    left: calc(100% - 300px);
+  }
+
+  /* line 279, ../scss/modules/_nav.scss */
+  .no-touch .nav__item .subnav.is_open,
+  .no-touch .nav__item:hover .subnav.is_open, .touch .nav__item .subnav.is_open,
+  .touch .nav__item:hover .subnav.is_open {
+    left: -webkit-calc(102.5% - 300px);
+    left: calc(102.5% - 300px);
+  }
+  /* line 284, ../scss/modules/_nav.scss */
+  .no-touch .nav__item:hover .subnav, .touch .nav__item:hover .subnav {
+    left: 100%;
+  }
+}
 /* line 1, ../scss/modules/_search.scss */
 .wp_search {
   display: none;
@@ -5609,14 +5746,15 @@ img.aligncenter {
   width: 66.66667%;
   float: right;
   float: left;
+  padding: 0;
 }
 
-/* line 13, ../scss/modules/_news.scss */
+/* line 14, ../scss/modules/_news.scss */
 .news__title {
   color: green;
 }
 
-/* line 17, ../scss/modules/_news.scss */
+/* line 18, ../scss/modules/_news.scss */
 .news__divider {
   margin: 8px 0;
 }
@@ -5624,13 +5762,13 @@ img.aligncenter {
 /*  ==================================================
 	News Teaser - previews
 	================================================== */
-/* line 25, ../scss/modules/_news.scss */
+/* line 26, ../scss/modules/_news.scss */
 .tease {
   margin: 16px 0;
   border-top: 7px green solid;
 }
 
-/* line 30, ../scss/modules/_news.scss */
+/* line 31, ../scss/modules/_news.scss */
 .tease-container {
   padding: 16px;
   border-left: 1px #cecece solid;
@@ -5649,11 +5787,13 @@ img.aligncenter {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 40, ../scss/modules/_news.scss */
+/* line 41, ../scss/modules/_news.scss */
 .tease__title {
-  margin-top: 0px;
+  margin-top: 0;
+  margin-bottom: 9px;
+  margin-bottom: 0.5rem;
 }
-/* line 44, ../scss/modules/_news.scss */
+/* line 47, ../scss/modules/_news.scss */
 .tease__title a {
   color: #252525;
   text-decoration: none;
@@ -5661,19 +5801,19 @@ img.aligncenter {
   -moz-transition: color 500ms;
   transition: color 500ms;
 }
-/* line 51, ../scss/modules/_news.scss */
+/* line 54, ../scss/modules/_news.scss */
 .tease__title a:hover {
   color: #428bca;
 }
 
-/* line 57, ../scss/modules/_news.scss */
+/* line 60, ../scss/modules/_news.scss */
 .tease__thumbnail {
   float: left;
   padding-right: 16px;
   max-width: 100%;
 }
 
-/* line 63, ../scss/modules/_news.scss */
+/* line 66, ../scss/modules/_news.scss */
 .tease__date {
   font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
   color: #777777;
@@ -5897,46 +6037,13 @@ img.aligncenter {
     clear: both;
   }
 }
-@media screen and (min-width: 850px) {
-  /* line 31, ../scss/modules/breakpoints/_laptop.scss */
-  .navbar {
-    border-radius: 0;
-    min-height: 0;
-  }
-
-  /* line 35, ../scss/modules/breakpoints/_laptop.scss */
-  .navbar-nav > li > a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 5px 3px;
-  }
-
-  /* line 40, ../scss/modules/breakpoints/_laptop.scss */
-  .navbar-brand {
-    padding-top: 9px;
-    padding-bottom: 9px;
-  }
-  /* line 43, ../scss/modules/breakpoints/_laptop.scss */
-  .navbar-brand a {
-    color: #fcfcfc;
-    text-decoration: none;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 600ms;
-    transition-duration: 600ms;
-  }
-  /* line 48, ../scss/modules/breakpoints/_laptop.scss */
-  .navbar-brand a:hover {
-    color: #ffd059;
-  }
-}
 @media screen and (max-width: 960px) {
-  /* line 57, ../scss/modules/breakpoints/_laptop.scss */
+  /* line 34, ../scss/modules/breakpoints/_laptop.scss */
   .slider-inside-wrap {
     padding-top: 0;
   }
 
-  /* line 61, ../scss/modules/breakpoints/_laptop.scss */
+  /* line 38, ../scss/modules/breakpoints/_laptop.scss */
   .slider-container {
     margin-left: -40px;
     margin-left: -2.5rem;
@@ -5948,7 +6055,7 @@ img.aligncenter {
     width: calc(100% + 5rem);
   }
 
-  /* line 75, ../scss/modules/breakpoints/_laptop.scss */
+  /* line 52, ../scss/modules/breakpoints/_laptop.scss */
   .news-column {
     position: relative;
     padding-left: 0.9375rem;
@@ -5958,7 +6065,7 @@ img.aligncenter {
     float: left;
   }
 
-  /* line 84, ../scss/modules/breakpoints/_laptop.scss */
+  /* line 61, ../scss/modules/breakpoints/_laptop.scss */
   .sidebar {
     position: relative;
     padding-left: 0.9375rem;
@@ -5968,7 +6075,7 @@ img.aligncenter {
     float: left;
   }
 
-  /* line 92, ../scss/modules/breakpoints/_laptop.scss */
+  /* line 69, ../scss/modules/breakpoints/_laptop.scss */
   .widget {
     width: 49%;
     position: relative;
@@ -5978,7 +6085,7 @@ img.aligncenter {
     float: left;
   }
 
-  /* line 100, ../scss/modules/breakpoints/_laptop.scss */
+  /* line 77, ../scss/modules/breakpoints/_laptop.scss */
   .widget:first-of-type {
     margin-right: 4px;
   }
@@ -6055,141 +6162,49 @@ img.aligncenter {
     clear: both;
   }
 }
-@media screen and (max-width: 850px) {
-  /* line 49, ../scss/modules/breakpoints/_tablet.scss */
-  .nav__menu, .nav__close, .subnav__close {
-    display: inherit;
-  }
-
-  /* line 53, ../scss/modules/breakpoints/_tablet.scss */
-  .nav__right {
-    position: fixed;
-    top: 0;
-    padding-top: 46px;
-    left: 100%;
-    width: 60%;
-    border-left: yellowgreen 3px solid;
-    height: 100%;
-    padding-right: 0;
-    background-color: green;
-    z-index: 10;
-    max-width: 300px;
-    -webkit-transition-property: left;
-    transition-property: left;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-  }
-  /* line 68, ../scss/modules/breakpoints/_tablet.scss */
-  .nav__right.is_open {
-    left: 40%;
-  }
-  /* line 72, ../scss/modules/breakpoints/_tablet.scss */
-  .nav__right .nav__item {
-    display: block;
-    text-align: center;
-    box-shadow: none;
-    font-size: 18.4px;
-    font-size: 1.15rem;
-  }
-  /* line 78, ../scss/modules/breakpoints/_tablet.scss */
-  .nav__right .subnav {
-    display: block;
-  }
-
-  /* line 86, ../scss/modules/breakpoints/_tablet.scss */
-  .no-touch .nav__item .subnav, .no-touch .nav__item:hover .subnav, .touch .nav__item .subnav, .touch .nav__item:hover .subnav {
-    left: 100%;
-    position: fixed;
-    top: -20px;
-    width: 68%;
-    min-width: 0;
-    max-width: 300px;
-    height: 100%;
-    margin: auto;
-    padding-top: 65px;
-    overflow: hidden;
-    clip: auto;
-    display: block;
-    box-shadow: none;
-    border: none;
-    border-left: yellowgreen 3px solid;
-    -webkit-transition-property: left;
-    transition-property: left;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-  }
-  /* line 105, ../scss/modules/breakpoints/_tablet.scss */
-  .no-touch .nav__item .subnav.is_open, .no-touch .nav__item:hover .subnav.is_open, .touch .nav__item .subnav.is_open, .touch .nav__item:hover .subnav.is_open {
-    left: 40%;
-  }
-
-  /* line 113, ../scss/modules/breakpoints/_tablet.scss */
-  .subnav__item {
-    width: 88%;
-  }
-}
-@media screen and (min-width: 500px) and (max-width: 850px) {
-  /* line 119, ../scss/modules/breakpoints/_tablet.scss */
-  .nav__right.is_open {
-    left: -webkit-calc(100% - 300px);
-    left: calc(100% - 300px);
-  }
-
-  /* line 126, ../scss/modules/breakpoints/_tablet.scss */
-  .no-touch .nav__item .subnav.is_open,
-  .no-touch .nav__item:hover .subnav.is_open, .touch .nav__item .subnav.is_open,
-  .touch .nav__item:hover .subnav.is_open {
-    left: -webkit-calc(102.5% - 300px);
-    left: calc(102.5% - 300px);
-  }
-  /* line 131, ../scss/modules/breakpoints/_tablet.scss */
-  .no-touch .nav__item:hover .subnav, .touch .nav__item:hover .subnav {
-    left: 100%;
-  }
-}
 @media screen and (max-width: 560px) {
-  /* line 138, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 49, ../scss/modules/breakpoints/_tablet.scss */
   h1 {
     font-size: 25.6px;
     font-size: 1.6rem;
   }
 
-  /* line 141, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 52, ../scss/modules/breakpoints/_tablet.scss */
   h2 {
     font-size: 21.6px;
     font-size: 1.35rem;
   }
 
-  /* line 144, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 55, ../scss/modules/breakpoints/_tablet.scss */
   h3 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 
-  /* line 147, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 58, ../scss/modules/breakpoints/_tablet.scss */
   h4, h5 {
     font-size: 18.4px;
     font-size: 1.15rem;
   }
 
-  /* line 150, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 61, ../scss/modules/breakpoints/_tablet.scss */
   h6 {
     font-size: 13.6px;
     font-size: 0.85rem;
   }
 }
 @media screen and (min-width: 481px) {
-  /* line 156, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 67, ../scss/modules/breakpoints/_tablet.scss */
   .tab {
     display: inherit !important;
   }
 
-  /* line 159, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 70, ../scss/modules/breakpoints/_tablet.scss */
   .tab--palm {
     display: none !important;
   }
 
-  /* line 162, ../scss/modules/breakpoints/_tablet.scss */
+  /* line 73, ../scss/modules/breakpoints/_tablet.scss */
   .mainFooter__linkGroup {
     min-height: 145px;
   }
