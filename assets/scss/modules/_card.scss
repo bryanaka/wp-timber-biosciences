@@ -48,6 +48,13 @@
 	margin:0 0 8px 0;
 }
 
+.card--scientist {
+	.card__subtitle {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
 .card__content {
 	font-size: 16px;
 	margin:0 0 8px 0;
@@ -132,6 +139,10 @@
 	
 	.card--scientist {
 		min-height: 215px;
+		.card__subtitle {
+			font-size: 18px;
+			font-size: 1rem;
+		}
 	}
 }
 

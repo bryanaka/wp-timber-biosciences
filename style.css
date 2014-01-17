@@ -4398,54 +4398,6 @@ p + .drop-cap {
   clear: both;
 }
 
-/* http://jsfiddle.net/hakim/Ht6Ym/ */
-/* line 2, ../scss/core/helpers/_animations.scss */
-.roll {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: top;
-  -webkit-perspective: 400px;
-  -moz-perspective: 400px;
-  -webkit-perspective-origin: 50% 50%;
-  -moz-perspective-origin: 50% 50%;
-}
-
-/* line 14, ../scss/core/helpers/_animations.scss */
-.roll span {
-  display: block;
-  position: relative;
-  padding: 0 2px;
-  -webkit-transition: all 400ms ease;
-  -moz-transition: all 400ms ease;
-  -webkit-transform-origin: 50% 0%;
-  -moz-transform-origin: 50% 0%;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-}
-
-/* line 28, ../scss/core/helpers/_animations.scss */
-.roll:hover span {
-  background: #111;
-  -webkit-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
-  -moz-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
-}
-
-/* line 34, ../scss/core/helpers/_animations.scss */
-.roll span:after {
-  content: attr(data-title);
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 0 2px;
-  color: #fff;
-  background: #0f558a;
-  -webkit-transform-origin: 50% 0%;
-  -moz-transform-origin: 50% 0%;
-  -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-  -moz-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
-}
-
 /* ==========================================================================
    Base styles
    ========================================================================== */
@@ -4573,6 +4525,18 @@ table thead {
   text-shadow: none;
 }
 
+@media screen and (max-width: 769px) {
+  /* line 138, ../scss/core/_base.scss */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* line 141, ../scss/core/_base.scss */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 /* ==========================================================================
    Content
    ========================================================================== */
@@ -4652,16 +4616,34 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 
+  /* line 48, ../scss/core/content/_headers.scss */
+  h1 {
+    font-size: 25.6px;
+    font-size: 1.6rem;
+  }
+
   /* line 51, ../scss/core/content/_headers.scss */
-  .page__header {
+  h2, .page__header {
     font-size: 21.6px;
     font-size: 1.35rem;
   }
 
   /* line 54, ../scss/core/content/_headers.scss */
-  .tease__title {
+  h3, .tease__title {
     font-size: 20px;
     font-size: 1.25rem;
+  }
+
+  /* line 57, ../scss/core/content/_headers.scss */
+  h4, h5 {
+    font-size: 18.4px;
+    font-size: 1.15rem;
+  }
+
+  /* line 60, ../scss/core/content/_headers.scss */
+  h6 {
+    font-size: 13.6px;
+    font-size: 0.85rem;
   }
 }
 /* CSSWizardry Table Grid */
@@ -5292,6 +5274,12 @@ img.aligncenter {
   padding-bottom: 4px;
 }
 
+@media screen and (min-width: 481px) {
+  /* line 47, ../scss/modules/_footers.scss */
+  .mainFooter__linkGroup {
+    min-height: 145px;
+  }
+}
 /*  ==================================================
 	Front Page Slider
 	================================================== */
@@ -5431,6 +5419,24 @@ img.aligncenter {
   background: green;
 }
 
+@media screen and (max-width: 960px) {
+  /* line 129, ../scss/modules/_slider.scss */
+  .slider-inside-wrap {
+    padding-top: 0;
+  }
+
+  /* line 133, ../scss/modules/_slider.scss */
+  .slider-container {
+    margin-left: -40px;
+    margin-left: -2.5rem;
+    margin-top: -16px;
+    margin-top: -1rem;
+    width: 115%;
+    width: -webkit-calc(100% + 5rem);
+    width: -moz-calc(100% + 5rem);
+    width: calc(100% + 5rem);
+  }
+}
 /*  ==================================================
 	Ghetto Tabs
 	================================================== */
@@ -5451,6 +5457,59 @@ img.aligncenter {
   display: block;
 }
 
+@media screen and (min-width: 481px) {
+  /* line 34, ../scss/modules/_tabs.scss */
+  .tab {
+    display: inherit !important;
+  }
+
+  /* line 37, ../scss/modules/_tabs.scss */
+  .tab--palm {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 45, ../scss/modules/_tabs.scss */
+  .tabs--palm .tab {
+    display: none;
+  }
+  /* line 47, ../scss/modules/_tabs.scss */
+  .tabs--palm .tab.is_active {
+    display: block;
+  }
+  /* line 51, ../scss/modules/_tabs.scss */
+  .tabs--palm .tab--default {
+    display: block;
+  }
+  /* line 55, ../scss/modules/_tabs.scss */
+  .tabs--palm .tab-nav {
+    display: block;
+    text-align: center;
+  }
+  /* line 60, ../scss/modules/_tabs.scss */
+  .tabs--palm .tab-nav__item {
+    background-color: green;
+    border-top: yellowgreen 3px solid;
+    border-bottom: yellowgreen 3px solid;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    padding: 8px;
+    padding: 0.5rem;
+  }
+  /* line 67, ../scss/modules/_tabs.scss */
+  .tabs--palm .tab-nav__item:nth-of-type(2) {
+    border-left: yellowgreen 3px solid;
+    border-right: yellowgreen 3px solid;
+  }
+  /* line 73, ../scss/modules/_tabs.scss */
+  .tabs--palm .tab-nav__link {
+    color: #fcfcfc;
+  }
+  /* line 76, ../scss/modules/_tabs.scss */
+  .tabs--palm .tab-nav__link:hover {
+    color: #ffd059;
+  }
+}
 /*  ==================================================
 	Sidebar
 	================================================== */
@@ -5464,6 +5523,17 @@ img.aligncenter {
   float: left;
 }
 
+@media screen and (max-width: 960px) {
+  /* line 14, ../scss/modules/_sidebar.scss */
+  .sidebar {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: right;
+    float: left;
+  }
+}
 /*  ==================================================
 	Widgets
 	================================================== */
@@ -5496,6 +5566,46 @@ img.aligncenter {
   margin-top: 5px;
 }
 
+@media screen and (max-width: 960px) {
+  /* line 23, ../scss/modules/_widget.scss */
+  .widget {
+    width: 49%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+  }
+
+  /* line 31, ../scss/modules/_widget.scss */
+  .widget:first-of-type {
+    margin-right: 4px;
+  }
+}
+@media screen and (max-width: 769px) {
+  /* line 38, ../scss/modules/_widget.scss */
+  .widget {
+    width: 98%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 52, ../scss/modules/_widget.scss */
+  .widget {
+    display: none;
+  }
+
+  /* line 56, ../scss/modules/_widget.scss */
+  #gce_widget-2 {
+    display: block;
+  }
+}
 /*  ==================================================
 	Cards
 	================================================== */
@@ -5563,51 +5673,121 @@ img.aligncenter {
   margin: 0 0 8px 0;
 }
 
-/* line 51, ../scss/modules/_card.scss */
+/* line 52, ../scss/modules/_card.scss */
+.card--scientist .card__subtitle, .card--scientist .card__subtitle--theater {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+/* line 58, ../scss/modules/_card.scss */
 .card__content {
   font-size: 16px;
   margin: 0 0 8px 0;
 }
 
-/* line 56, ../scss/modules/_card.scss */
+/* line 63, ../scss/modules/_card.scss */
 .card__thumb--full {
   width: 95%;
   max-width: none;
 }
 
-/* line 63, ../scss/modules/_card.scss */
+/* line 70, ../scss/modules/_card.scss */
 .card-container--full {
   max-width: 100%;
   min-height: 460px;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-/* line 69, ../scss/modules/_card.scss */
+/* line 76, ../scss/modules/_card.scss */
 .card-container--full .card--full {
   min-height: 460px;
   height: 100%;
 }
 
-/* line 75, ../scss/modules/_card.scss */
+/* line 82, ../scss/modules/_card.scss */
 .card--full {
   max-width: 100%;
 }
 
-/* line 81, ../scss/modules/_card.scss */
+/* line 88, ../scss/modules/_card.scss */
 .card-container--scientist {
   min-height: 265px;
 }
 
-/* line 86, ../scss/modules/_card.scss */
+/* line 93, ../scss/modules/_card.scss */
 .card--scientist {
   min-height: 245px;
 }
 
-/* line 91, ../scss/modules/_card.scss */
+/* line 98, ../scss/modules/_card.scss */
 .card--video {
   min-height: 220px;
 }
 
+@media screen and (max-width: 1200px) {
+  /* line 103, ../scss/modules/_card.scss */
+  .card-container--scientist {
+    min-height: 305px;
+  }
+
+  /* line 107, ../scss/modules/_card.scss */
+  .card--scientist {
+    min-height: 285px;
+  }
+}
+@media screen and (max-width: 769px) {
+  /* line 113, ../scss/modules/_card.scss */
+  .card-container--scientist {
+    min-height: 285px;
+  }
+
+  /* line 117, ../scss/modules/_card.scss */
+  .card--scientist {
+    min-height: 265px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 124, ../scss/modules/_card.scss */
+  .card-container--full {
+    min-height: initial;
+  }
+  /* line 126, ../scss/modules/_card.scss */
+  .card-container--full .card--program {
+    max-height: 300px;
+    min-height: 200px;
+  }
+
+  /* line 132, ../scss/modules/_card.scss */
+  .card__text--program {
+    display: none;
+  }
+
+  /* line 136, ../scss/modules/_card.scss */
+  .card-container--scientist {
+    min-height: 235px;
+  }
+
+  /* line 140, ../scss/modules/_card.scss */
+  .card--scientist {
+    min-height: 215px;
+  }
+  /* line 142, ../scss/modules/_card.scss */
+  .card--scientist .card__subtitle, .card--scientist .card__subtitle--theater {
+    font-size: 18px;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 480px) {
+  /* line 150, ../scss/modules/_card.scss */
+  .card-container--scientist {
+    min-height: 285px;
+  }
+
+  /* line 154, ../scss/modules/_card.scss */
+  .card--scientist {
+    min-height: 265px;
+  }
+}
 /*  ==================================================
 	Scientist Profiles
 	================================================== */
@@ -5735,6 +5915,133 @@ img.aligncenter {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 1200px) {
+  /* line 95, ../scss/modules/_profile.scss */
+  .scientist_list {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+  }
+  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
+  .scientist_list:before, .scientist_list:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
+  .scientist_list:after {
+    clear: both;
+  }
+  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li {
+    width: 25%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li:nth-of-type(4n+1) {
+    clear: both;
+  }
+}
+@media screen and (max-width: 769px) {
+  /* line 112, ../scss/modules/_profile.scss */
+  .scientist_list {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+  }
+  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
+  .scientist_list:before, .scientist_list:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
+  .scientist_list:after {
+    clear: both;
+  }
+  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li {
+    width: 33.33333%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li:nth-of-type(3n+1) {
+    clear: both;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 129, ../scss/modules/_profile.scss */
+  .scientist_list {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+  }
+  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
+  .scientist_list:before, .scientist_list:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
+  .scientist_list:after {
+    clear: both;
+  }
+  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li {
+    width: 50%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .scientist_list > li:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* line 144, ../scss/modules/_profile.scss */
+  .profile__img {
+    max-width: 100%;
+  }
+
+  /* line 148, ../scss/modules/_profile.scss */
+  .profile__headContainer {
+    margin-bottom: 0;
+  }
+}
 /*  ==================================================
 	News
 	================================================== */
@@ -5819,6 +6126,25 @@ img.aligncenter {
   color: #777777;
 }
 
+@media screen and (max-width: 960px) {
+  /* line 73, ../scss/modules/_news.scss */
+  .news-column {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: right;
+    float: left;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 85, ../scss/modules/_news.scss */
+  .tease__thumbnail {
+    float: none;
+    display: block;
+    margin: .5rem auto;
+  }
+}
 /* line 1, ../scss/modules/_theater.scss */
 .video_list {
   display: block;
@@ -5951,6 +6277,123 @@ img.aligncenter {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 1200px) {
+  /* line 101, ../scss/modules/_theater.scss */
+  .video_list {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+  }
+  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
+  .video_list:before, .video_list:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
+  .video_list:after {
+    clear: both;
+  }
+  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li {
+    width: 25%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li:nth-of-type(4n+1) {
+    clear: both;
+  }
+}
+@media screen and (max-width: 769px) {
+  /* line 118, ../scss/modules/_theater.scss */
+  .video_list {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+  }
+  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
+  .video_list:before, .video_list:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
+  .video_list:after {
+    clear: both;
+  }
+  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li {
+    width: 33.33333%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li:nth-of-type(3n+1) {
+    clear: both;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 135, ../scss/modules/_theater.scss */
+  .video_list {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625rem;
+  }
+  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
+  .video_list:before, .video_list:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
+  .video_list:after {
+    clear: both;
+  }
+  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li {
+    width: 50%;
+    padding: 0 0.625rem 1.25rem;
+  }
+  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
+  .video_list > li:nth-of-type(2n+1) {
+    clear: both;
+  }
+}
 /*  ==================================================
 	Calendar
 	================================================== */
@@ -5986,404 +6429,6 @@ img.aligncenter {
 /* line 44, ../scss/modules/_calendar.scss */
 .ai1ec-allday-badge {
   background-color: #008000 !important;
-}
-
-@media screen and (max-width: 1200px) {
-  /* line 7, ../scss/modules/breakpoints/_laptop.scss */
-  .card-container--scientist {
-    min-height: 305px;
-  }
-
-  /* line 11, ../scss/modules/breakpoints/_laptop.scss */
-  .card--scientist {
-    min-height: 285px;
-  }
-
-  /* line 14, ../scss/modules/breakpoints/_laptop.scss */
-  .video_list, .scientist_list {
-    display: block;
-    padding: 0;
-    margin: 0 -0.625rem;
-  }
-  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
-  .video_list:before, .video_list:after, .scientist_list:before, .scientist_list:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-  }
-  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
-  .video_list:after, .scientist_list:after {
-    clear: both;
-  }
-  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li, .scientist_list > li {
-    display: inline;
-    height: auto;
-    float: left;
-    padding: 0 0.625rem 1.25rem;
-  }
-  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li, .scientist_list > li {
-    width: 25%;
-    padding: 0 0.625rem 1.25rem;
-  }
-  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li:nth-of-type(n), .scientist_list > li:nth-of-type(n) {
-    clear: none;
-  }
-  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li:nth-of-type(4n+1), .scientist_list > li:nth-of-type(4n+1) {
-    clear: both;
-  }
-}
-@media screen and (max-width: 960px) {
-  /* line 34, ../scss/modules/breakpoints/_laptop.scss */
-  .slider-inside-wrap {
-    padding-top: 0;
-  }
-
-  /* line 38, ../scss/modules/breakpoints/_laptop.scss */
-  .slider-container {
-    margin-left: -40px;
-    margin-left: -2.5rem;
-    margin-top: -16px;
-    margin-top: -1rem;
-    width: 115%;
-    width: -webkit-calc(100% + 5rem);
-    width: -moz-calc(100% + 5rem);
-    width: calc(100% + 5rem);
-  }
-
-  /* line 52, ../scss/modules/breakpoints/_laptop.scss */
-  .news-column {
-    position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 100%;
-    float: right;
-    float: left;
-  }
-
-  /* line 61, ../scss/modules/breakpoints/_laptop.scss */
-  .sidebar {
-    position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 100%;
-    float: right;
-    float: left;
-  }
-
-  /* line 69, ../scss/modules/breakpoints/_laptop.scss */
-  .widget {
-    width: 49%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    float: left;
-  }
-
-  /* line 77, ../scss/modules/breakpoints/_laptop.scss */
-  .widget:first-of-type {
-    margin-right: 4px;
-  }
-}
-@media screen and (max-width: 769px) {
-  /* line 7, ../scss/modules/breakpoints/_tablet.scss */
-  body {
-    overflow-x: hidden;
-  }
-
-  /* line 10, ../scss/modules/breakpoints/_tablet.scss */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* line 15, ../scss/modules/breakpoints/_tablet.scss */
-  .card-container--scientist {
-    min-height: 285px;
-  }
-
-  /* line 19, ../scss/modules/breakpoints/_tablet.scss */
-  .card--scientist {
-    min-height: 265px;
-  }
-
-  /* line 22, ../scss/modules/breakpoints/_tablet.scss */
-  .widget {
-    width: 98%;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    float: none;
-  }
-
-  /* line 32, ../scss/modules/breakpoints/_tablet.scss */
-  .video_list, .scientist_list {
-    display: block;
-    padding: 0;
-    margin: 0 -0.625rem;
-  }
-  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
-  .video_list:before, .video_list:after, .scientist_list:before, .scientist_list:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-  }
-  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
-  .video_list:after, .scientist_list:after {
-    clear: both;
-  }
-  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li, .scientist_list > li {
-    display: inline;
-    height: auto;
-    float: left;
-    padding: 0 0.625rem 1.25rem;
-  }
-  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li, .scientist_list > li {
-    width: 33.33333%;
-    padding: 0 0.625rem 1.25rem;
-  }
-  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li:nth-of-type(n), .scientist_list > li:nth-of-type(n) {
-    clear: none;
-  }
-  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li:nth-of-type(3n+1), .scientist_list > li:nth-of-type(3n+1) {
-    clear: both;
-  }
-}
-@media screen and (max-width: 560px) {
-  /* line 49, ../scss/modules/breakpoints/_tablet.scss */
-  h1 {
-    font-size: 25.6px;
-    font-size: 1.6rem;
-  }
-
-  /* line 52, ../scss/modules/breakpoints/_tablet.scss */
-  h2 {
-    font-size: 21.6px;
-    font-size: 1.35rem;
-  }
-
-  /* line 55, ../scss/modules/breakpoints/_tablet.scss */
-  h3 {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-
-  /* line 58, ../scss/modules/breakpoints/_tablet.scss */
-  h4, h5 {
-    font-size: 18.4px;
-    font-size: 1.15rem;
-  }
-
-  /* line 61, ../scss/modules/breakpoints/_tablet.scss */
-  h6 {
-    font-size: 13.6px;
-    font-size: 0.85rem;
-  }
-}
-@media screen and (min-width: 481px) {
-  /* line 67, ../scss/modules/breakpoints/_tablet.scss */
-  .tab {
-    display: inherit !important;
-  }
-
-  /* line 70, ../scss/modules/breakpoints/_tablet.scss */
-  .tab--palm {
-    display: none !important;
-  }
-
-  /* line 73, ../scss/modules/breakpoints/_tablet.scss */
-  .mainFooter__linkGroup {
-    min-height: 145px;
-  }
-}
-@media screen and (max-width: 480px) {
-  /* line 7, ../scss/modules/breakpoints/_palm.scss */
-  .tease__thumbnail {
-    float: none;
-    display: block;
-    margin: .5rem auto;
-  }
-
-  /* line 13, ../scss/modules/breakpoints/_palm.scss */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* line 18, ../scss/modules/breakpoints/_palm.scss */
-  .widget {
-    display: none;
-  }
-
-  /* line 22, ../scss/modules/breakpoints/_palm.scss */
-  #gce_widget-2 {
-    display: block;
-  }
-
-  /* line 26, ../scss/modules/breakpoints/_palm.scss */
-  .card-container--full {
-    min-height: initial;
-  }
-  /* line 28, ../scss/modules/breakpoints/_palm.scss */
-  .card-container--full .card--program {
-    max-height: 300px;
-    min-height: 200px;
-  }
-
-  /* line 34, ../scss/modules/breakpoints/_palm.scss */
-  .card__text--program {
-    display: none;
-  }
-
-  /* line 38, ../scss/modules/breakpoints/_palm.scss */
-  .card-container--scientist {
-    min-height: 235px;
-  }
-
-  /* line 42, ../scss/modules/breakpoints/_palm.scss */
-  .card--scientist {
-    min-height: 215px;
-  }
-
-  /* line 46, ../scss/modules/breakpoints/_palm.scss */
-  .video_list, .scientist_list {
-    display: block;
-    padding: 0;
-    margin: 0 -0.625rem;
-  }
-  /* line 62, ../scss/core/helpers/mixins/_utils.scss */
-  .video_list:before, .video_list:after, .scientist_list:before, .scientist_list:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-  }
-  /* line 66, ../scss/core/helpers/mixins/_utils.scss */
-  .video_list:after, .scientist_list:after {
-    clear: both;
-  }
-  /* line 35, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li, .scientist_list > li {
-    display: inline;
-    height: auto;
-    float: left;
-    padding: 0 0.625rem 1.25rem;
-  }
-  /* line 44, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li, .scientist_list > li {
-    width: 50%;
-    padding: 0 0.625rem 1.25rem;
-  }
-  /* line 48, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li:nth-of-type(n), .scientist_list > li:nth-of-type(n) {
-    clear: none;
-  }
-  /* line 49, ../vendor/foundation/scss/foundation/components/_block-grid.scss */
-  .video_list > li:nth-of-type(2n+1), .scientist_list > li:nth-of-type(2n+1) {
-    clear: both;
-  }
-
-  /* line 61, ../scss/modules/breakpoints/_palm.scss */
-  .profile__img {
-    max-width: 100%;
-  }
-
-  /* line 65, ../scss/modules/breakpoints/_palm.scss */
-  .profile__headContainer {
-    margin-bottom: 0;
-  }
-
-  /* line 71, ../scss/modules/breakpoints/_palm.scss */
-  .tabs--palm .tab {
-    display: none;
-  }
-  /* line 73, ../scss/modules/breakpoints/_palm.scss */
-  .tabs--palm .tab.is_active {
-    display: block;
-  }
-  /* line 77, ../scss/modules/breakpoints/_palm.scss */
-  .tabs--palm .tab--default {
-    display: block;
-  }
-  /* line 81, ../scss/modules/breakpoints/_palm.scss */
-  .tabs--palm .tab-nav {
-    display: block;
-    text-align: center;
-  }
-  /* line 86, ../scss/modules/breakpoints/_palm.scss */
-  .tabs--palm .tab-nav__item {
-    background-color: green;
-    border-top: yellowgreen 3px solid;
-    border-bottom: yellowgreen 3px solid;
-    margin-bottom: 16px;
-    margin-bottom: 1rem;
-    padding: 8px;
-    padding: 0.5rem;
-  }
-  /* line 93, ../scss/modules/breakpoints/_palm.scss */
-  .tabs--palm .tab-nav__item:nth-of-type(2) {
-    border-left: yellowgreen 3px solid;
-    border-right: yellowgreen 3px solid;
-  }
-  /* line 99, ../scss/modules/breakpoints/_palm.scss */
-  .tabs--palm .tab-nav__link {
-    color: #fcfcfc;
-  }
-  /* line 102, ../scss/modules/breakpoints/_palm.scss */
-  .tabs--palm .tab-nav__link:hover {
-    color: #ffd059;
-  }
-}
-@media screen and (min-width: 400px) and (max-width: 480px) {
-  /* line 111, ../scss/modules/breakpoints/_palm.scss */
-  .card-container--scientist {
-    min-height: 285px;
-  }
-
-  /* line 115, ../scss/modules/breakpoints/_palm.scss */
-  .card--scientist {
-    min-height: 265px;
-  }
-}
-/* line 1, ../scss/_inbox.scss */
-.hero--banner {
-  background-position: left top;
-  background-repeat: no-repeat;
-  height: 100px;
-  margin-bottom: 2rem;
-  position: relative;
-}
-/* line 8, ../scss/_inbox.scss */
-.hero--banner .page__header {
-  padding-top: 30px;
-  position: absolute;
-  z-index: 5;
-  text-shadow: rgba(255, 255, 255, 0.65) 0 1px 0;
-}
-
-/* line 15, ../scss/_inbox.scss */
-.hero--banner__overlay {
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: #fcfcfc;
-  opacity: 0.80;
 }
 
 /* ==========================================================================
