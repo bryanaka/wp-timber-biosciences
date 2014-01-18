@@ -4381,6 +4381,15 @@ p + .drop-cap {
  * Extend this object into your markup.
  *
  */
+/* line 4, ../scss/lib/_typeplate.scss */
+body {
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  -ms-hyphens: manual;
+  -o-hyphens: manual;
+  hyphens: manual;
+}
+
 /* ==========================================================================
    Helper
    ========================================================================== */
@@ -5274,8 +5283,13 @@ img.aligncenter {
   padding-bottom: 4px;
 }
 
+/* line 46, ../scss/modules/_footers.scss */
+.mainFooter__lab_logo {
+  width: 160px;
+}
+
 @media screen and (min-width: 481px) {
-  /* line 47, ../scss/modules/_footers.scss */
+  /* line 51, ../scss/modules/_footers.scss */
   .mainFooter__linkGroup {
     min-height: 145px;
   }
@@ -5516,7 +5530,9 @@ img.aligncenter {
 /* line 4, ../scss/modules/_sidebar.scss */
 .sidebar {
   position: relative;
+  padding-left: 15px;
   padding-left: 0.9375rem;
+  padding-right: 15px;
   padding-right: 0.9375rem;
   width: 33.33333%;
   float: right;
@@ -5527,7 +5543,9 @@ img.aligncenter {
   /* line 14, ../scss/modules/_sidebar.scss */
   .sidebar {
     position: relative;
+    padding-left: 15px;
     padding-left: 0.9375rem;
+    padding-right: 15px;
     padding-right: 0.9375rem;
     width: 100%;
     float: right;
@@ -6048,7 +6066,9 @@ img.aligncenter {
 /* line 4, ../scss/modules/_news.scss */
 .news-column {
   position: relative;
+  padding-left: 15px;
   padding-left: 0.9375rem;
+  padding-right: 15px;
   padding-right: 0.9375rem;
   width: 66.66667%;
   float: right;
@@ -6130,7 +6150,9 @@ img.aligncenter {
   /* line 73, ../scss/modules/_news.scss */
   .news-column {
     position: relative;
+    padding-left: 15px;
     padding-left: 0.9375rem;
+    padding-right: 15px;
     padding-right: 0.9375rem;
     width: 100%;
     float: right;

@@ -2,3 +2,58 @@
 	"../../vendor/foundation/scss/foundation/components/visibility",
     "../../vendor/foundation/scss/foundation/components/block-grid",
     "../../vendor/foundation/scss/foundation/components/grid";
+
+@mixin grid-column(
+  $columns:false, 
+  $last-column:false, 
+  $center:false, 
+  $offset:false, 
+  $push:false, 
+  $pull:false, 
+  $collapse:false, 
+  $float:true) {
+
+  position: relative;
+
+  // If collapsed, get rid of gutter padding
+  @if $collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Gutter padding whenever a column isn't set to collapse
+  // (use $collapse:null to do nothing)
+  @else if $collapse == false {
+  	@include rem-fallback(padding-left, $column-gutter / 2);
+	@include rem-fallback(padding-right, $column-gutter / 2);
+  }
+
+  // If a column number is given, calculate width
+  @if $columns {
+    width: grid-calc($columns, $total-columns);
+
+    // If last column, float naturally instead of to the right
+    @if $last-column { float: $opposite-direction; }
+  }
+
+  // Source Ordering, adds left/right depending on which you use.
+  @if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
+  @if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
+
+  // If centered, get rid of float and add appropriate margins
+  @if $center {
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+    float: none;
+  }
+
+  // If offset, calculate appropriate margins
+  @if $offset { margin-#{$default-float}: grid-calc($offset, $total-columns) !important; }
+
+  @if $float {
+    @if $float == left or $float == true { float: $default-float; }
+    @else if $float == right { float: $opposite-direction; }
+    @else { float: none; }
+  }
+
+}

@@ -1,2 +1,7 @@
 /*! Typeplate */
 @import "../../vendor/typeplate/scss/typeplate";
+
+body {
+	// Ala Trent Walton
+	@include css-hyphens(manual);
+}

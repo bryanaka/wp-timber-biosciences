@@ -6,7 +6,9 @@
 		<h1 class="post__title">
 			{{post.title}}
 		</h1>
-		<img src="{{post.get_thumbnail.src|resize(250)}}" alt="{{post.thumnail.caption}}" class="alignleft">
+		{% if post.get_thumbnail %}
+			<img src="{{post.get_thumbnail.src|resize(250)}}" alt="{{post.thumnail.caption}}" class="alignleft">
+		{% endif %}
 	</header>
 	<div class="entry-content">
 		{{post.content}}
