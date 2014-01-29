@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
-/*!
+/*
 Theme Name: wptimber-biosciences
 Theme URI: https://github.com/bryanaka/wptimber-biosciences
 Author: Bryan Robles <bryanaka0@gmail.com>
@@ -46,7 +46,7 @@ Tags: pbd, physical, biosciences, modern, front-end, developer, theme, timber, t
 /*  ==================================
 	Vendor Variables
 	================================== */
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -306,7 +306,7 @@ figure {
  */
 /* line 263, ../vendor/_normalize.scss/_normalize.scss */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -462,7 +462,7 @@ table {
   border-spacing: 0;
 }
 
-/*!
+/*
  * Bootstrap v3.0.0
  *
  * Copyright 2013 Twitter, Inc
@@ -3999,8 +3999,8 @@ select {
     float: right !important;
   }
 }
-/*! Typeplate */
-/*!
+/* Typeplate */
+/*
  *
 .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
 
@@ -4296,7 +4296,7 @@ p + .drop-cap {
 }
 /* line 502, ../vendor/typeplate/scss/_typeplate.scss */
 .dictionary-style dd:before {
-  content: counter(definitions,decimal) ". ";
+  content: counter(definitions, decimal) ". ";
 }
 
 /**
@@ -4442,7 +4442,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -4895,27 +4895,25 @@ img.aligncenter {
 
 /* line 30, ../scss/modules/_nav.scss */
 .nav, .nav__right, .nav__left, .subnav, .subnav--left {
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
   list-style: none;
 }
 
-/* line 37, ../scss/modules/_nav.scss */
+/* line 35, ../scss/modules/_nav.scss */
 .nav__right {
   float: right;
   padding-right: 16px;
   padding-right: 1rem;
 }
 
-/* line 43, ../scss/modules/_nav.scss */
+/* line 41, ../scss/modules/_nav.scss */
 .nav__left {
   float: left;
   padding-left: 16px;
   padding-left: 1rem;
 }
 
-/* line 49, ../scss/modules/_nav.scss */
+/* line 47, ../scss/modules/_nav.scss */
 .nav__search, .nav__menu, .nav__item {
   position: relative;
   display: inline-block;
@@ -4924,17 +4922,17 @@ img.aligncenter {
   padding-right: 12px;
   padding-right: 0.75rem;
 }
-/* line 55, ../scss/modules/_nav.scss */
+/* line 53, ../scss/modules/_nav.scss */
 .nav__search:hover, .nav__menu:hover, .nav__search:hover .nav__link, .nav__menu:hover .nav__link, .nav__search:hover .navbar__brand a, .navbar__brand .nav__search:hover a, .nav__menu:hover .navbar__brand a, .navbar__brand .nav__menu:hover a, .nav__search:hover .subnav__link, .nav__menu:hover .subnav__link, .nav__item:hover, .nav__item:hover .nav__link, .nav__item:hover .navbar__brand a, .navbar__brand .nav__item:hover a, .nav__item:hover .subnav__link {
   background-color: #009000;
 }
 
-/* line 60, ../scss/modules/_nav.scss */
+/* line 58, ../scss/modules/_nav.scss */
 .nav__search, .nav__menu {
   float: right;
 }
 
-/* line 65, ../scss/modules/_nav.scss */
+/* line 63, ../scss/modules/_nav.scss */
 .nav__item {
   box-shadow: none;
   -webkit-transition-property: box-shadow;
@@ -4947,36 +4945,36 @@ img.aligncenter {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 69, ../scss/modules/_nav.scss */
+/* line 67, ../scss/modules/_nav.scss */
 .nav__link, .navbar__brand a, .subnav__link {
   color: #fcfcfc;
   text-decoration: none;
 }
-/* line 73, ../scss/modules/_nav.scss */
+/* line 71, ../scss/modules/_nav.scss */
 .nav__link:hover, .navbar__brand a:hover, .subnav__link:hover, .nav__link:focus, .navbar__brand a:focus, .subnav__link:focus {
   color: #ffd059;
   text-decoration: none;
 }
 
-/* line 79, ../scss/modules/_nav.scss */
+/* line 77, ../scss/modules/_nav.scss */
 .navbar__brand {
   margin: 0;
   padding: 8px;
   padding: 0.5rem;
 }
-/* line 83, ../scss/modules/_nav.scss */
+/* line 81, ../scss/modules/_nav.scss */
 .navbar__brand a {
   font-size: 28px;
   font-size: 1.556rem;
   margin-bottom: 0;
 }
 
-/* line 91, ../scss/modules/_nav.scss */
+/* line 89, ../scss/modules/_nav.scss */
 .nav__menu, .nav__close, .subnav__close {
   display: none;
 }
 
-/* line 95, ../scss/modules/_nav.scss */
+/* line 93, ../scss/modules/_nav.scss */
 .nav__button {
   vertical-align: top;
   padding: 4px 8px;
@@ -4991,7 +4989,7 @@ img.aligncenter {
   -webkit-box-shadow: inset 0 -2px #263849;
   box-shadow: inset 0 -2px #263849;
 }
-/* line 108, ../scss/modules/_nav.scss */
+/* line 106, ../scss/modules/_nav.scss */
 .nav__button:active {
   top: 1px;
   outline: none;
@@ -5002,7 +5000,7 @@ img.aligncenter {
 /*  ==================================================
 	Sub Navigation
 	================================================== */
-/* line 120, ../scss/modules/_nav.scss */
+/* line 118, ../scss/modules/_nav.scss */
 .subnav, .subnav--left {
   background-color: #009000;
   z-index: 15;
@@ -5018,7 +5016,7 @@ img.aligncenter {
 }
 
 @media screen and (min-width: 851px) {
-  /* line 132, ../scss/modules/_nav.scss */
+  /* line 130, ../scss/modules/_nav.scss */
   .no-touch .nav__item:hover .subnav,
   .no-touch .nav__item:hover .subnav--left,
   .touch .nav__item:hover .subnav.is_open,
@@ -5040,7 +5038,7 @@ img.aligncenter {
     margin-top: 0.5rem;
   }
 
-  /* line 148, ../scss/modules/_nav.scss */
+  /* line 146, ../scss/modules/_nav.scss */
   .no-touch .nav__item:hover .subnav--left,
   .touch .nav__item:hover .subnav--left.is_open {
     left: -50%;
@@ -5048,7 +5046,7 @@ img.aligncenter {
     left: calc(-50% + 3px);
   }
 }
-/* line 155, ../scss/modules/_nav.scss */
+/* line 153, ../scss/modules/_nav.scss */
 .subnav__item {
   text-align: center;
   padding-top: 8px;
@@ -5056,25 +5054,25 @@ img.aligncenter {
 }
 
 @media screen and (min-width: 850px) {
-  /* line 170, ../scss/modules/_nav.scss */
+  /* line 168, ../scss/modules/_nav.scss */
   .navbar {
     border-radius: 0;
     min-height: 0;
   }
 
-  /* line 174, ../scss/modules/_nav.scss */
+  /* line 172, ../scss/modules/_nav.scss */
   .navbar-nav > li > a {
     padding-top: 5px;
     padding-bottom: 5px;
     margin: 5px 3px;
   }
 
-  /* line 179, ../scss/modules/_nav.scss */
+  /* line 177, ../scss/modules/_nav.scss */
   .navbar-brand {
     padding-top: 9px;
     padding-bottom: 9px;
   }
-  /* line 182, ../scss/modules/_nav.scss */
+  /* line 180, ../scss/modules/_nav.scss */
   .navbar-brand a {
     color: #fcfcfc;
     text-decoration: none;
@@ -5083,18 +5081,18 @@ img.aligncenter {
     -webkit-transition-duration: 600ms;
     transition-duration: 600ms;
   }
-  /* line 187, ../scss/modules/_nav.scss */
+  /* line 185, ../scss/modules/_nav.scss */
   .navbar-brand a:hover {
     color: #ffd059;
   }
 }
 @media screen and (max-width: 850px) {
-  /* line 195, ../scss/modules/_nav.scss */
+  /* line 193, ../scss/modules/_nav.scss */
   .nav__menu, .nav__close, .subnav__close {
     display: inherit;
   }
 
-  /* line 199, ../scss/modules/_nav.scss */
+  /* line 197, ../scss/modules/_nav.scss */
   .nav__right {
     position: fixed;
     overflow-y: scroll;
@@ -5113,11 +5111,11 @@ img.aligncenter {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
   }
-  /* line 215, ../scss/modules/_nav.scss */
+  /* line 213, ../scss/modules/_nav.scss */
   .nav__right.is_open {
     left: 40%;
   }
-  /* line 219, ../scss/modules/_nav.scss */
+  /* line 217, ../scss/modules/_nav.scss */
   .nav__right .nav__item {
     display: block;
     text-align: center;
@@ -5125,12 +5123,12 @@ img.aligncenter {
     font-size: 18.4px;
     font-size: 1.15rem;
   }
-  /* line 225, ../scss/modules/_nav.scss */
+  /* line 223, ../scss/modules/_nav.scss */
   .nav__right .subnav {
     display: block;
   }
 
-  /* line 233, ../scss/modules/_nav.scss */
+  /* line 231, ../scss/modules/_nav.scss */
   .no-touch .nav__item .subnav, .no-touch .nav__item .subnav--left, .no-touch .nav__item:hover .subnav, .no-touch .nav__item:hover .subnav--left, .touch .nav__item .subnav, .touch .nav__item .subnav--left, .touch .nav__item:hover .subnav, .touch .nav__item:hover .subnav--left {
     left: 100%;
     position: fixed;
@@ -5153,37 +5151,37 @@ img.aligncenter {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
   }
-  /* line 253, ../scss/modules/_nav.scss */
+  /* line 251, ../scss/modules/_nav.scss */
   .no-touch .nav__item .subnav.is_open, .no-touch .nav__item .subnav--left.is_open, .no-touch .nav__item:hover .subnav.is_open, .no-touch .nav__item:hover .subnav--left.is_open, .touch .nav__item .subnav.is_open, .touch .nav__item .subnav--left.is_open, .touch .nav__item:hover .subnav.is_open, .touch .nav__item:hover .subnav--left.is_open {
     left: 40%;
   }
-  /* line 257, ../scss/modules/_nav.scss */
+  /* line 255, ../scss/modules/_nav.scss */
   .no-touch .nav__item .subnav--left, .no-touch .nav__item:hover .subnav--left, .touch .nav__item .subnav--left, .touch .nav__item:hover .subnav--left {
     left: -100%;
     left: -webkit-calc(-100% + 3px);
     left: calc(-100% + 3px);
   }
 
-  /* line 266, ../scss/modules/_nav.scss */
+  /* line 264, ../scss/modules/_nav.scss */
   .subnav__item {
     width: 88%;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 850px) {
-  /* line 272, ../scss/modules/_nav.scss */
+  /* line 270, ../scss/modules/_nav.scss */
   .nav__right.is_open {
     left: -webkit-calc(100% - 300px);
     left: calc(100% - 300px);
   }
 
-  /* line 279, ../scss/modules/_nav.scss */
+  /* line 277, ../scss/modules/_nav.scss */
   .no-touch .nav__item .subnav.is_open,
   .no-touch .nav__item:hover .subnav.is_open, .touch .nav__item .subnav.is_open,
   .touch .nav__item:hover .subnav.is_open {
     left: -webkit-calc(102.5% - 300px);
     left: calc(102.5% - 300px);
   }
-  /* line 284, ../scss/modules/_nav.scss */
+  /* line 282, ../scss/modules/_nav.scss */
   .no-touch .nav__item:hover .subnav, .touch .nav__item:hover .subnav {
     left: 100%;
   }
@@ -5893,7 +5891,7 @@ img.aligncenter {
 /* line 59, ../scss/modules/_profile.scss */
 .profile__headContainer {
   background: #EDEDED;
-  border-bottom: #E5E5E5 3px solid;
+  border-bottom: #e5e5e5 3px solid;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
@@ -6142,7 +6140,7 @@ img.aligncenter {
 
 /* line 66, ../scss/modules/_news.scss */
 .tease__date {
-  font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
+  font-family: "Ubuntu", "Sans Source Pro", "Helvetica Neue", sans-serif;
   color: #777777;
 }
 
@@ -6164,7 +6162,7 @@ img.aligncenter {
   .tease__thumbnail {
     float: none;
     display: block;
-    margin: .5rem auto;
+    margin: 0.5rem auto;
   }
 }
 /* line 1, ../scss/modules/_theater.scss */
@@ -6258,7 +6256,7 @@ img.aligncenter {
 
 /* line 64, ../scss/modules/_theater.scss */
 .theater__icon {
-  font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", sans-serif;
   display: inline-block;
   padding: 12px 32px 16px 0px;
   padding: 0.75rem 2rem 1rem 0rem;
@@ -6437,7 +6435,7 @@ img.aligncenter {
 }
 /* line 26, ../scss/modules/_calendar.scss */
 .widget .ai1ec-agenda-widget-view .ai1ec-event {
-  border-top: #008000 3px solid;
+  border-top: green 3px solid;
 }
 /* line 31, ../scss/modules/_calendar.scss */
 .widget .ai1ec-agenda-widget-view .ai1ec-event > a {
@@ -6450,7 +6448,7 @@ img.aligncenter {
 
 /* line 44, ../scss/modules/_calendar.scss */
 .ai1ec-allday-badge {
-  background-color: #008000 !important;
+  background-color: green !important;
 }
 
 /* ==========================================================================
@@ -6461,7 +6459,7 @@ img.aligncenter {
   /* line 7, ../scss/support/_print.scss */
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -6495,7 +6493,7 @@ img.aligncenter {
 
   /* line 37, ../scss/support/_print.scss */
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
