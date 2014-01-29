@@ -8,6 +8,7 @@
 
     $(window).resize(function () {
         setOnestopHeights();
+        //
     });
 
     var setOnestopHeights = function() {
