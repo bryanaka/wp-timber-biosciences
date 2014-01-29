@@ -12,10 +12,10 @@
         <h3>Onestop</h3>
         <div id="sections">
                 {% for item in page.get_children %}
-                <a href="{{item.link}}" class="onestop-link">
-                    <div class="onestop-section">
+                <a href="{{item.link}}" class="onestop__onestop-link">
+                    <div class="onestop__onestop-section">
                         <figure class="effeckt-caption" data-effeckt-type="cover-fade">
-                            <div class="onestop-element-real">
+                            <div class="onestop__element-real">
                                 <img src="{{TimberImage(item.get_field('image')).src}}" alt="">
                                 <figcaption>
                                     <div class="effeckt-figcaption-wrap">
@@ -30,7 +30,9 @@
                 {% endfor %}
                 <div style="clear:both"></div>
         </div>
-        {{debug_info}}
     </div>
+    <script type="text/javascript" src="/wp-content/themes/wptimber-biosciences/assets/js/onestop.js">
+
+    </script>
 
 {% endblock %}

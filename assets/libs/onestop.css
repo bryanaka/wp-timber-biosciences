@@ -25,18 +25,18 @@ a {
     width: 256px;
 }*/
 
-.onestop-element-real img {
+.onestop__element-real img {
     height: 256px;
     width: 256px;
 }
 
-.onestop-section {
+.onestop__onestop-section {
     float: left;
     margin-right: 40px;
     margin-top: 30px;
 }
 
-.onestop-section p {
+.onestop__onestop-section p {
     position: relative;
     width: 100%;
     text-align: center;
