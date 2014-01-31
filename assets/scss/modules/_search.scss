@@ -1,6 +1,5 @@
 .wp_search {
   display: none;
-  background-color: #162A33;
 }
 
 .wp_search__field {
@@ -9,14 +8,14 @@
   @include font-size(2);
   width: 100%;
   height: 100%;
-  background-color: #162A33;
-  color: $off-white;
+  background-color: #04311e;
+  color: yellowgreen;
   border: none;
   border-radius: 0;
   padding: 0.5rem 2.5rem;
   
   @include placeholder(true) {
-    color: #EDEDED;
+    color: yellowgreen;
     
     &::before {
       font-family: FontAwesome;
