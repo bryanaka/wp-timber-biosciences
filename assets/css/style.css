@@ -5680,129 +5680,149 @@ img.aligncenter {
 }
 
 /* line 40, ../scss/modules/_card.scss */
+.helper {
+  display: inline-block;
+  height: 50%;
+  vertical-align: middle;
+}
+
+/* line 46, ../scss/modules/_card.scss */
 .card__thumb, .card__thumb--full {
+  position: relative;
   max-width: 168px;
   width: 90%;
   margin: 8px 0;
   padding: 0 8px;
+  height: 240px;
+  display: inline-block;
+}
+/* line 55, ../scss/modules/_card.scss */
+.card__thumb > img, .card__thumb--full > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-height: 230px;
 }
 
-/* line 47, ../scss/modules/_card.scss */
+/* line 66, ../scss/modules/_card.scss */
 .card__subtitle, .card__subtitle--theater {
   margin: 0 0 8px 0;
 }
 
-/* line 52, ../scss/modules/_card.scss */
+/* line 71, ../scss/modules/_card.scss */
 .card--scientist .card__subtitle, .card--scientist .card__subtitle--theater {
   font-size: 20px;
   font-size: 1.25rem;
 }
 
-/* line 58, ../scss/modules/_card.scss */
+/* line 77, ../scss/modules/_card.scss */
 .card__content {
   font-size: 16px;
   margin: 0 0 8px 0;
 }
 
-/* line 63, ../scss/modules/_card.scss */
+/* line 82, ../scss/modules/_card.scss */
 .card__thumb--full {
   width: 95%;
   max-width: none;
 }
 
-/* line 70, ../scss/modules/_card.scss */
+/* line 89, ../scss/modules/_card.scss */
 .card-container--full {
   max-width: 100%;
   min-height: 460px;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-/* line 76, ../scss/modules/_card.scss */
+/* line 95, ../scss/modules/_card.scss */
 .card-container--full .card--full {
   min-height: 460px;
   height: 100%;
 }
 
-/* line 82, ../scss/modules/_card.scss */
+/* line 101, ../scss/modules/_card.scss */
 .card--full {
   max-width: 100%;
 }
 
-/* line 88, ../scss/modules/_card.scss */
+/* line 107, ../scss/modules/_card.scss */
 .card-container--scientist {
   min-height: 265px;
 }
 
-/* line 93, ../scss/modules/_card.scss */
+/* line 112, ../scss/modules/_card.scss */
 .card--scientist {
-  min-height: 245px;
+  height: 300px;
 }
 
-/* line 98, ../scss/modules/_card.scss */
+/* line 117, ../scss/modules/_card.scss */
 .card--video {
   min-height: 220px;
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 103, ../scss/modules/_card.scss */
+  /* line 122, ../scss/modules/_card.scss */
   .card-container--scientist {
     min-height: 305px;
   }
 
-  /* line 107, ../scss/modules/_card.scss */
+  /* line 126, ../scss/modules/_card.scss */
   .card--scientist {
     min-height: 285px;
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 113, ../scss/modules/_card.scss */
+  /* line 132, ../scss/modules/_card.scss */
   .card-container--scientist {
     min-height: 285px;
   }
 
-  /* line 117, ../scss/modules/_card.scss */
+  /* line 136, ../scss/modules/_card.scss */
   .card--scientist {
     min-height: 265px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 124, ../scss/modules/_card.scss */
+  /* line 143, ../scss/modules/_card.scss */
   .card-container--full {
     min-height: initial;
   }
-  /* line 126, ../scss/modules/_card.scss */
+  /* line 145, ../scss/modules/_card.scss */
   .card-container--full .card--program {
     max-height: 300px;
     min-height: 200px;
   }
 
-  /* line 132, ../scss/modules/_card.scss */
+  /* line 151, ../scss/modules/_card.scss */
   .card__text--program {
     display: none;
   }
 
-  /* line 136, ../scss/modules/_card.scss */
+  /* line 155, ../scss/modules/_card.scss */
   .card-container--scientist {
     min-height: 235px;
   }
 
-  /* line 140, ../scss/modules/_card.scss */
+  /* line 159, ../scss/modules/_card.scss */
   .card--scientist {
     min-height: 215px;
   }
-  /* line 142, ../scss/modules/_card.scss */
+  /* line 161, ../scss/modules/_card.scss */
   .card--scientist .card__subtitle, .card--scientist .card__subtitle--theater {
     font-size: 18px;
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 400px) and (max-width: 480px) {
-  /* line 150, ../scss/modules/_card.scss */
+  /* line 169, ../scss/modules/_card.scss */
   .card-container--scientist {
     min-height: 285px;
   }
 
-  /* line 154, ../scss/modules/_card.scss */
+  /* line 173, ../scss/modules/_card.scss */
   .card--scientist {
     min-height: 265px;
   }
@@ -5847,12 +5867,8 @@ img.aligncenter {
 .scientist_list > li:nth-of-type(5n+1) {
   clear: both;
 }
-/* line 19, ../scss/modules/_profile.scss */
-.scientist_list > li {
-  clear: none !important;
-}
 
-/* line 24, ../scss/modules/_profile.scss */
+/* line 20, ../scss/modules/_profile.scss */
 .scientist__divider {
   border-top-color: green;
   width: 99%;
@@ -5860,12 +5876,12 @@ img.aligncenter {
   border-top-width: 2px;
 }
 
-/* line 31, ../scss/modules/_profile.scss */
+/* line 27, ../scss/modules/_profile.scss */
 .scientist__letter {
   color: green;
 }
 
-/* line 35, ../scss/modules/_profile.scss */
+/* line 31, ../scss/modules/_profile.scss */
 .profile__img {
   padding: 3px;
   border: #252525 2px solid;
@@ -5874,24 +5890,24 @@ img.aligncenter {
   background: #FAFAFA;
 }
 
-/* line 43, ../scss/modules/_profile.scss */
+/* line 39, ../scss/modules/_profile.scss */
 .profile__name, .profile__contact {
   text-align: left;
 }
 
-/* line 47, ../scss/modules/_profile.scss */
+/* line 43, ../scss/modules/_profile.scss */
 .profile__name {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-/* line 52, ../scss/modules/_profile.scss */
+/* line 48, ../scss/modules/_profile.scss */
 .profile__name h1, .profile__name h2, .profile__name ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 59, ../scss/modules/_profile.scss */
+/* line 55, ../scss/modules/_profile.scss */
 .profile__headContainer {
   background: #EDEDED;
   border-bottom: #e5e5e5 3px solid;
@@ -5899,13 +5915,13 @@ img.aligncenter {
   margin-bottom: 1.5rem;
 }
 
-/* line 66, ../scss/modules/_profile.scss */
+/* line 62, ../scss/modules/_profile.scss */
 .profile__head {
   padding: 8px 0;
   padding: 0.5rem 0;
 }
 
-/* line 71, ../scss/modules/_profile.scss */
+/* line 67, ../scss/modules/_profile.scss */
 .profile__icons {
   font-size: 36px;
   font-size: 2.25rem;
@@ -5913,29 +5929,29 @@ img.aligncenter {
   padding-top: 1rem;
   text-align: center;
 }
-/* line 75, ../scss/modules/_profile.scss */
+/* line 71, ../scss/modules/_profile.scss */
 .profile__icons a {
   color: #252525;
   text-decoration: none;
 }
-/* line 79, ../scss/modules/_profile.scss */
+/* line 75, ../scss/modules/_profile.scss */
 .profile__icons a:hover {
   color: #4b4b4b;
 }
 
-/* line 85, ../scss/modules/_profile.scss */
+/* line 81, ../scss/modules/_profile.scss */
 .profile__bio {
   text-align: left;
 }
 
-/* line 89, ../scss/modules/_profile.scss */
+/* line 85, ../scss/modules/_profile.scss */
 .profile__address, .profile__location {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 95, ../scss/modules/_profile.scss */
+  /* line 91, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -5974,7 +5990,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 112, ../scss/modules/_profile.scss */
+  /* line 108, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -6013,7 +6029,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 129, ../scss/modules/_profile.scss */
+  /* line 125, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -6051,12 +6067,12 @@ img.aligncenter {
     clear: both;
   }
 
-  /* line 144, ../scss/modules/_profile.scss */
+  /* line 140, ../scss/modules/_profile.scss */
   .profile__img {
     max-width: 100%;
   }
 
-  /* line 148, ../scss/modules/_profile.scss */
+  /* line 144, ../scss/modules/_profile.scss */
   .profile__headContainer {
     margin-bottom: 0;
   }

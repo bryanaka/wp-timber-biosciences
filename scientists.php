@@ -25,7 +25,7 @@ $scientists = Timber::get_posts($query);
 $grouped_scientists = array();
 
 foreach ($scientists as $sci) {
-    $last_name_first = $sci['last_name'][0];
+    $last_name_first = $sci->last_name[0];
     if (isset($grouped_scientists[$last_name_first])) {
         $grouped_scientists[$last_name_first][] = $sci;
     } else {
@@ -33,7 +33,6 @@ foreach ($scientists as $sci) {
     }
 }
 
+$pageObj->context["test"] = $test;
 $pageObj->context["scientists"] = $grouped_scientists;
-
-$pageObj->find_posts_as('scientists', $query);
 $pageObj->render_page('scientists/list.twig');
