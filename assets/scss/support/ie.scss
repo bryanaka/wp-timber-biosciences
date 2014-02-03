@@ -4,6 +4,8 @@
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
 
+@import "../core/helpers/mixins/media_queries";
+
 @include mq-max(960px) {
 	.slider-container {
 		margin-left: 0\9;

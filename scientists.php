@@ -14,6 +14,14 @@ $pageObj->get_current_page();
 $query = array(
 	"numberposts" => -1,
 	"post_type"   => "scientists",
+	"meta_query"  => array(
+		"relation" => "AND",
+		array(
+			"key"     => "scientist_type",
+			"value"   => "scientist",
+			"compare" => "="
+		)
+	),
 	"meta_key" 	  => "last_name",
 	"orderby" 	  => "meta_value",
 	"order"		  => "ASC"

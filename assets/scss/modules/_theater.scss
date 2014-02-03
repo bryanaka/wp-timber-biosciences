@@ -96,6 +96,13 @@
 	@include font-size(1);
 }
 
+// for the theater fb share icon
+.fb-share-button span{
+  width:150px !important;
+  position: relative;
+  top: -7px;
+}
+
 @include mq-lap {
 
 	.video_list {
