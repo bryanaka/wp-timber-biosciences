@@ -271,8 +271,8 @@
 
 @include mq-range(500px, 850px) {
 	.nav__right.is_open {
-		left: -webkit-calc(100% - 300px);
-		left:         calc(100% - 300px);
+		left: -webkit-calc(100% - 280px);
+		left:         calc(100% - 280px);
 	}
 
 	.no-touch, .touch  {

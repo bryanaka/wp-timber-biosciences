@@ -41,6 +41,5 @@ foreach ($scientists as $sci) {
     }
 }
 
-$pageObj->context["test"] = $test;
 $pageObj->context["scientists"] = $grouped_scientists;
 $pageObj->render_page('scientists/list.twig');
