@@ -4868,13 +4868,13 @@ img.aligncenter {
   appearance: none;
   font-size: 32px;
   font-size: 2rem;
-  width: 100%;
+  width: 95%;
   height: 100%;
   background-color: #04311e;
   color: yellowgreen;
   border: none;
   border-radius: 0;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2.5%;
 }
 /* line 6, ../scss/core/helpers/mixins/_selectors.scss */
 .wp_search__field::-webkit-input-placeholder, .wp_search__field:-ms-input-placeholder, .wp_search__field::-moz-placeholder, .wp_search__field:-moz-placeholder {
@@ -4888,9 +4888,10 @@ img.aligncenter {
   text-decoration: inherit;
   content: " ";
   padding-right: 0.25rem;
+  padding-left: 0.25rem;
 }
 
-/* line 31, ../scss/modules/_search.scss */
+/* line 32, ../scss/modules/_search.scss */
 .wp_search__field:focus {
   outline: none;
 }
