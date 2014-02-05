@@ -2,11 +2,14 @@
 	<a href="{{scientist.permalink}}" class="card__link">
 		<div class="card-container--scientist">
 			<article class="card--scientist">
-				<!-- 
+				<!--
 				WP resize is discoloring the images...
-				<img src="{{scientist.get_thumbnail.get_src|resize(200,280)}}" class="card__thumb"> 
+				<img src="{{scientist.get_thumbnail.get_src|resize(200,280)}}" class="card__thumb">
 				-->
-				<img src="{{scientist.get_thumbnail.get_src}}" class="card__thumb">
+				<div class="card__thumb">
+					<img src="{{scientist.get_thumbnail.get_src}}" alt="No Image">
+				</div>
+				<!-- <img src="{{scientist.get_thumbnail.get_src}}" class="card__thumb"> -->
 				<h3 class="c-h5 card__subtitle">{{scientist.first_name}} {{scientist.last_name}}</h3>
 				<!-- this should go in a tooltip
 				<h4 class="card__content">Title Goes Here</h4>

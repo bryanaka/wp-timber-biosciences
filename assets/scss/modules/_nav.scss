@@ -199,7 +199,7 @@
 
 	.nav__right {
 		position: fixed;
-		overflow-y: scroll;
+		overflow-y: auto;
 		top:0;
 		padding-top: 46px;
 		left:100%;
@@ -242,7 +242,7 @@
   				margin: auto;
 				padding-top: 65px;
   				overflow: hidden;
-  				overflow-y: scroll;
+  				overflow-y: auto;
   				clip: auto;
 				display: block;
 				box-shadow: none;

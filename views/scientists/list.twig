@@ -11,19 +11,15 @@
 			{% endfor %}
 		</article>
 	</div>
-	<ul class="scientist_list">
-		{% for scientist in scientists %}
-			{% if current_letter != scientist.last_name|slice(0,1) %}
-				</ul>
-				<div class="row">
-					{% set current_letter = scientist.last_name|slice(0,1) %}
-					<h2 class="small-12 columns scientist__letter" id="section-{{current_letter|lower}}">{{ current_letter }}</h2>
-					<hr class="scientist__divider">
-				</div>
-				<ul class="scientist_list">
-			{% endif %}
-			{% include [scientist.post_type~'/preview.twig', 'posts/preview.twig'] %}
-		{% endfor %}
-	</ul>
-	
+	{% for letter, grouped in scientists %}
+		<div class="row">
+			<h2 class="small-12 columns scientist__letter" id="section-{{letter|lower}}">{{ letter }}</h2>
+			<hr class="scientist__divider">
+		</div>
+		<ul class="scientist_list">
+			{% for scientist in grouped %}
+				{% include [scientist.post_type~'/preview.twig', 'posts/preview.twig'] %}
+			{% endfor %}
+		</ul>
+	{% endfor %}
 {% endblock %}

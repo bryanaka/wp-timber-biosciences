@@ -27,5 +27,18 @@ $query = array(
 	"order"		  => "ASC"
 );
 
-$pageObj->find_posts_as('scientists', $query);
+$affiliates = Timber::get_posts($query);
+
+$grouped_affiliates = array();
+
+foreach ($affiliates as $affil) {
+	$last_name_first = $affil->last_name[0];
+	if (isset($grouped_affiliates[$last_name_first])) {
+		$grouped_affiliates[$last_name_first][] = $affil;
+	} else {
+		$grouped_affiliates[$last_name_first] = array($affil);
+	}
+}
+
+$pageObj->context["scientists"] = $grouped_affiliates;
 $pageObj->render_page('scientists/list.twig');

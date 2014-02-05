@@ -27,5 +27,19 @@ $query = array(
 	"order"		  => "ASC"
 );
 
-$pageObj->find_posts_as('scientists', $query);
+$scientists = Timber::get_posts($query);
+
+// Group by first char of last name
+$grouped_scientists = array();
+
+foreach ($scientists as $sci) {
+    $last_name_first = $sci->last_name[0];
+    if (isset($grouped_scientists[$last_name_first])) {
+        $grouped_scientists[$last_name_first][] = $sci;
+    } else {
+        $grouped_scientists[$last_name_first] = array($sci);
+    }
+}
+
+$pageObj->context["scientists"] = $grouped_scientists;
 $pageObj->render_page('scientists/list.twig');
