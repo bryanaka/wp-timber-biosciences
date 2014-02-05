@@ -4756,7 +4756,7 @@ img.aligncenter {
   /* line 200, ../scss/modules/_nav.scss */
   .nav__right {
     position: fixed;
-    overflow-y: scroll;
+    overflow-y: auto;
     top: 0;
     padding-top: 46px;
     left: 100%;
@@ -4805,7 +4805,7 @@ img.aligncenter {
     margin: auto;
     padding-top: 65px;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     clip: auto;
     display: block;
     box-shadow: none;
@@ -4839,8 +4839,8 @@ img.aligncenter {
 @media screen and (min-width: 500px) and (max-width: 850px) {
   /* line 273, ../scss/modules/_nav.scss */
   .nav__right.is_open {
-    left: -webkit-calc(100% - 280px);
-    left: calc(100% - 280px);
+    left: -webkit-calc(100% - 300px);
+    left: calc(100% - 300px);
   }
 
   /* line 280, ../scss/modules/_nav.scss */
