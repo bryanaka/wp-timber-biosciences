@@ -5563,14 +5563,15 @@ img.aligncenter {
   width: 99%;
   margin-left: auto;
   border-top-width: 2px;
+  display: inline-block;
 }
 
-/* line 27, ../scss/modules/_profile.scss */
+/* line 28, ../scss/modules/_profile.scss */
 .scientist__letter {
   color: green;
 }
 
-/* line 31, ../scss/modules/_profile.scss */
+/* line 32, ../scss/modules/_profile.scss */
 .profile__img {
   padding: 3px;
   border: #252525 2px solid;
@@ -5579,24 +5580,24 @@ img.aligncenter {
   background: #FAFAFA;
 }
 
-/* line 39, ../scss/modules/_profile.scss */
+/* line 40, ../scss/modules/_profile.scss */
 .profile__name, .profile__contact {
   text-align: left;
 }
 
-/* line 43, ../scss/modules/_profile.scss */
+/* line 44, ../scss/modules/_profile.scss */
 .profile__name {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-/* line 48, ../scss/modules/_profile.scss */
+/* line 49, ../scss/modules/_profile.scss */
 .profile__name h1, .profile__name h2, .profile__name ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 55, ../scss/modules/_profile.scss */
+/* line 56, ../scss/modules/_profile.scss */
 .profile__headContainer {
   background: #EDEDED;
   border-bottom: #e5e5e5 3px solid;
@@ -5604,13 +5605,13 @@ img.aligncenter {
   margin-bottom: 1.5rem;
 }
 
-/* line 62, ../scss/modules/_profile.scss */
+/* line 63, ../scss/modules/_profile.scss */
 .profile__head {
   padding: 8px 0;
   padding: 0.5rem 0;
 }
 
-/* line 67, ../scss/modules/_profile.scss */
+/* line 68, ../scss/modules/_profile.scss */
 .profile__icons {
   font-size: 36px;
   font-size: 2.25rem;
@@ -5618,29 +5619,29 @@ img.aligncenter {
   padding-top: 1rem;
   text-align: center;
 }
-/* line 71, ../scss/modules/_profile.scss */
+/* line 72, ../scss/modules/_profile.scss */
 .profile__icons a {
   color: #252525;
   text-decoration: none;
 }
-/* line 75, ../scss/modules/_profile.scss */
+/* line 76, ../scss/modules/_profile.scss */
 .profile__icons a:hover {
   color: #4b4b4b;
 }
 
-/* line 81, ../scss/modules/_profile.scss */
+/* line 82, ../scss/modules/_profile.scss */
 .profile__bio {
   text-align: left;
 }
 
-/* line 85, ../scss/modules/_profile.scss */
+/* line 86, ../scss/modules/_profile.scss */
 .profile__address, .profile__location {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 91, ../scss/modules/_profile.scss */
+  /* line 92, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -5679,7 +5680,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 108, ../scss/modules/_profile.scss */
+  /* line 109, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -5718,7 +5719,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 125, ../scss/modules/_profile.scss */
+  /* line 126, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -5756,12 +5757,12 @@ img.aligncenter {
     clear: both;
   }
 
-  /* line 140, ../scss/modules/_profile.scss */
+  /* line 141, ../scss/modules/_profile.scss */
   .profile__img {
     max-width: 100%;
   }
 
-  /* line 144, ../scss/modules/_profile.scss */
+  /* line 145, ../scss/modules/_profile.scss */
   .profile__headContainer {
     margin-bottom: 0;
   }
