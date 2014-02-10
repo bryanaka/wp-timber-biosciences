@@ -5982,6 +5982,7 @@ img.aligncenter {
 }
 /* line 70, ../scss/modules/_theater.scss */
 .theater__icon a {
+  color: #d9d9d9;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   -webkit-transition-property: color;
@@ -5993,17 +5994,17 @@ img.aligncenter {
   -o-transition-duration: 500ms;
   transition-duration: 500ms;
 }
-/* line 76, ../scss/modules/_theater.scss */
+/* line 77, ../scss/modules/_theater.scss */
 .theater__icon a:hover {
   color: rgba(255, 255, 255, 0.85);
 }
-/* line 81, ../scss/modules/_theater.scss */
+/* line 82, ../scss/modules/_theater.scss */
 .theater__icon a, .theater__icon iframe {
   padding-left: 30%;
   width: 100% !important;
 }
 
-/* line 87, ../scss/modules/_theater.scss */
+/* line 88, ../scss/modules/_theater.scss */
 .theater__info {
   border-top: 1px rgba(255, 255, 255, 0.25) solid;
   color: #fcfcfc;
@@ -6012,13 +6013,13 @@ img.aligncenter {
   padding: 1rem 0rem;
 }
 
-/* line 94, ../scss/modules/_theater.scss */
+/* line 95, ../scss/modules/_theater.scss */
 .card__subtitle--theater {
   font-size: 16px;
   font-size: 1rem;
 }
 
-/* line 100, ../scss/modules/_theater.scss */
+/* line 101, ../scss/modules/_theater.scss */
 .fb-share-button span {
   width: 150px !important;
   position: relative;
@@ -6026,7 +6027,7 @@ img.aligncenter {
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 108, ../scss/modules/_theater.scss */
+  /* line 109, ../scss/modules/_theater.scss */
   .video_list {
     display: block;
     padding: 0;
@@ -6065,7 +6066,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 125, ../scss/modules/_theater.scss */
+  /* line 126, ../scss/modules/_theater.scss */
   .video_list {
     display: block;
     padding: 0;
@@ -6104,7 +6105,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 142, ../scss/modules/_theater.scss */
+  /* line 143, ../scss/modules/_theater.scss */
   .video_list {
     display: block;
     padding: 0;
