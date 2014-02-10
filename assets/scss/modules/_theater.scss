@@ -68,6 +68,7 @@
 	@include font-size(1.25);
 	
 	a {
+		color: rgb(217, 217, 217);
 		color: white(0.6);
 		text-decoration: none;
 		@include transition-property(color);

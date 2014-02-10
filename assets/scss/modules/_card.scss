@@ -49,7 +49,6 @@
 	width: 90%;
 	margin: 8px 0;
 	padding: 0 8px;
-	height: 240px;
 	display: inline-block;
 
 	& > img {
@@ -61,6 +60,12 @@
 		margin: auto;
 		max-height: 230px;
 	}
+
+}
+
+.card__thumb--scientist {
+	@extend .card__thumb;
+	height: 240px;
 }
 
 .card__subtitle {
