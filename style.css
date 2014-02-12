@@ -4680,12 +4680,12 @@ img.aligncenter {
   .touch .nav__item:hover .subnav--left.is_open {
     position: absolute;
     display: block;
-    width: 200px;
+    width: auto;
     height: auto;
     overflow: visible;
     clip: auto;
     right: 0px;
-    min-width: 150%;
+    min-width: 200px;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
     border: 3px yellowgreen solid;
     border-top: 0;
@@ -4861,27 +4861,25 @@ img.aligncenter {
 }
 
 /* line 5, ../scss/modules/_search.scss */
-.wp_search__field {
+.wp_search__input {
+  width: 100%;
+  background-color: #04311e;
+  color: yellowgreen;
   font-family: "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+  border: none;
+  border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   font-size: 32px;
   font-size: 2rem;
-  width: 95%;
-  height: 100%;
-  background-color: #04311e;
-  color: yellowgreen;
-  border: none;
-  border-radius: 0;
-  padding: 0.5rem 2.5%;
 }
 /* line 6, ../scss/core/helpers/mixins/_selectors.scss */
-.wp_search__field::-webkit-input-placeholder, .wp_search__field:-ms-input-placeholder, .wp_search__field::-moz-placeholder, .wp_search__field:-moz-placeholder {
+.wp_search__input::-webkit-input-placeholder, .wp_search__input:-ms-input-placeholder, .wp_search__input::-moz-placeholder, .wp_search__input:-moz-placeholder {
   color: yellowgreen;
 }
-/* line 20, ../scss/modules/_search.scss */
-.wp_search__field::-webkit-input-placeholder::before, .wp_search__field:-ms-input-placeholder::before, .wp_search__field::-moz-placeholder::before, .wp_search__field:-moz-placeholder::before {
+/* line 18, ../scss/modules/_search.scss */
+.wp_search__input::-webkit-input-placeholder::before, .wp_search__input:-ms-input-placeholder::before, .wp_search__input::-moz-placeholder::before, .wp_search__input:-moz-placeholder::before {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -4891,8 +4889,14 @@ img.aligncenter {
   padding-left: 0.25rem;
 }
 
-/* line 32, ../scss/modules/_search.scss */
-.wp_search__field:focus {
+/* line 30, ../scss/modules/_search.scss */
+.wp_search__field {
+  background-color: #04311e;
+  padding: 0.5rem 2.5%;
+}
+
+/* line 36, ../scss/modules/_search.scss */
+.wp_search__input:focus {
   outline: none;
 }
 

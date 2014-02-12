@@ -133,12 +133,12 @@
 	.touch .nav__item:hover .subnav--left.is_open {
 		position: absolute;
 		display: block;
-		width: 200px;
+		width: auto;
 		height: auto;
 		overflow: visible;
 		clip: auto;
 		right: 0px;
-		min-width: 150%;
+		min-width: 200px;
 		box-shadow: 4px 4px 6px rgba(0,0,0,0.2);
 		border: 3px $pbd-yellow-green solid;
 		border-top: 0;

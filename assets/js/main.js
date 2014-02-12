@@ -57,7 +57,7 @@
         $nav.addClass('is_open');
     });
 
-    Hammer(document.body, {
+    /*Hammer(document.body, {
         stop_browser_behavior: {
             userSelect: 'text'
         }
@@ -65,7 +65,7 @@
         event.preventDefault();
         event.stopPropagation();
         $nav.addClass('is_open');
-    });
+    });*/
 
     $('#closeNavButton').on('click', function() {
         event.preventDefault();
@@ -73,7 +73,7 @@
         $nav.removeClass('is_open');
     });
 
-    Hammer(document.body, {
+    /*Hammer(document.body, {
         stop_browser_behavior: {
             userSelect: 'text'
         }
@@ -81,7 +81,7 @@
         event.preventDefault();
         event.stopPropagation();
         $nav.removeClass('is_open');
-    });
+    });*/
 
     // search
     $('.js-search').on('click', function(event) {
@@ -89,4 +89,6 @@
         event.preventDefault();
         $('.wp_search').slideToggle(500);
     });
+
+
 })(window, document, jQuery);

@@ -2,18 +2,16 @@
   display: none;
 }
 
-.wp_search__field {
-  font-family: $base-header-font-family;
-  @include vendor(appearance, none, false);
-  @include font-size(2);
-  width: 95%;
-  height: 100%;
+.wp_search__input {
+  width:100%;
   background-color: #04311e;
   color: yellowgreen;
+  font-family: $base-header-font-family;
   border: none;
   border-radius: 0;
-  padding: 0.5rem 2.5%;
-  
+  @include vendor(appearance, none, false);
+  @include font-size(2);
+
   @include placeholder(true) {
     color: yellowgreen;
     
@@ -29,6 +27,12 @@
   }
 }
 
-.wp_search__field:focus {
+.wp_search__field {
+  background-color: #04311e;
+  padding: 0.5rem 2.5%;
+  
+}
+
+.wp_search__input:focus {
   outline: none;
 }
