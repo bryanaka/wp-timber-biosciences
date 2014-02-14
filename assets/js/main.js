@@ -1,5 +1,5 @@
 /*jshint undef:false, newcap: false */
-(function(window, document, $){
+(function(window, document, Modernizr, $){
     'use strict';
 
     $(function() {
@@ -57,15 +57,25 @@
         $nav.addClass('is_open');
     });
 
-    /*Hammer(document.body, {
-        stop_browser_behavior: {
-            userSelect: 'text'
+    var useHammer = true;
+    if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ //test for MSIE;
+        var ieversion = new Number(RegExp.$1);
+        if(ieversion <= 8){
+            useHammer = false;
         }
-    }).on('swipeleft', function() {
-        event.preventDefault();
-        event.stopPropagation();
-        $nav.addClass('is_open');
-    });*/
+    }
+
+    if(useHammer) {
+        Hammer(document.body, {
+            stop_browser_behavior: {
+                userSelect: 'text'
+            }
+        }).on('swipeleft', function() {
+            event.preventDefault();
+            event.stopPropagation();
+            $nav.addClass('is_open');
+        });
+    }
 
     $('#closeNavButton').on('click', function() {
         event.preventDefault();
@@ -73,15 +83,17 @@
         $nav.removeClass('is_open');
     });
 
-    /*Hammer(document.body, {
-        stop_browser_behavior: {
-            userSelect: 'text'
-        }
-    }).on('swiperight', function() {
-        event.preventDefault();
-        event.stopPropagation();
-        $nav.removeClass('is_open');
-    });*/
+    if(useHammer){
+        Hammer(document.body, {
+            stop_browser_behavior: {
+                userSelect: 'text'
+            }
+        }).on('swiperight', function() {
+            event.preventDefault();
+            event.stopPropagation();
+            $nav.removeClass('is_open');
+        });
+    }
 
     // search
     $('.js-search').on('click', function(event) {
@@ -90,5 +102,29 @@
         $('.wp_search').slideToggle(500);
     });
 
+    if(!Modernizr.input.placeholder){
+        $('[placeholder]').focus(function() {
+            var input = $(this);
+            if (input.val() === input.attr('placeholder')) {
+                input.val('');
+                input.removeClass('placeholder');
+            }
+        }).blur(function() {
+            var input = $(this);
+            if (input.val() === '' || input.val() === input.attr('placeholder')) {
+                input.addClass('placeholder');
+                input.val(input.attr('placeholder'));
+            }
+        }).blur();
+        $('[placeholder]').parents('form').submit(function() {
+            $(this).find('[placeholder]').each(function() {
+                var input = $(this);
+                if (input.val() === input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+        });
+    }
 
-})(window, document, jQuery);
+
+})(window, document, Modernizr, jQuery);
