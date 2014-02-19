@@ -5588,8 +5588,8 @@ img.aligncenter {
   min-width: 100px;
   background: #FAFAFA;
   position: relative;
-  left: 150px;
-  top: 100px;
+  left: 20%;
+  top: 2.5rem;
 }
 
 /* line 43, ../scss/modules/_profile.scss */
@@ -5629,38 +5629,37 @@ img.aligncenter {
   font-size: 2.25rem;
   padding-top: 16px;
   padding-top: 1rem;
-  text-align: center;
+  text-align: left;
   position: relative;
-  right: 260px;
 }
-/* line 77, ../scss/modules/_profile.scss */
+/* line 76, ../scss/modules/_profile.scss */
 .profile__icons a {
   color: #252525;
   text-decoration: none;
 }
-/* line 81, ../scss/modules/_profile.scss */
+/* line 80, ../scss/modules/_profile.scss */
 .profile__icons a:hover {
   color: #4b4b4b;
 }
 
-/* line 88, ../scss/modules/_profile.scss */
+/* line 87, ../scss/modules/_profile.scss */
 .profile__websites {
   margin-top: 20px;
 }
 
-/* line 92, ../scss/modules/_profile.scss */
+/* line 91, ../scss/modules/_profile.scss */
 .profile__bio {
   text-align: left;
 }
 
-/* line 96, ../scss/modules/_profile.scss */
+/* line 95, ../scss/modules/_profile.scss */
 .profile__address, .profile__location {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 102, ../scss/modules/_profile.scss */
+  /* line 101, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -5699,7 +5698,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 119, ../scss/modules/_profile.scss */
+  /* line 118, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -5738,7 +5737,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 136, ../scss/modules/_profile.scss */
+  /* line 135, ../scss/modules/_profile.scss */
   .scientist_list {
     display: block;
     padding: 0;
@@ -5776,12 +5775,12 @@ img.aligncenter {
     clear: both;
   }
 
-  /* line 151, ../scss/modules/_profile.scss */
+  /* line 150, ../scss/modules/_profile.scss */
   .profile__img {
     max-width: 100%;
   }
 
-  /* line 155, ../scss/modules/_profile.scss */
+  /* line 154, ../scss/modules/_profile.scss */
   .profile__headContainer {
     margin-bottom: 0;
   }
