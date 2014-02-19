@@ -39,6 +39,7 @@ function biosciences_script_loading() {
 	wp_register_script('responsive_slides', $script_path.'responsive_slides.min.js', array('jquery'), false, $in_footer );
 	wp_register_script('hammerjs', $vendor_path.'hammerjs/hammer.min.js', array('jquery'), false, $in_footer );
 	wp_register_script('fastclick', $vendor_path.'fastclick/lib/fastclick.js', array('jquery'), false, $in_footer );
+	wp_register_script('webshims', $vendor_path.'webshims-stable/js-webshim/minified/polyfiller.js', array('jquery', 'modernizr'), false, $in_footer);
 	wp_register_script('main', $script_path.'main.js', array('jquery', 'responsive_slides', 'hammerjs'), false, $in_footer );
 
 	wp_enqueue_script('modernizr');
@@ -47,6 +48,7 @@ function biosciences_script_loading() {
 	wp_enqueue_script('hammerjs');
 	wp_enqueue_script('fastclick');
 	wp_enqueue_script('responsive_slides');
+	wp_enqueue_script('webshims');
 	wp_enqueue_script('main');
 }
 

@@ -1,11 +1,13 @@
 /*jshint undef:false, newcap: false */
-(function(window, document, Modernizr, $){
+(function(window, document, $){
     'use strict';
 
     $(function() {
         FastClick.attach(document.body);
     });
 
+    $.webshims.polyfill();
+    
     window.TestSlider = $('#slider').responsiveSlides({
         auto: true,             // Boolean: Animate automatically, true or false
         speed: 500,            // Integer: Speed of the transition, in milliseconds
@@ -102,29 +104,6 @@
         $('.wp_search').slideToggle(500);
     });
 
-    if(!Modernizr.input.placeholder){
-        $('[placeholder]').focus(function() {
-            var input = $(this);
-            if (input.val() === input.attr('placeholder')) {
-                input.val('');
-                input.removeClass('placeholder');
-            }
-        }).blur(function() {
-            var input = $(this);
-            if (input.val() === '' || input.val() === input.attr('placeholder')) {
-                input.addClass('placeholder');
-                input.val(input.attr('placeholder'));
-            }
-        }).blur();
-        $('[placeholder]').parents('form').submit(function() {
-            $(this).find('[placeholder]').each(function() {
-                var input = $(this);
-                if (input.val() === input.attr('placeholder')) {
-                    input.val('');
-                }
-            });
-        });
-    }
 
 
-})(window, document, Modernizr, jQuery);
+})(window, document, jQuery);
