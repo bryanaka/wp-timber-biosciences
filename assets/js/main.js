@@ -7,7 +7,7 @@
     });
 
     $.webshims.polyfill();
-    
+
     window.TestSlider = $('#slider').responsiveSlides({
         auto: true,             // Boolean: Animate automatically, true or false
         speed: 500,            // Integer: Speed of the transition, in milliseconds
@@ -61,7 +61,7 @@
 
     var useHammer = true;
     if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){ //test for MSIE;
-        var ieversion = new Number(RegExp.$1);
+        var ieversion = RegExp.$1;
         if(ieversion <= 8){
             useHammer = false;
         }
