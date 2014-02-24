@@ -1,0 +1,21 @@
+{% extends 'onestop/single.twig' %}
+
+{% block tab_headers %}
+    <li><a href="#domestic">Domestic</a></li>
+    <li><a href="#foreign">Foreign</a></li>
+{% endblock %}
+
+{% block tab_bodies %}
+    <div id="domestic">
+        <form action="travel_processing_domestic.php">
+            <input type="text">
+            <input type="submit" text="Submit">
+        </form>
+    </div>
+    <div id="foreign">
+        <form action="travel_processing_foreign.php">
+            <input type="text">
+            <input type="submit" text="Submit">
+        </form>
+    </div>
+{% endblock %}
