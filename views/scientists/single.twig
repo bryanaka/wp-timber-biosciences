@@ -10,7 +10,7 @@
 				</figure>
 
 				<div class="profile__name small-5 medium-6 large-7 columns">
-					<h1>{{scientist.title}}</h1>
+					<h1>{% if scientist.prefix  != 'null' %}{{scientist.prefix}}{% endif %} {{scientist.title}}</h1>
 					<article class="profile__icons visible-xs">
 						<h5>{{ scientist.get_field('position_titles')[0].title }}</h5>
 						<a href="mailto:{{scientist.email}}">
