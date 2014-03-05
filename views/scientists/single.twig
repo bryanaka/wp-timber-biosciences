@@ -80,6 +80,18 @@
 			{% endif %}
 			E-Mail: <a href="mailto:{{scientist.email}}">{{scientist.email}}</a><br>
 		</article>
+		
+        {% set publication_links = scientist.get_field('publication_links')%}
+        {% if publication_links %}
+		<article class="profile__location medium-6 small-12 large-12 columns">
+			<h2 class="c-left">Publication Links</h2>
+			<ul>
+				{% for publication_link in publication_links %}
+					<li><a href="{{publication_link.url}}">{{publication_link.name}}</a></li>
+				{% endfor %}
+			</ul>
+		</article>
+		{% endif %}
 	
 	</section>
 
