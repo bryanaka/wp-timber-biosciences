@@ -33,7 +33,7 @@
 						<h4>Websites:</h4>
 						<ul>
 							{% for website in scientist.get_field('websites') %}
-								<li><a href="{{website.url}}">{{website.name}}</a></li>
+								<li><a target="_blank" href="{{website.url}}">{{website.name}}</a></li>
 							{% else %}
 								<li>No Websites</li>
 							{% endfor %}
@@ -87,7 +87,7 @@
 			<h2 class="c-left">Publication Links</h2>
 			<ul>
 				{% for publication_link in publication_links %}
-					<li><a href="{{publication_link.url}}">{{publication_link.name}}</a></li>
+					<li><a target="_blank" href="{{publication_link.url}}">{{publication_link.name}}</a></li>
 				{% endfor %}
 			</ul>
 		</article>
@@ -99,7 +99,7 @@
 		<h2 class="c-left">Websites:</h2>
 		<ul>
 			{% for website in scientist.get_field('websites') %}
-				<li><a href="{{website.url}}">{{website.name}}</a></li>
+				<li><a target="_blank" href="{{website.url}}">{{website.name}}</a></li>
 			{% else %}
 				<li>No Websites</li>
 			{% endfor %}

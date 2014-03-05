@@ -15,7 +15,7 @@
 				<article class="mainFooter__linkGroup">
 					<h4 class="mainFooter__subheader">{{menus.footer_center.name}}</h4>
 					{% for item in menus.footer_center.get_items %}
-						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
+						<a target="_blank" href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
 					{% endfor %}
 				</article>
 			{% endif %}
