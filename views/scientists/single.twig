@@ -16,9 +16,11 @@
 						<a href="mailto:{{scientist.email}}">
 							<i class="icon-envelope"></i>
 						</a>
-						<a href="{{scientist.publications}}">
-							<i class="icon-book"></i>
-						</a>
+						{% if file_path %}
+						    <a target="_blank" href="{{file_path}}">
+						    	<i class="icon-book"></i>
+						    </a>
+						{% endif %}
 					</article>
 					<article class="profile__titles hidden-xs">
 						<ul>
