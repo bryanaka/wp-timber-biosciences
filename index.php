@@ -13,6 +13,6 @@ $pageObj->context['main_sidebar'] = Timber::get_widgets('main_sidebar');
 $postCount = -1;
 $pageObj->find_posts("numberposts={$postCount}");
 $postCount = 5;
-$pageObj->find_posts_as("recent_news", "numberposts={$postCount}");
+$pageObj->find_posts_as("latest_news", "numberposts={$postCount}");
 // need to find the first 5 featured posts as well. Can we do this in one query?
 $pageObj->render_page('index.twig');
