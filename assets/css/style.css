@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/*!
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+/*
 Theme Name: wptimber-biosciences
 Theme URI: https://github.com/bryanaka/wptimber-biosciences
 Author: Bryan Robles <bryanaka0@gmail.com>
@@ -45,14 +46,13 @@ Tags: pbd, physical, biosciences, modern, front-end, developer, theme, timber, t
 /*  ==================================
 	Vendor Variables
 	================================== */
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 /* line 22, ../vendor/_normalize.scss/_normalize.scss */
 article,
 aside,
@@ -306,7 +306,7 @@ figure {
  */
 /* line 263, ../vendor/_normalize.scss/_normalize.scss */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -3641,8 +3641,8 @@ select {
     float: right !important;
   }
 }
-/*! Typeplate */
-/*!
+/* Typeplate */
+/*
  *
 .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
 
@@ -3938,7 +3938,7 @@ p + .drop-cap {
 }
 /* line 502, ../vendor/typeplate/scss/_typeplate.scss */
 .dictionary-style dd:before {
-  content: counter(definitions,decimal) ". ";
+  content: counter(definitions, decimal) ". ";
 }
 
 /**
@@ -4084,7 +4084,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -5612,7 +5612,7 @@ img.aligncenter {
 /* line 59, ../scss/modules/_profile.scss */
 .profile__headContainer {
   background: #EDEDED;
-  border-bottom: #E5E5E5 3px solid;
+  border-bottom: #e5e5e5 3px solid;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
@@ -5871,7 +5871,7 @@ img.aligncenter {
 
 /* line 66, ../scss/modules/_news.scss */
 .tease__date {
-  font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
+  font-family: "Ubuntu", "Sans Source Pro", "Helvetica Neue", sans-serif;
   color: #777777;
 }
 
@@ -5893,7 +5893,7 @@ img.aligncenter {
   .tease__thumbnail {
     float: none;
     display: block;
-    margin: .5rem auto;
+    margin: 0.5rem auto;
   }
 }
 /* line 1, ../scss/modules/_theater.scss */
@@ -5987,7 +5987,7 @@ img.aligncenter {
 
 /* line 64, ../scss/modules/_theater.scss */
 .theater__icon {
-  font-family: 'Ubuntu', 'Helvetica Neue', sans-serif;
+  font-family: "Ubuntu", "Helvetica Neue", sans-serif;
   display: inline-block;
   padding: 12px 32px 16px 0px;
   padding: 0.75rem 2rem 1rem 0rem;
@@ -6178,7 +6178,7 @@ img.aligncenter {
 }
 /* line 26, ../scss/modules/_calendar.scss */
 .widget .ai1ec-agenda-widget-view .ai1ec-event {
-  border-top: #008000 3px solid;
+  border-top: green 3px solid;
 }
 /* line 31, ../scss/modules/_calendar.scss */
 .widget .ai1ec-agenda-widget-view .ai1ec-event > a {
@@ -6191,7 +6191,144 @@ img.aligncenter {
 
 /* line 44, ../scss/modules/_calendar.scss */
 .ai1ec-allday-badge {
-  background-color: #008000 !important;
+  background-color: green !important;
+}
+
+/* line 1, ../scss/modules/_onestop.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 5, ../scss/modules/_onestop.scss */
+#onestop {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 10, ../scss/modules/_onestop.scss */
+.clear {
+  clear: both;
+}
+
+/* line 14, ../scss/modules/_onestop.scss */
+.section {
+  margin-bottom: 20px;
+}
+
+/* line 18, ../scss/modules/_onestop.scss */
+.onestop_link {
+  text-decoration: none;
+  color: white;
+}
+
+/*.onestop-element {
+    height: 256px;
+    width: 256px;
+}*/
+/* line 28, ../scss/modules/_onestop.scss */
+.onestop__element-real img {
+  height: 256px;
+  width: 256px;
+}
+
+/* line 33, ../scss/modules/_onestop.scss */
+.onestop__onestop-section {
+  float: left;
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+/* line 39, ../scss/modules/_onestop.scss */
+.onestop__onestop-section p {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  color: black;
+  background-color: #8d8e8f;
+  margin: 0;
+}
+
+/* line 49, ../scss/modules/_onestop.scss */
+.onestop_container {
+  margin: 1em 1em 0 1em;
+}
+
+/* line 53, ../scss/modules/_onestop.scss */
+.onestop_section {
+  position: relative;
+  text-align: center;
+  height: 200px;
+  /*margin: 1em 1em 0 1em;*/
+}
+
+/* line 60, ../scss/modules/_onestop.scss */
+.onestop_section > img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  margin-left: -128px;
+}
+
+/* line 67, ../scss/modules/_onestop.scss */
+.onestop_section > p {
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  text-align: center;
+  font-size: 23px;
+  margin: 0;
+}
+
+/* line 76, ../scss/modules/_onestop.scss */
+.onestop_section_list {
+  list-style-type: none;
+  text-align: center;
+  /*margin: 0 1em;*/
+  padding: 0;
+  font-size: 14px;
+  color: black;
+}
+
+/* line 85, ../scss/modules/_onestop.scss */
+.onestop_section_list > li {
+  padding: 0.8em 0;
+  background-color: #f7f7f7;
+  border-bottom: 2px solid #e7e7e7;
+}
+
+/* line 91, ../scss/modules/_onestop.scss */
+.pure-g {
+  box-sizing: border-box;
+}
+
+/* line 95, ../scss/modules/_onestop.scss */
+.effeckt-caption figcaption {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1em;
+}
+
+/* line 101, ../scss/modules/_onestop.scss */
+.onestop__form-field-long, .onestop__form-field-short {
+  width: 100% !important;
+}
+
+/* line 105, ../scss/modules/_onestop.scss */
+.onestop__form-field-wrap {
+  margin-left: 20px;
+}
+
+/* line 109, ../scss/modules/_onestop.scss */
+.onestop__form-field-long-wrap {
+  width: 40%;
+  float: left;
+}
+
+/* line 114, ../scss/modules/_onestop.scss */
+.onestop__form-field-short-wrap {
+  width: 30%;
+  float: left;
 }
 
 /* ==========================================================================
@@ -6202,7 +6339,7 @@ img.aligncenter {
   /* line 7, ../scss/support/_print.scss */
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -6236,7 +6373,7 @@ img.aligncenter {
 
   /* line 37, ../scss/support/_print.scss */
   pre, blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
