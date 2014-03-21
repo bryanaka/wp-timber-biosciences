@@ -5424,7 +5424,7 @@ img.aligncenter {
 
 /* line 87, ../scss/modules/_card.scss */
 .card__thumb--full {
-  width: 95%;
+  height: 200px;
   max-width: none;
 }
 
