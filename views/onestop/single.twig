@@ -19,7 +19,7 @@
         {% endfor %}
     </ul>
     <div class="row">
-        <div id="tabs" class="hidden">
+        <div id="tabs">
             <ul>
             {% for tab in page.get_field('tabs') %}
                 <li><a href="#tab-{{loop.index}}">{{tab.title}}</a></li>
@@ -39,8 +39,6 @@
     {% include "components/footer.twig" %}
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script type="text/javascript">
-        jQuery(function(){
-            jQuery('#tabs').removeClass("hidden").tabs();
-        });
+        jQuery('#tabs').tabs();
     </script>
 {% endblock %}
