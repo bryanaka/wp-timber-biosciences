@@ -94,6 +94,15 @@
 			</ul>
 		</article>
 		{% endif %}
+
+        {% if scientist.rg_profile_url %}
+		<article class="profile__location medium-6 small-12 large-12 columns">
+			<h2 class="c-left">Research Gate</h2>
+			<a target="_blank" href="{{scientist.rg_profile_url}}">
+				{% if scientist.prefix  != 'null' %}{{scientist.prefix}}{% endif %} {{scientist.title}}'s Profile
+			</a>
+		</article>
+		{% endif %}
 	
 	</section>
 
