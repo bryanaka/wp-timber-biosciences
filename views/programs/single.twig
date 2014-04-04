@@ -1,0 +1,14 @@
+{% extends 'layout/base-focused.twig' %}
+
+{% block hero %}
+	<div class="row">
+		<h1 class="page__header columns">{{program.title}}</h1>
+		<hr style="width:100%">
+	</div>
+{% endblock %}
+
+{% block content %}
+	<article class="page__content small-12 columns">
+		{{program.long_description}}
+	</article>
+{% endblock %}

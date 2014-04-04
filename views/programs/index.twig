@@ -14,20 +14,24 @@
 		</div>
 	</div>
 	<div class="row">
-		{% for child in page.get_children %}
+		{% for program in programs %}
 			<div class="small-12 medium-6 large-4 columns">
 				<div class="card-container--full">
 					<article class="card--full card--program">
-						{% if child.get_thumbnail %}
-							<img src="{{ child.get_thumbnail.get_src }}" class="card__thumb--full">
+						{% if program.get_thumbnail %}
+							<img src="{{ program.get_thumbnail.get_src }}" class="card__thumb--full">
 						{% endif %}
 						<h2 class="card__title">
-							<a href="{{child.get_path}}">
-								{{child.post_title}}
+							{% if program.program_type == "program" %}
+							<a href="{{program.get_path}}">
+							{% else %}
+							<a href="{{program.url}}" target="_blank">
+							{% endif %}
+								{{program.title}}
 							</a>
 						</h2>
 						<p class="card__text--program">
-							{{child.get_preview(30)}}
+							{{program.summary}}
 						</p>
 					</article>
 				</div>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Programs
+Template Name: Centers
 */
 use Timber as Timber;
 use TimberPost as TimberPost;
@@ -18,13 +18,13 @@ $query = array(
 		"relation" => "AND",
 		array(
 			"key"     => "program_type",
-			"value"   => "program",
+			"value"   => "center",
 			"compare" => "="
 		)
 	)
 );
 
-$programs = Timber::get_posts($query);
+$centers = Timber::get_posts($query);
 
-$pageObj->context["programs"] = $programs;
+$pageObj->context["programs"] = $centers;
 $pageObj->render_page('programs/index.twig');
