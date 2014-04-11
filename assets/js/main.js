@@ -53,7 +53,7 @@
 
     // off canvas nav
     var $nav = $('.nav__right');
-    $('#openNavButton').on('click', function() {
+    $('#openNavButton').on('click', function(event) {
         event.preventDefault();
         event.stopPropagation();
         $nav.addClass('is_open');
@@ -72,14 +72,14 @@
             stop_browser_behavior: {
                 userSelect: 'text'
             }
-        }).on('swipeleft', function() {
+        }).on('swipeleft', function(event) {
             event.preventDefault();
             event.stopPropagation();
             $nav.addClass('is_open');
         });
     }
 
-    $('#closeNavButton').on('click', function() {
+    $('#closeNavButton').on('click', function(event) {
         event.preventDefault();
         event.stopPropagation();
         $nav.removeClass('is_open');
@@ -90,7 +90,7 @@
             stop_browser_behavior: {
                 userSelect: 'text'
             }
-        }).on('swiperight', function() {
+        }).on('swiperight', function(event) {
             event.preventDefault();
             event.stopPropagation();
             $nav.removeClass('is_open');
