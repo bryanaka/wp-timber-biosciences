@@ -5324,6 +5324,7 @@ img.aligncenter {
   border-top: none;
   width: 100%;
   max-width: 240px;
+  height: 250px;
   padding: 0 8px;
   -webkit-transition-property: background-color;
   -moz-transition-property: background-color;
@@ -5348,7 +5349,7 @@ img.aligncenter {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 23, ../scss/modules/_card.scss */
+/* line 24, ../scss/modules/_card.scss */
 .card__link {
   color: green;
   text-decoration: none;
@@ -5361,35 +5362,35 @@ img.aligncenter {
   -o-transition-duration: 500ms;
   transition-duration: 500ms;
 }
-/* line 29, ../scss/modules/_card.scss */
+/* line 30, ../scss/modules/_card.scss */
 .card__link:hover {
   color: green;
   text-decoration: none;
 }
 
-/* line 35, ../scss/modules/_card.scss */
+/* line 36, ../scss/modules/_card.scss */
 .card__title {
   margin-top: 0;
   padding-top: 1rem;
 }
 
-/* line 40, ../scss/modules/_card.scss */
+/* line 41, ../scss/modules/_card.scss */
 .helper {
   display: inline-block;
   height: 50%;
   vertical-align: middle;
 }
 
-/* line 46, ../scss/modules/_card.scss */
+/* line 47, ../scss/modules/_card.scss */
 .card__thumb, .card__thumb--scientist, .card__thumb--full {
   position: relative;
-  max-width: 168px;
+  max-width: 180px;
   width: 90%;
   margin: 8px 0;
   padding: 0 8px;
   display: inline-block;
 }
-/* line 54, ../scss/modules/_card.scss */
+/* line 55, ../scss/modules/_card.scss */
 .card__thumb > img, .card__thumb--scientist > img, .card__thumb--full > img {
   position: absolute;
   top: 0;
@@ -5400,127 +5401,144 @@ img.aligncenter {
   max-height: 230px;
 }
 
-/* line 66, ../scss/modules/_card.scss */
+/* line 67, ../scss/modules/_card.scss */
 .card__thumb--scientist {
   height: 240px;
 }
 
-/* line 71, ../scss/modules/_card.scss */
+/* line 72, ../scss/modules/_card.scss */
 .card__subtitle, .card__subtitle--theater {
   margin: 0 0 8px 0;
 }
 
-/* line 76, ../scss/modules/_card.scss */
+/* line 77, ../scss/modules/_card.scss */
 .card--scientist .card__subtitle, .card--scientist .card__subtitle--theater {
   font-size: 20px;
   font-size: 1.25rem;
 }
 
-/* line 82, ../scss/modules/_card.scss */
+/* line 83, ../scss/modules/_card.scss */
 .card__content {
   font-size: 16px;
   margin: 0 0 8px 0;
 }
 
-/* line 87, ../scss/modules/_card.scss */
+/* line 88, ../scss/modules/_card.scss */
 .card__thumb--full {
   height: 200px;
   max-width: none;
 }
 
-/* line 94, ../scss/modules/_card.scss */
+/* line 95, ../scss/modules/_card.scss */
 .card-container--full {
   max-width: 100%;
-  min-height: 460px;
+  height: 500px;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
-/* line 100, ../scss/modules/_card.scss */
+/* line 101, ../scss/modules/_card.scss */
 .card-container--full .card--full {
   min-height: 460px;
   height: 100%;
 }
 
-/* line 106, ../scss/modules/_card.scss */
+/* line 107, ../scss/modules/_card.scss */
 .card--full {
   max-width: 100%;
+  height: 500px;
 }
 
-/* line 112, ../scss/modules/_card.scss */
+/* line 113, ../scss/modules/_card.scss */
+.card__text--program {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+/* line 117, ../scss/modules/_card.scss */
+.card__text--program .readmore {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: #fcfcfc;
+  width: 100%;
+}
+
+/* line 127, ../scss/modules/_card.scss */
 .card-container--scientist {
   min-height: 265px;
 }
 
-/* line 117, ../scss/modules/_card.scss */
+/* line 132, ../scss/modules/_card.scss */
 .card--scientist {
   height: 325px;
 }
 
-/* line 122, ../scss/modules/_card.scss */
+/* line 137, ../scss/modules/_card.scss */
 .card--video {
   min-height: 220px;
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 127, ../scss/modules/_card.scss */
+  /* line 142, ../scss/modules/_card.scss */
   .card-container--scientist {
     min-height: 305px;
   }
 
-  /* line 131, ../scss/modules/_card.scss */
+  /* line 146, ../scss/modules/_card.scss */
   .card--scientist {
     min-height: 285px;
   }
 }
 @media screen and (max-width: 769px) {
-  /* line 137, ../scss/modules/_card.scss */
+  /* line 152, ../scss/modules/_card.scss */
   .card-container--scientist {
     min-height: 285px;
   }
 
-  /* line 141, ../scss/modules/_card.scss */
+  /* line 156, ../scss/modules/_card.scss */
   .card--scientist {
     min-height: 265px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 148, ../scss/modules/_card.scss */
+  /* line 163, ../scss/modules/_card.scss */
   .card-container--full {
     min-height: initial;
+    max-height: 300px;
   }
-  /* line 150, ../scss/modules/_card.scss */
+  /* line 166, ../scss/modules/_card.scss */
   .card-container--full .card--program {
     max-height: 300px;
     min-height: 200px;
   }
 
-  /* line 156, ../scss/modules/_card.scss */
+  /* line 172, ../scss/modules/_card.scss */
   .card__text--program {
     display: none;
   }
 
-  /* line 160, ../scss/modules/_card.scss */
+  /* line 176, ../scss/modules/_card.scss */
   .card-container--scientist {
     min-height: 235px;
   }
 
-  /* line 164, ../scss/modules/_card.scss */
+  /* line 180, ../scss/modules/_card.scss */
   .card--scientist {
     min-height: 215px;
   }
-  /* line 166, ../scss/modules/_card.scss */
+  /* line 182, ../scss/modules/_card.scss */
   .card--scientist .card__subtitle, .card--scientist .card__subtitle--theater {
     font-size: 18px;
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 400px) and (max-width: 480px) {
-  /* line 174, ../scss/modules/_card.scss */
+  /* line 190, ../scss/modules/_card.scss */
   .card-container--scientist {
     min-height: 285px;
   }
 
-  /* line 178, ../scss/modules/_card.scss */
+  /* line 194, ../scss/modules/_card.scss */
   .card--scientist {
     min-height: 265px;
   }

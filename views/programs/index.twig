@@ -23,16 +23,21 @@
 						{% endif %}
 						<h2 class="card__title">
 							{% if program.program_type == "program" %}
+							{% set link = program.get_path %}
 							<a href="{{program.get_path}}">
 							{% else %}
+							{% set link = program.url %}
 							<a href="{{program.url}}" target="_blank">
 							{% endif %}
 								{{program.title}}
 							</a>
 						</h2>
-						<p class="card__text--program">
+						<div class="card__text--program">
 							{{program.summary}}
-						</p>
+							<div class="readmore">
+								<a href = "{{ link }}" {% if program.program_type == "center" %} target="_blank" {% endif %}>Learn More</a>
+							</div>
+						</div>
 					</article>
 				</div>
 			</div>
