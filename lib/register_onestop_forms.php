@@ -23,13 +23,16 @@ function process_form() {
 
     switch($form_id) {
         case 2: // Property form
-            process_properties_form($form);
+            process_property_form($form);
             break;
         case 3:
             process_facilities_form($form);
             break;
-        case 4:
-            process_travel_form($form);
+        case 5:
+            process_travel_foreign_form($form);
+            break;
+        case 7:
+            process_travel_domestic_form($form);
             break;
     }
 
