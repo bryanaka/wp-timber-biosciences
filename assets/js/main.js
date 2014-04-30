@@ -104,7 +104,7 @@
         $('.wp_search').slideToggle(500);
     });
 
-    //add read more to centers and programs when the text is compressed
+    //read more for science and centers
     function cardTextOverflow() {
         $('.card__text--program').each(function(){
             if ($(this)[0].scrollHeight > $(this).height()) {
