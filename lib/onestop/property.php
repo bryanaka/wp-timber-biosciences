@@ -1,4 +1,6 @@
 <?php
+use Timber as Timber;
+
 function process_property_form($form) {
     // Have to write a formatted email when submitting this email
     $requestor_name = $form[6];
@@ -19,4 +21,41 @@ function process_property_form($form) {
         'offsite_address' => $form[29]
     );
     $items = array($item_1);
+
+    $context = array(
+        'requestor_name' => $requestor_name,
+        'requestor_lab_id' => $requestor_lab_id,
+        'requestor_location' => $requestor_location,
+        'requestor_phone' => $requestor_phone,
+        'requestor_email' => $requestor_email,
+        'alternate_name' => $alternate_name,
+        'alternate_lab_id' => $alternate_lab_id,
+        'alternate_location' => $alternate_location,
+        'alternate_email' => $alternate_email,
+        'alternate_phone' => $alternate_phone,
+        'items' => $items
+    );
+
+    $message = Timber::compile('templates/property.twig', $context);
+
+    // Set email headers
+
+    // for multiple recipients, you can use a comma
+    $to  = 'pbdproperty@lbl.gov'; //. ', '; // note the comma
+
+    // subject
+    $subject = 'Property Pass Authorization Request';
+
+    // To send HTML mail, the Content-type header must be set
+    $headers  = 'MIME-Version: 1.0' . "\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\n";
+
+    // Additional headers
+    $headers .= 'To: PBD Property <pbdproperty@example.com>' . "\n";
+    $headers .= 'From: PBD-Do-Not-Reply <do-not-reply@lbl.gov>, '.$requestor_name.' <'.$requestor_email.'>' . "\n";
+    $headers .= "Reply-To: PBD-Do-Not-Reply <do-not-reply@lbl.gov>" . "\n";
+    $headers .= 'Cc: '.$requestor_name.' <'.$requestor_email.'>, '.$alternate_name.' <'.$alternate_email.'>'."\n";
+    //$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
+
+    mail($to, $subject, $message, $headers);
 }
