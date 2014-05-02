@@ -37,9 +37,12 @@
     }
     // touch nav
     $('.nav__item').on('click', '.js-navDropdown', function(event) {
-        if(window.innerWidth <= 850 || window.Modernizr.touch) {
-            event.stopPropagation();
-            event.preventDefault();
+        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if(width <= 850 || window.Modernizr.touch) {
+            event.cancelBubble = true;
+            event.returnValue = false;
+            if(event.stopPropagation) {event.stopPropagation();}
+            if(event.preventDefault) {event.preventDefault();}
             $('.subnav').removeClass('is_open');
             $(this).siblings('.subnav').toggleClass('is_open');
         }
