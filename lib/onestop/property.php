@@ -36,6 +36,7 @@ function process_property_form($form) {
         'items' => $items
     );
 
+    // Get HTML form of email body
     $message = Timber::compile('templates/property.twig', $context);
 
     // Set email headers
