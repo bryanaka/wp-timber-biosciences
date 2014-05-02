@@ -11,9 +11,12 @@ function process_property_form($form) {
     $alternate_location = $form[15];
     $alternate_email = $form[16];
     $alternate_phone = $form[17];
-    $doe_number = $form[45];
-    $description = $form[26];
-    $model = $form[27];
-    $serial_number = $form[28];
-    $offsite_address = $form[29];
+    $item_1 = array(
+        'doe_number' => $form[45],
+        'description' => $form[26],
+        'model' => $form[27],
+        'serial_number' => $form[28],
+        'offsite_address' => $form[29]
+    );
+    $items = array($item_1);
 }

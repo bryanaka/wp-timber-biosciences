@@ -48,29 +48,46 @@
         </thead>
         <tbody>
 
-// loop over items and append them. if-else gives nice readable style
-for ($i=0; $i < $count; $i++):
-    if ($i % 2) {
-        $message .= '
-        <tr>
-            <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">'.$property->items[$i]->doe_num.'</td>
-            <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">'.$property->items[$i]->description.'</td>
-            <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">'.$property->items[$i]->model.'</td>
-            <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">'.$property->items[$i]->seriel_num.'</td>
-            <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">'.$property->items[$i]->offsite_location.'</td>
-        </tr>';
-    }else {
-        $message .= '
-        <tr>
-            <td style="width:175px; padding: 6px 6px 6px 18px;">'.$property->items[$i]->doe_num.'</td>
-            <td style="width:175px; padding: 6px 6px 6px 18px;">'.$property->items[$i]->description.'</td>
-            <td style="width:175px; padding: 6px 6px 6px 18px;">'.$property->items[$i]->model.'</td>
-            <td style="width:175px; padding: 6px 6px 6px 18px;">'.$property->items[$i]->seriel_num.'</td>
-            <td style="width:175px; padding: 6px 6px 6px 18px;">'.$property->items[$i]->offsite_location.'</td>
-        </tr>';
-    }
-endfor;
-$message .= '
-    </tbody>
-</table>
-</fieldset>';
+        <!-- loop over items and append them. if-else gives nice readable style -->
+        {% for item in items %}
+            {% if loop.index is even %}
+                <tr>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['doe_number']}}
+                    </td>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['description']}}
+                    </td>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['model']}}
+                    </td>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['serial_number']}}
+                    </td>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['offsite_address']}}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['doe_number']}}
+                    </td>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['description']}}
+                    </td>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['model']}}
+                    </td>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['serial_number']}}
+                    </td>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['offsite_address']}}
+                    </td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+</fieldset>
