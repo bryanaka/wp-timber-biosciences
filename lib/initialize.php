@@ -1,8 +1,6 @@
 <?php
 
 require_once BIOSCIENCES_PATH.'/lib/navigation_menus.php';
-require_once BIOSCIENCES_PATH.'/lib/onestop/property.php';
-require_once BIOSCIENCES_PATH.'/lib/onestop/facilities.php';
 
 function to_underscored ($string) {
 	$underscored_string = strtolower(preg_replace('/([a-z])([A-Z])/', '$1_$2', $string ));

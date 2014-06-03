@@ -24,8 +24,6 @@
             {% for tab in page.get_field('tabs') %}
                 <li><a href="#tab-{{loop.index}}">{{tab.title}}</a></li>
             {% endfor %}
-            {% block tab_headers %}
-            {% endblock %}
             </ul>
             {% for tab in page.get_field('tabs') %}
                 <div id="tab-{{loop.index}}">
@@ -33,8 +31,6 @@
                     <p>{{tab.content}}</p>
                 </div>
             {% endfor %}
-            {% block tab_bodies %}
-            {% endblock %}
         </div>
     </div>
 {% endblock %}
