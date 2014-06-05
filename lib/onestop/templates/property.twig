@@ -1,0 +1,93 @@
+<h2>Property Pass Authorization Request<h2>
+<hr>
+<p style="font-size:18px;">
+    This request was submitted by {{requestor_name}} and can be contacted at <a href="{{requestor_email}}">{{requestor_email}}</a>
+</p>
+<fieldset>
+
+    <div style="font-size:16px;">
+    <table>
+        <tr>
+            <th><h3 style="text-align:left;">Requestor Information</h3></th>
+            <th><h3 style="text-align:left;">Alternate Contact Information</h3></th>
+        </tr>
+        <tr>
+            <td style="width:300px;">Name: {{requestor_name}}</td>
+            <td>Name: {{alternate_name}}</td>
+        </tr>
+        <tr>
+            <td>Lab ID: {{requestor_lab_id}}</td>
+            <td>Lab ID: {{alternate_lab_id}}</td>
+        </tr>
+        <tr>
+            <td>Location: {{requestor_location}}</td>
+            <td>Location: {{alternate_location}}</td>
+        </tr>
+        <tr>
+            <td>E-mail: <a href="{{requestor_email}}">{{requestor_email}}</a></td>
+            <td>E-mail: <a href="{{alternate_email}}">{{alternate_email}}</a></td>
+        </tr>
+        <tr>
+            <td>Phone Number: {{requestor_phone}}</td>
+            <td>Phone Number: {{alternate_phone}}</td>
+        </tr>
+    </table>
+    </div>
+</fieldset>
+<fieldset>
+    <h3>Items Requested</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:left;padding: 4px 6px 4px 18px;background-color:#EDEDED; border-bottom: #DEDEDE 4px solid;">DOE Number</th>
+                <th style="text-align:left;padding: 4px 6px 4px 18px;background-color:#EDEDED; border-bottom: #DEDEDE 4px solid;">Description</th>
+                <th style="text-align:left;padding: 4px 6px 4px 18px;background-color:#EDEDED; border-bottom: #DEDEDE 4px solid;">Model</th>
+                <th style="text-align:left;padding: 4px 6px 4px 18px;background-color:#EDEDED; border-bottom: #DEDEDE 4px solid;">Serial Number</th>
+                <th style="text-align:left;padding: 4px 6px 4px 18px;background-color:#EDEDED; border-bottom: #DEDEDE 4px solid;">Offsite Address</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <!-- loop over items and append them. if-else gives nice readable style -->
+        {% for item in items %}
+            {% if loop.index is even %}
+                <tr>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['doe_number']}}
+                    </td>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['description']}}
+                    </td>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['model']}}
+                    </td>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['serial_number']}}
+                    </td>
+                    <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
+                        {{item['offsite_address']}}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['doe_number']}}
+                    </td>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['description']}}
+                    </td>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['model']}}
+                    </td>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['serial_number']}}
+                    </td>
+                    <td style="width:175px; padding: 6px 6px 6px 18px;">
+                        {{item['offsite_address']}}
+                    </td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+</fieldset>
