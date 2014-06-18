@@ -13,6 +13,7 @@ function process_property_form($form) {
     $alternate_location = $form[15];
     $alternate_email = $form[16];
     $alternate_phone = $form[17];
+/*  comment those 3 items array to create 1 array below
     $item_1 = array(
         'doe_number' => $form[45],
         'description' => $form[133],
@@ -34,7 +35,27 @@ function process_property_form($form) {
         'serial_number' => $form[144],
         'offsite_address' => $form[145]
     );
-    $items = array($item_1,$item_2,$item_3);
+*/
+    $items = array( 
+        array(
+        'doe_number' => $form[45],
+        'description' => $form[133],
+        'model' => $form[27],
+        'serial_number' => $form[28],
+        'offsite_address' => $form[29]),
+        array(
+        'doe_number' => $form[135],
+        'description' => $form[136],
+        'model' => $form[137],
+        'serial_number' => $form[138],
+        'offsite_address' => $form[139]),
+        array(
+        'doe_number' => $form[141],
+        'description' => $form[142],
+        'model' => $form[143],
+        'serial_number' => $form[144],
+        'offsite_address' => $form[145])
+        );
 
     $context = array(
         'requestor_name' => $requestor_name,
