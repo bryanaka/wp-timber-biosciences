@@ -49,59 +49,67 @@
         <tbody>
 
         <!-- loop over items and append them. if-else gives nice readable style -->
-        {% for item in items %}
+        {% for item in item_1 %}
         {#  {% if loop.index is even %} #}
                 <tr>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['doe_number']}}
+                        {{item['doe_number_1']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['description']}}
+                        {{item['description_1']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['model']}}
+                        {{item['model_1']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['serial_number']}}
+                        {{item['serial_number_1']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['offsite_address']}}
+                        {{item['offsite_address_1']}}
                     </td>
                 </tr>
+        {% endfor %}
+
+        {% for item in item_2 %}
                 <tr>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['doe_number']}}
+                        {{item['doe_number_2']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['description']}}
+                        {{item['description_2']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['model']}}
+                        {{item['model_2']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['serial_number']}}
+                        {{item['serial_number_2']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['offsite_address']}}
+                        {{item['offsite_address_2']}}
                     </td>
                 </tr>
+        {% endfor %}
+
+        {% for item in item_3 %}
                 <tr>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['doe_number']}}
+                        {{item['doe_number_3']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['description']}}
+                        {{item['description_3']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['model']}}
+                        {{item['model_3']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['serial_number']}}
+                        {{item['serial_number_3']}}
                     </td>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
-                        {{item['offsite_address']}}
+                        {{item['offsite_address_3']}}
                     </td>
                 </tr>
+        {% endfor %}
+
         {#    {% else %}
                 <tr>
                     <td style="width:175px; padding: 6px 6px 6px 18px;">
@@ -121,8 +129,9 @@
                     </td>
                 </tr>
             {% endif %}
-        #}  
         {% endfor %}
+        #}  
+        
         </tbody>
     </table>
 </fieldset>

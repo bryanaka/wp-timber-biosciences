@@ -15,29 +15,29 @@ function process_property_form($form) {
     $alternate_phone = $form[17];
 
     $item_1 = array(
-        'doe_number' => $form[45],
-        'description' => $form[133],
-        'model' => $form[27],
-        'serial_number' => $form[28],
-        'offsite_address' => $form[29]
+        'doe_number_1' => $form[45],
+        'description_1' => $form[133],
+        'model_1' => $form[27],
+        'serial_number_1' => $form[28],
+        'offsite_address_1' => $form[29]
     );
     $item_2 = array(
-        'doe_number' => $form[135],
-        'description' => $form[136],
-        'model' => $form[137],
-        'serial_number' => $form[138],
-        'offsite_address' => $form[139]
+        'doe_number_2' => $form[135],
+        'description_2' => $form[136],
+        'model_2' => $form[137],
+        'serial_number_2' => $form[138],
+        'offsite_address_2' => $form[139]
     );
     $item_3 = array(
-        'doe_number' => $form[141],
-        'description' => $form[142],
-        'model' => $form[143],
-        'serial_number' => $form[144],
-        'offsite_address' => $form[145]
+        'doe_number_3' => $form[141],
+        'description_3' => $form[142],
+        'model_3' => $form[143],
+        'serial_number_3' => $form[144],
+        'offsite_address_3' => $form[145]
     );
 
-    $items = array($item_1, $item_2, $item_3);
-/*  Comment out those echo statement 
+/*    $items = array($item_1, $item_2, $item_3); */
+/*   Comment out those echo statement 
     ?>
 
     <?php if (count($items) > 0): ?>
@@ -70,7 +70,10 @@ function process_property_form($form) {
         'alternate_location' => $alternate_location,
         'alternate_email' => $alternate_email,
         'alternate_phone' => $alternate_phone,
-        'items' => $items
+        'item_1' => $item_1,
+        'item_2' => $item_2,
+        'item_3' => $item_3
+/*        'items' => $items  */
     );
 
     // Get HTML form of email body
