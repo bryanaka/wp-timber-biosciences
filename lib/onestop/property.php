@@ -80,8 +80,7 @@ function process_property_form($form) {
 */
     // Set email headers
     // for multiple recipients, you can use a comma
-    //$to  = 'pbdproperty@lbl.gov'; //. ', '; // note the comma
-    $to  = 'jcsu@lbl.gov'; 
+    $to  = 'pbdproperty@lbl.gov'; //. ', '; // note the comma
 /*    
     ?>
     <?php echo $to;  ?>
@@ -91,14 +90,14 @@ function process_property_form($form) {
     $subject = 'Property Pass Authorization Request';
 
     // To send HTML mail, the Content-type header must be set
-    $headers  = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type: text/html; charset=utf-8" . "\r\n";
+    $headers  = 'MIME-Version: 1.0' . "\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\n";
 
     // Additional headers
-    $headers .= "To: PBD Property <pbdproperty@example.com>" . "\r\n";
-    $headers .= "From: PBD-Do-Not-Reply <do-not-reply@lbl.gov>, " . $requestor_name . " <" . $requestor_email . ">" . "\r\n";
-    $headers .= "Reply-To: PBD-Do-Not-Reply <do-not-reply@lbl.gov>" . "\r\n";
-    $headers .= "Cc: " . $requestor_name . " <" . $requestor_email . ">, " . $alternate_name . " <" . $alternate_email . ">" . "\r\n";
+    $headers .= 'To: PBD Property <pbdproperty@example.com>' . "\n";
+    $headers .= 'From: PBD-Do-Not-Reply <do-not-reply@lbl.gov>, '.$requestor_name.' <".$requestor_email.">' . "\n";
+    $headers .= 'Reply-To: PBD-Do-Not-Reply <do-not-reply@lbl.gov>' . "\r\n";
+    $headers .= 'Cc: '.$requestor_name.'<".$requestor_email.">, '.$alternate_name.' <".$alternate_email.">' . "\n";
     //$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
  /*
     ?>
@@ -107,4 +106,4 @@ function process_property_form($form) {
 */
     mail($to, $subject, $message, $headers);
 }
-/* ?> */
+?>
