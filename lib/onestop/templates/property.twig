@@ -49,8 +49,8 @@
         <tbody>
 
         <!-- loop over items and append them. if-else gives nice readable style -->
-        {% for item in item_1 %}
-        {#  {% if loop.index is even %} #}
+        {% for item in items %}
+        {#  {% if loop.index is even %}   #}
                 <tr>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
                         {{item['doe_number_1']}}
@@ -68,9 +68,7 @@
                         {{item['offsite_address_1']}}
                     </td>
                 </tr>
-        {% endfor %}
 
-        {% for item in item_2 %}
                 <tr>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
                         {{item['doe_number_2']}}
@@ -88,9 +86,7 @@
                         {{item['offsite_address_2']}}
                     </td>
                 </tr>
-        {% endfor %}
 
-        {% for item in item_3 %}
                 <tr>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
                         {{item['doe_number_3']}}

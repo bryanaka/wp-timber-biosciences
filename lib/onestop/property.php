@@ -19,16 +19,12 @@ function process_property_form($form) {
         'description_1' => $form[133],
         'model_1' => $form[27],
         'serial_number_1' => $form[28],
-        'offsite_address_1' => $form[29]
-    );
-    $item_2 = array(
+        'offsite_address_1' => $form[29],
         'doe_number_2' => $form[135],
         'description_2' => $form[136],
         'model_2' => $form[137],
         'serial_number_2' => $form[138],
-        'offsite_address_2' => $form[139]
-    );
-    $item_3 = array(
+        'offsite_address_2' => $form[139],
         'doe_number_3' => $form[141],
         'description_3' => $form[142],
         'model_3' => $form[143],
@@ -36,7 +32,8 @@ function process_property_form($form) {
         'offsite_address_3' => $form[145]
     );
 
-/*    $items = array($item_1, $item_2, $item_3); */
+  $items = array($item_1); 
+  
 /*   Comment out those echo statement 
     ?>
 
@@ -70,10 +67,7 @@ function process_property_form($form) {
         'alternate_location' => $alternate_location,
         'alternate_email' => $alternate_email,
         'alternate_phone' => $alternate_phone,
-        'item_1' => $item_1,
-        'item_2' => $item_2,
-        'item_3' => $item_3
-/*        'items' => $items  */
+        'items' => $items
     );
 
     // Get HTML form of email body
