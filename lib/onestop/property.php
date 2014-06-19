@@ -73,24 +73,38 @@ function process_property_form($form) {
     // Get HTML form of email body
     $message = Timber::compile('templates/property.twig', $context);
 
+/* echo email body $message - after twig program formatted email
+    ?>
+    <?php echo $message;  ?>
+    <?php
+*/
     // Set email headers
-
     // for multiple recipients, you can use a comma
-    $to  = 'pbdproperty@lbl.gov'; //. ', '; // note the comma
-
+    //$to  = 'pbdproperty@lbl.gov'; //. ', '; // note the comma
+    $to  = 'jcsu@lbl.gov'; 
+/*    
+    ?>
+    <?php echo $to;  ?>
+    <?php
+*/
     // subject
     $subject = 'Property Pass Authorization Request';
 
     // To send HTML mail, the Content-type header must be set
-    $headers  = 'MIME-Version: 1.0' . "\n";
-    $headers .= 'Content-type: text/html; charset=utf-8' . "\n";
+    $headers  = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type: text/html; charset=utf-8" . "\r\n";
 
     // Additional headers
-    $headers .= 'To: PBD Property <pbdproperty@example.com>' . "\n";
-    $headers .= 'From: PBD-Do-Not-Reply <do-not-reply@lbl.gov>, '.$requestor_name.' <'.$requestor_email.'>' . "\n";
-    $headers .= "Reply-To: PBD-Do-Not-Reply <do-not-reply@lbl.gov>" . "\n";
-    $headers .= 'Cc: '.$requestor_name.' <'.$requestor_email.'>, '.$alternate_name.' <'.$alternate_email.'>'."\n";
+    $headers .= "To: PBD Property <pbdproperty@example.com>" . "\r\n";
+    $headers .= "From: PBD-Do-Not-Reply <do-not-reply@lbl.gov>, " . $requestor_name . " <" . $requestor_email . ">" . "\r\n";
+    $headers .= "Reply-To: PBD-Do-Not-Reply <do-not-reply@lbl.gov>" . "\r\n";
+    $headers .= "Cc: " . $requestor_name . " <" . $requestor_email . ">, " . $alternate_name . " <" . $alternate_email . ">" . "\r\n";
     //$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
-
+ /*
+    ?>
+    <?php echo $headers;  ?>
+    <?php
+*/
     mail($to, $subject, $message, $headers);
 }
+/* ?> */

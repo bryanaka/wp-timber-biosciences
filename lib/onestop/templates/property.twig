@@ -50,7 +50,6 @@
 
         <!-- loop over items and append them. if-else gives nice readable style -->
         {% for item in items %}
-        {#  {% if loop.index is even %}   #}
                 <tr>
                     <td style="width:165px;background-color:#EDEDED; padding: 6px 6px 6px 18px; border-bottom:#DEDEDE 2px solid; border-top:#DEDEDE 2px solid;">
                         {{item['doe_number_1']}}
@@ -104,29 +103,7 @@
                         {{item['offsite_address_3']}}
                     </td>
                 </tr>
-        {% endfor %}
-
-        {#    {% else %}
-                <tr>
-                    <td style="width:175px; padding: 6px 6px 6px 18px;">
-                        {{item['doe_number']}}
-                    </td>
-                    <td style="width:175px; padding: 6px 6px 6px 18px;">
-                        {{item['description']}}
-                    </td>
-                    <td style="width:175px; padding: 6px 6px 6px 18px;">
-                        {{item['model']}}
-                    </td>
-                    <td style="width:175px; padding: 6px 6px 6px 18px;">
-                        {{item['serial_number']}}
-                    </td>
-                    <td style="width:175px; padding: 6px 6px 6px 18px;">
-                        {{item['offsite_address']}}
-                    </td>
-                </tr>
-            {% endif %}
-        {% endfor %}
-        #}  
+        {% endfor %} 
         
         </tbody>
     </table>
