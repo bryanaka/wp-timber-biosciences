@@ -29,12 +29,13 @@ function process_property_form($form) {
         'description_3' => $form[142],
         'model_3' => $form[143],
         'serial_number_3' => $form[144],
-        'offsite_address_3' => $form[145]
+        'offsite_address_3' => $form[145],
+        'check_box' => $form[146]
     );
 
   $items = array($item_1); 
   
-/*   Comment out those echo statement 
+/*   Comment out those echo statement   
     ?>
 
     <?php if (count($items) > 0): ?>
@@ -71,8 +72,8 @@ function process_property_form($form) {
     );
 
     // Get HTML form of email body
-    $message = Timber::compile('templates/property.twig', $context);
-
+ //   $message = Timber::compile('templates/property.twig', $context);
+    $message = 'Testing - Dummy email body';
 /* echo email body $message - after twig program formatted email
     ?>
     <?php echo $message;  ?>
@@ -80,7 +81,8 @@ function process_property_form($form) {
 */
     // Set email headers
     // for multiple recipients, you can use a comma
-    $to  = 'pbdproperty@lbl.gov'; //. ', '; // note the comma
+//    $to  = 'pbdproperty@lbl.gov'; //. ', '; // note the comma
+    $to  = 'jcsu@lbl.gov';
 /*    
     ?>
     <?php echo $to;  ?>
@@ -95,9 +97,9 @@ function process_property_form($form) {
 
     // Additional headers
     $headers .= 'To: PBD Property <pbdproperty@example.com>' . "\n";
-    $headers .= 'From: PBD-Do-Not-Reply <do-not-reply@lbl.gov>, '.$requestor_name.' <".$requestor_email.">' . "\n";
-    $headers .= 'Reply-To: PBD-Do-Not-Reply <do-not-reply@lbl.gov>' . "\r\n";
-    $headers .= 'Cc: '.$requestor_name.'<".$requestor_email.">, '.$alternate_name.' <".$alternate_email.">' . "\n";
+    $headers .= 'From: PBD-Do-Not-Reply <do-not-reply@lbl.gov>, '.$requestor_name.' <'.$requestor_email.'>' . "\n";
+    $headers .= "Reply-To: PBD-Do-Not-Reply <do-not-reply@lbl.gov>" . "\r\n";
+    $headers .= 'Cc: '.$requestor_name.' <'.$requestor_email.'>, '.$alternate_name.' <'.$alternate_email.'>'."\n";
     //$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
  /*
     ?>
@@ -105,5 +107,11 @@ function process_property_form($form) {
     <?php
 */
     mail($to, $subject, $message, $headers);
+
+    if (@mail($to, $subject, $message, $headers))
+        echo "email sent successfully";
+    else
+        echo "Email not sent successfully";
+    exit;
 }
 ?>
