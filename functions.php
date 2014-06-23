@@ -41,4 +41,4 @@ add_filter("mce_buttons_3", "enable_more_buttons");
 add_action( 'widgets_init', 'main_sidebar' );
 
 require_once BIOSCIENCES_PATH.'/lib/initialize.php';
-require_once BIOSCIENCES_PATH.'/lib/register_onestop_forms.php';
+//require_once BIOSCIENCES_PATH.'/lib/register_onestop_forms.php';
