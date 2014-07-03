@@ -11,19 +11,20 @@
 
 				<div class="profile__name small-5 medium-6 large-7 columns">
 					<h1>{% if scientist.prefix  != 'null' %}{{scientist.prefix}}{% endif %} {{scientist.title}}</h1>
-					<article class="profile__icons visible-xs">
+					<h4></h4>
 					{# comment out duplicated position_titles and email icon-envelop
+					<article class="profile__icons visible-xs">
 						<h5>{{ scientist.get_field('position_titles')[0].title }}</h5>
 						<a href="mailto:{{scientist.email}}">
 							<i class="icon-envelope"></i>
 						</a>
-					#}
 						{% if file_path %}
 						    <a target="_blank" href="{{file_path}}">
 						    	<i class="icon-book"></i>
 						    </a>
 						{% endif %}
 					</article>
+					#}
 					<article class="profile__titles hidden-xs">
 						<ul>
 							{% for title in scientist.get_field('position_titles') %}
@@ -84,6 +85,13 @@
 			{% endif %}
 			E-Mail: <a href="mailto:{{scientist.email}}">{{scientist.email}}</a><br>
 		</article>
+
+		{% set publications = scientist.get_field('publications')%}
+		{% if publications %}
+			<article class="profile__location medium-6 small-12 large-12 columns">
+				<a target="_blank" href="{{publications.url}}">Curriculum vitae</a>
+			</article>
+		{% endif %}
 		
         {% set publication_links = scientist.get_field('publication_links')%}
         {% if publication_links %}
@@ -101,7 +109,7 @@
 		<article class="profile__location medium-6 small-12 large-12 columns">
 			<h2 class="c-left">Research Gate</h2>
 			<a target="_blank" href="{{scientist.rg_profile_url}}">
-				{% if scientist.prefix  != 'null' %}{{scientist.prefix}}{% endif %} {{scientist.title}}'s Profile
+				{{scientist.title}}'s Profile
 			</a>
 		</article>
 		{% endif %}
