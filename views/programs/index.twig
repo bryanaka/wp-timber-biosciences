@@ -22,7 +22,7 @@
 							<img src="{{ program.get_thumbnail.get_src }}" class="card__thumb--full">
 						{% endif %}
 						<h2 class="card__title">
-							{% if program.program_type == "program" %}
+							{% if program.url == false %}
 							{% set link = program.get_path %}
 							<a href="{{program.get_path}}">
 							{% else %}
