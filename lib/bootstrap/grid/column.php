@@ -13,7 +13,7 @@ Class Column extends Shortcodes
 
 	// shortcode_atts basically works like array_merge but additionally 
 	// creates an atttribute filter with the shortcode. Poor API and breaks SRP.
-	public function column ( $attributes, $content=null ) {
+	public function column ( $attributes=null, $content=null ) {
 		$attrs = shortcode_atts($this->default_attrs, $attributes, $this->shortcode);
 		$col_classes = $this->create_column_classes( $attrs['media'], $attrs['size'] );
 		return "<{$attrs['el']} class=\"{$col_classes}\">\n".do_shortcode($content)."\n</{$attrs['el']}>";

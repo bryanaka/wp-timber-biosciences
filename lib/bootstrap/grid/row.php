@@ -9,7 +9,7 @@ Class Row extends Shortcodes
 		'el' => 'div'
 	);
 
-	public function row ( $attributes, $content=null ) {
+	public function row ( $attributes=null, $content=null ) {
 		$attrs = shortcode_atts($this->default_attrs, $attributes, $this->shortcode);
 		return "<{$attrs['el']} class=\"row\">".do_shortcode($content)."\n</{$attrs['el']}>";
 	}
