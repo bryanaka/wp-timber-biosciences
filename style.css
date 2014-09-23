@@ -5830,15 +5830,23 @@ img.aligncenter {
 }
 
 /*  ==================================================
+	Pagination
+	================================================== */
+/* line 25, ../scss/modules/_news.scss */
+.pagination {
+  text-align: center;
+}
+
+/*  ==================================================
 	News Teaser - previews
 	================================================== */
-/* line 26, ../scss/modules/_news.scss */
+/* line 33, ../scss/modules/_news.scss */
 .tease {
   margin: 16px 0;
   border-top: 7px green solid;
 }
 
-/* line 31, ../scss/modules/_news.scss */
+/* line 38, ../scss/modules/_news.scss */
 .tease-container {
   padding: 16px;
   border-left: 1px #cecece solid;
@@ -5861,13 +5869,13 @@ img.aligncenter {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* line 41, ../scss/modules/_news.scss */
+/* line 48, ../scss/modules/_news.scss */
 .tease__title {
   margin-top: 0;
   margin-bottom: 9px;
   margin-bottom: 0.5rem;
 }
-/* line 47, ../scss/modules/_news.scss */
+/* line 54, ../scss/modules/_news.scss */
 .tease__title a {
   color: #252525;
   text-decoration: none;
@@ -5875,26 +5883,26 @@ img.aligncenter {
   -moz-transition: color 500ms;
   transition: color 500ms;
 }
-/* line 54, ../scss/modules/_news.scss */
+/* line 61, ../scss/modules/_news.scss */
 .tease__title a:hover {
   color: #428bca;
 }
 
-/* line 60, ../scss/modules/_news.scss */
+/* line 67, ../scss/modules/_news.scss */
 .tease__thumbnail {
   float: left;
   padding-right: 16px;
   max-width: 100%;
 }
 
-/* line 66, ../scss/modules/_news.scss */
+/* line 73, ../scss/modules/_news.scss */
 .tease__date {
   font-family: 'Ubuntu', 'Sans Source Pro', 'Helvetica Neue', sans-serif;
   color: #777777;
 }
 
 @media screen and (max-width: 960px) {
-  /* line 73, ../scss/modules/_news.scss */
+  /* line 80, ../scss/modules/_news.scss */
   .news-column {
     position: relative;
     padding-left: 15px;
@@ -5907,7 +5915,7 @@ img.aligncenter {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 85, ../scss/modules/_news.scss */
+  /* line 92, ../scss/modules/_news.scss */
   .tease__thumbnail {
     float: none;
     display: block;
@@ -6210,6 +6218,13 @@ img.aligncenter {
 /* line 44, ../scss/modules/_calendar.scss */
 .ai1ec-allday-badge {
   background-color: #008000 !important;
+}
+
+/** Ninja Form Hack. */
+/* Shorten height of ninja-forms field. */
+/* line 4, ../scss/_shame.scss */
+.ninja-forms-field {
+  height: 30px;
 }
 
 /* ==========================================================================

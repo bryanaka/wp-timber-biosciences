@@ -6,4 +6,15 @@
 			{% include [post.post_type~'/preview-full.twig', 'posts/preview-full.twig'] %}
 		</div>
 	{% endfor %}
+    <div class="pagination">
+        {% if pagination.prev %}
+            <a href="{{pagination.prev.link}}" class="prev {{pagination.prev.link|length ? '' : 'invisible'}}">Prev</a>
+        {% endif %}
+        {% for page in pagination.pages %}
+            <a href="{{ page.link }}">{{ page.title }}</a>
+        {% endfor %}
+        {% if pagination.next %}
+            <a href="{{pagination.next.link}}" class="next {{pagination.next.link|length ? '' : 'invisible'}}">Next</a>
+        {% endif %}
+    </div>
 {% endblock %}
