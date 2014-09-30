@@ -88,18 +88,17 @@
 		    {% if cv %}
 			    <a target="_blank" href="{{cv.url}}">Curriculum vitae</a><br>
 		    {% endif %}
-
-		    {% set publications = scientist.get_field('publications')%}
-		    {% if publications %}
-				<a target="_blank" href="{{publications.url}}">Research Publication</a>
-		    {% endif %}
 		</article>
 		
         {% set publication_links = scientist.get_field('publication_links')%}
-        {% if publication_links %}
+        {% set publications = scientist.get_field('publications')%}
+        {% if publication_links or publications %}
 		<article class="profile__location medium-6 small-12 large-12 columns">
 			<h2 class="c-left">Publication Links</h2>
 			<ul>
+				{% if publications %}
+				    <li><a target="_blank" href="{{publications.url}}">Publications List</a></li>
+				{% endif %}
 				{% for publication_link in publication_links %}
 					<li><a target="_blank" href="{{publication_link.url}}">{{publication_link.name}}</a></li>
 				{% endfor %}
