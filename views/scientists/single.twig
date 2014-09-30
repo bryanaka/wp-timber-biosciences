@@ -84,14 +84,16 @@
 				{{scientist.phone2_type}}: {{scientist.phone2}}<br>
 			{% endif %}
 			E-Mail: <a href="mailto:{{scientist.email}}">{{scientist.email}}</a><br>
-		</article>
+            {% set cv = scientist.get_field('curriculum_vitae')%}
+		    {% if cv %}
+			    <a target="_blank" href="{{cv.url}}">Curriculum vitae</a><br>
+		    {% endif %}
 
-		{% set publications = scientist.get_field('publications')%}
-		{% if publications %}
-			<article class="profile__location medium-6 small-12 large-12 columns">
-				<a target="_blank" href="{{publications.url}}">Curriculum vitae</a>
-			</article>
-		{% endif %}
+		    {% set publications = scientist.get_field('publications')%}
+		    {% if publications %}
+				<a target="_blank" href="{{publications.url}}">Research Publication</a>
+		    {% endif %}
+		</article>
 		
         {% set publication_links = scientist.get_field('publication_links')%}
         {% if publication_links %}
