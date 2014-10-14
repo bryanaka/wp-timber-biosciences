@@ -18,7 +18,7 @@ $args = array(
 		"relation" => "AND",
 		array(
 			"key"     => "featured_article",
-			"value"   => "no",
+			"value"   => "yes",
 			"compare" => "="
 		)
 	),
