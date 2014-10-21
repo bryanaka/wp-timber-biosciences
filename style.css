@@ -5199,6 +5199,12 @@ img.aligncenter {
     color: #ffd059;
   }
 }
+/* line 1, ../scss/modules/_wpcaption.scss */
+.wp-caption .wp-caption-text {
+  font-size: 14px;
+  text-align: center;
+}
+
 /*  ==================================================
 	Sidebar
 	================================================== */
