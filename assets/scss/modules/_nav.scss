@@ -214,7 +214,7 @@
 		@include transition-duration(500ms);
 
 		&.is_open {
-			left: 63%;
+			left: 40%;
 		}
 
 		.nav__item {
@@ -252,7 +252,7 @@
 				@include transition-duration(500ms);
 
 				&.is_open {
-					left: 65%;
+					left: 45%;
 				}
 			}
 			.subnav--left {

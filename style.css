@@ -4778,7 +4778,7 @@ img.aligncenter {
   }
   /* line 216, ../scss/modules/_nav.scss */
   .nav__right.is_open {
-    left: 63%;
+    left: 40%;
   }
   /* line 220, ../scss/modules/_nav.scss */
   .nav__right .nav__item {
@@ -4822,7 +4822,7 @@ img.aligncenter {
   }
   /* line 254, ../scss/modules/_nav.scss */
   .no-touch .nav__item .subnav.is_open, .no-touch .nav__item .subnav--left.is_open, .no-touch .nav__item:hover .subnav.is_open, .no-touch .nav__item:hover .subnav--left.is_open, .touch .nav__item .subnav.is_open, .touch .nav__item .subnav--left.is_open, .touch .nav__item:hover .subnav.is_open, .touch .nav__item:hover .subnav--left.is_open {
-    left: 65%;
+    left: 45%;
   }
   /* line 258, ../scss/modules/_nav.scss */
   .no-touch .nav__item .subnav--left, .no-touch .nav__item:hover .subnav--left, .touch .nav__item .subnav--left, .touch .nav__item:hover .subnav--left {
