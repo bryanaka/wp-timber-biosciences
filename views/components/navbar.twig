@@ -1,10 +1,9 @@
-<nav id="main_nav" class="navbar navbar--green">
-
-  <div class="large-3 medium-6 small-12 columns">
-          <img src="{{template_uri}}/assets/img/lbnl.png" class="mainFooter__lab_logo">
+<nav id="header_nav" class="navbar navbar--green">
+  <div class="nav__right large-3 medium-6 small-12 columns">
+        <img src="{{template_uri}}/assets/img/lbnl.png" width="120" Class="alignright" > 
   </div>
-
-	<div class="nav__left">
+	<div style="text-align: center">
+    <br/>
 		<h1 class="navbar__brand">
         	<a href="/" class="show-for-xlarge-up">
         		<i class="icon-leaf"></i> Physical Biosciences Division
@@ -12,9 +11,23 @@
         	<a href="/" class="hide-for-xlarge-up">
         		<i class="icon-leaf"></i> PBD
         	</a>
-      	</h1>
+    </h1>
 	</div>
-  
+</nav>
+
+<nav id="main_nav" class="navbar navbar--green">
+{#
+  <div style="text-align: buttom" class="nav__left">
+    <h1 class="navbar__brand">
+          <a href="/" class="show-for-xlarge-up">
+            <i class="icon-leaf"></i> Physical Biosciences Division
+          </a>
+          <a href="/" class="hide-for-xlarge-up">
+            <i class="icon-leaf"></i> PBD
+          </a>
+    </h1>
+  </div>
+#}  
   <div class="nav__menu">
     <button id="openNavButton" class="nav__button">Menu</button>
   </div>
