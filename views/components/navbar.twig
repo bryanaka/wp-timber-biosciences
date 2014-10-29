@@ -1,11 +1,10 @@
 <nav id="main_nav" class="navbar navbar--green">
 
   <div class="nav__right large-3 medium-6 small-12 columns">
-        <img src="{{template_uri}}/assets/img/lbnl.png" width="120" Class="alignright" > 
+        <img src="{{template_uri}}/assets/img/lbnl.png" width="100" Class="alignright" > 
   </div>
 
   <div class="nav__left">
-    <br/>
     <h1 class="navbar__brand">
           <a href="/" class="show-for-xlarge-up">
             <i class="icon-leaf"></i> Physical Biosciences Division
@@ -17,19 +16,16 @@
   </div>
 
   <div class="nav__menu">
-    <br/><br/>
     <button id="openNavButton" class="nav__button">Menu</button>
   </div>
 
   <div class="nav__search js-search">
-    <br/><br/>
     <a href="#" class="nav__link">
       <b class="icon-search icon-large"></b>
     </a>
   </div>
 
 	<ul class="nav__right">
-    <br/><br/>
 		{% for item in menus.primary.get_items %}
 	    {% if item.get_children %}
 				<li class="nav__item">
