@@ -83,6 +83,7 @@
 {% endblock %}
 
 {% block content %}
+{% if rel_videos %}
 	<div class="container">
 		<div class="small-12 columns">
 			<h2>Related Videos</h2>
@@ -94,6 +95,7 @@
 			{% endfor %}
 		</section>
 	</div>
+{% endif %}
 {% endblock %}
 
 {% block scripts %}
