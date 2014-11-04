@@ -41,6 +41,14 @@
 	@include rem-fallback(padding-right, 1);
 }
 
+.nav__right__logo {
+	position:absolute;
+	right:0;
+	img {
+		float:right;
+	}
+}
+
 .nav__left {
 	@extend .nav;
 	float: left;
