@@ -5,7 +5,7 @@
 				<article class="mainFooter__linkGroup">
 					<h4 class="mainFooter__subheader">{{menus.footer_left.name}}</h4>
 					{% for item in menus.footer_left.get_items %}
-						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
+						<a target="_blank" href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
 					{% endfor %}
 				</article>
 			{% endif %}
@@ -17,6 +17,7 @@
 					{% for item in menus.footer_center.get_items %}
 						<a target="_blank" href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
 					{% endfor %}
+					<a href="mailto:PBDwebmaster@lbl.gov" class="mainFooter__link">Contact Us</a><br>
 				</article>
 			{% endif %}
 		</div>
@@ -25,7 +26,7 @@
 				<article class="mainFooter__linkGroup">
 					<h4 class="mainFooter__subheader">{{menus.footer_right.name}}</h4>
 					{% for item in menus.footer_right.get_items %}
-						<a href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
+						<a target="_blank" href="{{item.get_path}}" class="mainFooter__link">{{item.title}}</a><br>
 					{% endfor %}
 				</article>
 			{% endif %}
@@ -33,10 +34,10 @@
 		<div class="large-3 medium-6 small-12 columns">
 			<article class="mainFooter__linkGroup">
 				<div class="mainFooter__img">
-				    <img src="{{template_uri}}/assets/img/lbnl.png" Class="mainFooter__lab_logo"> 
+				    <a href="http://www.lbl.gov/" target="_blank"><img src="{{template_uri}}/assets/img/lbnl.png" Class="mainFooter__lab_logo"></a> 
 				</div>
 				<div class="mainFooter__img">
-					<img src="{{template_uri}}/assets/img/full_doe_logo_white.png" width="150">
+					<a href="http://energy.gov/" target="_blank"><img src="{{template_uri}}/assets/img/full_doe_logo_white.png" width="150"></a>
 				</div>
 			</article>
 		</div>
