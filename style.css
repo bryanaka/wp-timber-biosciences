@@ -5566,6 +5566,30 @@ img.aligncenter {
   }
 }
 /*  ==================================================
+	Buttons and Clickables
+	================================================== */
+/* line 4, ../scss/modules/_buttons.scss */
+.back-to-top {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 130px;
+  height: 40px;
+  background-color: #005200;
+  color: #fcfcfc;
+  text-decoration: none;
+  border-top: yellowgreen 1px solid;
+  z-index: 1;
+  padding-left: 16px;
+  padding-left: 1rem;
+}
+/* line 16, ../scss/modules/_buttons.scss */
+.back-to-top:hover {
+  background-color: #006B00;
+  color: #ffd059;
+}
+
+/*  ==================================================
 	Scientist Profiles
 	================================================== */
 /* line 5, ../scss/modules/_profile.scss */
