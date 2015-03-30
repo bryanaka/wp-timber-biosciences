@@ -5570,6 +5570,7 @@ img.aligncenter {
 	================================================== */
 /* line 4, ../scss/modules/_buttons.scss */
 .back-to-top {
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -5583,7 +5584,7 @@ img.aligncenter {
   padding-left: 16px;
   padding-left: 1rem;
 }
-/* line 16, ../scss/modules/_buttons.scss */
+/* line 17, ../scss/modules/_buttons.scss */
 .back-to-top:hover {
   background-color: #006B00;
   color: #ffd059;
