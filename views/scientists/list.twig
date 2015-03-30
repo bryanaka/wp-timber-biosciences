@@ -6,7 +6,7 @@
 			{{page.content}}
 		</article>
 		<article class="small-12 columns">
-			{% for letter in 'A'..'Z' %}
+			{% for letter, grouped in scientists %}
 				<span class="letterNav"><a href="#section-{{letter|lower}}">{{letter}}</a></span>
 			{% endfor %}
 		</article>
