@@ -108,14 +108,14 @@
     });
 
     // back to top button
-    if(document.body.scrollTop > 2500) {
+    if(document.body.scrollTop > 500) {
         $('.back-to-top').slideDown(500);
     } else {
         $('.back-to-top').slideUp(500);
     }
 
     $(window).scroll(function() {
-        if(document.body.scrollTop > 2500) {
+        if(document.body.scrollTop > 500) {
             $('.back-to-top').slideDown(500);
         } else {
             $('.back-to-top').slideUp(500);

@@ -5,15 +5,16 @@
     display: none;
 	position: fixed;
 	bottom: 0;
-	left: 0;
-	width: 130px;
-	height: 35px;
+	right: 0;
+	width: 175px;
+	height: 40px;
+	text-align: center;
+	font-size: 23px;
 	background-color: #005200;
 	color: $off-white;
 	text-decoration: none;
 	border-top: $pbd-yellow-green 1px solid;
 	z-index: 1;
-	@include rem-fallback(padding-left, 1);
 	&:hover {
 		background-color: #006B00;
 		color: $pbd-yellow;
