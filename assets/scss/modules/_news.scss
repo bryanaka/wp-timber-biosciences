@@ -1,4 +1,43 @@
 /*  ==================================================
+	Press Room
+	================================================== */
+.press-link {
+	color: black;
+	font-weight: 500;
+	text-decoration: none;
+	&:hover {
+        color: #5E6961;
+	}
+}
+
+.title-link {
+	font-weight: 400;
+}
+
+.article-link {
+	font-weight: bold;
+}
+
+.press-date {
+	color: #929C95;
+}
+
+.press-preview {
+	padding-bottom: 10px;
+	img {
+	    width: 210px;
+	    height: 130px;
+	}
+}
+
+.press-section {
+	padding-top: 20px;
+	&:hover {
+	    background-color: #D9DEDC;
+	}
+}
+
+/*  ==================================================
 	News
 	================================================== */
 .news-column {
