@@ -17,7 +17,7 @@
         	    {% for featured_article in featured_articles %}
         		    <div class="press-preview row">
         			    {% if featured_article.get_thumbnail %}
-                            <img class="small-5 large-3 columns" src="{{ featured_article.get_thumbnail.get_src|resize(100, 50) }}">
+                            <img class="small-5 large-3 columns" src="{{ featured_article.get_thumbnail.get_src|resize(100) }}">
                         {% endif %}
                         <div class="small-7 large-9 columns">
                             <div><a class="article-link press-link" href="{{featured_article.get_path}}">{{featured_article.title}}</a></div>
@@ -33,7 +33,7 @@
                 {% for news_article in news_articles %}
                     <div class="press-preview row">
                         {% if news_article.get_thumbnail %}
-                            <img class="small-5 large-3 columns" src="{{ news_article.get_thumbnail.get_src|resize(100, 100) }}">
+                            <img class="small-5 large-3 columns" src="{{ news_article.get_thumbnail.get_src|resize(100) }}">
                         {% endif %}
                         <div class="small-7 large-9 columns">
                             <div><a class="article-link press-link" href="{{news_article.get_path}}">{{news_article.title}}</a></div>
