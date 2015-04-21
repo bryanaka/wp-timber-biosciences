@@ -8,7 +8,7 @@ $menus = array('primary', 'footer_left', 'footer_center', 'footer_right');
 $page->find_menus($menus);
 $page->get_current_page();
 
-$postCount = 4;
+$postCount = 2;
 $args = array(
 	"numberposts" => $postCount,
     "post_type" => "post",
