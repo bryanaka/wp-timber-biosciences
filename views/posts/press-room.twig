@@ -33,7 +33,7 @@
                 {% for news_article in news_articles %}
                     <div class="press-preview row">
                         {% if news_article.get_thumbnail %}
-                            <img class="small-5 large-3 columns" src="{{ news_article.get_thumbnail.get_src|resize(100) }}">
+                            <img class="small-5 large-3 columns" src="{{ news_article.get_thumbnail.get_src }}">
                         {% endif %}
                         <div class="small-7 large-9 columns">
                             <div><a class="article-link press-link" href="{{news_article.get_path}}">{{news_article.title}}</a></div>
