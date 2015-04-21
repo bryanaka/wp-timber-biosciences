@@ -4,30 +4,14 @@
     <div class="small-12 large-3 columns">
         <h3>{{page.title}}</h3>
         <div class="small-12 columns">
-            <h6><a class="press-link" href="/featured-news">Featured News</a></h6>
             <h6><a class="press-link" href="/news">PBD in the News</a></h6>
+            <h6><a class="press-link" href="/featured-news">Featured News</a></h6>
             <h6><a class="press-link" href="/theater">Webcast Theater</a></h6>
         </div>
     </div>    
     <div class="small-12 large-9 columns">
     	<h1>{{page.title}}</h1>
-        <div class="row">
-            <div class="press-section small-12 columns">
-                <h3><a class="press-link title-link" href="/featured-news">Featured News >></a></h3>
-        	    {% for featured_article in featured_articles %}
-        		    <div class="press-preview row">
-        			    {% if featured_article.get_thumbnail %}
-                            <img class="small-5 large-3 columns" src="{{ featured_article.get_thumbnail.get_src }}">
-                        {% endif %}
-                        <div class="small-7 large-9 columns">
-                            <div><a class="article-link press-link" href="{{featured_article.get_path}}">{{featured_article.title}}</a></div>
-                            <div class="press-date">{{featured_article.post_date|date('l, F jS Y')}}</div>
-                        </div>
-        		    </div>
-        	    {% endfor %}
-                <h6><a class="press-link" href="/featured-news">More >></a></h6>
-            </div>            
-
+        <div class="row">        
             <div class="press-section small-12 columns">
                 <h3><a class="press-link title-link" href="/news">PBD in the News >></a></h3>
                 {% for news_article in news_articles %}
@@ -44,6 +28,22 @@
                 <h6><a class="press-link" href="/news">More >></a></h6>
             </div>            
 
+            <div class="press-section small-12 columns">
+                <h3><a class="press-link title-link" href="/featured-news">Featured News >></a></h3>
+                {% for featured_article in featured_articles %}
+                    <div class="press-preview row">
+                        {% if featured_article.get_thumbnail %}
+                            <img class="small-5 large-3 columns" src="{{ featured_article.get_thumbnail.get_src }}">
+                        {% endif %}
+                        <div class="small-7 large-9 columns">
+                            <div><a class="article-link press-link" href="{{featured_article.get_path}}">{{featured_article.title}}</a></div>
+                            <div class="press-date">{{featured_article.post_date|date('l, F jS Y')}}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <h6><a class="press-link" href="/featured-news">More >></a></h6>
+            </div>    
+            
             <div class="press-section small-12 columns">
                 <h3><a class="press-link title-link" href="/theater">Webcast Theater >></a></h3>
                 {% for video in videos %}
