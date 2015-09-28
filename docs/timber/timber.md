@@ -36,7 +36,7 @@ Properties
             </td>
             <td>
                 <strong>The web site's title</strong><br>
-                <em>University/Hill Operations Office</em>
+                <em>Physical Biosciences</em>
             </td>
         </tr>
         <tr>
